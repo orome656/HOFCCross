@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HOFCCross.View;
+using HOFCCross.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,22 +11,16 @@ namespace HOFCCross
 {
     public class App : Application
     {
+        private static ViewModelLocator locator;
+
+        public static ViewModelLocator Locator { get
+            { return locator ?? (locator = new ViewModelLocator()); }
+        }
+
         public App()
         {
             // The root page of your application
-            MainPage = new ContentPage
-            {
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+            MainPage = new MainView();
         }
 
         protected override void OnStart()
