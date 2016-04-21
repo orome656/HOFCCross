@@ -11,12 +11,6 @@ namespace HOFCCross
 {
     public class App : Application
     {
-        private static ViewModelLocator locator;
-
-        public static ViewModelLocator Locator { get
-            { return locator ?? (locator = new ViewModelLocator()); }
-        }
-
         public App()
         {
             // The root page of your application

@@ -15,7 +15,7 @@ namespace HOFCCross.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            this.ActionBar.SetIcon(Android.Resource.Color.Transparent);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
