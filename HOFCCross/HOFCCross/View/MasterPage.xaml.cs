@@ -23,13 +23,15 @@ namespace HOFCCross.View
             Items.Add(new MasterPageItem()
             {
                 Title = "Actus",
-                TargetType = typeof(ActuView)
+                TargetType = typeof(ActuView),
+                IconSource = "accueil_icon.png"
             });
 
             Items.Add(new MasterPageItem()
             {
                 Title = "Calendrier",
-                TargetType = typeof(CalendarView)
+                TargetType = typeof(CalendarView),
+                IconSource = "calendar_icon.png"
             });
 
             listView.ItemsSource = Items;

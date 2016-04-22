@@ -33,4 +33,3 @@ using Android.App;
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
 
-[assembly: Application(Theme = "@android:style/Theme.Material.Light")]
