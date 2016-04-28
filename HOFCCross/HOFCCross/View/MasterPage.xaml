@@ -11,7 +11,7 @@
            SeparatorColor="Transparent"
            HasUnevenRows="True"
            x:Name="listView">
-      <ListView.Header>
+      <!--ListView.Header>
         <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
@@ -19,8 +19,8 @@
             <ColumnDefinition Width="10"/>
           </Grid.ColumnDefinitions>
           <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="5"/>
           </Grid.RowDefinitions>
@@ -34,7 +34,7 @@
               Text="HOFC"
               Style="{DynamicResource SubtitleStyle}"/>
         </Grid>
-      </ListView.Header>
+      </ListView.Header-->
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>

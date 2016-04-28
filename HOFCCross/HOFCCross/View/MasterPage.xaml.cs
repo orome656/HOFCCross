@@ -17,7 +17,7 @@ namespace HOFCCross.View
         public MasterPage()
         {
             InitializeComponent();
-
+            
             Items = new List<MasterPageItem>();
 
             Items.Add(new MasterPageItem()
