@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace HOFCCross.View
+namespace HOFCCross.Page
 {
-    public partial class ActuView : ContentPage
+    public partial class ActuPage : ContentPage
     {
         ActuViewModel viewModel;
 
-        public ActuView()
+        public ActuPage()
         {
             InitializeComponent();
             viewModel = new ActuViewModel();

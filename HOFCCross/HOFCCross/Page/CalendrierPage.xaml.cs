@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace HOFCCross.View
+namespace HOFCCross.Page
 {
-    public partial class CalendarView : ContentPage
+    public partial class CalendrierPage : ContentPage
     {
-        public CalendarView()
+        public CalendrierPage()
         {
             InitializeComponent();
         }

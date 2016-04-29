@@ -1,4 +1,5 @@
-﻿using HOFCCross.Model;
+﻿using FreshMvvm;
+using HOFCCross.Model;
 using HOFCCross.Service;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.ViewModel
 {
-    public class ActuViewModel: BaseViewModel
+    public class ActuViewModel: FreshBasePageModel
     {
         public List<ActuDetailViewModel> Actus { get; set; }
 

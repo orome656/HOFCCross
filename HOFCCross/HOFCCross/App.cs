@@ -1,4 +1,4 @@
-﻿using HOFCCross.View;
+﻿using FreshMvvm;
 using HOFCCross.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -14,15 +14,15 @@ namespace HOFCCross
         public App()
         {
             // The root page of your application
-            RegisterPages();
-            NavigationService.SetRoot(new MainViewModel());
-        }
+            var masterDetail = new FreshMasterDetailNavigationContainer();
 
-        void RegisterPages()
-        {
-            SimpleIoC.RegisterPage<MainViewModel, MainView>();
-            SimpleIoC.RegisterPage<ActuViewModel, ActuView>();
-            SimpleIoC.RegisterPage<CalendrierViewModel, CalendarView>();
+            masterDetail.Init("HOFC", "ic_menu_black_24dp.png");
+
+            masterDetail.AddPage<ActuViewModel>("Actus", null);
+            masterDetail.AddPage<CalendrierViewModel>("Calendrier", null);
+
+            MainPage = masterDetail;
+
         }
 
         protected override void OnStart()
