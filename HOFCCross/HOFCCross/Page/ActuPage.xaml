@@ -4,7 +4,7 @@
              x:Class="HOFCCross.Page.ActuPage"
              Title="Actualités">
   <ContentPage.Content>
-    <ListView x:Name="actusListView">
+    <ListView ItemsSource="{Binding Actus}">
       <ListView.ItemTemplate>
         <DataTemplate>
           <TextCell Text="{Binding Title}" Detail="{Binding Content}"/>

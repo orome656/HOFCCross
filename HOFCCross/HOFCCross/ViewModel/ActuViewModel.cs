@@ -12,12 +12,11 @@ namespace HOFCCross.ViewModel
     public class ActuViewModel: FreshBasePageModel
     {
         public List<ActuDetailViewModel> Actus { get; set; }
-
+        IService service;
         public ActuViewModel()
         {
-            // TODO Faire avec de l'injection de dépendance
-            ActuService service = new ActuService();
-            Actus = FromModelList(service.GetAll());
+            service = FreshIOC.Container.Resolve<IService>();
+            Actus = FromModelList(service.GetActu());
         }
 
         public List<ActuDetailViewModel> FromModelList(List<Actu> actusModel)

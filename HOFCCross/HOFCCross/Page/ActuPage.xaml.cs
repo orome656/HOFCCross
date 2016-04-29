@@ -11,13 +11,9 @@ namespace HOFCCross.Page
 {
     public partial class ActuPage : ContentPage
     {
-        ActuViewModel viewModel;
-
         public ActuPage()
         {
             InitializeComponent();
-            viewModel = new ActuViewModel();
-            actusListView.ItemsSource = viewModel.Actus;
         }
     }
 }

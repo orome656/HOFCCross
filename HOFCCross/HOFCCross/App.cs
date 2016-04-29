@@ -1,4 +1,5 @@
 ﻿using FreshMvvm;
+using HOFCCross.Service;
 using HOFCCross.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace HOFCCross
     {
         public App()
         {
+            FreshIOC.Container.Register<IService, MockService>();
+
             // The root page of your application
             var masterDetail = new FreshMasterDetailNavigationContainer();
 

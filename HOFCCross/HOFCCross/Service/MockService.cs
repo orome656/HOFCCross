@@ -1,15 +1,15 @@
-﻿using HOFCCross.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HOFCCross.Model;
 
 namespace HOFCCross.Service
 {
-    class ActuService
+    class MockService : IService
     {
-        public List<Actu> GetAll()
+        public List<Actu> GetActu()
         {
             List<Actu> actus = new List<Actu>();
             actus.Add(new Actu()
@@ -28,6 +28,11 @@ namespace HOFCCross.Service
                 Content = "Test 1"
             });
             return actus;
+        }
+
+        public List<Match> GetCalendrier()
+        {
+            throw new NotImplementedException();
         }
     }
 }
