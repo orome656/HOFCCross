@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.ViewModel
 {
-    public class ActuViewModel
+    public class ActuViewModel: BaseViewModel
     {
         public List<ActuDetailViewModel> Actus { get; set; }
 

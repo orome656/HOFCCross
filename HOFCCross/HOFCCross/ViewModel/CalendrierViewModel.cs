@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.ViewModel
 {
-    public class MainViewModel: BaseViewModel
+    public class CalendrierViewModel: BaseViewModel
     {
-        public string MainText { get; set; } = "Test";
     }
 }

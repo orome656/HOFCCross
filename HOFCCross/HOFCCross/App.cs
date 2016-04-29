@@ -14,7 +14,15 @@ namespace HOFCCross
         public App()
         {
             // The root page of your application
-            MainPage = new MainView();
+            RegisterPages();
+            NavigationService.SetRoot(new MainViewModel());
+        }
+
+        void RegisterPages()
+        {
+            SimpleIoC.RegisterPage<MainViewModel, MainView>();
+            SimpleIoC.RegisterPage<ActuViewModel, ActuView>();
+            SimpleIoC.RegisterPage<CalendrierViewModel, CalendarView>();
         }
 
         protected override void OnStart()

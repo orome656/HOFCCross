@@ -36,12 +36,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Extension\BaseNotify.cs" />
     <Compile Include="Model\Actu.cs" />
+    <Compile Include="NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ActuService.cs" />
+    <Compile Include="SimpleIoC.cs" />
     <Compile Include="Utils\MasterPageItem.cs" />
     <Compile Include="ViewModel\ActuDetailViewModel.cs" />
     <Compile Include="ViewModel\ActuViewModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\CalendrierViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\ActuView.xaml.cs">
       <DependentUpon>ActuView.xaml</DependentUpon>
