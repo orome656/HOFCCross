@@ -10,6 +10,6 @@ namespace HOFCCross.Service
     interface IService
     {
         List<Actu> GetActu();
-        List<Match> GetCalendrier();
+        List<Match> GetMatchs();
     }
 }
