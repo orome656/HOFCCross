@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.Model
 {
-    class Match
+    public class Match
     {
         public string Equipe1 { get; set; }
         public string Equipe2 { get; set; }

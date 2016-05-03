@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.Page
 {
-    public partial class CalendrierPage : ContentPage
+    public partial class CalendrierPage : TabbedPage
     {
         public CalendrierPage()
         {
