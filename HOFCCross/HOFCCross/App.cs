@@ -21,8 +21,9 @@ namespace HOFCCross
 
             masterDetail.Init("HOFC", "ic_menu_black_24dp.png");
 
+            masterDetail.AddPage<CalendrierViewModel>("Calendriers", null);
             masterDetail.AddPage<ActuViewModel>("Actus", null);
-            masterDetail.AddPage<CalendrierViewModel>("Calendrier", null);
+            masterDetail.AddPage<ClassementViewModel>("Classements", null);
 
             MainPage = masterDetail;
 

@@ -11,5 +11,6 @@ namespace HOFCCross.Service
     {
         List<Actu> GetActu();
         List<Match> GetMatchs();
+        List<ClassementEquipe> GetClassements();
     }
 }
