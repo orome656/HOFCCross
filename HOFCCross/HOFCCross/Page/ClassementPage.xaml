@@ -7,13 +7,50 @@
   <TabbedPage.ItemTemplate>
     <DataTemplate>
       <ContentPage Title="{Binding Key}">
-        <ListView ItemsSource="{Binding Value}">
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <TextCell Text="{Binding Nom}"></TextCell>
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
+      <ListView ItemsSource="{Binding Value}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <!-- Place -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Nom -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Points -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Joues -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Victoires -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Nuls -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Défaites -->
+                  <ColumnDefinition Width="*" />
+                  <!-- But Pour -->
+                  <ColumnDefinition Width="*" />
+                  <!-- But Contre -->
+                  <ColumnDefinition Width="*" />
+                  <!-- Diff -->
+                </Grid.ColumnDefinitions>
+
+                <Label Text="#" Grid.Column="0" />
+                <Label Text="{Binding Nom}" Grid.Column="1" />
+                <Label Text="{Binding Point}" Grid.Column="2" />
+                <Label Text="{Binding Joue}" Grid.Column="3" />
+                <Label Text="{Binding Victoire}" Grid.Column="4" />
+                <Label Text="{Binding Nul}" Grid.Column="5" />
+                <Label Text="{Binding Defaite}" Grid.Column="6" />
+                <Label Text="{Binding Bp}" Grid.Column="7" />
+                <Label Text="{Binding Bc}" Grid.Column="8" />
+                <Label Text="{Binding Diff}" Grid.Column="9" />
+
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
       </ContentPage>
     </DataTemplate>
   </TabbedPage.ItemTemplate>

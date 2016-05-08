@@ -118,45 +118,45 @@ namespace HOFCCross.Service
             {
                 Categorie = "equipe1",
                 Nom = "Equipe Bidon 1",
-                joue = 10,
-                victoire = 7,
-                nul = 0,
-                defaite = 3,
-                bp = 30,
-                bc = 10
+                Joue = 10,
+                Victoire = 7,
+                Nul = 0,
+                Defaite = 3,
+                Bp = 30,
+                Bc = 10
             });
             list.Add(new ClassementEquipe()
             {
                 Categorie = "equipe1",
                 Nom = "Equipe Bidon 2",
-                joue = 10,
-                victoire = 5,
-                nul = 0,
-                defaite = 5,
-                bp = 15,
-                bc = 15
+                Joue = 10,
+                Victoire = 5,
+                Nul = 0,
+                Defaite = 5,
+                Bp = 15,
+                Bc = 15
             });
             list.Add(new ClassementEquipe()
             {
                 Categorie = "equipe1",
                 Nom = "Equipe Bidon 3",
-                joue = 10,
-                victoire = 3,
-                nul = 0,
-                defaite = 7,
-                bp = 10,
-                bc = 30
+                Joue = 10,
+                Victoire = 3,
+                Nul = 0,
+                Defaite = 7,
+                Bp = 10,
+                Bc = 30
             });
             list.Add(new ClassementEquipe()
             {
                 Categorie = "equipe2",
                 Nom = "Equipe Bidon 4",
-                joue = 10,
-                victoire = 3,
-                nul = 0,
-                defaite = 7,
-                bp = 10,
-                bc = 30
+                Joue = 10,
+                Victoire = 3,
+                Nul = 0,
+                Defaite = 7,
+                Bp = 10,
+                Bc = 30
             });
 
             return list;

@@ -10,11 +10,13 @@ namespace HOFCCross.Model
     {
         public string Categorie { get; set; }
         public string Nom { get; set; }
-        public int joue { get; set; }
-        public int victoire { get; set; }
-        public int nul { get; set; }
-        public int defaite { get; set; }
-        public int bp { get; set; }
-        public int bc { get; set; }
+        public int Point { get; set; }
+        public int Joue { get; set; }
+        public int Victoire { get; set; }
+        public int Nul { get; set; }
+        public int Defaite { get; set; }
+        public int Bp { get; set; }
+        public int Bc { get; set; }
+        public int Diff { get { return Bp - Bc; } }
     }
 }
