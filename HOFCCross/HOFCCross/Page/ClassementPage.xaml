@@ -8,16 +8,53 @@
     <DataTemplate>
       <ContentPage Title="{Binding Key}">
       <ListView ItemsSource="{Binding Value}">
+        <ListView.Header>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <!-- Place -->
+              <ColumnDefinition Width="*" />
+              <!-- Nom -->
+              <ColumnDefinition Width="5*" />
+              <!-- Points -->
+              <ColumnDefinition Width="*" />
+              <!-- Joues -->
+              <ColumnDefinition Width="*" />
+              <!-- Victoires -->
+              <ColumnDefinition Width="*" />
+              <!-- Nuls -->
+              <ColumnDefinition Width="*" />
+              <!-- Défaites -->
+              <ColumnDefinition Width="*" />
+              <!-- But Pour -->
+              <ColumnDefinition Width="*" />
+              <!-- But Contre -->
+              <ColumnDefinition Width="*" />
+              <!-- Diff -->
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="#" Grid.Column="0" />
+            <Label Text="Nom" Grid.Column="1" />
+            <Label Text="P" Grid.Column="2" />
+            <Label Text="J" Grid.Column="3" />
+            <Label Text="V" Grid.Column="4" />
+            <Label Text="N" Grid.Column="5" />
+            <Label Text="D" Grid.Column="6" />
+            <Label Text="BP" Grid.Column="7" />
+            <Label Text="BC" Grid.Column="8" />
+            <Label Text="+/-" Grid.Column="9" />
+
+          </Grid>
+        </ListView.Header>
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
               <Grid>
                 <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="*" />
                   <!-- Place -->
                   <ColumnDefinition Width="*" />
                   <!-- Nom -->
-                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="5*" />
                   <!-- Points -->
                   <ColumnDefinition Width="*" />
                   <!-- Joues -->
@@ -33,6 +70,7 @@
                   <!-- But Contre -->
                   <ColumnDefinition Width="*" />
                   <!-- Diff -->
+                  <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <Label Text="#" Grid.Column="0" />
