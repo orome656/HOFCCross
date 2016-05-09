@@ -17,6 +17,7 @@ namespace HOFCCross.ViewModel
         {
             service = FreshIOC.Container.Resolve<IService>();
             Actus = FromModelList(service.GetActu());
+            this.RaisePropertyChanged(nameof(Actus));
         }
 
         public List<ActuDetailViewModel> FromModelList(List<Actu> actusModel)

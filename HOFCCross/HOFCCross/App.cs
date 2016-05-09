@@ -14,7 +14,7 @@ namespace HOFCCross
     {
         public App()
         {
-            FreshMvvm.FreshIOC.Container.Register<IService, MockService>();
+            FreshMvvm.FreshIOC.Container.Register<IService, ClientService>();
 
             // The root page of your application
             var masterDetail = new FreshMasterDetailNavigationContainer();

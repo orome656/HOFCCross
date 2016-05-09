@@ -22,7 +22,7 @@ namespace HOFCCross.ViewModel
         {
             base.ViewIsAppearing(sender, e);
             Classements = FromModelList(service.GetClassements());
-            this.RaisePropertyChanged("Classements");
+            this.RaisePropertyChanged(nameof(Classements));
         }
 
 

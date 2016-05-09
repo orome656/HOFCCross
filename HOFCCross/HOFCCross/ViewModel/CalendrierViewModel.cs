@@ -22,7 +22,7 @@ namespace HOFCCross.ViewModel
         {
             base.ViewIsAppearing(sender, e);
             Matchs = FromModelList(service.GetMatchs());
-            this.RaisePropertyChanged("Matchs");
+            this.RaisePropertyChanged(nameof(Matchs));
         }
 
         private Dictionary<string, List<Match>> FromModelList(List<Match> list)

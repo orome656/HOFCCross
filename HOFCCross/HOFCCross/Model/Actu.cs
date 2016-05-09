@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,17 @@ namespace HOFCCross.Model
 {
     public class Actu
     {
+        [JsonProperty(PropertyName = "postid")]
         public int PostId { get; set; }
+        [JsonProperty(PropertyName = "date")]
         public DateTime Date { get; set; }
+        [JsonProperty(PropertyName = "titre")]
         public string Title { get; set; }
+        [JsonProperty(PropertyName = "texte")]
         public string Content { get; set; }
+        [JsonProperty(PropertyName = "image")]
         public string ImageUrl { get; set; }
+        [JsonProperty(PropertyName = "url")]
         public string Url { get; set; }
     }
 }
