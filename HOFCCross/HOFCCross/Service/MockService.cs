@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HOFCCross.Model;
+using HOFCCross.Constantes;
 
 namespace HOFCCross.Service
 {
@@ -43,7 +44,7 @@ namespace HOFCCross.Service
             matchs.Add(new Match()
             {
                 Date = DateTime.Now,
-                Equipe1 = "Test1",
+                Equipe1 = AppConstantes.HOFC_NAME,
                 Equipe2 = "Test2",
                 Competition = new Competition()
                 {
@@ -57,7 +58,7 @@ namespace HOFCCross.Service
             {
                 Date = DateTime.Now,
                 Equipe1 = "Test1",
-                Equipe2 = "Test2",
+                Equipe2 = AppConstantes.HOFC_NAME,
                 Score1 = 1,
                 Score2 = 1,
                 Competition = new Competition()
@@ -71,7 +72,7 @@ namespace HOFCCross.Service
             matchs.Add(new Match()
             {
                 Date = DateTime.Now,
-                Equipe1 = "Test1",
+                Equipe1 = AppConstantes.HOFC_NAME,
                 Equipe2 = "Test2",
                 Competition = new Competition()
                 {
@@ -84,7 +85,7 @@ namespace HOFCCross.Service
             matchs.Add(new Match()
             {
                 Date = DateTime.Now,
-                Equipe1 = "Test1",
+                Equipe1 = AppConstantes.HOFC_NAME,
                 Equipe2 = "Test2",
                 Competition = new Competition()
                 {
@@ -97,7 +98,7 @@ namespace HOFCCross.Service
             matchs.Add(new Match()
             {
                 Date = DateTime.Now,
-                Equipe1 = "Test1",
+                Equipe1 = AppConstantes.HOFC_NAME,
                 Equipe2 = "Test2",
                 Competition = new Competition()
                 {

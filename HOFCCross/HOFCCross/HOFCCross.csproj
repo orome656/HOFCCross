@@ -36,7 +36,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Constantes\AppConstantes.cs" />
     <Compile Include="Container\FreshMasterDetailNavigationContainer.cs" />
+    <Compile Include="Converters\IsHOFCConverter.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />

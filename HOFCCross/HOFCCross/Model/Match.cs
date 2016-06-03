@@ -15,10 +15,16 @@ namespace HOFCCross.Model
 
         public string ScoreMessage { get
             {
-                return Score1 + " - " + Score2;
+                if (Score1 != null && Score2 != null)
+                    return Score1 + " - " + Score2;
+                else if (!String.IsNullOrEmpty(Commentaire))
+                    return Commentaire;
+                else
+                    return String.Empty;
             }
         }
         public DateTime Date { get; set; }
         public Competition Competition { get; set; }
+        public string Commentaire { get; set; }
     }
 }
