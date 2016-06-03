@@ -7,10 +7,33 @@
   <TabbedPage.ItemTemplate>
     <DataTemplate>
       <ContentPage Title="{Binding Key}">
-        <ListView ItemsSource="{Binding Value}">
+        <ListView ItemsSource="{Binding Value}" HasUnevenRows="True">
           <ListView.ItemTemplate>
             <DataTemplate>
-              <TextCell Text="{Binding Equipe1}"></TextCell>
+              <ViewCell>
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <!-- Logo + Nom -->
+                    <ColumnDefinition />
+                    <!-- Score -->
+                    <ColumnDefinition />
+                    <!-- Logo + Nom -->
+                    <ColumnDefinition />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                  </Grid.RowDefinitions>
+                  <Image Source="icon.png" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="Center"/>
+                  <Label Text="{Binding Equipe1}" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center"/>
+
+                  <Label Text="{Binding ScoreMessage}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
+
+                  <Image Source="icon.png" Grid.Column="2" Grid.RowSpan="2" HorizontalOptions="Center"/>
+                  <Label Text="{Binding Equipe1}" Grid.Column="2" Grid.Row="2" HorizontalOptions="Center"/>
+                </Grid>
+              </ViewCell>
             </DataTemplate>
           </ListView.ItemTemplate>
         </ListView>

@@ -12,6 +12,12 @@ namespace HOFCCross.Model
         public string Equipe2 { get; set; }
         public int? Score1 { get; set; }
         public int? Score2 { get; set; }
+
+        public string ScoreMessage { get
+            {
+                return Score1 + " - " + Score2;
+            }
+        }
         public DateTime Date { get; set; }
         public Competition Competition { get; set; }
     }
