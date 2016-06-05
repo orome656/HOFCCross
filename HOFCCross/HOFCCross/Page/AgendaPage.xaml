@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="HOFCCross.Page.AgendaPage"
+            xmlns:controls="clr-namespace:HOFCCross.Controls"
+            Title="Calendrier"
+            ItemsSource="{Binding Matchs}">
+  <TabbedPage.ItemTemplate>
+    <DataTemplate>
+      <ContentPage Title="{Binding Key}">
+        <ListView ItemsSource="{Binding Value}" HasUnevenRows="True">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <controls:Match BindingContext="{Binding }"/>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </ContentPage>
+    </DataTemplate>
+  </TabbedPage.ItemTemplate>
+</TabbedPage>
