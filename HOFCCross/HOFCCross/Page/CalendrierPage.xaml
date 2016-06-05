@@ -2,14 +2,9 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="HOFCCross.Page.CalendrierPage"
-            xmlns:local="clr-namespace:HOFCCross.Converters"
+            xmlns:controls="clr-namespace:HOFCCross.Controls"
             Title="Calendrier"
             ItemsSource="{Binding Matchs}">
-  <TabbedPage.Resources>
-    <ResourceDictionary>
-      <local:IsHOFCConverter x:Key="isHOFCConverter"/>
-    </ResourceDictionary>
-  </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
       <ContentPage Title="{Binding Key}">
@@ -17,32 +12,7 @@
           <ListView.ItemTemplate>
             <DataTemplate>
               <ViewCell>
-                <Grid>
-                  <Grid.ColumnDefinitions>
-                    <!-- Logo + Nom -->
-                    <ColumnDefinition />
-                    <!-- Score -->
-                    <ColumnDefinition />
-                    <!-- Logo + Nom -->
-                    <ColumnDefinition />
-                  </Grid.ColumnDefinitions>
-                  <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                  </Grid.RowDefinitions>
-                  
-                  <Label Text="{Binding Date, StringFormat='{}{0:MM/dd/yyyy}'}}" Grid.ColumnSpan="3" HorizontalTextAlignment="Center"/>
-                  
-                  <Image Source="icon.png" IsVisible="{Binding Equipe1, Converter={StaticResource isHOFCConverter}}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
-                  <Label Text="{Binding Equipe1}" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center"/>
-
-                  <Label Text="{Binding ScoreMessage}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
-
-                  <Image Source="icon.png" IsVisible="{Binding Equipe2, Converter={StaticResource isHOFCConverter}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
-                  <Label Text="{Binding Equipe2}" Grid.Column="2" Grid.Row="3" HorizontalOptions="Center"/>
-                </Grid>
+                <controls:Match BindingContext="{Binding }"/>
               </ViewCell>
             </DataTemplate>
           </ListView.ItemTemplate>

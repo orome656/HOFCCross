@@ -38,6 +38,9 @@
     <Compile Include="App.cs" />
     <Compile Include="Constantes\AppConstantes.cs" />
     <Compile Include="Container\FreshMasterDetailNavigationContainer.cs" />
+    <Compile Include="Controls\Match.xaml.cs">
+      <DependentUpon>Match.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Converters\IsHOFCConverter.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
@@ -113,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page\ClassementPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Match.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
