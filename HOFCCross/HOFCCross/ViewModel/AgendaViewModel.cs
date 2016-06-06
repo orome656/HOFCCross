@@ -13,16 +13,16 @@ namespace HOFCCross.ViewModel
     class AgendaViewModel: FreshBasePageModel
     {
         public Dictionary<string, List<Match>> Matchs { get; set; }
-        IService service;
-        public AgendaViewModel()
+        IService Service;
+        public AgendaViewModel(IService service)
         {
-            service = FreshIOC.Container.Resolve<IService>();
+            Service = service;
         }
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            Matchs = FromModelList(service.GetMatchs());
+            Matchs = FromModelList(Service.GetMatchs());
             this.RaisePropertyChanged(nameof(Matchs));
         }
 

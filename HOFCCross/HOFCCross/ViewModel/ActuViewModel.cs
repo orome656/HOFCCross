@@ -12,11 +12,11 @@ namespace HOFCCross.ViewModel
     public class ActuViewModel: FreshBasePageModel
     {
         public List<ActuDetailViewModel> Actus { get; set; }
-        IService service;
-        public ActuViewModel()
+        IService Service;
+        public ActuViewModel(IService service)
         {
-            service = FreshIOC.Container.Resolve<IService>();
-            Actus = FromModelList(service.GetActu());
+            Service = service;
+            Actus = FromModelList(Service.GetActu());
             this.RaisePropertyChanged(nameof(Actus));
         }
 

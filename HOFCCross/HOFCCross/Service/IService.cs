@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.Service
 {
-    interface IService
+    public interface IService
     {
         List<Actu> GetActu();
         List<Match> GetMatchs();

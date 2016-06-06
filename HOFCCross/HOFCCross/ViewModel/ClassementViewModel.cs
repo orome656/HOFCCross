@@ -12,16 +12,16 @@ namespace HOFCCross.ViewModel
     class ClassementViewModel: FreshBasePageModel
     {
         public Dictionary<string,List<ClassementEquipe>> Classements { get; set; }
-        IService service;
-        public ClassementViewModel()
+        IService Service;
+        public ClassementViewModel(IService service)
         {
-            service = FreshIOC.Container.Resolve<IService>();
+            Service = service;
         }
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            Classements = FromModelList(service.GetClassements());
+            Classements = FromModelList(Service.GetClassements());
             this.RaisePropertyChanged(nameof(Classements));
         }
 

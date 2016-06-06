@@ -14,16 +14,16 @@ namespace HOFCCross.ViewModel
     {
         private string Category { get; set; }
         public Dictionary<int, List<Match>> Matchs { get; set; }
-        IService service;
-        public JourneeViewModel()
+        IService Service;
+        public JourneeViewModel(IService service)
         {
-            service = FreshIOC.Container.Resolve<IService>();
+            Service = service;
         }
 
         protected override void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            Matchs = FromModelList(service.GetMatchs().Where(m => Category.Equals(m.Competition.Categorie) && m.Competition.IsChampionnat).ToList());
+            Matchs = FromModelList(Service.GetMatchs().Where(m => Category.Equals(m.Competition.Categorie) && m.Competition.IsChampionnat).ToList());
             this.RaisePropertyChanged(nameof(Matchs));
         }
 
