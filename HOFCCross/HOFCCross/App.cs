@@ -25,6 +25,9 @@ namespace HOFCCross
             masterDetail.AddPage<CalendrierViewModel>("Calendriers", null);
             masterDetail.AddPage<ClassementViewModel>("Classements", null);
             masterDetail.AddPage<AgendaViewModel>("Agendas", null);
+            masterDetail.AddPage<JourneeViewModel>("Journees Excellence", "equipe1");
+            masterDetail.AddPage<JourneeViewModel>("Journees Premiere Div.", "equipe2");
+            masterDetail.AddPage<JourneeViewModel>("Journees Promotion Premiere Div.", "equipe3");
 
             MainPage = masterDetail;
 

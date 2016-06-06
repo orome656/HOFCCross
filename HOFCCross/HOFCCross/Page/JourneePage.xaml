@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="HOFCCross.Page.AgendaPage"
+            x:Class="HOFCCross.Page.JourneePage"
             xmlns:controls="clr-namespace:HOFCCross.Controls"
-            Title="Agendas"
+            Title="Journees"
             ItemsSource="{Binding Matchs}">
   <TabbedPage.ItemTemplate>
     <DataTemplate>

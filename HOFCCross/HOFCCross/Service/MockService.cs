@@ -50,7 +50,8 @@ namespace HOFCCross.Service
                 {
                     Nom = "Excellence",
                     Categorie = "equipe1",
-                    IsChampionnat = true
+                    IsChampionnat = true,
+                    JourneeId = 1
                 }
             });
 
@@ -65,7 +66,8 @@ namespace HOFCCross.Service
                 {
                     Nom = "Excellence",
                     Categorie = "equipe1",
-                    IsChampionnat = true
+                    IsChampionnat = true,
+                    JourneeId = 2
                 }
             });
 
@@ -91,7 +93,8 @@ namespace HOFCCross.Service
                 {
                     Nom = "Autre",
                     Categorie = "equipe2",
-                    IsChampionnat = true
+                    IsChampionnat = true,
+                    JourneeId = 1
                 }
             });
 
