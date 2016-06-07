@@ -11,23 +11,18 @@ namespace HOFCCross.ViewModel
 {
     public class ActuViewModel: FreshBasePageModel
     {
-        public List<ActuDetailViewModel> Actus { get; set; }
+        public List<Actu> Actus { get; set; }
         IService Service;
         public ActuViewModel(IService service)
         {
             Service = service;
-            Actus = FromModelList(Service.GetActu());
-            this.RaisePropertyChanged(nameof(Actus));
         }
 
-        public List<ActuDetailViewModel> FromModelList(List<Actu> actusModel)
+        public override async void Init(object initData)
         {
-            List<ActuDetailViewModel> viewModels = new List<ActuDetailViewModel>();
-            foreach(Actu actu in actusModel)
-            {
-                viewModels.Add(actu);
-            }
-            return viewModels;
+            base.Init(initData);
+            Actus = await Service.GetActu();
+            this.RaisePropertyChanged(nameof(Actus));
         }
     }
 }

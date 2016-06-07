@@ -20,10 +20,10 @@ namespace HOFCCross.ViewModel
             Service = service;
         }
 
-        protected override void ViewIsAppearing(object sender, EventArgs e)
+        protected override async void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            Matchs = FromModelList(Service.GetMatchs().Where(m => Category.Equals(m.Competition.Categorie) && m.Competition.IsChampionnat).ToList());
+            Matchs = FromModelList((await Service.GetMatchs()).Where(m => Category.Equals(m.Competition.Categorie) && m.Competition.IsChampionnat).ToList());
             this.RaisePropertyChanged(nameof(Matchs));
         }
 

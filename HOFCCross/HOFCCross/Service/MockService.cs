@@ -10,7 +10,7 @@ namespace HOFCCross.Service
 {
     class MockService : IService
     {
-        public List<Actu> GetActu()
+        public Task<List<Actu>> GetActu()
         {
             List<Actu> actus = new List<Actu>();
             actus.Add(new Actu()
@@ -34,10 +34,10 @@ namespace HOFCCross.Service
                 Url = "http://www.hofc.fr/2016/03/hofc-iii-marquisat-ii-en-images/",
                 ImageUrl = "http://www.hofc.fr/wp-content/themes/Canyon/timthumb.php?src=http://www.hofc.fr/wp-content/uploads/2016/02/HOFC-SEN-HOFC-III-1-3-MARQUISAT-II-20-02-2016-8.jpg&h=150&w=250&zc=1"
             });
-            return actus;
+            return Task.FromResult(actus);
         }
 
-        public List<Match> GetMatchs()
+        public Task<List<Match>> GetMatchs()
         {
             List<Match> matchs = new List<Match>();
 
@@ -111,10 +111,10 @@ namespace HOFCCross.Service
                 }
             });
 
-            return matchs;
+            return Task.FromResult(matchs);
         }
 
-        public List<ClassementEquipe> GetClassements()
+        public Task<List<ClassementEquipe>> GetClassements()
         {
             List<ClassementEquipe> list = new List<ClassementEquipe>();
 
@@ -167,7 +167,7 @@ namespace HOFCCross.Service
                 Bc = 30
             });
 
-            return list;
+            return Task.FromResult(list);
         }
     }
 }

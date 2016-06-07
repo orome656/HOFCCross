@@ -18,10 +18,10 @@ namespace HOFCCross.ViewModel
             Service = service;
         }
 
-        protected override void ViewIsAppearing(object sender, EventArgs e)
+        protected override async void ViewIsAppearing(object sender, EventArgs e)
         {
             base.ViewIsAppearing(sender, e);
-            Classements = FromModelList(Service.GetClassements());
+            Classements = FromModelList(await Service.GetClassements());
             this.RaisePropertyChanged(nameof(Classements));
         }
 

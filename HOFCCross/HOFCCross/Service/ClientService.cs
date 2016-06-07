@@ -10,27 +10,30 @@ using Newtonsoft.Json;
 
 namespace HOFCCross.Service
 {
-    class ClientService : IService
+    public class ClientService : IService
     {
 
 
-        public List<Actu> GetActu()
+        public async Task<List<Actu>> GetActu()
         {
             HttpClient client = new HttpClient();
-            var response = client.GetStringAsync("http://localhost:49360/api/Actu").Result;
+            var response = await client.GetStringAsync("http://localhost/api/Actu");
             List<Actu> actus = JsonConvert.DeserializeObject<List<Actu>>(response);
             return actus;
         }
 
-        public List<ClassementEquipe> GetClassements()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Match> GetMatchs()
+        public async Task<List<ClassementEquipe>> GetClassements()
         {
             HttpClient client = new HttpClient();
-            var response = client.GetStringAsync("http://localhost:49360/api/Match").Result;
+            var response = await client.GetStringAsync("http://localhost/api/Classement");
+            List<ClassementEquipe> classement = JsonConvert.DeserializeObject<List<ClassementEquipe>>(response);
+            return classement;
+        }
+
+        public async Task<List<Match>> GetMatchs()
+        {
+            HttpClient client = new HttpClient();
+            var response = await client.GetStringAsync("http://localhost/api/Match");
             List<Match> matchs = JsonConvert.DeserializeObject<List<Match>>(response);
             return matchs;
         }

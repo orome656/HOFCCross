@@ -9,8 +9,8 @@ namespace HOFCCross.Service
 {
     public interface IService
     {
-        List<Actu> GetActu();
-        List<Match> GetMatchs();
-        List<ClassementEquipe> GetClassements();
+        Task<List<Actu>> GetActu();
+        Task<List<Match>> GetMatchs();
+        Task<List<ClassementEquipe>> GetClassements();
     }
 }
