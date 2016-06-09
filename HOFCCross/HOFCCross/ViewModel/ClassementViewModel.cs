@@ -31,11 +31,11 @@ namespace HOFCCross.ViewModel
             Dictionary<string, List<ClassementEquipe>> classements = new Dictionary<string, List<ClassementEquipe>>();
             foreach (ClassementEquipe classement in list)
             {
-                if (!classements.ContainsKey(classement.Categorie))
+                if (!classements.ContainsKey(classement.Competition.Categorie))
                 {
-                    classements.Add(classement.Categorie, new List<ClassementEquipe>());
+                    classements.Add(classement.Competition.Categorie, new List<ClassementEquipe>());
                 }
-                classements[classement.Categorie].Add(classement);
+                classements[classement.Competition.Categorie].Add(classement);
             }
             return classements;
         }

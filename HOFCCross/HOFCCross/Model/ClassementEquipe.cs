@@ -8,7 +8,7 @@ namespace HOFCCross.Model
 {
     public class ClassementEquipe
     {
-        public string Categorie { get; set; }
+        public Competition Competition { get; set; }
         public string Nom { get; set; }
         public int Point { get; set; }
         public int Joue { get; set; }

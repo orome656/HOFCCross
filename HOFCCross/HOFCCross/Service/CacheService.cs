@@ -33,16 +33,9 @@ namespace HOFCCross.Service
 
         public async Task<List<ClassementEquipe>> GetClassements()
         {
-            List<ClassementEquipe> classements = null;
-            try
-            {
-                classements = await BlobCache.LocalMachine.GetObject<List<ClassementEquipe>>("Classements");
-            }
-            catch (KeyNotFoundException)
-            {
-                classements = await Service.GetClassements();
-                await BlobCache.LocalMachine.InsertObject("Classements", classements, DateTimeOffset.Now.AddDays(1));
-            }
+            List<ClassementEquipe> classements = await BlobCache.LocalMachine.GetOrFetchObject<List<ClassementEquipe>>("Classements",
+                                    async () => await Service.GetClassements(),
+                                    DateTimeOffset.Now.AddDays(1));
             return classements;
         }
 

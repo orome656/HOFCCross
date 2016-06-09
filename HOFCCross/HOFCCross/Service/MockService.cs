@@ -120,7 +120,7 @@ namespace HOFCCross.Service
 
             list.Add(new ClassementEquipe()
             {
-                Categorie = "equipe1",
+                Competition = new Competition() { Categorie = "equipe1" },
                 Nom = "Equipe Bidon 1",
                 Point = 21,
                 Joue = 10,
@@ -132,7 +132,7 @@ namespace HOFCCross.Service
             });
             list.Add(new ClassementEquipe()
             {
-                Categorie = "equipe1",
+                Competition = new Competition() { Categorie = "equipe1" },
                 Nom = "Equipe Bidon 2",
                 Point = 15,
                 Joue = 10,
@@ -144,7 +144,7 @@ namespace HOFCCross.Service
             });
             list.Add(new ClassementEquipe()
             {
-                Categorie = "equipe1",
+               Competition = new Competition() { Categorie = "equipe1" },
                 Nom = "Equipe Bidon 3",
                 Point = 9,
                 Joue = 10,
@@ -156,7 +156,7 @@ namespace HOFCCross.Service
             });
             list.Add(new ClassementEquipe()
             {
-                Categorie = "equipe2",
+                Competition = new Competition() { Categorie = "equipe2" },
                 Nom = "Equipe Bidon 4",
                 Point = 9,
                 Joue = 10,
