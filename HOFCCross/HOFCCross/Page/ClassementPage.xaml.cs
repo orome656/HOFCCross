@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.Page
 {
-    public partial class ClassementPage : TabbedPage
+    public partial class ClassementPage : ContentPage
     {
         public ClassementPage()
         {

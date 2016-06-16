@@ -1,4 +1,6 @@
 ﻿using HOFCCross.Container;
+using HOFCCross.Model;
+using HOFCCross.Page;
 using HOFCCross.Service;
 using HOFCCross.ViewModel;
 using System;
@@ -22,8 +24,8 @@ namespace HOFCCross
             masterDetail.Init("HOFC", "ic_menu_black_24dp.png");
 
             masterDetail.AddPage<ActuViewModel>("Actus", null);
-            masterDetail.AddPage<CalendrierViewModel>("Calendriers", null);
-            masterDetail.AddPage<ClassementViewModel>("Classements", null);
+            masterDetail.AddPage<CalendrierViewModel>("Calendriers", "equipe1");
+            masterDetail.AddPage<ClassementViewModel>("Classements", "equipe1");
             masterDetail.AddPage<AgendaViewModel>("Agendas", null);
             masterDetail.AddPage<JourneeViewModel>("Journees Excellence", "equipe1");
             masterDetail.AddPage<JourneeViewModel>("Journees Premiere Div.", "equipe2");

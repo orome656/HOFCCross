@@ -1,13 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HOFCCross.Page.ClassementPage"
-            Title="Classement"
-            ItemsSource="{Binding Classements}">
-  <TabbedPage.ItemTemplate>
-    <DataTemplate>
-      <ContentPage Title="{Binding Key}">
-      <ListView ItemsSource="{Binding Value}">
+             xmlns:local="clr-namespace:HOFCCross.Behaviors"
+            Title="Classement">
+      <ListView ItemsSource="{Binding Classements}">
         <ListView.Header>
           <Grid Padding="5,20,5,20">
             <Grid.ColumnDefinitions>
@@ -90,7 +87,7 @@
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>
+  <ContentPage.Behaviors>
+    <local:ToolbarItemsBehavior ItemsSource="{Binding Equipes}"/>
+  </ContentPage.Behaviors>
       </ContentPage>
-    </DataTemplate>
-  </TabbedPage.ItemTemplate>
-</TabbedPage>
