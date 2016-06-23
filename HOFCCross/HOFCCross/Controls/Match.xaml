@@ -24,7 +24,7 @@
       <RowDefinition />
     </Grid.RowDefinitions>
 
-    <Label Text="{Binding Date, StringFormat='{}{0:MM/dd/yyyy}'}}" Grid.ColumnSpan="3" HorizontalTextAlignment="Center"/>
+    <Label Text="{Binding Date, StringFormat='{}{0:MM/dd/yyyy}'}" Grid.ColumnSpan="3" HorizontalTextAlignment="Center"/>
 
     <Image Source="icon.png" IsVisible="{Binding Equipe1, Converter={StaticResource isHOFCConverter}}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
     <Label Text="{Binding Equipe1}" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center"/>
