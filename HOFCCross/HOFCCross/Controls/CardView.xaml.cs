@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.Controls
 {
-    public partial class CardView : ContentView
+    public partial class CardView : ViewCell
     {
         public static readonly BindableProperty TitleProperty =
                BindableProperty.Create(nameof(Title), typeof(string), typeof(CardView), null, BindingMode.OneWay);

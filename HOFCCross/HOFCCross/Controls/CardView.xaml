@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             x:Class="HOFCCross.Controls.CardView"
-             Margin="10,10,10,0"
-             BackgroundColor="White">
-  <StackLayout>
-    <ffimageloading:CachedImage HeightRequest="270" WidthRequest="480" Source="{Binding ImageUrl}" />
+             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
+             x:Class="HOFCCross.Controls.CardView">
+  <StackLayout BackgroundColor="White" Margin="10,10,10,0">
+    <ffimageloading:CachedImage Source="{Binding ImageUrl}" />
     
     <Label Text="{Binding Title}" TextColor="#08589D" Margin="30,0,0,0" FontSize="30"/>
     <Label Text="{Binding Detail}" Margin="10,0,0,0"/>
     <BoxView Color="Gray" HeightRequest="1" WidthRequest="480" Margin="15,0,15,0" />
     <Label Text="{Binding Date, StringFormat='{}{0:MM/dd/yyyy}'}" TextColor="Gray" HorizontalTextAlignment="End" Margin="0,10,10,10"/>
   </StackLayout>
-</ContentView>
+</ViewCell>

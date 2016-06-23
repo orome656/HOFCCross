@@ -8,9 +8,7 @@
     <ListView x:Name="listActus" ItemsSource="{Binding Actus}" HasUnevenRows="True" SeparatorVisibility="None">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ViewCell>
-            <controls:CardView Title="{Binding Title}" Detail="{Binding Detail}" ImageUrl="{Binding ImageUrl}" Date="{Binding Date}"/>
-          </ViewCell>
+          <controls:CardView Title="{Binding Title}" Detail="{Binding Detail}" ImageUrl="{Binding ImageUrl}" Date="{Binding Date}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
