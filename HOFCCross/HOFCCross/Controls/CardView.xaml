@@ -5,11 +5,11 @@
              xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
              x:Class="HOFCCross.Controls.CardView">
   <StackLayout BackgroundColor="White" Margin="10,10,10,0">
-    <ffimageloading:CachedImage Source="{Binding ImageUrl}" />
+    <ffimageloading:CachedImage x:Name="Image" />
     
-    <Label Text="{Binding Title}" TextColor="#08589D" Margin="30,0,0,0" FontSize="30"/>
-    <Label Text="{Binding Detail}" Margin="10,0,0,0"/>
+    <Label x:Name="TitleLabel" TextColor="#08589D" Margin="30,0,0,0" FontSize="30"/>
+    <Label x:Name="DetailLabel" Margin="10,0,0,0"/>
     <BoxView Color="Gray" HeightRequest="1" WidthRequest="480" Margin="15,0,15,0" />
-    <Label Text="{Binding Date, StringFormat='{}{0:MM/dd/yyyy}'}" TextColor="Gray" HorizontalTextAlignment="End" Margin="0,10,10,10"/>
+    <Label x:Name="DateLabel" TextColor="Gray" HorizontalTextAlignment="End" Margin="0,10,10,10"/>
   </StackLayout>
 </ViewCell>

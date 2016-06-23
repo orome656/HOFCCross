@@ -46,6 +46,20 @@ namespace HOFCCross.Controls
             set { SetValue(DateProperty, value); }
         }
 
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+
+            if(BindingContext != null)
+            {
+                Image.Source = ImageUrl;
+                TitleLabel.Text = Title;
+                DetailLabel.Text = Detail;
+                if (Date.HasValue)
+                    DateLabel.Text = Date.Value.ToString("dd/MM/yyyy");
+            }
+        }
+
         public CardView()
         {
             InitializeComponent();
