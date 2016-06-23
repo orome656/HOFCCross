@@ -50,8 +50,15 @@ namespace HOFCCross.ViewModel
 
             var classements = await Service.GetClassements();
 
-            Equipes = classements.Select(c => c.Competition).Select(c => c.Categorie).Distinct().OrderBy(c => c).Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam, CommandParameter = c, Order = ToolbarItemOrder.Secondary }).ToList();
-            Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie)).ToList();
+            Equipes = classements.Select(c => c.Competition)
+                                 .Select(c => c.Categorie)
+                                 .Distinct()
+                                 .OrderBy(c => c)
+                                 .Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
+                                 .ToList();
+            Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie))
+                                     .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
+                                     .ToList();
             this.RaisePropertyChanged(nameof(Classements));
             this.RaisePropertyChanged(nameof(Equipes));
         }

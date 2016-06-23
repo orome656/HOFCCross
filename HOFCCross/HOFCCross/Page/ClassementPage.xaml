@@ -71,7 +71,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- TODO comment afficher le compteur ?-->
-                <Label VerticalTextAlignment="Center" Text="#" Grid.Column="0" />
+                <Label VerticalTextAlignment="Center" Text="{Binding Rank}" Grid.Column="0" />
                 <Label VerticalTextAlignment="Center" Text="{Binding Nom}" Grid.Column="1" />
                 <Label VerticalTextAlignment="Center" Text="{Binding Point}" Grid.Column="2" />
                 <Label VerticalTextAlignment="Center" Text="{Binding Joue}" Grid.Column="3" />
