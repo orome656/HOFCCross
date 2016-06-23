@@ -1,4 +1,5 @@
-﻿using HOFCCross.Converters;
+﻿using HOFCCross.Constantes;
+using HOFCCross.Converters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,11 +58,22 @@ namespace HOFCCross.Controls
             if(BindingContext != null)
             {
                 Equipe1Label.Text = Equipe1;
+                if((bool)Converter.Convert(Equipe1, null, null, null))
+                {
+                    Equipe1Label.TextColor = Color.FromHex(AppConstantes.PRIMARY_COLOR_HEX);
+                    Equipe2Label.TextColor = Color.Black;
+                }
+                else if ((bool)Converter.Convert(Equipe2, null, null, null))
+                {
+                    Equipe1Label.TextColor = Color.Black;
+                    Equipe2Label.TextColor = Color.FromHex(AppConstantes.PRIMARY_COLOR_HEX);
+                }
+
                 Equipe2Label.Text = Equipe2;
                 Equipe1Image.IsVisible = (bool)Converter.Convert(Equipe1, null, null, null);
                 Equipe2Image.IsVisible = (bool)Converter.Convert(Equipe2, null, null, null);
 
-                DateLabel.Text = Date.Value.ToString("dd/MM/yyyy HH:mm");
+                DateLabel.Text = Date.Value.ToString("dd MMMM yyyy HH:mm");
 
                 MessageLabel.Text = Message;
             }

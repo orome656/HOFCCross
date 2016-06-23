@@ -13,5 +13,7 @@ namespace HOFCCross.Constantes
         public static readonly string SERVER_ACTU_URL = SERVER_BASE_URL + "api/Actu";
         public static readonly string SERVER_MATCH_URL = SERVER_BASE_URL + "api/Match";
         public static readonly string SERVER_CLASSEMENT_URL = SERVER_BASE_URL + "api/Classement";
+
+        public static readonly string PRIMARY_COLOR_HEX = "#08589D";
     }
 }
