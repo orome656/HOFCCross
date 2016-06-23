@@ -14,6 +14,15 @@ namespace HOFCCross.Page
         public ActuPage()
         {
             InitializeComponent();
+
+            listActus.ItemTapped += ListActus_ItemTapped;
+        }
+
+        private void ListActus_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item == null) return;
+
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

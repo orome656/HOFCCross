@@ -16,7 +16,7 @@ namespace HOFCCross.Model
         [JsonProperty(PropertyName = "titre")]
         public string Title { get; set; }
         [JsonProperty(PropertyName = "texte")]
-        public string Content { get; set; }
+        public string Detail { get; set; }
         [JsonProperty(PropertyName = "image")]
         public string ImageUrl { get; set; }
         [JsonProperty(PropertyName = "url")]

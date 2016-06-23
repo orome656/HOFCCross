@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:HOFCCross.Controls"
              x:Class="HOFCCross.Page.ActuPage"
              Title="Actualités">
   <ContentPage.Content>
-    <ListView ItemsSource="{Binding Actus}">
+    <ListView x:Name="listActus" ItemsSource="{Binding Actus}" HasUnevenRows="True" SeparatorVisibility="None">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding Title}" Detail="{Binding Content}"/>
+          <ViewCell>
+            <controls:CardView Title="{Binding Title}" Detail="{Binding Detail}" ImageUrl="{Binding ImageUrl}" Date="{Binding Date}"/>
+          </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

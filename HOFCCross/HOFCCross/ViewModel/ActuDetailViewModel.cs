@@ -20,7 +20,7 @@ namespace HOFCCross.ViewModel
         {
             return new ActuDetailViewModel()
             {
-                Content = actu.Content,
+                Content = actu.Detail,
                 Date = actu.Date,
                 ImageUrl = actu.ImageUrl,
                 PostId = actu.PostId,
