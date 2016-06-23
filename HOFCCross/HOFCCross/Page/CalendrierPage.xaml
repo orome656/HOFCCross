@@ -3,14 +3,12 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="HOFCCross.Page.CalendrierPage"
             xmlns:controls="clr-namespace:HOFCCross.Controls"
-             xmlns:local="clr-namespace:HOFCCross.Behaviors"
+            xmlns:local="clr-namespace:HOFCCross.Behaviors"
             Title="Calendrier">
   <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
     <ListView.ItemTemplate>
       <DataTemplate>
-        <ViewCell>
-          <controls:Match BindingContext="{Binding }"/>
-        </ViewCell>
+        <controls:Match Equipe1="{Binding Equipe1}" Equipe2="{Binding Equipe2}" Message="{Binding ScoreMessage}" Date="{Binding Date}"/>
       </DataTemplate>
     </ListView.ItemTemplate>
   </ListView>

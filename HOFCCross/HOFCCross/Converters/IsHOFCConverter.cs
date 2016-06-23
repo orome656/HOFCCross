@@ -13,7 +13,11 @@ namespace HOFCCross.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value?.ToString().ToUpper().Contains(AppConstantes.HOFC_NAME);
+            if(value == null)
+            {
+                return false;
+            }
+            return value.ToString().ToUpper().Contains(AppConstantes.HOFC_NAME);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
