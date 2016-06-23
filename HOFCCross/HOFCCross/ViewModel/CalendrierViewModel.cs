@@ -9,6 +9,7 @@ using HOFCCross.Model;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
+using HOFCCross.Constantes;
 
 namespace HOFCCross.ViewModel
 {
@@ -43,9 +44,16 @@ namespace HOFCCross.ViewModel
             
             List<Match> matchs = await Service.GetMatchs();
 
-            Equipes = matchs.Select(m => m.Competition).Select(c => c.Categorie).Distinct().OrderBy(c => c).Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam ,CommandParameter = c, Order = ToolbarItemOrder.Secondary }).ToList();
+            Equipes = matchs.Select(m => m.Competition)
+                            .Select(c => c.Categorie)
+                            .Distinct()
+                            .OrderBy(c => c)
+                            .Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam ,CommandParameter = c, Order = ToolbarItemOrder.Secondary })
+                            .ToList();
 
-            Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie)).ToList();
+            Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                           .OrderBy(m => m.Date)
+                           .ToList();
 
             this.RaisePropertyChanged(nameof(Equipes));
             this.RaisePropertyChanged(nameof(Matchs));
@@ -54,7 +62,9 @@ namespace HOFCCross.ViewModel
         private async void ReloadMatchs()
         {
             List<Match> matchs = await Service.GetMatchs();
-            Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie)).ToList();
+            Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                           .OrderBy(m => m.Date)
+                           .ToList();
             this.RaisePropertyChanged(nameof(Matchs));
         }
     }
