@@ -33,7 +33,9 @@ namespace HOFCCross.ViewModel
         {
             var classements = await Service.GetClassements();
 
-            Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie)).ToList();
+            Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie))
+                                     .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
+                                     .ToList();
 
             this.RaisePropertyChanged(nameof(Classements));
         }
