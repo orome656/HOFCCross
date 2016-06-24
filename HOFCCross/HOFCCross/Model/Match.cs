@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,5 +27,7 @@ namespace HOFCCross.Model
         public DateTime Date { get; set; }
         public Competition Competition { get; set; }
         public string Commentaire { get; set; }
+        [JsonProperty(PropertyName = "idJournee")]
+        public int? JourneeId { get; set; }
     }
 }

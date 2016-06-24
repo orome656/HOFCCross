@@ -46,12 +46,12 @@ namespace HOFCCross.Service
                 Date = DateTime.Now,
                 Equipe1 = AppConstantes.HOFC_NAME,
                 Equipe2 = "Test2",
+                JourneeId = 1,
                 Competition = new Competition()
                 {
                     Nom = "Excellence",
                     Categorie = "equipe1",
                     IsChampionnat = true,
-                    JourneeId = 1
                 }
             });
 
@@ -62,12 +62,12 @@ namespace HOFCCross.Service
                 Equipe2 = AppConstantes.HOFC_NAME,
                 Score1 = 1,
                 Score2 = 1,
+                JourneeId = 2,
                 Competition = new Competition()
                 {
                     Nom = "Excellence",
                     Categorie = "equipe1",
-                    IsChampionnat = true,
-                    JourneeId = 2
+                    IsChampionnat = true
                 }
             });
 
@@ -89,12 +89,12 @@ namespace HOFCCross.Service
                 Date = DateTime.Now,
                 Equipe1 = AppConstantes.HOFC_NAME,
                 Equipe2 = "Test2",
+                JourneeId = 1,
                 Competition = new Competition()
                 {
                     Nom = "Autre",
                     Categorie = "equipe2",
-                    IsChampionnat = true,
-                    JourneeId = 1
+                    IsChampionnat = true
                 }
             });
 

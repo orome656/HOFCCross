@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.Page
 {
-    public partial class JourneePage : TabbedPage
+    public partial class JourneePage : ContentPage
     {
         public JourneePage()
         {

@@ -11,7 +11,5 @@ namespace HOFCCross.Model
         public string Nom { get; set; }
         public string Categorie { get; set; }
         public bool IsChampionnat { get; set; }
-
-        public int JourneeId { get; set; }
     }
 }
