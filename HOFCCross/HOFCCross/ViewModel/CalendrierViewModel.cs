@@ -13,7 +13,7 @@ using HOFCCross.Constantes;
 
 namespace HOFCCross.ViewModel
 {
-    public class CalendrierViewModel: FreshBasePageModel
+    public class CalendrierViewModel: BaseViewModel
     {
         public List<Match> Matchs { get; set; }
         public string Category { get; set; }
@@ -40,6 +40,8 @@ namespace HOFCCross.ViewModel
 
         protected override async void ViewIsAppearing(object sender, EventArgs e)
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             base.ViewIsAppearing(sender, e);
             
             List<Match> matchs = await Service.GetMatchs();
@@ -57,15 +59,21 @@ namespace HOFCCross.ViewModel
 
             this.RaisePropertyChanged(nameof(Equipes));
             this.RaisePropertyChanged(nameof(Matchs));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
 
         private async void ReloadMatchs()
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             List<Match> matchs = await Service.GetMatchs();
             Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
                            .OrderBy(m => m.Date)
                            .ToList();
             this.RaisePropertyChanged(nameof(Matchs));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
     }
 }

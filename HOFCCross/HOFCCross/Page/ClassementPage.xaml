@@ -3,91 +3,99 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HOFCCross.Page.ClassementPage"
              xmlns:local="clr-namespace:HOFCCross.Behaviors"
+             xmlns:converters="clr-namespace:HOFCCross.Converters"
             Title="Classement">
-      <ListView ItemsSource="{Binding Classements}">
-        <ListView.Header>
-          <Grid Padding="5,20,5,20">
-            <Grid.ColumnDefinitions>
-              <!-- Place -->
-              <ColumnDefinition Width="*" />
-              <!-- Nom -->
-              <ColumnDefinition Width="8*" />
-              <!-- Points -->
-              <ColumnDefinition Width="2*" />
-              <!-- Joues -->
-              <ColumnDefinition Width="2*" />
-              <!-- Victoires -->
-              <ColumnDefinition Width="2*" />
-              <!-- Nuls -->
-              <ColumnDefinition Width="2*" />
-              <!-- Défaites -->
-              <ColumnDefinition Width="2*" />
-              <!-- But Pour -->
-              <ColumnDefinition Width="2*" />
-              <!-- But Contre -->
-              <ColumnDefinition Width="2*" />
-              <!-- Diff -->
-              <ColumnDefinition Width="2*" />
-            </Grid.ColumnDefinitions>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:NotConverter x:Key="NotConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout>
+    <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+    <ListView IsVisible="{Binding IsLoading, Converter={StaticResource NotConverter}}" ItemsSource="{Binding Classements}">
+      <ListView.Header>
+        <Grid Padding="5,20,5,20">
+          <Grid.ColumnDefinitions>
+            <!-- Place -->
+            <ColumnDefinition Width="2*" />
+            <!-- Nom -->
+            <ColumnDefinition Width="7*" />
+            <!-- Points -->
+            <ColumnDefinition Width="2*" />
+            <!-- Joues -->
+            <ColumnDefinition Width="2*" />
+            <!-- Victoires -->
+            <ColumnDefinition Width="2*" />
+            <!-- Nuls -->
+            <ColumnDefinition Width="2*" />
+            <!-- Défaites -->
+            <ColumnDefinition Width="2*" />
+            <!-- But Pour -->
+            <ColumnDefinition Width="2*" />
+            <!-- But Contre -->
+            <ColumnDefinition Width="2*" />
+            <!-- Diff -->
+            <ColumnDefinition Width="2*" />
+          </Grid.ColumnDefinitions>
 
-            <Label Text="#" Grid.Column="0" />
-            <Label Text="Nom" Grid.Column="1" />
-            <Label Text="P" Grid.Column="2" />
-            <Label Text="J" Grid.Column="3" />
-            <Label Text="V" Grid.Column="4" />
-            <Label Text="N" Grid.Column="5" />
-            <Label Text="D" Grid.Column="6" />
-            <Label Text="BP" Grid.Column="7" />
-            <Label Text="BC" Grid.Column="8" />
-            <Label Text="+/-" Grid.Column="9" />
+          <Label Text="#" Grid.Column="0" />
+          <Label Text="Nom" Grid.Column="1" />
+          <Label Text="P" Grid.Column="2" />
+          <Label Text="J" Grid.Column="3" />
+          <Label Text="V" Grid.Column="4" />
+          <Label Text="N" Grid.Column="5" />
+          <Label Text="D" Grid.Column="6" />
+          <Label Text="BP" Grid.Column="7" />
+          <Label Text="BC" Grid.Column="8" />
+          <Label Text="+/-" Grid.Column="9" />
 
-          </Grid>
-        </ListView.Header>
-        <ListView.ItemTemplate>
-          <DataTemplate>
-            <ViewCell>
-              <Grid Padding="5,0,5,0">
-                <Grid.ColumnDefinitions>
-                  <!-- Place -->
-                  <ColumnDefinition Width="*" />
-                  <!-- Nom -->
-                  <ColumnDefinition Width="8*" />
-                  <!-- Points -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- Joues -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- Victoires -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- Nuls -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- Défaites -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- But Pour -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- But Contre -->
-                  <ColumnDefinition Width="2*" />
-                  <!-- Diff -->
-                  <ColumnDefinition Width="2*" />
-                </Grid.ColumnDefinitions>
+        </Grid>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid Padding="5,0,5,0">
+              <Grid.ColumnDefinitions>
+                <!-- Place -->
+                <ColumnDefinition Width="2*" />
+                <!-- Nom -->
+                <ColumnDefinition Width="7*" />
+                <!-- Points -->
+                <ColumnDefinition Width="2*" />
+                <!-- Joues -->
+                <ColumnDefinition Width="2*" />
+                <!-- Victoires -->
+                <ColumnDefinition Width="2*" />
+                <!-- Nuls -->
+                <ColumnDefinition Width="2*" />
+                <!-- Défaites -->
+                <ColumnDefinition Width="2*" />
+                <!-- But Pour -->
+                <ColumnDefinition Width="2*" />
+                <!-- But Contre -->
+                <ColumnDefinition Width="2*" />
+                <!-- Diff -->
+                <ColumnDefinition Width="2*" />
+              </Grid.ColumnDefinitions>
 
-                <!-- TODO comment afficher le compteur ?-->
-                <Label VerticalTextAlignment="Center" Text="{Binding Rank}" Grid.Column="0" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Nom}" Grid.Column="1" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Point}" Grid.Column="2" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Joue}" Grid.Column="3" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Victoire}" Grid.Column="4" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Nul}" Grid.Column="5" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Defaite}" Grid.Column="6" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Bp}" Grid.Column="7" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Bc}" Grid.Column="8" />
-                <Label VerticalTextAlignment="Center" Text="{Binding Diff}" Grid.Column="9" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Rank}" Grid.Column="0" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Nom}" Grid.Column="1" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Point}" Grid.Column="2" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Joue}" Grid.Column="3" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Victoire}" Grid.Column="4" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Nul}" Grid.Column="5" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Defaite}" Grid.Column="6" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Bp}" Grid.Column="7" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Bc}" Grid.Column="8" />
+              <Label VerticalTextAlignment="Center" Text="{Binding Diff}" Grid.Column="9" />
 
-              </Grid>
-            </ViewCell>
-          </DataTemplate>
-        </ListView.ItemTemplate>
-      </ListView>
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
   <ContentPage.Behaviors>
     <local:ToolbarItemsBehavior ItemsSource="{Binding Equipes}"/>
   </ContentPage.Behaviors>
-      </ContentPage>
+</ContentPage>

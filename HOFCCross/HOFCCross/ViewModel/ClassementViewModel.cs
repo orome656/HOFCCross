@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class ClassementViewModel: FreshBasePageModel
+    class ClassementViewModel: BaseViewModel
     {
         public List<ClassementEquipe> Classements { get; set; }
         public string Category { get; set; }
@@ -31,6 +31,8 @@ namespace HOFCCross.ViewModel
 
         private async void ReloadRanks()
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             var classements = await Service.GetClassements();
 
             Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie))
@@ -38,6 +40,8 @@ namespace HOFCCross.ViewModel
                                      .ToList();
 
             this.RaisePropertyChanged(nameof(Classements));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
 
         public override void Init(object initData)
@@ -48,6 +52,8 @@ namespace HOFCCross.ViewModel
 
         protected override async void ViewIsAppearing(object sender, EventArgs e)
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             base.ViewIsAppearing(sender, e);
 
             var classements = await Service.GetClassements();
@@ -63,6 +69,8 @@ namespace HOFCCross.ViewModel
                                      .ToList();
             this.RaisePropertyChanged(nameof(Classements));
             this.RaisePropertyChanged(nameof(Equipes));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
     }
 }

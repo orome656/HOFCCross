@@ -4,15 +4,24 @@
              x:Class="HOFCCross.Page.AgendaPage"
              xmlns:controls="clr-namespace:HOFCCross.Controls"
              xmlns:local="clr-namespace:HOFCCross.Behaviors"
+             xmlns:converters="clr-namespace:HOFCCross.Converters"
              BackgroundColor="#cccccc"
              Title="{Binding Title}">
-  <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <controls:Match Equipe1="{Binding Equipe1}" Equipe2="{Binding Equipe2}" Message="{Binding ScoreMessage}" Date="{Binding Date}"/>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:NotConverter x:Key="NotConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout>
+    <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+    <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <controls:Match Equipe1="{Binding Equipe1}" Equipe2="{Binding Equipe2}" Message="{Binding ScoreMessage}" Date="{Binding Date}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
   <ContentPage.Behaviors>
     <local:ToolbarItemsBehavior ItemsSource="{Binding Semaines}"/>
   </ContentPage.Behaviors>

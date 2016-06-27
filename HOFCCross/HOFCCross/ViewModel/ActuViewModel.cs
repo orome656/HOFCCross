@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.ViewModel
 {
-    public class ActuViewModel: FreshBasePageModel
+    public class ActuViewModel: BaseViewModel
     {
         public List<Actu> Actus { get; set; }
-        public bool IsLoading { get; set; } = true;
         IService Service;
         public ActuViewModel(IService service)
         {

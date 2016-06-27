@@ -12,7 +12,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class JourneeViewModel: FreshBasePageModel
+    class JourneeViewModel: BaseViewModel
     {
         private string Category { get; set; }
         private int Journee;
@@ -33,6 +33,8 @@ namespace HOFCCross.ViewModel
 
         protected override async void ViewIsAppearing(object sender, EventArgs e)
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             base.ViewIsAppearing(sender, e);
             var matchs = await Service.GetMatchs();
 
@@ -47,6 +49,8 @@ namespace HOFCCross.ViewModel
 
             this.RaisePropertyChanged(nameof(Journees));
             this.RaisePropertyChanged(nameof(Matchs));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
 
         public override void Init(object initData)
@@ -58,11 +62,15 @@ namespace HOFCCross.ViewModel
 
         private async void ReloadMatchs()
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             List<Match> matchs = await Service.GetMatchs();
 
             Matchs = matchs.Where(m => Category.Equals(m.Competition.Categorie) && m.JourneeId == Journee).ToList();
 
             this.RaisePropertyChanged(nameof(Matchs));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
     }
 }

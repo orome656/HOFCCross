@@ -48,6 +48,7 @@
       <DependentUpon>Match.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converters\IsHOFCConverter.cs" />
+    <Compile Include="Converters\NotConverter.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
@@ -68,8 +69,8 @@
     <Compile Include="Service\ClientService.cs" />
     <Compile Include="Service\IService.cs" />
     <Compile Include="Service\MockService.cs" />
-    <Compile Include="ViewModel\ActuDetailViewModel.cs" />
     <Compile Include="ViewModel\ActuViewModel.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\JourneeViewModel.cs" />
     <Compile Include="ViewModel\AgendaViewModel.cs" />
     <Compile Include="ViewModel\CalendrierViewModel.cs" />
