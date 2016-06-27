@@ -12,6 +12,7 @@ namespace HOFCCross.ViewModel
     public class ActuViewModel: FreshBasePageModel
     {
         public List<Actu> Actus { get; set; }
+        public bool IsLoading { get; set; } = true;
         IService Service;
         public ActuViewModel(IService service)
         {
@@ -20,9 +21,13 @@ namespace HOFCCross.ViewModel
 
         public override async void Init(object initData)
         {
+            IsLoading = true;
+            RaisePropertyChanged(nameof(IsLoading));
             base.Init(initData);
             Actus = await Service.GetActu();
             this.RaisePropertyChanged(nameof(Actus));
+            IsLoading = false;
+            RaisePropertyChanged(nameof(IsLoading));
         }
     }
 }

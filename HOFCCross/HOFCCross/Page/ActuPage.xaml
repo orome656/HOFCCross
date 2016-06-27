@@ -5,7 +5,8 @@
              x:Class="HOFCCross.Page.ActuPage"
              BackgroundColor="#cccccc"
              Title="Actualités">
-  <ContentPage.Content>
+  <StackLayout>
+    <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
     <ListView x:Name="listActus" ItemsSource="{Binding Actus}" HasUnevenRows="True" SeparatorVisibility="None">
       <ListView.ItemTemplate>
         <DataTemplate>
@@ -13,5 +14,5 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-  </ContentPage.Content>
+  </StackLayout>
 </ContentPage>
