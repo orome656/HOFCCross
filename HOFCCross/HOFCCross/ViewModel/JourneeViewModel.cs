@@ -36,19 +36,26 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
             base.ViewIsAppearing(sender, e);
-            var matchs = await Service.GetMatchs();
+            try
+            {
+                var matchs = await Service.GetMatchs();
 
-            Journees = matchs.Where(m => m.JourneeId.HasValue && Category.Equals(m.Competition.Categorie))
-                             .Select(m => m.JourneeId)
-                             .Distinct()
-                             .OrderBy(c => c)
-                             .Select(c => new ToolbarItem() { Text = c + "", Command = ChangeDay, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
-                             .ToList();
+                Journees = matchs.Where(m => m.JourneeId.HasValue && Category.Equals(m.Competition.Categorie))
+                                 .Select(m => m.JourneeId)
+                                 .Distinct()
+                                 .OrderBy(c => c)
+                                 .Select(c => new ToolbarItem() { Text = c + "", Command = ChangeDay, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
+                                 .ToList();
 
-            Matchs = matchs.Where(m => Category.Equals(m.Competition.Categorie) && m.JourneeId == Journee).ToList();
+                Matchs = matchs.Where(m => Category.Equals(m.Competition.Categorie) && m.JourneeId == Journee).ToList();
 
-            this.RaisePropertyChanged(nameof(Journees));
-            this.RaisePropertyChanged(nameof(Matchs));
+                this.RaisePropertyChanged(nameof(Journees));
+                this.RaisePropertyChanged(nameof(Matchs));
+            }
+            catch
+            {
+                DisplayError("Erreur lors de la récupération des Matchs");
+            }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
         }

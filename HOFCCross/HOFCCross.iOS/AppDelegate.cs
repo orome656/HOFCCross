@@ -4,6 +4,8 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Plugin.Toasts;
+using Xamarin.Forms;
 
 namespace HOFCCross.iOS
 {
@@ -22,7 +24,10 @@ namespace HOFCCross.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
+            ToastNotificatorImplementation.Init();
             global::Xamarin.Forms.Forms.Init();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -43,22 +43,27 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
             base.ViewIsAppearing(sender, e);
-            
-            List<Match> matchs = await Service.GetMatchs();
+            try
+            {
+                List<Match> matchs = await Service.GetMatchs();
 
-            Equipes = matchs.Select(m => m.Competition)
-                            .Select(c => c.Categorie)
-                            .Distinct()
-                            .OrderBy(c => c)
-                            .Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam ,CommandParameter = c, Order = ToolbarItemOrder.Secondary })
-                            .ToList();
+                Equipes = matchs.Select(m => m.Competition)
+                                .Select(c => c.Categorie)
+                                .Distinct()
+                                .OrderBy(c => c)
+                                .Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
+                                .ToList();
 
-            Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
-                           .OrderBy(m => m.Date)
-                           .ToList();
+                Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                               .OrderBy(m => m.Date)
+                               .ToList();
 
-            this.RaisePropertyChanged(nameof(Equipes));
-            this.RaisePropertyChanged(nameof(Matchs));
+                this.RaisePropertyChanged(nameof(Equipes));
+                this.RaisePropertyChanged(nameof(Matchs));
+            } catch
+            {
+                DisplayError("Erreur lors de la récupération des Matchs");
+            }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
         }
@@ -67,11 +72,18 @@ namespace HOFCCross.ViewModel
         {
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
-            List<Match> matchs = await Service.GetMatchs();
-            Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
-                           .OrderBy(m => m.Date)
-                           .ToList();
-            this.RaisePropertyChanged(nameof(Matchs));
+            try
+            {
+                List<Match> matchs = await Service.GetMatchs();
+                Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                               .OrderBy(m => m.Date)
+                               .ToList();
+                this.RaisePropertyChanged(nameof(Matchs));
+            }
+            catch
+            {
+                DisplayError("Erreur lors de la récupération des Matchs");
+            }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
         }

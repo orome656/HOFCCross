@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class AgendaViewModel: BaseViewModel
+    class AgendaViewModel : BaseViewModel
     {
         public List<Match> Matchs { get; set; }
         IService Service;
@@ -38,30 +38,36 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
             base.ViewIsAppearing(sender, e);
-
-            var matchs = await Service.GetMatchs();
-
-            Semaines = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                             .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
-                             .OrderBy(d => d)
-                             .Distinct()
-                             .Select(w => new ToolbarItem() { Text = w.ToString("dd/MM/yyyy"), Command = ChangeWeek, CommandParameter = w, Order = ToolbarItemOrder.Secondary })
-                             .ToList();
-
-            var lastDate = DateTime.ParseExact(Semaines.Last().Text, "dd/MM/yyyy", null);
-            if(WeekStartingDate.CompareTo(lastDate.AddDays(7)) > 0)
+            try
             {
-                WeekStartingDate = lastDate;
-                this.RaisePropertyChanged(nameof(Title));
+                var matchs = await Service.GetMatchs();
+
+                Semaines = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                                 .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
+                                 .OrderBy(d => d)
+                                 .Distinct()
+                                 .Select(w => new ToolbarItem() { Text = w.ToString("dd/MM/yyyy"), Command = ChangeWeek, CommandParameter = w, Order = ToolbarItemOrder.Secondary })
+                                 .ToList();
+
+                var lastDate = DateTime.ParseExact(Semaines.Last().Text, "dd/MM/yyyy", null);
+                if (WeekStartingDate.CompareTo(lastDate.AddDays(7)) > 0)
+                {
+                    WeekStartingDate = lastDate;
+                    this.RaisePropertyChanged(nameof(Title));
+                }
+
+                Matchs = matchs.Where(m => WeekStartingDate.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                               .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                               .OrderBy(m => m.Date)
+                               .ToList();
+
+                this.RaisePropertyChanged(nameof(Matchs));
+                this.RaisePropertyChanged(nameof(Semaines));
             }
-
-            Matchs = matchs.Where(m => WeekStartingDate.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
-                           .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                           .OrderBy(m => m.Date)
-                           .ToList();
-
-            this.RaisePropertyChanged(nameof(Matchs));
-            this.RaisePropertyChanged(nameof(Semaines));
+            catch
+            {
+                DisplayError("Erreur lors de la récupération des Matchs");
+            }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
         }
@@ -76,14 +82,21 @@ namespace HOFCCross.ViewModel
         {
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
-            List<Match> matchs = await Service.GetMatchs();
+            try
+            {
+                List<Match> matchs = await Service.GetMatchs();
 
-            Matchs = matchs.Where(m => WeekStartingDate.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
-                           .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                           .OrderBy(m => m.Date)
-                           .ToList();
+                Matchs = matchs.Where(m => WeekStartingDate.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                               .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                               .OrderBy(m => m.Date)
+                               .ToList();
 
-            this.RaisePropertyChanged(nameof(Matchs));
+                this.RaisePropertyChanged(nameof(Matchs));
+            }
+            catch
+            {
+                DisplayError("Erreur lors de la récupération des Matchs");
+            }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
         }

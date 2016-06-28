@@ -6,6 +6,7 @@
     "FreshMvvm": "2.1.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
     "Newtonsoft.Json": "8.0.3",
+    "Toasts.Forms.Plugin": "2.0.4",
     "Xamarin.FFImageLoading.Forms": "2.1.5",
     "Xamarin.Forms": "2.3.0.49"
   },

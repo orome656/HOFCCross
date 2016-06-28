@@ -23,8 +23,15 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
             base.Init(initData);
-            Actus = await Service.GetActu();
-            this.RaisePropertyChanged(nameof(Actus));
+            try
+            {
+                Actus = await Service.GetActu();
+                this.RaisePropertyChanged(nameof(Actus));
+            }
+            catch
+            {
+                DisplayError("Erreur lors de la récupération des actualités");
+            }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
         }
