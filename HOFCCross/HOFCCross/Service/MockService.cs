@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using HOFCCross.Model;
 using HOFCCross.Constantes;
+using PushNotification.Plugin.Abstractions;
+using System.Diagnostics;
 
 namespace HOFCCross.Service
 {
@@ -168,6 +170,12 @@ namespace HOFCCross.Service
             });
 
             return Task.FromResult(list);
+        }
+
+        public Task SendNotificationToken(string token, DeviceType type)
+        {
+            Debug.WriteLine("Sending notification token");
+            return null;
         }
     }
 }

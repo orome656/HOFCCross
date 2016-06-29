@@ -19,15 +19,14 @@ namespace HOFCCross.Droid
         {
             FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
             FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
-
+            
             base.OnCreate(bundle);
-            //this.ActionBar.SetIcon(Android.Resource.Color.Transparent);
-
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+            LoadApplication(new App());
+            
             DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
             ToastNotificatorImplementation.Init(this);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
         }
     }
 }

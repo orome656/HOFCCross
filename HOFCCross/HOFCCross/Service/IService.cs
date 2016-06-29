@@ -1,4 +1,5 @@
 ﻿using HOFCCross.Model;
+using PushNotification.Plugin.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace HOFCCross.Service
         Task<List<Actu>> GetActu();
         Task<List<Match>> GetMatchs();
         Task<List<ClassementEquipe>> GetClassements();
+        Task SendNotificationToken(string token, DeviceType type);
     }
 }

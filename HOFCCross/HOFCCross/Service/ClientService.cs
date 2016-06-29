@@ -8,6 +8,8 @@ using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
 using HOFCCross.Constantes;
+using PushNotification.Plugin.Abstractions;
+using System.Diagnostics;
 
 namespace HOFCCross.Service
 {
@@ -37,6 +39,25 @@ namespace HOFCCross.Service
             var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_URL);
             List<Match> matchs = JsonConvert.DeserializeObject<List<Match>>(response);
             return matchs;
+        }
+
+        public async Task SendNotificationToken(string token, DeviceType device)
+        {
+            
+            try
+            {
+                HttpClient client = new HttpClient();
+                
+                List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
+
+                list.Add(new KeyValuePair<string, string>("notification_id", token));
+                list.Add(new KeyValuePair<string, string>("platform", device.ToString()));
+
+                var result = await client.PostAsync(AppConstantes.SERVER_NOTIFICATION_URL, new FormUrlEncodedContent(list)).ConfigureAwait(continueOnCapturedContext: false);
+            } catch(Exception ex)
+            {
+
+            }
         }
     }
 }

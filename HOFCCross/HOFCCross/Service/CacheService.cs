@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HOFCCross.Model;
 using Akavache;
 using System.Reactive.Linq;
+using PushNotification.Plugin.Abstractions;
 
 namespace HOFCCross.Service
 {
@@ -52,6 +53,11 @@ namespace HOFCCross.Service
                 await BlobCache.LocalMachine.InsertObject("Matchs", matchs, DateTimeOffset.Now.AddDays(1));
             }
             return matchs;
+        }
+
+        public async Task SendNotificationToken(string token, DeviceType type)
+        {
+            await Service.SendNotificationToken(token, type);
         }
     }
 }
