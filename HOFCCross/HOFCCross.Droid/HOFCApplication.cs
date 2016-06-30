@@ -30,7 +30,7 @@ namespace HOFCCross.Droid
 
             AppContext = this.ApplicationContext;
             
-            CrossPushNotification.Initialize<CrossPushNotificationListener>("929230038000");
+            CrossPushNotification.Initialize<CrossPushNotificationListener>("");
 
             //This service will keep your app receiving push even when closed.             
             StartPushService();
