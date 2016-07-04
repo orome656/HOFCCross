@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/HOFCCross/HOFCCross.Droid/Assets/config.json

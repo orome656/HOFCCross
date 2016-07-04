@@ -11,6 +11,10 @@ using Android.Views;
 using Android.Widget;
 using PushNotification.Plugin;
 using HOFCCross.Notifications;
+using Newtonsoft.Json.Linq;
+using Android.Content.Res;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace HOFCCross.Droid
 {
@@ -30,10 +34,25 @@ namespace HOFCCross.Droid
 
             AppContext = this.ApplicationContext;
             
-            CrossPushNotification.Initialize<CrossPushNotificationListener>("");
+            CrossPushNotification.Initialize<CrossPushNotificationListener>(GetSenderId());
 
             //This service will keep your app receiving push even when closed.             
             StartPushService();
+        }
+
+        private string GetSenderId()
+        {
+            var serializer = new JsonSerializer();
+            using(var sr = new StreamReader(Assets.Open("config.json")))
+            {
+                using(var reader = new JsonTextReader(sr))
+                {
+                    var json = serializer.Deserialize<JObject>(reader);
+                    return json.Value<string>("SENDER_ID");
+                }
+            }
+            
+            
         }
 
         public static void StartPushService()
