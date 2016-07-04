@@ -19,26 +19,49 @@ namespace HOFCCross.Service
 
         public async Task<List<Actu>> GetActu()
         {
-            HttpClient client = new HttpClient();
-            var response = await client.GetStringAsync(AppConstantes.SERVER_ACTU_URL);
-            List<Actu> actus = JsonConvert.DeserializeObject<List<Actu>>(response);
-            return actus;
+            try
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.GetStringAsync(AppConstantes.SERVER_ACTU_URL);
+                List<Actu> actus = JsonConvert.DeserializeObject<List<Actu>>(response);
+                return actus;
+            } catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
         }
 
         public async Task<List<ClassementEquipe>> GetClassements()
         {
-            HttpClient client = new HttpClient();
-            var response = await client.GetStringAsync(AppConstantes.SERVER_CLASSEMENT_URL);
-            List<ClassementEquipe> classement = JsonConvert.DeserializeObject<List<ClassementEquipe>>(response);
-            return classement;
+            try
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.GetStringAsync(AppConstantes.SERVER_CLASSEMENT_URL);
+                List<ClassementEquipe> classement = JsonConvert.DeserializeObject<List<ClassementEquipe>>(response);
+                return classement;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
         }
 
         public async Task<List<Match>> GetMatchs()
         {
-            HttpClient client = new HttpClient();
-            var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_URL);
-            List<Match> matchs = JsonConvert.DeserializeObject<List<Match>>(response);
-            return matchs;
+            try
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_URL);
+                List<Match> matchs = JsonConvert.DeserializeObject<List<Match>>(response);
+                return matchs;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
         }
 
         public async Task SendNotificationToken(string token, DeviceType device)
@@ -56,7 +79,8 @@ namespace HOFCCross.Service
                 var result = await client.PostAsync(AppConstantes.SERVER_NOTIFICATION_URL, new FormUrlEncodedContent(list)).ConfigureAwait(continueOnCapturedContext: false);
             } catch(Exception ex)
             {
-
+                Debug.WriteLine(ex.Message);
+                throw ex;
             }
         }
     }
