@@ -26,6 +26,7 @@ namespace HOFCCross.Model
         }
         public DateTime Date { get; set; }
         public Competition Competition { get; set; }
+        [JsonProperty(PropertyName = "message")]
         public string Commentaire { get; set; }
         [JsonProperty(PropertyName = "idJournee")]
         public int? JourneeId { get; set; }
