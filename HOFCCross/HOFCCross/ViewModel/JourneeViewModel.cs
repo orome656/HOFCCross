@@ -31,11 +31,14 @@ namespace HOFCCross.ViewModel
             });
         }
 
-        protected override async void ViewIsAppearing(object sender, EventArgs e)
+        public override async void Init(object initData)
         {
+            base.Init(initData);
+            Category = (string)initData;
+            Journee = 1;
+
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
-            base.ViewIsAppearing(sender, e);
             try
             {
                 var matchs = await Service.GetMatchs();
@@ -58,13 +61,6 @@ namespace HOFCCross.ViewModel
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
-        }
-
-        public override void Init(object initData)
-        {
-            base.Init(initData);
-            Category = (string)initData;
-            Journee = 1;
         }
 
         private async void ReloadMatchs()

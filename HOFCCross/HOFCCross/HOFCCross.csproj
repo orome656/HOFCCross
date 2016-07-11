@@ -40,7 +40,7 @@
     <Compile Include="Behaviors\BehaviorBase.cs" />
     <Compile Include="Behaviors\ToolbarItemsBehavior.cs" />
     <Compile Include="Constantes\AppConstantes.cs" />
-    <Compile Include="Container\FreshMasterDetailNavigationContainer.cs" />
+    <Compile Include="Container\MasterDetail.cs" />
     <Compile Include="Controls\CardView.xaml.cs">
       <DependentUpon>CardView.xaml</DependentUpon>
     </Compile>
@@ -49,12 +49,15 @@
     </Compile>
     <Compile Include="Converters\IsHOFCConverter.cs" />
     <Compile Include="Converters\NotConverter.cs" />
+    <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />
     <Compile Include="Model\Match.cs" />
+    <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\TypeSelectionParameter.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Notifications\CrossPushNotificationListener.cs" />
     <Compile Include="Page\JourneePage.xaml.cs">
       <DependentUpon>JourneePage.xaml</DependentUpon>
@@ -65,10 +68,15 @@
     <Compile Include="Page\ClassementPage.xaml.cs">
       <DependentUpon>ClassementPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\CacheService.cs" />
     <Compile Include="Service\ClientService.cs" />
+    <Compile Include="Service\ILoginService.cs" />
     <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MockService.cs" />
     <Compile Include="ViewModel\ActuViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
@@ -82,6 +90,7 @@
       <DependentUpon>CalendrierPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ClassementViewModel.cs" />
+    <Compile Include="ViewModel\MenuViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -228,6 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Helpers\CrossPushNotificationListener.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

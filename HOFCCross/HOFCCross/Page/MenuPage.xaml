@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
+             xmlns:converters="clr-namespace:HOFCCross.Converters"
+             x:Class="HOFCCross.Page.MenuPage">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <converters:NotConverter x:Key="NotConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <StackLayout Spacing="0">
+    <BoxView BackgroundColor="#084578" HeightRequest="24"/>
+    <StackLayout HeightRequest="100" BackgroundColor="#08589D">
+      <StackLayout Orientation="Horizontal" 
+                   HeightRequest="30" 
+                   VerticalOptions="CenterAndExpand" 
+                   Margin="20,0,0,0"
+                   Spacing="20"
+                   IsVisible="{Binding IsAuthenticated, Converter={StaticResource NotConverter}}">
+        <Image Source="icon.png" />
+        <Label Text="Se connecter" TextColor="White" />
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" 
+                   HeightRequest="30" 
+                   VerticalOptions="CenterAndExpand" 
+                   Margin="20,0,0,0"
+                   Spacing="20"
+                   IsVisible="{Binding IsAuthenticated}">
+        <Image Source="icon.png" />
+        <Label Text="{Binding User.FullName}" TextColor="White" />
+      </StackLayout>
+    </StackLayout>
+
+    <ListView ItemsSource="{Binding Items}"
+              fe:ListViewItemTappedAttached.Command="{Binding MenuItemCommand}"
+              SeparatorVisibility="None"
+              RowHeight="50">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Image Source="{Binding Icon}" VerticalOptions="Center" HeightRequest="30" Margin="10,0,0,0"/>
+              <Label Text="{Binding Titre}"  VerticalOptions="Center" HorizontalOptions="Center"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

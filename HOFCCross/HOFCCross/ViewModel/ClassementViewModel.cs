@@ -51,17 +51,12 @@ namespace HOFCCross.ViewModel
             RaisePropertyChanged(nameof(IsLoading));
         }
 
-        public override void Init(object initData)
+        public override async void Init(object initData)
         {
             base.Init(initData);
             Category = (string)initData;
-        }
-
-        protected override async void ViewIsAppearing(object sender, EventArgs e)
-        {
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
-            base.ViewIsAppearing(sender, e);
 
             try
             {
@@ -79,7 +74,7 @@ namespace HOFCCross.ViewModel
                 this.RaisePropertyChanged(nameof(Classements));
                 this.RaisePropertyChanged(nameof(Equipes));
             }
-            catch
+            catch (Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des informations de classement");
             }

@@ -32,17 +32,12 @@ namespace HOFCCross.ViewModel
             });
         }
 
-        public override void Init(object initData)
+        public override async void Init(object initData)
         {
             base.Init(initData);
             Category = (string)initData;
-        }
-
-        protected override async void ViewIsAppearing(object sender, EventArgs e)
-        {
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
-            base.ViewIsAppearing(sender, e);
             try
             {
                 List<Match> matchs = await Service.GetMatchs();
@@ -60,7 +55,8 @@ namespace HOFCCross.ViewModel
 
                 this.RaisePropertyChanged(nameof(Equipes));
                 this.RaisePropertyChanged(nameof(Matchs));
-            } catch
+            }
+            catch
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
             }

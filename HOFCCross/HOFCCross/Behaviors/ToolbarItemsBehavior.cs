@@ -14,12 +14,16 @@ namespace HOFCCross.Behaviors
                 
         private static void OnItemsSourceChanged(BindableObject bindable, object oldValue, object newValue)
         {
+            
             var contentPage = (bindable as ToolbarItemsBehavior).AssociatedObject;
             var equipes = newValue as IEnumerable<ToolbarItem>;
             contentPage.ToolbarItems.Clear();
-            foreach(ToolbarItem equipe in equipes)
+            if (equipes != null)
             {
-                contentPage.ToolbarItems.Add(equipe);
+                foreach (ToolbarItem equipe in equipes)
+                {
+                    contentPage.ToolbarItems.Add(equipe);
+                }
             }
         }
     }

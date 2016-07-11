@@ -33,11 +33,12 @@ namespace HOFCCross.ViewModel
             });
         }
 
-        protected override async void ViewIsAppearing(object sender, EventArgs e)
+        public override async void Init(object initData)
         {
+            base.Init(initData);
+            WeekStartingDate = ((DateTime)initData).StartOfWeek(DayOfWeek.Monday);
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
-            base.ViewIsAppearing(sender, e);
             try
             {
                 var matchs = await Service.GetMatchs();
@@ -70,12 +71,6 @@ namespace HOFCCross.ViewModel
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
-        }
-
-        public override void Init(object initData)
-        {
-            base.Init(initData);
-            WeekStartingDate = ((DateTime)initData).StartOfWeek(DayOfWeek.Monday);
         }
 
         private async void ReloadMatchs()

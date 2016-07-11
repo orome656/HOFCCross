@@ -28,7 +28,7 @@ namespace HOFCCross.ViewModel
                 Actus = await Service.GetActu();
                 this.RaisePropertyChanged(nameof(Actus));
             }
-            catch
+            catch (Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des actualités");
             }
