@@ -52,6 +52,7 @@
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Model\Actu.cs" />
+    <Compile Include="Model\ArticleDetails.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />
     <Compile Include="Model\Match.cs" />
@@ -59,6 +60,9 @@
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Notifications\CrossPushNotificationListener.cs" />
+    <Compile Include="Page\ArticleDetailsPage.xaml.cs">
+      <DependentUpon>ArticleDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\JourneePage.xaml.cs">
       <DependentUpon>JourneePage.xaml</DependentUpon>
     </Compile>
@@ -79,6 +83,7 @@
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\MockService.cs" />
     <Compile Include="ViewModel\ActuViewModel.cs" />
+    <Compile Include="ViewModel\ArticleDetailsViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\JourneeViewModel.cs" />
     <Compile Include="ViewModel\AgendaViewModel.cs" />
@@ -242,6 +247,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\ArticleDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

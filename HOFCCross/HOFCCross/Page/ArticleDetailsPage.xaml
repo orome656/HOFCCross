@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:HOFCCross.Controls"
+             x:Class="HOFCCross.Page.ArticleDetailsPage"
+             BackgroundColor="#ffffff"
+             Title="Article">
+  <StackLayout>
+    <Label TextColor="Black" Text="{Binding Title}"/>
+    <Label TextColor="Black" Text="{Binding Date, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+    <WebView 
+      HorizontalOptions="Fill"
+      VerticalOptions="FillAndExpand"
+      Source="{Binding Html}"></WebView>
+  </StackLayout>
+</ContentPage>

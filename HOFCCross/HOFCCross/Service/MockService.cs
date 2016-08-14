@@ -36,6 +36,13 @@ namespace HOFCCross.Service
                 Url = "http://www.hofc.fr/2016/03/hofc-iii-marquisat-ii-en-images/",
                 ImageUrl = "http://www.hofc.fr/wp-content/themes/Canyon/timthumb.php?src=http://www.hofc.fr/wp-content/uploads/2016/02/HOFC-SEN-HOFC-III-1-3-MARQUISAT-II-20-02-2016-8.jpg&h=150&w=250&zc=1"
             });
+            actus.Add(new Actu()
+            {
+                Title = "Article Test",
+                Detail = "Article Test",
+                Url = "http://www.hofc.fr/2016/03/article-test/",
+                ImageUrl = "http://www.hofc.fr/wp-content/themes/Canyon/timthumb.php?src=http://www.hofc.fr/wp-content/uploads/2016/02/HOFC-SEN-HOFC-III-1-3-MARQUISAT-II-20-02-2016-8.jpg&h=150&w=250&zc=1"
+            });
             return Task.FromResult(actus);
         }
 
@@ -176,6 +183,16 @@ namespace HOFCCross.Service
         {
             Debug.WriteLine("Sending notification token");
             return null;
+        }
+
+        public Task<ArticleDetails> GetArticleDetails(string Url)
+        {
+            return Task.FromResult(new ArticleDetails()
+            {
+                Content = "<p>Test<br/>Test retour a la ligne</p>",
+                Title = "Titre",
+                Date = DateTime.Now
+            });
         }
     }
 }

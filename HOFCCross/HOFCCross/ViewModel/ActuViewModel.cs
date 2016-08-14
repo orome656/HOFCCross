@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
@@ -34,6 +35,25 @@ namespace HOFCCross.ViewModel
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
+        }
+
+        public Command ItemTapCommand
+        {
+            get
+            {
+                return new Command((o) =>
+                {
+                    var item = o as Actu;
+                    if(item.Url.Contains("en-images"))
+                    {
+
+                    }
+                    else
+                    {
+                        CoreMethods.PushPageModel<ArticleDetailsViewModel>(item.Url);
+                    }
+                });
+            }
         }
     }
 }

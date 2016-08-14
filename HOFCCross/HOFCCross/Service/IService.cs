@@ -14,5 +14,7 @@ namespace HOFCCross.Service
         Task<List<Match>> GetMatchs();
         Task<List<ClassementEquipe>> GetClassements();
         Task SendNotificationToken(string token, DeviceType type);
+
+        Task<ArticleDetails> GetArticleDetails(string Url);
     }
 }

@@ -59,5 +59,12 @@ namespace HOFCCross.Service
         {
             await Service.SendNotificationToken(token, type);
         }
+
+        public async Task<ArticleDetails> GetArticleDetails(string Url)
+        {
+            return await BlobCache.LocalMachine.GetOrFetchObject<ArticleDetails>("Article" + Url,
+                         async () => await Service.GetArticleDetails(Url),
+                         DateTimeOffset.Now.AddDays(1));
+        }
     }
 }
