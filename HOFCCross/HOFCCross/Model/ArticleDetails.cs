@@ -10,6 +10,6 @@ namespace HOFCCross.Model
     {
         public string Title { get; set; }
         public DateTime Date { get; set; }
-        public string Content { get; set; }
+        public string Article { get; set; }
     }
 }

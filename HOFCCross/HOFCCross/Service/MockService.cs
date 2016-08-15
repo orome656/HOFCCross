@@ -189,7 +189,7 @@ namespace HOFCCross.Service
         {
             return Task.FromResult(new ArticleDetails()
             {
-                Content = "<p>Test<br/>Test retour a la ligne</p>",
+                Article = "<p>Test<br/>Test retour a la ligne</p>",
                 Title = "Titre",
                 Date = DateTime.Now
             });

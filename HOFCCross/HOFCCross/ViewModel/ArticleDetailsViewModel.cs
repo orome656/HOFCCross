@@ -34,7 +34,7 @@ namespace HOFCCross.ViewModel
             var details = await _service.GetArticleDetails((string)initData);
             Title = details.Title;
             Date = details.Date;
-            Content = details.Content;
+            Content = details.Article;
         }
     }
 }
