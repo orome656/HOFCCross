@@ -66,5 +66,12 @@ namespace HOFCCross.Service
                          async () => await Service.GetArticleDetails(Url),
                          DateTimeOffset.Now.AddDays(1));
         }
+
+        public async Task<List<string>> GetDiaporama(string Url)
+        {
+            return await BlobCache.LocalMachine.GetOrFetchObject<List<string>>("Diaporama" + Url,
+                         async () => await Service.GetDiaporama(Url),
+                         DateTimeOffset.Now.AddDays(1));
+        }
     }
 }

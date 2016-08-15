@@ -16,5 +16,6 @@ namespace HOFCCross.Service
         Task SendNotificationToken(string token, DeviceType type);
 
         Task<ArticleDetails> GetArticleDetails(string Url);
+        Task<List<string>> GetDiaporama(string initData);
     }
 }

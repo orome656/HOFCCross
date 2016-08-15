@@ -182,7 +182,7 @@ namespace HOFCCross.Service
         public Task SendNotificationToken(string token, DeviceType type)
         {
             Debug.WriteLine("Sending notification token");
-            return null;
+            return Task.FromResult(0);
         }
 
         public Task<ArticleDetails> GetArticleDetails(string Url)
@@ -192,6 +192,17 @@ namespace HOFCCross.Service
                 Article = "<p>Test<br/>Test retour a la ligne</p>",
                 Title = "Titre",
                 Date = DateTime.Now
+            });
+        }
+
+        public Task<List<string>> GetDiaporama(string initData)
+        {
+            return Task.FromResult(new List<string>()
+            {
+                "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-.jpg",
+                "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-2.jpg",
+                "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-3.jpg",
+                "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-4.jpg"
             });
         }
     }

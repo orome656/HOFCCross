@@ -217,7 +217,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <AndroidAsset Include="Assets\config.json" />
-    <None Include="config.json" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

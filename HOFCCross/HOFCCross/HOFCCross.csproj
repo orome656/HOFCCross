@@ -60,6 +60,9 @@
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Notifications\CrossPushNotificationListener.cs" />
+    <Compile Include="Page\DiaporamaPage.xaml.cs">
+      <DependentUpon>DiaporamaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\ArticleDetailsPage.xaml.cs">
       <DependentUpon>ArticleDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,7 @@
     <Compile Include="ViewModel\ActuViewModel.cs" />
     <Compile Include="ViewModel\ArticleDetailsViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\DiaporamaViewModel.cs" />
     <Compile Include="ViewModel\JourneeViewModel.cs" />
     <Compile Include="ViewModel\AgendaViewModel.cs" />
     <Compile Include="ViewModel\CalendrierViewModel.cs" />
@@ -249,6 +253,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page\ArticleDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\DiaporamaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

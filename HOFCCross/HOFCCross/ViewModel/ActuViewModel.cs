@@ -46,7 +46,7 @@ namespace HOFCCross.ViewModel
                     var item = o as Actu;
                     if(item.Url.Contains("en-images"))
                     {
-
+                        CoreMethods.PushPageModel<DiaporamaViewModel>(item.Url);
                     }
                     else
                     {

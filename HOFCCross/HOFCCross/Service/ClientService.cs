@@ -102,5 +102,24 @@ namespace HOFCCross.Service
                 throw ex;
             }
         }
+
+        public async Task<List<string>> GetDiaporama(string url)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+
+                List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
+
+                list.Add(new KeyValuePair<string, string>("url", url));
+                var response = await client.PostAsync(AppConstantes.SERVER_PARSE_URL, new FormUrlEncodedContent(list)).ConfigureAwait(continueOnCapturedContext: false);
+                return JsonConvert.DeserializeObject<List<string>>(await response.Content.ReadAsStringAsync());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
     }
 }
