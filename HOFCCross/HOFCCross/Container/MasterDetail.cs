@@ -63,5 +63,10 @@ namespace HOFCCross.Container
             DetailsPage.NotifyChildrenPageWasPopped();
             DetailsPage = newDetail;
         }
+
+        public Task<FreshBasePageModel> SwitchSelectedRootPageModel<T>() where T : FreshBasePageModel
+        {
+            throw new NotImplementedException();
+        }
     }
 }
