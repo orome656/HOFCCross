@@ -1812,8 +1812,6 @@ namespace HOFCCross.Droid
 			global::FreshEssentials.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::FreshEssentials.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Splat.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::HOFCCross.Droid.Resource.String.ApplicationName;
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::HOFCCross.Droid.Resource.String.Hello;
 			global::Plugin.Toasts.Resource.Drawable.error = global::HOFCCross.Droid.Resource.Drawable.error;
 			global::Plugin.Toasts.Resource.Drawable.info = global::HOFCCross.Droid.Resource.Drawable.info;
 			global::Plugin.Toasts.Resource.Drawable.success = global::HOFCCross.Droid.Resource.Drawable.success;
