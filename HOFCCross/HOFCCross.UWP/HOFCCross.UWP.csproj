@@ -113,10 +113,11 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\accueil_icon.png" />
-    <Content Include="Assets\calendar_icon.png" />
-    <Content Include="Assets\classement_icon.png" />
+    <Content Include="accueil_icon.png" />
+    <Content Include="calendar_icon.png" />
+    <Content Include="classement_icon.png" />
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="icon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
