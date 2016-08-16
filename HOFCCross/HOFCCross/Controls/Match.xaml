@@ -15,17 +15,21 @@
       <RowDefinition />
       <RowDefinition />
       <RowDefinition />
-      <RowDefinition />
+      <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
     <Label x:Name="DateLabel" Grid.ColumnSpan="3" HorizontalTextAlignment="Center"/>
 
     <Image x:Name="Equipe1Image" Source="icon.png" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
-    <Label x:Name="Equipe1Label" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center"/>
+    <StackLayout Grid.Column="0" Grid.Row="3" Padding="0,0,0,20">
+      <Label x:Name="Equipe1Label" HorizontalTextAlignment="Center"/>
+    </StackLayout>
 
     <Label x:Name="MessageLabel" FontSize="20" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
 
     <Image x:Name="Equipe2Image" Source="icon.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
-    <Label x:Name="Equipe2Label" Grid.Column="2" Grid.Row="3" HorizontalOptions="Center"/>
+    <StackLayout Grid.Column="2" Grid.Row="3" Padding="0,0,0,20">
+      <Label x:Name="Equipe2Label" HorizontalTextAlignment="Center"/>
+    </StackLayout>
   </Grid>
 </ViewCell>
