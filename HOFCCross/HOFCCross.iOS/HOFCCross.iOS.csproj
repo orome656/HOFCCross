@@ -97,7 +97,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HOFCCross\HOFCCross.csproj">
@@ -147,12 +149,12 @@
       <HintPath>..\..\packages\Xamarin.FFImageLoading.2.1.6\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FreshEssentials, Version=1.0.5976.18464, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FreshEssentials.2.0.1\lib\Xamarin.iOS10\FreshEssentials.dll</HintPath>
+    <Reference Include="FreshEssentials, Version=1.0.6073.26184, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreshEssentials.2.1.0\lib\Xamarin.iOS10\FreshEssentials.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FreshEssentials.iOS, Version=1.0.5976.18474, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FreshEssentials.2.0.1\lib\Xamarin.iOS10\FreshEssentials.iOS.dll</HintPath>
+    <Reference Include="FreshEssentials.iOS, Version=1.0.6073.26193, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreshEssentials.2.1.0\lib\Xamarin.iOS10\FreshEssentials.iOS.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FreshIOC, Version=1.0.6071.17008, Culture=neutral, processorArchitecture=MSIL">
