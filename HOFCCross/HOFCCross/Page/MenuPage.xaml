@@ -19,7 +19,7 @@
                    Spacing="20"
                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource NotConverter}}">
         <Image Source="icon.png" />
-        <Label Text="Se connecter" TextColor="White" />
+        <Label Text="HOFC" TextColor="White" />
       </StackLayout>
       <StackLayout Orientation="Horizontal" 
                    HeightRequest="30" 
