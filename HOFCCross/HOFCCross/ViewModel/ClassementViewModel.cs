@@ -14,19 +14,31 @@ namespace HOFCCross.ViewModel
     class ClassementViewModel: BaseViewModel
     {
         public List<ClassementEquipe> Classements { get; set; }
-        public string Category { get; set; }
-        public List<ToolbarItem> Equipes { get; set; }
+
+
+        private string _selectedEquipe;
+
+        public string SelectedEquipe
+        {
+            get
+            {
+                return _selectedEquipe;
+            }
+            set
+            {
+                _selectedEquipe = value;
+                RaisePropertyChanged(nameof(SelectedEquipe));
+                ReloadRanks();
+            }
+        }
+
+        public List<string> Equipes { get; set; } = new List<string>();
+
         IService Service;
-        public ICommand ChangeTeam { get; set; }
 
         public ClassementViewModel(IService service)
         {
             Service = service;
-            ChangeTeam = new Command<string>((key) =>
-            {
-                Category = key;
-                this.ReloadRanks();
-            });
         }
 
         private async void ReloadRanks()
@@ -37,11 +49,11 @@ namespace HOFCCross.ViewModel
             {
                 var classements = await Service.GetClassements();
 
-                Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie))
+                Classements = classements.Where(c => c.Competition != null && _selectedEquipe.Equals(c.Competition.Categorie))
                                          .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
                                          .ToList();
 
-                this.RaisePropertyChanged(nameof(Classements));
+                RaisePropertyChanged(nameof(Classements));
             }
             catch
             {
@@ -54,25 +66,32 @@ namespace HOFCCross.ViewModel
         public override async void Init(object initData)
         {
             base.Init(initData);
-            Category = (string)initData;
+
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
 
             try
             {
                 var classements = await Service.GetClassements();
-
-                Equipes = classements.Select(c => c.Competition)
+                if (classements != null && classements.Count > 0)
+                {
+                    Equipes = classements.Select(c => c.Competition)
                                      .Select(c => c.Categorie)
                                      .Distinct()
                                      .OrderBy(c => c)
-                                     .Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
+                                     .Select(c => c)
                                      .ToList();
-                Classements = classements.Where(c => c.Competition != null && Category.Equals(c.Competition.Categorie))
-                                         .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
-                                         .ToList();
-                this.RaisePropertyChanged(nameof(Classements));
-                this.RaisePropertyChanged(nameof(Equipes));
+
+                    _selectedEquipe = Equipes.First(c => c.Equals((string)initData));
+
+                    Classements = classements.Where(c => c.Competition != null && _selectedEquipe.Equals(c.Competition.Categorie))
+                                             .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
+                                             .ToList();
+
+                    RaisePropertyChanged(nameof(Classements));
+                    RaisePropertyChanged(nameof(SelectedEquipe));
+                    RaisePropertyChanged(nameof(Equipes));
+                }
             }
             catch (Exception ex)
             {

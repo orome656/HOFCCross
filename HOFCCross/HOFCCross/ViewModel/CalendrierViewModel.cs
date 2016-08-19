@@ -16,45 +16,57 @@ namespace HOFCCross.ViewModel
     public class CalendrierViewModel: BaseViewModel
     {
         public List<Match> Matchs { get; set; }
-        public string Category { get; set; }
-        public List<ToolbarItem> Equipes { get; set; }
-        IService Service;
-        public ICommand ChangeTeam { get; set; }
 
+        private string _selectedEquipe;
+
+        public string SelectedEquipe {
+            get {
+                return _selectedEquipe;
+            }
+            set {
+                _selectedEquipe = value;
+                RaisePropertyChanged(nameof(SelectedEquipe));
+                ReloadMatchs();
+            }
+        }
+
+        public List<string> Equipes { get; set; }
+        
+        IService Service;
 
         public CalendrierViewModel(IService service)
         {
             Service = service;
-            ChangeTeam = new Command<string>((key) =>
-            {
-                Category = key;
-                this.ReloadMatchs();
-            });
         }
 
         public override async void Init(object initData)
         {
             base.Init(initData);
-            Category = (string)initData;
+
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
             try
             {
                 List<Match> matchs = await Service.GetMatchs();
+                if(matchs != null && matchs.Count > 0)
+                {
+                    Equipes = matchs.Select(m => m.Competition)
+                                    .Select(c => c.Categorie)
+                                    .Distinct()
+                                    .OrderBy(c => c)
+                                    .Select(c => c)
+                                    .ToList();
 
-                Equipes = matchs.Select(m => m.Competition)
-                                .Select(c => c.Categorie)
-                                .Distinct()
-                                .OrderBy(c => c)
-                                .Select(c => new ToolbarItem() { Text = c, Command = ChangeTeam, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
-                                .ToList();
+                    _selectedEquipe = Equipes.First(c => c.Equals((string)initData));
 
-                Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
-                               .OrderBy(m => m.Date)
-                               .ToList();
+                    Matchs = matchs.Where(m => m.Competition != null && _selectedEquipe.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                                   .OrderBy(m => m.Date)
+                                   .ToList();
 
-                this.RaisePropertyChanged(nameof(Equipes));
-                this.RaisePropertyChanged(nameof(Matchs));
+                    this.RaisePropertyChanged(nameof(SelectedEquipe));
+                    this.RaisePropertyChanged(nameof(Equipes));
+                    this.RaisePropertyChanged(nameof(Matchs));
+                }
             }
             catch
             {
@@ -71,7 +83,7 @@ namespace HOFCCross.ViewModel
             try
             {
                 List<Match> matchs = await Service.GetMatchs();
-                Matchs = matchs.Where(m => m.Competition != null && Category.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                Matchs = matchs.Where(m => m.Competition != null && _selectedEquipe.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
                                .OrderBy(m => m.Date)
                                .ToList();
                 this.RaisePropertyChanged(nameof(Matchs));
