@@ -58,6 +58,12 @@ namespace HOFCCross.ViewModel
             });
             Items.Add(new MenuItem()
             {
+                Titre = "Agenda",
+                Icon = "calendar_icon.png",
+                PageName = PageNameEnum.AGENDA
+            });
+            Items.Add(new MenuItem()
+            {
                 Titre = "Journées Excellence",
                 Icon = "calendar_icon.png",
                 PageName = PageNameEnum.JOURNEE_EQUIPE_1
