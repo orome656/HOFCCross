@@ -17,26 +17,32 @@ namespace HOFCCross.ViewModel
     {
         public List<Match> Matchs { get; set; }
         IService Service;
-        public List<ToolbarItem> Semaines { get; set; }
-        private DateTime WeekStartingDate;
+        public List<Week> Semaines { get; set; }
+
+        private Week _weekStartingDate;
+        
+        public Week WeekSelected {
+            get { return _weekStartingDate; }
+            set {
+                _weekStartingDate = value;
+                RaisePropertyChanged(nameof(WeekSelected));
+                ReloadMatchs();
+            }
+        }
+
         public ICommand ChangeWeek { get; set; }
-        public string Title { get { return "Agenda du " + WeekStartingDate.ToString("dd/MM/yyyy"); } }
+        public string Title { get { return "Agenda"; } }
 
         public AgendaViewModel(IService service)
         {
             Service = service;
-            ChangeWeek = new Command<DateTime>((key) =>
-            {
-                WeekStartingDate = key;
-                this.RaisePropertyChanged(nameof(Title));
-                this.ReloadMatchs();
-            });
         }
 
         public override async void Init(object initData)
         {
             base.Init(initData);
-            WeekStartingDate = ((DateTime)initData).StartOfWeek(DayOfWeek.Monday);
+
+
             IsLoading = true;
             RaisePropertyChanged(nameof(IsLoading));
             try
@@ -47,25 +53,27 @@ namespace HOFCCross.ViewModel
                                  .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
                                  .OrderBy(d => d)
                                  .Distinct()
-                                 .Select(w => new ToolbarItem() { Text = w.ToString("dd/MM/yyyy"), Command = ChangeWeek, CommandParameter = w, Order = ToolbarItemOrder.Secondary })
+                                 .Select(w => new Week() { Date = w })
                                  .ToList();
 
-                var lastDate = DateTime.ParseExact(Semaines.Last().Text, "dd/MM/yyyy", null);
-                if (WeekStartingDate.CompareTo(lastDate.AddDays(7)) > 0)
+                WeekSelected = Semaines.First( w => w.DisplayName.Equals((((DateTime)initData).StartOfWeek(DayOfWeek.Monday)).ToString("dd/MM/yyyy")));
+
+                var lastDate = Semaines.Last().Date;
+                if (_weekStartingDate.Date.CompareTo(lastDate.AddDays(7)) > 0)
                 {
-                    WeekStartingDate = lastDate;
-                    this.RaisePropertyChanged(nameof(Title));
+                    WeekSelected = Semaines.First(w => w.DisplayName.Equals(lastDate.ToString("dd/MM/yyyy")));
                 }
 
-                Matchs = matchs.Where(m => WeekStartingDate.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                Matchs = matchs.Where(m => _weekStartingDate.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
                                .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
                                .OrderBy(m => m.Date)
                                .ToList();
 
+                this.RaisePropertyChanged(nameof(WeekSelected));
                 this.RaisePropertyChanged(nameof(Matchs));
                 this.RaisePropertyChanged(nameof(Semaines));
             }
-            catch
+            catch(Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
             }
@@ -81,7 +89,7 @@ namespace HOFCCross.ViewModel
             {
                 List<Match> matchs = await Service.GetMatchs();
 
-                Matchs = matchs.Where(m => WeekStartingDate.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                Matchs = matchs.Where(m => _weekStartingDate.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
                                .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
                                .OrderBy(m => m.Date)
                                .ToList();
@@ -94,6 +102,12 @@ namespace HOFCCross.ViewModel
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
+        }
+
+        public class Week
+        {
+            public string DisplayName { get { return Date.ToString("dd/MM/yyyy"); } }
+            public DateTime Date { get; set; }
         }
     }
 }

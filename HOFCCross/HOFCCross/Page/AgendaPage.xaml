@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
              x:Class="HOFCCross.Page.AgendaPage"
              xmlns:controls="clr-namespace:HOFCCross.Controls"
              xmlns:local="clr-namespace:HOFCCross.Behaviors"
              xmlns:converters="clr-namespace:HOFCCross.Converters"
              BackgroundColor="#cccccc"
-             Title="{Binding Title}">
+             Title="Agenda">
   <ContentPage.Resources>
     <ResourceDictionary>
       <converters:NotConverter x:Key="NotConverter" />
@@ -14,6 +15,30 @@
   </ContentPage.Resources>
   <StackLayout>
     <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+    <ContentView>
+      <OnPlatform x:TypeArguments="View">
+        <OnPlatform.Android>
+          <fe:BindablePicker ItemsSource="{Binding Semaines}"
+                             SelectedItem="{Binding WeekSelected}"
+                             Title="{Binding WeekSelected.DisplayName}"
+                             DisplayProperty="DisplayName"
+                             TextColor="White"/>
+        </OnPlatform.Android>
+        <OnPlatform.WinPhone>
+          <fe:BindablePicker ItemsSource="{Binding Semaines}"
+                             SelectedItem="{Binding WeekSelected}"
+                             DisplayProperty="DisplayName"
+                             TextColor="White"/>
+        </OnPlatform.WinPhone>
+        <OnPlatform.iOS>
+          <fe:BindablePicker ItemsSource="{Binding Semaines}"
+                             SelectedItem="{Binding WeekSelected}"
+                             DisplayProperty="DisplayName"
+                             TextColor="White"/>
+        </OnPlatform.iOS>
+
+      </OnPlatform>
+    </ContentView>
     <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
       <ListView.ItemTemplate>
         <DataTemplate>
@@ -22,7 +47,4 @@
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
-  <ContentPage.Behaviors>
-    <local:ToolbarItemsBehavior ItemsSource="{Binding Semaines}"/>
-  </ContentPage.Behaviors>
 </ContentPage>
