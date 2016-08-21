@@ -20,39 +20,23 @@ namespace HOFCCross.Service
         }
         public async Task<List<Actu>> GetActu()
         {
-            List<Actu> actus = null;
-            try
-            {
-                 actus = await BlobCache.LocalMachine.GetObject<List<Actu>>("Actus");
-            } catch(KeyNotFoundException)
-            {
-                actus = await Service.GetActu();
-                await BlobCache.LocalMachine.InsertObject("Actus", actus, DateTimeOffset.Now.AddDays(1));
-            }
-            return actus;
+            return await BlobCache.LocalMachine.GetOrFetchObject("Actus",
+                                    async () => await Service.GetActu(),
+                                    DateTimeOffset.Now.AddDays(1));
         }
 
         public async Task<List<ClassementEquipe>> GetClassements()
         {
-            List<ClassementEquipe> classements = await BlobCache.LocalMachine.GetOrFetchObject<List<ClassementEquipe>>("Classements",
+            return await BlobCache.LocalMachine.GetOrFetchObject("Classements",
                                     async () => await Service.GetClassements(),
                                     DateTimeOffset.Now.AddDays(1));
-            return classements;
         }
 
         public async Task<List<Match>> GetMatchs()
         {
-            List<Match> matchs = null;
-            try
-            {
-                matchs = await BlobCache.LocalMachine.GetObject<List<Match>>("Matchs");
-            }
-            catch (KeyNotFoundException)
-            {
-                matchs = await Service.GetMatchs();
-                await BlobCache.LocalMachine.InsertObject("Matchs", matchs, DateTimeOffset.Now.AddDays(1));
-            }
-            return matchs;
+            return await BlobCache.LocalMachine.GetOrFetchObject("Matchs",
+                                    async () => await Service.GetMatchs(),
+                                    DateTimeOffset.Now.AddDays(1));
         }
 
         public async Task SendNotificationToken(string token, DeviceType type)
@@ -62,14 +46,14 @@ namespace HOFCCross.Service
 
         public async Task<ArticleDetails> GetArticleDetails(string Url)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject<ArticleDetails>("Article" + Url,
+            return await BlobCache.LocalMachine.GetOrFetchObject("Article" + Url,
                          async () => await Service.GetArticleDetails(Url),
                          DateTimeOffset.Now.AddDays(1));
         }
 
         public async Task<List<string>> GetDiaporama(string Url)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject<List<string>>("Diaporama" + Url,
+            return await BlobCache.LocalMachine.GetOrFetchObject("Diaporama" + Url,
                          async () => await Service.GetDiaporama(Url),
                          DateTimeOffset.Now.AddDays(1));
         }
