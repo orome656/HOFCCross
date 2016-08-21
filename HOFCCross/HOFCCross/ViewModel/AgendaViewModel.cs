@@ -29,8 +29,7 @@ namespace HOFCCross.ViewModel
                 ReloadMatchs();
             }
         }
-
-        public ICommand ChangeWeek { get; set; }
+        
         public string Title { get { return "Agenda"; } }
 
         public AgendaViewModel(IService service)

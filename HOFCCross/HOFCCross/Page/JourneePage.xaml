@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
              x:Class="HOFCCross.Page.JourneePage"
              xmlns:controls="clr-namespace:HOFCCross.Controls"
              xmlns:local="clr-namespace:HOFCCross.Behaviors"
@@ -14,6 +15,9 @@
   </ContentPage.Resources>
   <StackLayout>
     <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+    <fe:BindablePicker ItemsSource="{Binding Journees}"
+                       SelectedItem="{Binding Journee}"
+                       Title="Changer de journée"/>
     <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
       <ListView.ItemTemplate>
         <DataTemplate>
@@ -22,7 +26,4 @@
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
-  <ContentPage.Behaviors>
-    <local:ToolbarItemsBehavior ItemsSource="{Binding Journees}"/>
-  </ContentPage.Behaviors>
 </ContentPage>

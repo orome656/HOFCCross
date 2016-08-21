@@ -15,20 +15,24 @@ namespace HOFCCross.ViewModel
     class JourneeViewModel: BaseViewModel
     {
         private string Category { get; set; }
-        private int Journee;
+        private int _journee;
+        public int Journee
+        {
+            get { return _journee; }
+            set
+            {
+                _journee = value;
+                RaisePropertyChanged(nameof(Journee));
+                ReloadMatchs();
+            }
+        }
         public List<Match> Matchs { get; set; }
-        public List<ToolbarItem> Journees { get; set; }
+        public List<int?> Journees { get; set; }
         IService Service;
-        public ICommand ChangeDay { get; set; }
 
         public JourneeViewModel(IService service)
         {
             Service = service;
-            ChangeDay = new Command<int>((key) =>
-            {
-                Journee = key;
-                this.ReloadMatchs();
-            });
         }
 
         public override async void Init(object initData)
@@ -47,7 +51,7 @@ namespace HOFCCross.ViewModel
                                  .Select(m => m.JourneeId)
                                  .Distinct()
                                  .OrderBy(c => c)
-                                 .Select(c => new ToolbarItem() { Text = c + "", Command = ChangeDay, CommandParameter = c, Order = ToolbarItemOrder.Secondary })
+                                 .Select(c => c)
                                  .ToList();
 
                 Matchs = matchs.Where(m => Category.Equals(m.Competition.Categorie) && m.JourneeId == Journee).ToList();

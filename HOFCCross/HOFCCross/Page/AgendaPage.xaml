@@ -15,30 +15,10 @@
   </ContentPage.Resources>
   <StackLayout>
     <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
-    <ContentView>
-      <OnPlatform x:TypeArguments="View">
-        <OnPlatform.Android>
-          <fe:BindablePicker ItemsSource="{Binding Semaines}"
-                             SelectedItem="{Binding WeekSelected}"
-                             Title="{Binding WeekSelected.DisplayName}"
-                             DisplayProperty="DisplayName"
-                             TextColor="White"/>
-        </OnPlatform.Android>
-        <OnPlatform.WinPhone>
-          <fe:BindablePicker ItemsSource="{Binding Semaines}"
-                             SelectedItem="{Binding WeekSelected}"
-                             DisplayProperty="DisplayName"
-                             TextColor="White"/>
-        </OnPlatform.WinPhone>
-        <OnPlatform.iOS>
-          <fe:BindablePicker ItemsSource="{Binding Semaines}"
-                             SelectedItem="{Binding WeekSelected}"
-                             DisplayProperty="DisplayName"
-                             TextColor="White"/>
-        </OnPlatform.iOS>
-
-      </OnPlatform>
-    </ContentView>
+    <fe:BindablePicker ItemsSource="{Binding Semaines}"
+                        SelectedItem="{Binding WeekSelected}"
+                        Title="Changer de semaine"
+                        DisplayProperty="DisplayName"/>
     <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
       <ListView.ItemTemplate>
         <DataTemplate>
