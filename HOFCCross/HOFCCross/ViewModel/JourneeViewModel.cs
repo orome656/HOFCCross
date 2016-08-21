@@ -4,6 +4,7 @@ using HOFCCross.Model;
 using HOFCCross.Service;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,9 +60,10 @@ namespace HOFCCross.ViewModel
                 this.RaisePropertyChanged(nameof(Journees));
                 this.RaisePropertyChanged(nameof(Matchs));
             }
-            catch
+            catch(Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
+                Debug.WriteLine(ex);
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));

@@ -3,6 +3,7 @@ using HOFCCross.Model;
 using HOFCCross.Service;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,7 @@ namespace HOFCCross.ViewModel
             catch (Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des actualités");
+                Debug.WriteLine(ex);
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));

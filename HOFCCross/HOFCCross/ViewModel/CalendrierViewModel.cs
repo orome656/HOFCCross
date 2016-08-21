@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 using HOFCCross.Constantes;
+using System.Diagnostics;
 
 namespace HOFCCross.ViewModel
 {
@@ -68,9 +69,10 @@ namespace HOFCCross.ViewModel
                     this.RaisePropertyChanged(nameof(Matchs));
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
+                Debug.WriteLine(ex);
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
@@ -88,9 +90,10 @@ namespace HOFCCross.ViewModel
                                .ToList();
                 this.RaisePropertyChanged(nameof(Matchs));
             }
-            catch
+            catch(Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
+                Debug.WriteLine(ex);
             }
             IsLoading = false;
             RaisePropertyChanged(nameof(IsLoading));
