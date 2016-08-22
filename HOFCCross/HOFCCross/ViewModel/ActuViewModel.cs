@@ -13,7 +13,19 @@ namespace HOFCCross.ViewModel
 {
     public class ActuViewModel: BaseViewModel
     {
-        public List<Actu> Actus { get; set; }
+        private List<Actu> _actus;
+        public List<Actu> Actus
+        {
+            get
+            {
+                return _actus;
+            }
+            set
+            {
+                _actus = value;
+                RaisePropertyChanged(nameof(Actus));
+            }
+        }
         IService Service;
         public ActuViewModel(IService service)
         {
@@ -23,12 +35,11 @@ namespace HOFCCross.ViewModel
         public override async void Init(object initData)
         {
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
+
             base.Init(initData);
             try
             {
                 Actus = await Service.GetActu();
-                this.RaisePropertyChanged(nameof(Actus));
             }
             catch (Exception ex)
             {
@@ -36,7 +47,26 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
+        }
+
+        public Command RefreshCommand
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    try
+                    {
+                        Actus = await Service.GetActu(true);
+                        IsLoading = false;
+                    }
+                    catch (Exception ex)
+                    {
+                        DisplayError("Erreur lors de la mise à jour des actualités");
+                        Debug.WriteLine(ex);
+                    }
+                });
+            }
         }
 
         public Command ItemTapCommand

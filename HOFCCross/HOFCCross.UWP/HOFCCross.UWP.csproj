@@ -118,6 +118,7 @@
     <Content Include="classement_icon.png" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="icon.png" />
+    <Content Include="ic_sync_black_24dp_2x.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

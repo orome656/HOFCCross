@@ -18,11 +18,27 @@ namespace HOFCCross.Service
         {
             Service = service;
         }
-        public async Task<List<Actu>> GetActu()
+        public async Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject("Actus",
-                                    async () => await Service.GetActu(),
-                                    DateTimeOffset.Now.AddDays(1));
+            if (forceRefresh)
+            {
+                var actus = await Service.GetActu();
+                if (actus != null && actus.Count > 0)
+                {
+                    await BlobCache.LocalMachine.InsertObject("Actus", actus, DateTimeOffset.Now.AddDays(1));
+                    return actus;
+                }
+                else
+                {
+                    return await BlobCache.LocalMachine.GetObject<List<Actu>>("Actus");
+                }
+            }
+            else
+            {
+                return await BlobCache.LocalMachine.GetOrFetchObject("Actus",
+                                        async () => await Service.GetActu(),
+                                        DateTimeOffset.Now.AddDays(1));
+            }
         }
 
         public async Task<List<ClassementEquipe>> GetClassements()

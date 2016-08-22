@@ -10,7 +10,7 @@ namespace HOFCCross.Service
 {
     public interface IService
     {
-        Task<List<Actu>> GetActu();
+        Task<List<Actu>> GetActu(bool forceRefresh = false);
         Task<List<Match>> GetMatchs();
         Task<List<ClassementEquipe>> GetClassements();
         Task SendNotificationToken(string token, DeviceType type);

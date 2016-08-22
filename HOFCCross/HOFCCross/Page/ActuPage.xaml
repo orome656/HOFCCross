@@ -6,9 +6,22 @@
              x:Class="HOFCCross.Page.ActuPage"
              BackgroundColor="#cccccc"
              Title="Actualités">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Sync"
+                 Order="Primary"
+                 Priority="0"
+                 Icon="ic_sync_black_24dp_2x.png"
+                 Command="{Binding RefreshCommand}"/>
+  </ContentPage.ToolbarItems>
   <StackLayout>
-    <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
-    <ListView x:Name="listActus" ItemsSource="{Binding Actus}" HasUnevenRows="True" SeparatorVisibility="None" fe:ListViewItemTappedAttached.Command="{Binding ItemTapCommand}">
+    <ListView  x:Name="listActus" 
+              ItemsSource="{Binding Actus}" 
+              HasUnevenRows="True" 
+              SeparatorVisibility="None" 
+              fe:ListViewItemTappedAttached.Command="{Binding ItemTapCommand}"
+              IsPullToRefreshEnabled="True"
+              IsRefreshing="{Binding IsLoading}"
+              RefreshCommand="{Binding RefreshCommand}">
       <ListView.ItemTemplate>
         <DataTemplate>
           <controls:CardView Title="{Binding Title}" Detail="{Binding Detail}" ImageUrl="{Binding ImageUrl}" Date="{Binding Date}"/>

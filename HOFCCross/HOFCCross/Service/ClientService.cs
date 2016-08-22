@@ -17,7 +17,7 @@ namespace HOFCCross.Service
     {
 
 
-        public async Task<List<Actu>> GetActu()
+        public async Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
             try
             {

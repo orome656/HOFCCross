@@ -12,7 +12,7 @@ namespace HOFCCross.Service
 {
     class MockService : IService
     {
-        public Task<List<Actu>> GetActu()
+        public Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
             List<Actu> actus = new List<Actu>();
             actus.Add(new Actu()
