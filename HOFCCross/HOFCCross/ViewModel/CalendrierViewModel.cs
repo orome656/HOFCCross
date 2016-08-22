@@ -16,7 +16,16 @@ namespace HOFCCross.ViewModel
 {
     public class CalendrierViewModel: BaseViewModel
     {
-        public List<Match> Matchs { get; set; }
+        private List<Match> _matchs;
+        public List<Match> Matchs
+        {
+            get { return _matchs; }
+            set
+            {
+                _matchs = value;
+                RaisePropertyChanged(nameof(Matchs));
+            }
+        }
 
         private string _selectedEquipe;
 
@@ -31,7 +40,16 @@ namespace HOFCCross.ViewModel
             }
         }
 
-        public List<string> Equipes { get; set; }
+        private List<string> _equipes;
+        public List<string> Equipes
+        {
+            get { return _equipes; }
+            set
+            {
+                _equipes = value;
+                RaisePropertyChanged(nameof(Equipes));
+            }
+        }
         
         IService Service;
 
@@ -43,31 +61,12 @@ namespace HOFCCross.ViewModel
         public override async void Init(object initData)
         {
             base.Init(initData);
-
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
+
             try
             {
-                List<Match> matchs = await Service.GetMatchs();
-                if(matchs != null && matchs.Count > 0)
-                {
-                    Equipes = matchs.Select(m => m.Competition)
-                                    .Select(c => c.Categorie)
-                                    .Distinct()
-                                    .OrderBy(c => c)
-                                    .Select(c => c)
-                                    .ToList();
-
-                    _selectedEquipe = Equipes.First(c => c.Equals((string)initData));
-
-                    Matchs = matchs.Where(m => m.Competition != null && _selectedEquipe.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
-                                   .OrderBy(m => m.Date)
-                                   .ToList();
-
-                    this.RaisePropertyChanged(nameof(SelectedEquipe));
-                    this.RaisePropertyChanged(nameof(Equipes));
-                    this.RaisePropertyChanged(nameof(Matchs));
-                }
+                await LoadEquipes();
+                SelectedEquipe = Equipes.First(c => c.Equals((string)initData));
             }
             catch(Exception ex)
             {
@@ -75,13 +74,23 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
+        }
+
+        private async Task LoadEquipes()
+        {
+            List<Match> matchs = await Service.GetMatchs();
+            Equipes = matchs.Select(m => m.Competition)
+                                    .Select(c => c.Categorie)
+                                    .Distinct()
+                                    .OrderBy(c => c)
+                                    .Select(c => c)
+                                    .ToList();
+
         }
 
         private async void ReloadMatchs()
         {
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
             try
             {
                 List<Match> matchs = await Service.GetMatchs();
@@ -96,7 +105,6 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
         }
     }
 }
