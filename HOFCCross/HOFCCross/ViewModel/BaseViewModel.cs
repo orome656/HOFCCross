@@ -25,7 +25,7 @@ namespace HOFCCross.ViewModel
             }
         }
         public string ErrorMessage { get; set; }
-
+        public string Title { get; set; }
         protected async void DisplayError(string message)
         {
             var notificator = DependencyService.Get<IToastNotificator>();

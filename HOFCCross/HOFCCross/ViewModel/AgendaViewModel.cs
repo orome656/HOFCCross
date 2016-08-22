@@ -16,9 +16,25 @@ namespace HOFCCross.ViewModel
 {
     class AgendaViewModel : BaseViewModel
     {
-        public List<Match> Matchs { get; set; }
+        private List<Match> _matchs;
+        public List<Match> Matchs {
+            get { return _matchs; }
+            set
+            {
+                _matchs = value;
+                RaisePropertyChanged(nameof(Matchs));
+            }
+        }
         IService Service;
-        public List<Week> Semaines { get; set; }
+        private List<Week> _semaines;
+        public List<Week> Semaines {
+            get { return _semaines; }
+            set
+            {
+                _semaines = value;
+                RaisePropertyChanged(nameof(Semaines));
+            }
+        }
 
         private Week _weekStartingDate;
         
@@ -30,48 +46,38 @@ namespace HOFCCross.ViewModel
                 ReloadMatchs();
             }
         }
-        
-        public string Title { get { return "Agenda"; } }
 
         public AgendaViewModel(IService service)
         {
             Service = service;
+            Title = "Agenda";
         }
 
         public override async void Init(object initData)
         {
             base.Init(initData);
-
-
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
+
             try
             {
-                var matchs = await Service.GetMatchs();
+                await LoadListeSemaine();
+                
+                Week weekDate = null;
+                DateTime date = (DateTime)initData;
+                var lastDate = Semaines.Last();
 
-                Semaines = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                                 .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
-                                 .OrderBy(d => d)
-                                 .Distinct()
-                                 .Select(w => new Week() { Date = w })
-                                 .ToList();
-
-                WeekSelected = Semaines.First( w => w.DisplayName.Equals((((DateTime)initData).StartOfWeek(DayOfWeek.Monday)).ToString("dd/MM/yyyy")));
-
-                var lastDate = Semaines.Last().Date;
-                if (_weekStartingDate.Date.CompareTo(lastDate.AddDays(7)) > 0)
+                while(weekDate == null)
                 {
-                    WeekSelected = Semaines.First(w => w.DisplayName.Equals(lastDate.ToString("dd/MM/yyyy")));
+                    if(weekDate != null && weekDate.Date.CompareTo(lastDate.Date.AddDays(7)) >= 0)
+                    {
+                        weekDate = lastDate;
+                        break;
+                    }
+
+                    weekDate = Semaines.FirstOrDefault(w => w.Date.Date.CompareTo(date.StartOfWeek(DayOfWeek.Monday)) == 0);
+                    date = date.AddDays(7);
                 }
-
-                Matchs = matchs.Where(m => _weekStartingDate.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
-                               .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                               .OrderBy(m => m.Date)
-                               .ToList();
-
-                this.RaisePropertyChanged(nameof(WeekSelected));
-                this.RaisePropertyChanged(nameof(Matchs));
-                this.RaisePropertyChanged(nameof(Semaines));
+                WeekSelected = weekDate;
             }
             catch(Exception ex)
             {
@@ -79,13 +85,24 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
+        }
+
+        private async Task LoadListeSemaine()
+        {
+            var matchs = await Service.GetMatchs();
+
+            Semaines = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                             .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
+                             .OrderBy(d => d)
+                             .Distinct()
+                             .Select(w => new Week() { Date = w })
+                             .ToList();
         }
 
         private async void ReloadMatchs()
         {
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
+
             try
             {
                 List<Match> matchs = await Service.GetMatchs();
@@ -94,16 +111,14 @@ namespace HOFCCross.ViewModel
                                .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
                                .OrderBy(m => m.Date)
                                .ToList();
-
-                this.RaisePropertyChanged(nameof(Matchs));
             }
             catch(Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
                 Debug.WriteLine(ex);
             }
+
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
         }
 
         public class Week

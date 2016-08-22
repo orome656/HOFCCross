@@ -19,10 +19,17 @@
                         SelectedItem="{Binding WeekSelected}"
                         Title="Changer de semaine"
                         DisplayProperty="DisplayName"/>
-    <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
+    <ListView ItemsSource="{Binding Matchs}" 
+              HasUnevenRows="True"
+              IsPullToRefreshEnabled="True"
+              IsRefreshing="{Binding IsLoading}"
+              RefreshCommand="{Binding RefreshCommand}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <controls:Match Equipe1="{Binding Equipe1}" Equipe2="{Binding Equipe2}" Message="{Binding ScoreMessage}" Date="{Binding Date}"/>
+          <controls:Match Equipe1="{Binding Equipe1}" 
+                          Equipe2="{Binding Equipe2}" 
+                          Message="{Binding ScoreMessage}" 
+                          Date="{Binding Date}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
