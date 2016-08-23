@@ -22,7 +22,14 @@
                  Command="{Binding RefreshCommand}"/>
   </ContentPage.ToolbarItems>
   <StackLayout>
-    <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+    <ContentView>
+      <OnPlatform x:TypeArguments="View">
+        <OnPlatform.WinPhone>
+          <ActivityIndicator IsRunning="{Binding IsLoading}"
+                             IsVisible="{Binding IsLoading}" />
+        </OnPlatform.WinPhone>
+      </OnPlatform>
+    </ContentView>
     <fe:BindablePicker ItemsSource="{Binding Filters}"
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer d'équipe"

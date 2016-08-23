@@ -27,29 +27,30 @@ namespace HOFCCross.ViewModel
         {
             base.Init(initData);
             IsLoading = true;
+            
+            await LoadEquipes();
+            SelectedFilter = Filters.First(c => c.Equals((string)initData));
 
-            try
-            {
-                await LoadEquipes();
-                SelectedFilter = Filters.First(c => c.Equals((string)initData));
-            }
-            catch(Exception ex)
-            {
-                DisplayError("Erreur lors de la récupération des Matchs");
-                Debug.WriteLine(ex);
-            }
             IsLoading = false;
         }
 
         private async Task LoadEquipes()
         {
-            List<Match> matchs = await Service.GetMatchs();
-            Filters = matchs.Select(m => m.Competition)
-                            .Select(c => c.Categorie)
-                            .Distinct()
-                            .OrderBy(c => c)
-                            .Select(c => c)
-                            .ToList();
+            try
+            {
+                List<Match> matchs = await Service.GetMatchs();
+                Filters = matchs.Select(m => m.Competition)
+                                .Select(c => c.Categorie)
+                                .Distinct()
+                                .OrderBy(c => c)
+                                .Select(c => c)
+                                .ToList();
+            }
+            catch (Exception ex)
+            {
+                DisplayError("Erreur lors de la récupération des Matchs");
+                Debug.WriteLine(ex);
+            }
 
         }
 

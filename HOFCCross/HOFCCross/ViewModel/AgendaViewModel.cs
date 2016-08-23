@@ -28,46 +28,36 @@ namespace HOFCCross.ViewModel
         {
             base.Init(initData);
             IsLoading = true;
+            
+            await LoadListeSemaine();
+            
+            DateTime date = (DateTime)initData;
+            Week weekDate = Filters.FirstOrDefault(w => w.Date.Date.CompareTo(date.StartOfWeek(DayOfWeek.Monday)) >= 0);
 
+            if (weekDate == null) weekDate = Filters.Last();
+            SelectedFilter = weekDate;
+
+            IsLoading = false;
+        }
+
+        private async Task LoadListeSemaine()
+        {
             try
             {
-                await LoadListeSemaine();
+                var matchs = await Service.GetMatchs();
 
-                Week weekDate = null;
-                DateTime date = (DateTime)initData;
-                var lastDate = Filters.Last();
-
-                while (weekDate == null)
-                {
-                    if (weekDate != null && weekDate.Date.CompareTo(lastDate.Date.AddDays(7)) >= 0)
-                    {
-                        weekDate = lastDate;
-                        break;
-                    }
-
-                    weekDate = Filters.FirstOrDefault(w => w.Date.Date.CompareTo(date.StartOfWeek(DayOfWeek.Monday)) == 0);
-                    date = date.AddDays(7);
-                }
-                SelectedFilter = weekDate;
+                Filters = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                                 .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
+                                 .OrderBy(d => d)
+                                 .Distinct()
+                                 .Select(w => new Week() { Date = w })
+                                 .ToList();
             }
             catch (Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
                 Debug.WriteLine(ex);
             }
-            IsLoading = false;
-        }
-
-        private async Task LoadListeSemaine()
-        {
-            var matchs = await Service.GetMatchs();
-
-            Filters = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                             .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
-                             .OrderBy(d => d)
-                             .Distinct()
-                             .Select(w => new Week() { Date = w })
-                             .ToList();
         }
 
         protected override async Task ReloadItems(bool forceRefresh = false)

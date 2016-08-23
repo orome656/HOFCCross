@@ -34,19 +34,8 @@ namespace HOFCCross.ViewModel
 
         public override async void Init(object initData)
         {
-            IsLoading = true;
-
             base.Init(initData);
-            try
-            {
-                Actus = await Service.GetActu();
-            }
-            catch (Exception ex)
-            {
-                DisplayError("Erreur lors de la récupération des actualités");
-                Debug.WriteLine(ex);
-            }
-            IsLoading = false;
+            await ReloadItems();
         }
 
         public Command RefreshCommand
@@ -55,18 +44,24 @@ namespace HOFCCross.ViewModel
             {
                 return new Command(async () =>
                 {
-                    try
-                    {
-                        Actus = await Service.GetActu(true);
-                        IsLoading = false;
-                    }
-                    catch (Exception ex)
-                    {
-                        DisplayError("Erreur lors de la mise à jour des actualités");
-                        Debug.WriteLine(ex);
-                    }
+                    await ReloadItems(true);
                 });
             }
+        }
+
+        private async Task ReloadItems(bool forceRefresh = false)
+        {
+            IsLoading = true;
+            try
+            {
+                Actus = await Service.GetActu(forceRefresh);
+            }
+            catch (Exception ex)
+            {
+                DisplayError("Erreur lors de la récupération des actualités");
+                Debug.WriteLine(ex);
+            }
+            IsLoading = false;
         }
 
         public Command ItemTapCommand
