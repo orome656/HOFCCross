@@ -46,7 +46,7 @@ namespace HOFCCross.Service
             return Task.FromResult(actus);
         }
 
-        public Task<List<Match>> GetMatchs()
+        public Task<List<Match>> GetMatchs(bool forceRefresh = false)
         {
             List<Match> matchs = new List<Match>();
 

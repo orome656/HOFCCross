@@ -48,11 +48,27 @@ namespace HOFCCross.Service
                                     DateTimeOffset.Now.AddDays(1));
         }
 
-        public async Task<List<Match>> GetMatchs()
+        public async Task<List<Match>> GetMatchs(bool forceRefresh = false)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject("Matchs",
-                                    async () => await Service.GetMatchs(),
-                                    DateTimeOffset.Now.AddDays(1));
+            if (forceRefresh)
+            {
+                var matchs = await Service.GetMatchs();
+                if (matchs != null && matchs.Count > 0)
+                {
+                    await BlobCache.LocalMachine.InsertObject("Matchs", matchs, DateTimeOffset.Now.AddDays(1));
+                    return matchs;
+                }
+                else
+                {
+                    return await BlobCache.LocalMachine.GetObject<List<Match>>("Matchs");
+                }
+            }
+            else
+            {
+                return await BlobCache.LocalMachine.GetOrFetchObject("Matchs",
+                                        async () => await Service.GetMatchs(),
+                                        DateTimeOffset.Now.AddDays(1));
+            }
         }
 
         public async Task SendNotificationToken(string token, DeviceType type)

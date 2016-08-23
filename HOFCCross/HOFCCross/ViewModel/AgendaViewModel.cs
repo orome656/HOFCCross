@@ -14,38 +14,9 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class AgendaViewModel : BaseViewModel
+    class AgendaViewModel : FilteredListBaseViewModel<AgendaViewModel.Week, Match>
     {
-        private List<Match> _matchs;
-        public List<Match> Matchs {
-            get { return _matchs; }
-            set
-            {
-                _matchs = value;
-                RaisePropertyChanged(nameof(Matchs));
-            }
-        }
         IService Service;
-        private List<Week> _semaines;
-        public List<Week> Semaines {
-            get { return _semaines; }
-            set
-            {
-                _semaines = value;
-                RaisePropertyChanged(nameof(Semaines));
-            }
-        }
-
-        private Week _weekStartingDate;
-        
-        public Week WeekSelected {
-            get { return _weekStartingDate; }
-            set {
-                _weekStartingDate = value;
-                RaisePropertyChanged(nameof(WeekSelected));
-                ReloadMatchs();
-            }
-        }
 
         public AgendaViewModel(IService service)
         {
@@ -61,25 +32,25 @@ namespace HOFCCross.ViewModel
             try
             {
                 await LoadListeSemaine();
-                
+
                 Week weekDate = null;
                 DateTime date = (DateTime)initData;
-                var lastDate = Semaines.Last();
+                var lastDate = Filters.Last();
 
-                while(weekDate == null)
+                while (weekDate == null)
                 {
-                    if(weekDate != null && weekDate.Date.CompareTo(lastDate.Date.AddDays(7)) >= 0)
+                    if (weekDate != null && weekDate.Date.CompareTo(lastDate.Date.AddDays(7)) >= 0)
                     {
                         weekDate = lastDate;
                         break;
                     }
 
-                    weekDate = Semaines.FirstOrDefault(w => w.Date.Date.CompareTo(date.StartOfWeek(DayOfWeek.Monday)) == 0);
+                    weekDate = Filters.FirstOrDefault(w => w.Date.Date.CompareTo(date.StartOfWeek(DayOfWeek.Monday)) == 0);
                     date = date.AddDays(7);
                 }
-                WeekSelected = weekDate;
+                SelectedFilter = weekDate;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
                 Debug.WriteLine(ex);
@@ -91,7 +62,7 @@ namespace HOFCCross.ViewModel
         {
             var matchs = await Service.GetMatchs();
 
-            Semaines = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+            Filters = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
                              .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
                              .OrderBy(d => d)
                              .Distinct()
@@ -99,20 +70,20 @@ namespace HOFCCross.ViewModel
                              .ToList();
         }
 
-        private async void ReloadMatchs()
+        protected override async Task ReloadItems(bool forceRefresh = false)
         {
             IsLoading = true;
 
             try
             {
-                List<Match> matchs = await Service.GetMatchs();
+                List<Match> matchs = await Service.GetMatchs(forceRefresh);
 
-                Matchs = matchs.Where(m => _weekStartingDate.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                Items = matchs.Where(m => SelectedFilter.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
                                .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
                                .OrderBy(m => m.Date)
                                .ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 DisplayError("Erreur lors de la récupération des Matchs");
                 Debug.WriteLine(ex);

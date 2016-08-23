@@ -48,7 +48,7 @@ namespace HOFCCross.Service
             }
         }
 
-        public async Task<List<Match>> GetMatchs()
+        public async Task<List<Match>> GetMatchs(bool forceRefresh = false)
         {
             try
             {
