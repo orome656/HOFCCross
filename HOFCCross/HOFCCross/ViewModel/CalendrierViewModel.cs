@@ -14,43 +14,8 @@ using System.Diagnostics;
 
 namespace HOFCCross.ViewModel
 {
-    public class CalendrierViewModel: BaseViewModel
+    public class CalendrierViewModel: FilteredListBaseViewModel<string, Match>
     {
-        private List<Match> _matchs;
-        public List<Match> Matchs
-        {
-            get { return _matchs; }
-            set
-            {
-                _matchs = value;
-                RaisePropertyChanged(nameof(Matchs));
-            }
-        }
-
-        private string _selectedEquipe;
-
-        public string SelectedEquipe {
-            get {
-                return _selectedEquipe;
-            }
-            set {
-                _selectedEquipe = value;
-                RaisePropertyChanged(nameof(SelectedEquipe));
-                ReloadMatchs();
-            }
-        }
-
-        private List<string> _equipes;
-        public List<string> Equipes
-        {
-            get { return _equipes; }
-            set
-            {
-                _equipes = value;
-                RaisePropertyChanged(nameof(Equipes));
-            }
-        }
-        
         IService Service;
 
         public CalendrierViewModel(IService service)
@@ -66,7 +31,7 @@ namespace HOFCCross.ViewModel
             try
             {
                 await LoadEquipes();
-                SelectedEquipe = Equipes.First(c => c.Equals((string)initData));
+                SelectedFilter = Filters.First(c => c.Equals((string)initData));
             }
             catch(Exception ex)
             {
@@ -79,25 +44,24 @@ namespace HOFCCross.ViewModel
         private async Task LoadEquipes()
         {
             List<Match> matchs = await Service.GetMatchs();
-            Equipes = matchs.Select(m => m.Competition)
-                                    .Select(c => c.Categorie)
-                                    .Distinct()
-                                    .OrderBy(c => c)
-                                    .Select(c => c)
-                                    .ToList();
+            Filters = matchs.Select(m => m.Competition)
+                            .Select(c => c.Categorie)
+                            .Distinct()
+                            .OrderBy(c => c)
+                            .Select(c => c)
+                            .ToList();
 
         }
 
-        private async void ReloadMatchs()
+        protected override async Task ReloadItems(bool forceRefresh = false)
         {
             IsLoading = true;
             try
             {
-                List<Match> matchs = await Service.GetMatchs();
-                Matchs = matchs.Where(m => m.Competition != null && _selectedEquipe.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                List<Match> matchs = await Service.GetMatchs(forceRefresh);
+                Items = matchs.Where(m => m.Competition != null && SelectedFilter.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
                                .OrderBy(m => m.Date)
                                .ToList();
-                this.RaisePropertyChanged(nameof(Matchs));
             }
             catch(Exception ex)
             {

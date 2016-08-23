@@ -123,7 +123,7 @@ namespace HOFCCross.Service
             return Task.FromResult(matchs);
         }
 
-        public Task<List<ClassementEquipe>> GetClassements()
+        public Task<List<ClassementEquipe>> GetClassements(bool forceRefresh = false)
         {
             List<ClassementEquipe> list = new List<ClassementEquipe>();
 

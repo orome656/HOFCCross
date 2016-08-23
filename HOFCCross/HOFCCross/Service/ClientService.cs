@@ -32,7 +32,7 @@ namespace HOFCCross.Service
             }
         }
 
-        public async Task<List<ClassementEquipe>> GetClassements()
+        public async Task<List<ClassementEquipe>> GetClassements(bool forceRefresh = false)
         {
             try
             {

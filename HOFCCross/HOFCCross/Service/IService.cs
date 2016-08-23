@@ -12,7 +12,7 @@ namespace HOFCCross.Service
     {
         Task<List<Actu>> GetActu(bool forceRefresh = false);
         Task<List<Match>> GetMatchs(bool forceRefresh = false);
-        Task<List<ClassementEquipe>> GetClassements();
+        Task<List<ClassementEquipe>> GetClassements(bool forceRefresh = false);
         Task SendNotificationToken(string token, DeviceType type);
 
         Task<ArticleDetails> GetArticleDetails(string Url);

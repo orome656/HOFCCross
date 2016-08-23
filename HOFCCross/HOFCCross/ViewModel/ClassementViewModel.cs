@@ -12,29 +12,8 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class ClassementViewModel: BaseViewModel
+    class ClassementViewModel: FilteredListBaseViewModel<string, ClassementEquipe>
     {
-        public List<ClassementEquipe> Classements { get; set; }
-
-
-        private string _selectedEquipe;
-
-        public string SelectedEquipe
-        {
-            get
-            {
-                return _selectedEquipe;
-            }
-            set
-            {
-                _selectedEquipe = value;
-                RaisePropertyChanged(nameof(SelectedEquipe));
-                ReloadRanks();
-            }
-        }
-
-        public List<string> Equipes { get; set; } = new List<string>();
-
         IService Service;
 
         public ClassementViewModel(IService service)
@@ -42,19 +21,17 @@ namespace HOFCCross.ViewModel
             Service = service;
         }
 
-        private async void ReloadRanks()
+        protected override async Task ReloadItems(bool forceRefresh = false)
         {
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
+
             try
             {
-                var classements = await Service.GetClassements();
+                var classements = await Service.GetClassements(forceRefresh);
 
-                Classements = classements.Where(c => c.Competition != null && _selectedEquipe.Equals(c.Competition.Categorie))
+                Items = classements.Where(c => c.Competition != null && SelectedFilter.Equals(c.Competition.Categorie))
                                          .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
                                          .ToList();
-
-                RaisePropertyChanged(nameof(Classements));
             }
             catch(Exception ex)
             {
@@ -62,7 +39,6 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
         }
 
         public override async void Init(object initData)
@@ -70,29 +46,20 @@ namespace HOFCCross.ViewModel
             base.Init(initData);
 
             IsLoading = true;
-            RaisePropertyChanged(nameof(IsLoading));
 
             try
             {
                 var classements = await Service.GetClassements();
                 if (classements != null && classements.Count > 0)
                 {
-                    Equipes = classements.Select(c => c.Competition)
+                    Filters = classements.Select(c => c.Competition)
                                      .Select(c => c.Categorie)
                                      .Distinct()
                                      .OrderBy(c => c)
                                      .Select(c => c)
                                      .ToList();
 
-                    _selectedEquipe = Equipes.First(c => c.Equals((string)initData));
-
-                    Classements = classements.Where(c => c.Competition != null && _selectedEquipe.Equals(c.Competition.Categorie))
-                                             .Select((c, i) => new ClassementEquipe() { Bc = c.Bc, Bp = c.Bp, Competition = c.Competition, Defaite = c.Defaite, Joue = c.Joue, Nom = c.Nom, Nul = c.Nul, Point = c.Point, Victoire = c.Victoire, Rank = i + 1 })
-                                             .ToList();
-
-                    RaisePropertyChanged(nameof(Classements));
-                    RaisePropertyChanged(nameof(SelectedEquipe));
-                    RaisePropertyChanged(nameof(Equipes));
+                    SelectedFilter = Filters.First(c => c.Equals((string)initData));
                 }
             }
             catch (Exception ex)
@@ -101,7 +68,6 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-            RaisePropertyChanged(nameof(IsLoading));
         }
     }
 }

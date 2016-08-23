@@ -13,12 +13,23 @@
       <converters:NotConverter x:Key="NotConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Sync"
+                 Order="Primary"
+                 Priority="0"
+                 Icon="ic_sync_black_24dp_2x.png"
+                 Command="{Binding RefreshCommand}"/>
+  </ContentPage.ToolbarItems>
   <StackLayout>
     <ActivityIndicator Color="White" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
-    <fe:BindablePicker ItemsSource="{Binding Journees}"
-                       SelectedItem="{Binding Journee}"
+    <fe:BindablePicker ItemsSource="{Binding Filters}"
+                       SelectedItem="{Binding SelectedFilter}"
                        Title="Changer de journée"/>
-    <ListView ItemsSource="{Binding Matchs}" HasUnevenRows="True">
+    <ListView ItemsSource="{Binding Items}" 
+              HasUnevenRows="True"
+              IsPullToRefreshEnabled="True"
+              IsRefreshing="{Binding IsLoading}"
+              RefreshCommand="{Binding RefreshCommand}">
       <ListView.ItemTemplate>
         <DataTemplate>
           <controls:Match Equipe1="{Binding Equipe1}" Equipe2="{Binding Equipe2}" Message="{Binding ScoreMessage}" Date="{Binding Date}"/>

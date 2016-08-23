@@ -41,13 +41,6 @@ namespace HOFCCross.Service
             }
         }
 
-        public async Task<List<ClassementEquipe>> GetClassements()
-        {
-            return await BlobCache.LocalMachine.GetOrFetchObject("Classements",
-                                    async () => await Service.GetClassements(),
-                                    DateTimeOffset.Now.AddDays(1));
-        }
-
         public async Task<List<Match>> GetMatchs(bool forceRefresh = false)
         {
             if (forceRefresh)
@@ -67,6 +60,29 @@ namespace HOFCCross.Service
             {
                 return await BlobCache.LocalMachine.GetOrFetchObject("Matchs",
                                         async () => await Service.GetMatchs(),
+                                        DateTimeOffset.Now.AddDays(1));
+            }
+        }
+
+        public async Task<List<ClassementEquipe>> GetClassements(bool forceRefresh = false)
+        {
+            if (forceRefresh)
+            {
+                var classements = await Service.GetClassements();
+                if (classements != null && classements.Count > 0)
+                {
+                    await BlobCache.LocalMachine.InsertObject("Classements", classements, DateTimeOffset.Now.AddDays(1));
+                    return classements;
+                }
+                else
+                {
+                    return await BlobCache.LocalMachine.GetObject<List<ClassementEquipe>>("Classements");
+                }
+            }
+            else
+            {
+                return await BlobCache.LocalMachine.GetOrFetchObject("Classements",
+                                        async () => await Service.GetClassements(),
                                         DateTimeOffset.Now.AddDays(1));
             }
         }
