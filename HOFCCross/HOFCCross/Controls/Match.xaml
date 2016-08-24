@@ -2,34 +2,63 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HOFCCross.Controls.Match">
-  <Grid BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+  <Grid HeightRequest="180" BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
     <Grid.ColumnDefinitions>
       <!-- Logo + Nom -->
-      <ColumnDefinition />
+      <ColumnDefinition Width="*"/>
       <!-- Score -->
-      <ColumnDefinition />
+      <ColumnDefinition  Width="*"/>
       <!-- Logo + Nom -->
-      <ColumnDefinition />
+      <ColumnDefinition  Width="*"/>
     </Grid.ColumnDefinitions>
     <Grid.RowDefinitions>
       <RowDefinition />
       <RowDefinition />
       <RowDefinition />
-      <RowDefinition Height="Auto"/>
+      <RowDefinition />
     </Grid.RowDefinitions>
 
-    <Label x:Name="DateLabel" Grid.ColumnSpan="3" HorizontalTextAlignment="Center"/>
+    <Label x:Name="DateLabel" 
+           Grid.ColumnSpan="3" 
+           HorizontalTextAlignment="Center"/>
 
-    <Image x:Name="Equipe1Image" Source="icon.png" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
-    <StackLayout Grid.Column="0" Grid.Row="3" Padding="0,0,0,20">
-      <Label x:Name="Equipe1Label" HorizontalTextAlignment="Center"/>
+    <Image x:Name="Equipe1Image" 
+           Source="icon.png" 
+           Grid.Column="0" 
+           Grid.Row="1" 
+           Grid.RowSpan="2" 
+           HorizontalOptions="Center"/>
+
+
+    <StackLayout Grid.Column="0"
+                 Grid.Row="3"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+      <Label x:Name="Equipe1Label"
+             HorizontalTextAlignment="Center"
+             LineBreakMode="WordWrap"/>
     </StackLayout>
 
-    <Label x:Name="MessageLabel" FontSize="20" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
+    <Label x:Name="MessageLabel" 
+           FontSize="20"
+           Grid.Row="2" 
+           Grid.Column="1" 
+           HorizontalOptions="Center"/>
 
-    <Image x:Name="Equipe2Image" Source="icon.png" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" HorizontalOptions="Center"/>
-    <StackLayout Grid.Column="2" Grid.Row="3" Padding="0,0,0,20">
-      <Label x:Name="Equipe2Label" HorizontalTextAlignment="Center"/>
+    <Image x:Name="Equipe2Image" 
+           Source="icon.png" 
+           Grid.Column="2" 
+           Grid.Row="1" 
+           Grid.RowSpan="2"
+           HorizontalOptions="Center"/>
+
+    <StackLayout Grid.Column="2"
+                 Grid.Row="3"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+      <Label x:Name="Equipe2Label"
+             HorizontalTextAlignment="Center"
+             LineBreakMode="WordWrap"/>
     </StackLayout>
   </Grid>
 </ViewCell>
