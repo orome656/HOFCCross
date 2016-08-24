@@ -23,6 +23,15 @@ namespace HOFCCross.Controls
             set { SetValue(Equipe1Property, value); }
         }
 
+        public static readonly BindableProperty TitleProperty =
+            BindableProperty.Create(nameof(Title), typeof(string), typeof(Match), null, BindingMode.OneWay);
+
+        public string Title
+        {
+            get { return (string)GetValue(TitleProperty); }
+            set { SetValue(TitleProperty, value); }
+        }
+
         public static readonly BindableProperty Equipe2Property =
             BindableProperty.Create(nameof(Equipe2), typeof(string), typeof(Match), null, BindingMode.OneWay);
 
@@ -76,6 +85,7 @@ namespace HOFCCross.Controls
                 DateLabel.Text = Date.Value.ToString("dd MMMM yyyy HH:mm");
 
                 MessageLabel.Text = Message;
+                TitleLabel.Text = Title;
             }
         }
 

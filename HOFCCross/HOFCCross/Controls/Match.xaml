@@ -18,20 +18,25 @@
       <RowDefinition />
     </Grid.RowDefinitions>
 
+    <Label x:Name="TitleLabel"
+           Grid.ColumnSpan="3"
+           HorizontalTextAlignment="Center"/>
+    
     <Label x:Name="DateLabel" 
+           Grid.Row="1" 
            Grid.ColumnSpan="3" 
            HorizontalTextAlignment="Center"/>
 
     <Image x:Name="Equipe1Image" 
            Source="icon.png" 
            Grid.Column="0" 
-           Grid.Row="1" 
+           Grid.Row="2" 
            Grid.RowSpan="2" 
            HorizontalOptions="Center"/>
 
 
     <StackLayout Grid.Column="0"
-                 Grid.Row="3"
+                 Grid.Row="4"
                  HorizontalOptions="FillAndExpand"
                  VerticalOptions="FillAndExpand">
       <Label x:Name="Equipe1Label"
@@ -41,19 +46,19 @@
 
     <Label x:Name="MessageLabel" 
            FontSize="20"
-           Grid.Row="2" 
+           Grid.Row="3" 
            Grid.Column="1" 
            HorizontalOptions="Center"/>
 
     <Image x:Name="Equipe2Image" 
            Source="icon.png" 
            Grid.Column="2" 
-           Grid.Row="1" 
+           Grid.Row="2" 
            Grid.RowSpan="2"
            HorizontalOptions="Center"/>
 
     <StackLayout Grid.Column="2"
-                 Grid.Row="3"
+                 Grid.Row="4"
                  HorizontalOptions="FillAndExpand"
                  VerticalOptions="FillAndExpand">
       <Label x:Name="Equipe2Label"

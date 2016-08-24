@@ -41,7 +41,11 @@
               RefreshCommand="{Binding RefreshCommand}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <controls:Match Equipe1="{Binding Equipe1}" Equipe2="{Binding Equipe2}" Message="{Binding ScoreMessage}" Date="{Binding Date}"/>
+          <controls:Match Equipe1="{Binding Equipe1}" 
+                          Equipe2="{Binding Equipe2}" 
+                          Message="{Binding ScoreMessage}"
+                          Date="{Binding Date}"
+                          Title="{Binding Competition.Nom}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
