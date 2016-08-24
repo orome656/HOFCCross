@@ -11,21 +11,8 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    public class ActuViewModel: BaseViewModel
+    public class ActuViewModel: ListBaseViewModel<Actu>
     {
-        private List<Actu> _actus;
-        public List<Actu> Actus
-        {
-            get
-            {
-                return _actus;
-            }
-            set
-            {
-                _actus = value;
-                RaisePropertyChanged(nameof(Actus));
-            }
-        }
         IService Service;
         public ActuViewModel(IService service)
         {
@@ -49,12 +36,12 @@ namespace HOFCCross.ViewModel
             }
         }
 
-        private async Task ReloadItems(bool forceRefresh = false)
+        protected override async Task ReloadItems(bool forceRefresh = false)
         {
             IsLoading = true;
             try
             {
-                Actus = await Service.GetActu(forceRefresh);
+                Items = await Service.GetActu(forceRefresh);
             }
             catch (Exception ex)
             {

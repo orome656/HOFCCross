@@ -23,7 +23,7 @@
       </OnPlatform>
     </ContentView>
     <ListView x:Name="listActus" 
-              ItemsSource="{Binding Actus}" 
+              ItemsSource="{Binding Items}" 
               HasUnevenRows="True" 
               SeparatorVisibility="None" 
               fe:ListViewItemTappedAttached.Command="{Binding ItemTapCommand}"

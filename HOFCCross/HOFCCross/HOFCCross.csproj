@@ -101,6 +101,7 @@
       <DependentUpon>CalendrierPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ClassementViewModel.cs" />
+    <Compile Include="ViewModel\ListBaseViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

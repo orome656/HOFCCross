@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    public abstract class FilteredListBaseViewModel<T, V>: BaseViewModel
+    public abstract class FilteredListBaseViewModel<T, V>: ListBaseViewModel<V>
     {
         private List<T> _filters;
         public List<T> Filters
@@ -30,19 +30,6 @@ namespace HOFCCross.ViewModel
                 ReloadItems();
             }
         }
-
-
-        private List<V> _items;
-        public List<V> Items {
-            get { return _items; }
-            set
-            {
-                _items = value;
-                RaisePropertyChanged(nameof(Items));
-            }
-        }
-
-        protected abstract Task ReloadItems(bool forceRefresh = false);
 
         public Command RefreshCommand
         {
