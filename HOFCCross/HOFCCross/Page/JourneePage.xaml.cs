@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HOFCCross.Page.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.Page
 {
-    public partial class JourneePage : ContentPage
+    public partial class JourneePage : ListPage
     {
         public JourneePage()
         {

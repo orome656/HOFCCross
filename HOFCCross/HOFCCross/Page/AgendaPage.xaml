@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<commonpage:ListPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:commonpage="clr-namespace:HOFCCross.Page.Common"
              xmlns:fe="clr-namespace:FreshEssentials;assembly=FreshEssentials"
              x:Class="HOFCCross.Page.AgendaPage"
              xmlns:controls="clr-namespace:HOFCCross.Controls"
@@ -13,13 +14,6 @@
       <converters:NotConverter x:Key="NotConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
-  <ContentPage.ToolbarItems>
-    <ToolbarItem Name="Sync"
-                 Order="Primary"
-                 Priority="0"
-                 Icon="ic_sync_black_24dp_2x.png"
-                 Command="{Binding RefreshCommand}"/>
-  </ContentPage.ToolbarItems>
   <StackLayout>
     <ContentView>
       <OnPlatform x:TypeArguments="View">
@@ -49,4 +43,4 @@
       </ListView.ItemTemplate>
     </ListView>
   </StackLayout>
-</ContentPage>
+</commonpage:ListPage>

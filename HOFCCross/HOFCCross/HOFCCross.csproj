@@ -61,6 +61,7 @@
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Notifications\CrossPushNotificationListener.cs" />
+    <Compile Include="Page\Common\ListPage.cs" />
     <Compile Include="Page\DiaporamaPage.xaml.cs">
       <DependentUpon>DiaporamaPage.xaml</DependentUpon>
     </Compile>
