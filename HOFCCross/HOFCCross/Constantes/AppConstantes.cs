@@ -9,11 +9,11 @@ namespace HOFCCross.Constantes
     public class AppConstantes
     {
         public static readonly string HOFC_NAME = "HORGUES ODOS";
-        public static readonly string SERVER_BASE_URL = "http://192.168.1.81:49360/";
+        public static readonly string SERVER_BASE_URL = "http://v2.webhofc.fr/";
         public static readonly string SERVER_ACTU_URL = SERVER_BASE_URL + "api/actus";
         public static readonly string SERVER_MATCH_URL = SERVER_BASE_URL + "api/matchs";
         public static readonly string SERVER_CLASSEMENT_URL = SERVER_BASE_URL + "api/classements";
-        public static readonly string SERVER_NOTIFICATION_URL = SERVER_BASE_URL + "api/notifications";
+        public static readonly string SERVER_NOTIFICATION_URL = SERVER_BASE_URL + "api/Notification";
         public static readonly string SERVER_PARSE_URL = SERVER_BASE_URL + "api/parsePage";
 
         public static readonly string PRIMARY_COLOR_HEX = "#08589D";
