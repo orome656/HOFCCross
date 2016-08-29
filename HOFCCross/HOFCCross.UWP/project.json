@@ -2,14 +2,14 @@
   "dependencies": {
     "akavache": "4.1.2",
     "akavache.sqlite3": "4.1.2",
-    "FreshEssentials": "2.1.0",
+    "FreshEssentials": "2.1.1",
     "FreshMvvm": "2.2.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "9.0.1",
     "Splat": "1.6.2",
     "SQLitePCL.raw_basic": "0.8.6",
     "Toasts.Forms.Plugin": "2.0.4",
-    "Xam.Plugin.PushNotification": "1.2.2",
+    "Xam.Plugin.PushNotification": "1.2.4",
     "Xamarin.FFImageLoading.Forms": "2.1.6",
     "Xamarin.Forms": "2.3.1.114"
   },
