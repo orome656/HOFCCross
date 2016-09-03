@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -63,7 +64,12 @@ namespace HOFCCross.UWP
                 Xamarin.Forms.DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
                 ToastNotificatorImplementation.Init();
                 CrossPushNotification.Initialize<CrossPushNotificationListener>();
-                Xamarin.Forms.Forms.Init(e);
+                List<Assembly> assembliesToInclude = new List<Assembly>();
+
+                assembliesToInclude.Add(typeof(FFImageLoading.Forms.WinUWP.CachedImageRenderer).GetTypeInfo().Assembly);
+                assembliesToInclude.Add(typeof(FFImageLoading.Forms.WinUWP.ImageSourceBinding).GetTypeInfo().Assembly);
+
+                Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
