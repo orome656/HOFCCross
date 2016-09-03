@@ -29,7 +29,21 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             
             await LoadEquipes();
-            SelectedFilter = Filters.First(c => c.Equals((string)initData));
+            try
+            {
+                if (Filters != null && Filters.Count > 0)
+                {
+                    var filter = Filters.FirstOrDefault(c => c.Equals((string)initData));
+                    if (filter == null)
+                        filter = Filters.First();
+                    SelectedFilter = filter;
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayError("Erreur lors de la récupération des matchs");
+                Debug.WriteLine(ex);
+            }
 
             IsLoading = false;
         }

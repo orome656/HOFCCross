@@ -73,12 +73,20 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
 
             await LoadFilters();
-            if(Filters != null && Filters.Count > 0)
+            try
             {
-                var filter = Filters.FirstOrDefault(c => c.Equals((string)initData));
-                if (SelectedFilter == null)
-                    filter = Filters.First();
-                SelectedFilter = filter;
+                if (Filters != null && Filters.Count > 0)
+                {
+                    var filter = Filters.FirstOrDefault(c => c.Equals((string)initData));
+                    if (filter == null)
+                        filter = Filters.First();
+                    SelectedFilter = filter;
+                }
+            }
+            catch (Exception ex)
+            {
+                DisplayError("Erreur lors de la récupération des informations de classement");
+                Debug.WriteLine(ex);
             }
 
             IsLoading = false;

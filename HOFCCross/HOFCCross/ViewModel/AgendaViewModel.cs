@@ -45,13 +45,16 @@ namespace HOFCCross.ViewModel
             try
             {
                 var matchs = await Service.GetMatchs();
+                if(matchs != null && matchs.Count > 0)
+                {
+                    Filters = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                                     .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
+                                     .OrderBy(d => d)
+                                     .Distinct()
+                                     .Select(w => new Week() { Date = w })
+                                     .ToList();
 
-                Filters = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                                 .Select(m => m.Date.StartOfWeek(DayOfWeek.Monday).Date)
-                                 .OrderBy(d => d)
-                                 .Distinct()
-                                 .Select(w => new Week() { Date = w })
-                                 .ToList();
+                }
             }
             catch (Exception ex)
             {
