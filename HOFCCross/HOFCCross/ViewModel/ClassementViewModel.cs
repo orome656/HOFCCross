@@ -74,7 +74,12 @@ namespace HOFCCross.ViewModel
 
             await LoadFilters();
             if(Filters != null && Filters.Count > 0)
-                SelectedFilter = Filters.First(c => c.Equals((string)initData));
+            {
+                var filter = Filters.FirstOrDefault(c => c.Equals((string)initData));
+                if (SelectedFilter == null)
+                    filter = Filters.First();
+                SelectedFilter = filter;
+            }
 
             IsLoading = false;
         }
