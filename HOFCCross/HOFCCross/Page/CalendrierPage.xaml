@@ -28,7 +28,8 @@
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer d'équipe"
                        IsVisible="{Binding Filters, Converter={StaticResource FalseIfNullOrEmptyConverter}}"/>
-    <ListView ItemsSource="{Binding Items}" 
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Items}" 
               HasUnevenRows="True"
               IsPullToRefreshEnabled="True"
               IsRefreshing="{Binding IsLoading}"
@@ -39,7 +40,9 @@
                           Equipe2="{Binding Equipe2}" 
                           Message="{Binding ScoreMessage}"
                           Date="{Binding Date}"
-                          Title="{Binding Competition.Nom}"/>
+                          Title="{Binding Competition.Nom}"
+                          InfosCommand="{Binding Source={x:Reference listView}, Path=BindingContext.InfosCommand}"
+                          InfosId="{Binding Infos}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

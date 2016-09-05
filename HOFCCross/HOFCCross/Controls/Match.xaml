@@ -16,6 +16,10 @@
       <RowDefinition />
       <RowDefinition />
       <RowDefinition />
+      <RowDefinition />
+      <RowDefinition />
+      <RowDefinition Height="1"/>
+      <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
 
     <Label x:Name="TitleLabel"
@@ -29,14 +33,15 @@
 
     <Image x:Name="Equipe1Image" 
            Source="icon.png" 
-           Grid.Column="0" 
-           Grid.Row="2" 
-           Grid.RowSpan="2" 
+           Grid.Column="0"
+           Grid.Row="2"
+           Grid.RowSpan="2"
            HorizontalOptions="Center"/>
 
 
     <StackLayout Grid.Column="0"
                  Grid.Row="4"
+                 Grid.RowSpan="2"
                  HorizontalOptions="FillAndExpand"
                  VerticalOptions="FillAndExpand">
       <Label x:Name="Equipe1Label"
@@ -48,22 +53,34 @@
            FontSize="20"
            Grid.Row="3" 
            Grid.Column="1" 
+           Grid.RowSpan="2"
            HorizontalOptions="Center"/>
 
     <Image x:Name="Equipe2Image" 
            Source="icon.png" 
            Grid.Column="2" 
-           Grid.Row="2" 
+           Grid.Row="2"
            Grid.RowSpan="2"
            HorizontalOptions="Center"/>
 
     <StackLayout Grid.Column="2"
                  Grid.Row="4"
+                 Grid.RowSpan="2"
                  HorizontalOptions="FillAndExpand"
                  VerticalOptions="FillAndExpand">
       <Label x:Name="Equipe2Label"
              HorizontalTextAlignment="Center"
              LineBreakMode="WordWrap"/>
+    </StackLayout>
+
+    <BoxView Color="Gray" HeightRequest="1" Grid.ColumnSpan="3" Grid.Row="6"/>
+    
+    <StackLayout Grid.Column="2"
+                 Grid.Row="7">
+      <Image x:Name="InfosButton"
+             Source="ic_info_outline_black_24dp.png"
+             HeightRequest="30"
+             HorizontalOptions="End"></Image>
     </StackLayout>
   </Grid>
 </ViewCell>

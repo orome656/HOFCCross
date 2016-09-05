@@ -60,6 +60,24 @@ namespace HOFCCross.Controls
             set { SetValue(DateProperty, value); }
         }
 
+        public static readonly BindableProperty InfosCommandProperty =
+            BindableProperty.Create(nameof(Date), typeof(Command), typeof(Match), null, BindingMode.OneWay);
+
+        public Command InfosCommand
+        {
+            get { return (Command)GetValue(InfosCommandProperty); }
+            set { SetValue(InfosCommandProperty, value); }
+        }
+
+        public static readonly BindableProperty InfosIdProperty =
+            BindableProperty.Create(nameof(InfosId), typeof(string), typeof(Match), null, BindingMode.OneWay);
+
+        public string InfosId
+        {
+            get { return (string)GetValue(InfosIdProperty); }
+            set { SetValue(InfosIdProperty, value); }
+        }
+
         protected override void OnBindingContextChanged()
         {
             base.OnBindingContextChanged();
@@ -86,6 +104,10 @@ namespace HOFCCross.Controls
 
                 MessageLabel.Text = Message;
                 TitleLabel.Text = Title;
+                TapGestureRecognizer tapGesture = new TapGestureRecognizer();
+                tapGesture.Command = InfosCommand;
+                tapGesture.CommandParameter = InfosId;
+                InfosButton.GestureRecognizers.Add(tapGesture);
             }
         }
 

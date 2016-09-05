@@ -105,5 +105,12 @@ namespace HOFCCross.Service
                          async () => await Service.GetDiaporama(Url),
                          DateTimeOffset.Now.AddDays(1));
         }
+
+        public async Task<MatchInfos> GetMatchInfos(string id)
+        {
+            return await BlobCache.LocalMachine.GetOrFetchObject("MatchInfos" + id,
+                          async () => await Service.GetMatchInfos(id),
+                          DateTimeOffset.Now.AddDays(1));
+        }
     }
 }

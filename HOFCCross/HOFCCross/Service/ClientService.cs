@@ -121,5 +121,21 @@ namespace HOFCCross.Service
                 throw ex;
             }
         }
+
+        public async Task<MatchInfos> GetMatchInfos(string id)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_INFOS_URL + "/" + id);
+                MatchInfos matchInfos = JsonConvert.DeserializeObject<MatchInfos>(response);
+                return matchInfos;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
     }
 }

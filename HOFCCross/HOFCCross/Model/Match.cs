@@ -30,5 +30,6 @@ namespace HOFCCross.Model
         public string Commentaire { get; set; }
         [JsonProperty(PropertyName = "idJournee")]
         public int? JourneeId { get; set; }
+        public string Infos { get; set; }
     }
 }

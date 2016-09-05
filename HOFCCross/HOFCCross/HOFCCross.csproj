@@ -52,11 +52,13 @@
     <Compile Include="Converters\NotConverter.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
+    <Compile Include="Model\ActionButton.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ArticleDetails.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />
     <Compile Include="Model\Match.cs" />
+    <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />

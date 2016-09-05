@@ -61,7 +61,8 @@ namespace HOFCCross.Service
                     Nom = "Excellence",
                     Categorie = "equipe1",
                     IsChampionnat = true,
-                }
+                },
+                Infos = "1111"
             });
 
             matchs.Add(new Match()
@@ -77,7 +78,8 @@ namespace HOFCCross.Service
                     Nom = "Excellence",
                     Categorie = "equipe1",
                     IsChampionnat = true
-                }
+                },
+                Infos = "1111"
             });
 
             matchs.Add(new Match()
@@ -90,7 +92,8 @@ namespace HOFCCross.Service
                     Nom = "Autre",
                     Categorie = "equipe1",
                     IsChampionnat = false
-                }
+                },
+                Infos = "1111"
             });
 
             matchs.Add(new Match()
@@ -104,7 +107,8 @@ namespace HOFCCross.Service
                     Nom = "Autre",
                     Categorie = "equipe2",
                     IsChampionnat = true
-                }
+                },
+                Infos = "1111"
             });
 
             matchs.Add(new Match()
@@ -117,7 +121,8 @@ namespace HOFCCross.Service
                     Nom = "Autre",
                     Categorie = "equipe2",
                     IsChampionnat = false
-                }
+                },
+                Infos = "1111"
             });
 
             return Task.FromResult(matchs);
@@ -203,6 +208,17 @@ namespace HOFCCross.Service
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-2.jpg",
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-3.jpg",
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-4.jpg"
+            });
+        }
+
+        public Task<MatchInfos> GetMatchInfos(string id)
+        {
+            return Task.FromResult(new MatchInfos()
+            {
+                Nom = "STADE DU TILHOS 1",
+                Adresse = "ROUTE DU STADE",
+                Ville = "65400 ARGELES GAZOST",
+                Arbitres = new List<string>() { "Arbitre centre Test arbitre" }
             });
         }
     }
