@@ -1,5 +1,6 @@
 ﻿using FreshMvvm;
 using HOFCCross.Service;
+using HOFCCross.ViewModel.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,8 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    public class ArticleDetailsViewModel: FreshBasePageModel
+    public class ArticleDetailsViewModel: BaseViewModel
     {
-        public string Title { get; set; }
         public DateTime Date { get; set; }
         public HtmlWebViewSource Html {
             get {

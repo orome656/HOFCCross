@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace HOFCCross.ViewModel
+namespace HOFCCross.ViewModel.Common
 {
     public abstract class FilteredListBaseViewModel<T, V>: ListBaseViewModel<V>
     {

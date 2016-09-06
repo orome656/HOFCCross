@@ -1,5 +1,6 @@
 ﻿using FreshMvvm;
 using HOFCCross.Service;
+using HOFCCross.ViewModel.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,9 @@ using System.Threading.Tasks;
 
 namespace HOFCCross.ViewModel
 {
-    public class DiaporamaViewModel: FreshBasePageModel
+    public class DiaporamaViewModel: BaseViewModel
     {
         public List<string> Images { get; set; }
-        public bool IsLoading { get; set; } = false;
         private IService _service;
 
         public DiaporamaViewModel(IService service)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HOFCCross.ViewModel
+namespace HOFCCross.ViewModel.Common
 {
     public abstract class ListBaseViewModel<T>: BaseViewModel
     {
