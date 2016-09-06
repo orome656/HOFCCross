@@ -97,10 +97,7 @@ namespace HOFCCross.ViewModel
             {
                 return new Command<string>(async (id) =>
                 {
-                    MatchInfos infos = await Service.GetMatchInfos(id);
-                    var texte = string.Format("Nom : {0}{1}Adresse : {2}{1}Ville : {3}{1}Arbitres {1}{4}", infos.Nom, Environment.NewLine, infos.Adresse, infos.Ville, infos.Arbitres?.Aggregate((a, b) => a + Environment.NewLine + b));
-                    CoreMethods.DisplayAlert("Informations", texte, "Ok");
-                    // should open dialog infos
+                    await CoreMethods.PushPageModel<MatchInfosViewModel>(id, true);
                 });
             }
         }
