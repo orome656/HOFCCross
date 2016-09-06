@@ -23,6 +23,8 @@
         </OnPlatform.WinPhone>
       </OnPlatform>
     </ContentView>
+    <ActivityIndicator IsRunning="{Binding IsNavLoading}"
+                       IsVisible="{Binding IsNavLoading}" />
     <fe:BindablePicker ItemsSource="{Binding Filters}"
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer de semaine"
@@ -41,7 +43,8 @@
                           Date="{Binding Date}"
                           Title="{Binding Competition.Nom}"
                           InfosCommand="{Binding Source={x:Reference listView}, Path=BindingContext.InfosCommand}"
-                          InfosId="{Binding Infos}"/>
+                          InfosId="{Binding Infos}"
+                          NavCommand="{Binding Source={x:Reference listView}, Path=BindingContext.NavCommand}"/>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

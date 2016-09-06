@@ -1,4 +1,5 @@
 ﻿using FreshMvvm;
+using HOFCCross.Service;
 using Plugin.Toasts;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace HOFCCross.ViewModel
                 RaisePropertyChanged(nameof(IsLoading));
             }
         }
+        protected IService Service;
         public string ErrorMessage { get; set; }
         public string Title { get; set; }
         protected async void DisplayError(string message)

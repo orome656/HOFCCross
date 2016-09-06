@@ -11,13 +11,12 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using HOFCCross.Constantes;
 using System.Diagnostics;
+using HOFCCross.ViewModel.Common;
 
 namespace HOFCCross.ViewModel
 {
-    public class CalendrierViewModel: FilteredListBaseViewModel<string, Match>
+    public class CalendrierViewModel: ListMatchBaseViewModel<string, Match>
     {
-        IService Service;
-
         public CalendrierViewModel(IService service)
         {
             Service = service;
@@ -84,17 +83,6 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-        }
-
-        public Command InfosCommand
-        {
-            get
-            {
-                return new Command<string>(async (id) =>
-                {
-                    await CoreMethods.PushPageModel<MatchInfosViewModel>(id, true);
-                });
-            }
         }
     }
 }

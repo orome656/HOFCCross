@@ -69,6 +69,15 @@ namespace HOFCCross.Controls
             set { SetValue(InfosCommandProperty, value); }
         }
 
+        public static readonly BindableProperty NavCommandProperty =
+            BindableProperty.Create(nameof(Date), typeof(Command), typeof(Match), null, BindingMode.OneWay);
+
+        public Command NavCommand
+        {
+            get { return (Command)GetValue(NavCommandProperty); }
+            set { SetValue(NavCommandProperty, value); }
+        }
+
         public static readonly BindableProperty InfosIdProperty =
             BindableProperty.Create(nameof(InfosId), typeof(string), typeof(Match), null, BindingMode.OneWay);
 
@@ -108,6 +117,11 @@ namespace HOFCCross.Controls
                 tapGesture.Command = InfosCommand;
                 tapGesture.CommandParameter = InfosId;
                 InfosButton.GestureRecognizers.Add(tapGesture);
+
+                TapGestureRecognizer tapNav = new TapGestureRecognizer();
+                tapNav.Command = NavCommand;
+                tapNav.CommandParameter = InfosId;
+                NaviButton.GestureRecognizers.Add(tapNav);
             }
         }
 

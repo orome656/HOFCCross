@@ -14,8 +14,6 @@ namespace HOFCCross.ViewModel
 {
     class ClassementViewModel: FilteredListBaseViewModel<string, ClassementEquipe>
     {
-        IService Service;
-
         public ClassementViewModel(IService service)
         {
             Service = service;

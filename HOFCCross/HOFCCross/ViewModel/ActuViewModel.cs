@@ -13,7 +13,6 @@ namespace HOFCCross.ViewModel
 {
     public class ActuViewModel: ListBaseViewModel<Actu>
     {
-        IService Service;
         public ActuViewModel(IService service)
         {
             Service = service;

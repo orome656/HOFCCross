@@ -2,6 +2,7 @@
 using HOFCCross.Extension;
 using HOFCCross.Model;
 using HOFCCross.Service;
+using HOFCCross.ViewModel.Common;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,9 +14,8 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class JourneeViewModel: FilteredListBaseViewModel<int?, Match>
+    class JourneeViewModel: ListMatchBaseViewModel<int?, Match>
     {
-        IService Service;
         private string _category;
 
         public JourneeViewModel(IService service)
@@ -72,17 +72,6 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
-        }
-
-        public Command InfosCommand
-        {
-            get
-            {
-                return new Command<string>(async (id) =>
-                {
-                    await CoreMethods.PushPageModel<MatchInfosViewModel>(id, true);
-                });
-            }
         }
     }
 }

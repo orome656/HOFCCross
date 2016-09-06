@@ -3,6 +3,7 @@ using HOFCCross.Constantes;
 using HOFCCross.Extension;
 using HOFCCross.Model;
 using HOFCCross.Service;
+using HOFCCross.ViewModel.Common;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,10 +15,8 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    class AgendaViewModel : FilteredListBaseViewModel<AgendaViewModel.Week, Match>
+    class AgendaViewModel : ListMatchBaseViewModel<AgendaViewModel.Week, Match>
     {
-        IService Service;
-
         public AgendaViewModel(IService service)
         {
             Service = service;
@@ -89,17 +88,6 @@ namespace HOFCCross.ViewModel
         {
             public string DisplayName { get { return Date.ToString("dd/MM/yyyy"); } }
             public DateTime Date { get; set; }
-        }
-
-        public Command InfosCommand
-        {
-            get
-            {
-                return new Command<string>(async (id) =>
-                {
-                    await CoreMethods.PushPageModel<MatchInfosViewModel>(id, true);
-                });
-            }
         }
     }
 }
