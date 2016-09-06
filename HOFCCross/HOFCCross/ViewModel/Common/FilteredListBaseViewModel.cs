@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HOFCCross.Service;
 using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel.Common
@@ -21,6 +22,11 @@ namespace HOFCCross.ViewModel.Common
         }
 
         private T _selectedFilter;
+
+        public FilteredListBaseViewModel(IService service) : base(service)
+        {
+        }
+
         public T SelectedFilter {
             get { return _selectedFilter; }
             set

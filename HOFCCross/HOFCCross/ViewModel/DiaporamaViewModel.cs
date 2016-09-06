@@ -12,11 +12,9 @@ namespace HOFCCross.ViewModel
     public class DiaporamaViewModel: BaseViewModel
     {
         public List<string> Images { get; set; }
-        private IService _service;
 
-        public DiaporamaViewModel(IService service)
+        public DiaporamaViewModel(IService service): base(service)
         {
-            _service = service;
         }
 
         public async override void Init(object initData)

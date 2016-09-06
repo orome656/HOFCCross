@@ -5,12 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using HOFCCross.Service;
 
 namespace HOFCCross.ViewModel.Common
 {
     public abstract class ListMatchBaseViewModel<T, V> : FilteredListBaseViewModel<T, V>
     {
         private bool _isNavLoading;
+
+        public ListMatchBaseViewModel(IService service) : base(service)
+        {
+        }
+
         public bool IsNavLoading
         {
             get
@@ -42,7 +48,7 @@ namespace HOFCCross.ViewModel.Common
                 return new Command<string>(async (id) =>
                 {
                     IsNavLoading = true;
-                    var infos = await Service.GetMatchInfos(id);
+                    var infos = await _service.GetMatchInfos(id);
                     var adresse = string.Format("{0} {1}", infos.Adresse, infos.Ville);
 
                     IsNavLoading = false;

@@ -17,9 +17,8 @@ namespace HOFCCross.ViewModel
 {
     class AgendaViewModel : ListMatchBaseViewModel<AgendaViewModel.Week, Match>
     {
-        public AgendaViewModel(IService service)
+        public AgendaViewModel(IService service) : base(service)
         {
-            Service = service;
             Title = "Agenda";
         }
 
@@ -43,7 +42,7 @@ namespace HOFCCross.ViewModel
         {
             try
             {
-                var matchs = await Service.GetMatchs();
+                var matchs = await _service.GetMatchs();
                 if(matchs != null && matchs.Count > 0)
                 {
                     Filters = matchs.Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
@@ -68,7 +67,7 @@ namespace HOFCCross.ViewModel
 
             try
             {
-                List<Match> matchs = await Service.GetMatchs(forceRefresh);
+                List<Match> matchs = await _service.GetMatchs(forceRefresh);
 
                 Items = matchs.Where(m => SelectedFilter.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
                                .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))

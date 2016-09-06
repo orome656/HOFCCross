@@ -12,6 +12,10 @@ namespace HOFCCross.ViewModel
 {
     public class ArticleDetailsViewModel: BaseViewModel
     {
+        public ArticleDetailsViewModel(IService service) : base(service)
+        {
+        }
+
         public DateTime Date { get; set; }
         public HtmlWebViewSource Html {
             get {
@@ -19,14 +23,7 @@ namespace HOFCCross.ViewModel
             }
         }
         public string Content { get; set; }
-
-        private IService _service;
-
-        public ArticleDetailsViewModel(IService service)
-        {
-            _service = service;
-        }
-
+        
         public override async void Init(object initData)
         {
             base.Init(initData);

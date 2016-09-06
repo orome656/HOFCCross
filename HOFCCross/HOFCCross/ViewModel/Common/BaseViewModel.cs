@@ -25,9 +25,15 @@ namespace HOFCCross.ViewModel.Common
                 RaisePropertyChanged(nameof(IsLoading));
             }
         }
-        protected IService Service;
+        protected IService _service;
         public string ErrorMessage { get; set; }
         public string Title { get; set; }
+
+        public BaseViewModel(IService service)
+        {
+            _service = service;
+        }
+
         protected async void DisplayError(string message)
         {
             var notificator = DependencyService.Get<IToastNotificator>();

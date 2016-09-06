@@ -15,16 +15,15 @@ namespace HOFCCross.ViewModel
 {
     class ClassementViewModel: FilteredListBaseViewModel<string, ClassementEquipe>
     {
-        public ClassementViewModel(IService service)
+        public ClassementViewModel(IService service) : base(service)
         {
-            Service = service;
         }
 
         private async Task LoadFilters()
         {
             try
             {
-                var classements = await Service.GetClassements();
+                var classements = await _service.GetClassements();
                 if (classements != null && classements.Count > 0)
                 {
                     Filters = classements.Select(c => c.Competition)
@@ -48,7 +47,7 @@ namespace HOFCCross.ViewModel
 
             try
             {
-                var classements = await Service.GetClassements(forceRefresh);
+                var classements = await _service.GetClassements(forceRefresh);
                 if(classements != null && classements.Count > 0)
                 {
                     Items = classements.Where(c => c.Competition != null && SelectedFilter.Equals(c.Competition.Categorie))

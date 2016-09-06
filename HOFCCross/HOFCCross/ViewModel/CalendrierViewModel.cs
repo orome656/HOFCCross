@@ -17,9 +17,8 @@ namespace HOFCCross.ViewModel
 {
     public class CalendrierViewModel: ListMatchBaseViewModel<string, Match>
     {
-        public CalendrierViewModel(IService service)
+        public CalendrierViewModel(IService service) : base(service)
         {
-            Service = service;
         }
 
         public override async void Init(object initData)
@@ -51,7 +50,7 @@ namespace HOFCCross.ViewModel
         {
             try
             {
-                List<Match> matchs = await Service.GetMatchs();
+                List<Match> matchs = await _service.GetMatchs();
                 Filters = matchs.Select(m => m.Competition)
                                 .Select(c => c.Categorie)
                                 .Distinct()
@@ -72,7 +71,7 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             try
             {
-                List<Match> matchs = await Service.GetMatchs(forceRefresh);
+                List<Match> matchs = await _service.GetMatchs(forceRefresh);
                 Items = matchs.Where(m => m.Competition != null && SelectedFilter.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
                                .OrderBy(m => m.Date)
                                .ToList();

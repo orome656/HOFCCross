@@ -18,9 +18,8 @@ namespace HOFCCross.ViewModel
     {
         private string _category;
 
-        public JourneeViewModel(IService service)
+        public JourneeViewModel(IService service) : base(service)
         {
-            Service = service;
         }
 
         public override async void Init(object initData)
@@ -40,7 +39,7 @@ namespace HOFCCross.ViewModel
         {
             try
             {
-                var matchs = await Service.GetMatchs();
+                var matchs = await _service.GetMatchs();
 
                 Filters = matchs.Where(m => m.JourneeId.HasValue && _category.Equals(m.Competition.Categorie))
                                  .Select(m => m.JourneeId)
@@ -62,7 +61,7 @@ namespace HOFCCross.ViewModel
 
             try
             {
-                List<Match> matchs = await Service.GetMatchs(forceRefresh);
+                List<Match> matchs = await _service.GetMatchs(forceRefresh);
 
                 Items = matchs.Where(m => _category.Equals(m.Competition.Categorie) && m.JourneeId == SelectedFilter).ToList();
             }

@@ -14,9 +14,8 @@ namespace HOFCCross.ViewModel
 {
     public class ActuViewModel: ListBaseViewModel<Actu>
     {
-        public ActuViewModel(IService service)
+        public ActuViewModel(IService service) : base(service)
         {
-            Service = service;
         }
 
         public override async void Init(object initData)
@@ -41,7 +40,7 @@ namespace HOFCCross.ViewModel
             IsLoading = true;
             try
             {
-                Items = await Service.GetActu(forceRefresh);
+                Items = await _service.GetActu(forceRefresh);
             }
             catch (Exception ex)
             {

@@ -13,11 +13,9 @@ namespace HOFCCross.ViewModel
     public class MatchInfosViewModel: BaseViewModel
     {
         public MatchInfos Infos { get; set; }
-        private IService _service;
 
-        public MatchInfosViewModel(IService service)
+        public MatchInfosViewModel(IService service): base(service)
         {
-            _service = service;
         }
 
         public override async void Init(object initData)
