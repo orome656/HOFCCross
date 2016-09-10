@@ -6,7 +6,7 @@
              BackgroundColor="#ffffff"
              Title="Article">
   <StackLayout>
-    <Label TextColor="Black" Text="{Binding Title}"/>
+    <Label TextColor="Black" Text="{Binding ArticleTitle}"/>
     <Label TextColor="Black" Text="{Binding Date, StringFormat='{}{0:dd/MM/yyyy}'}"/>
     <WebView 
       HorizontalOptions="Fill"

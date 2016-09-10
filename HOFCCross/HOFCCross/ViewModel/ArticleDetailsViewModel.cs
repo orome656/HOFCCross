@@ -16,6 +16,7 @@ namespace HOFCCross.ViewModel
         {
         }
 
+        public string ArticleTitle { get; set; }
         public DateTime Date { get; set; }
         public HtmlWebViewSource Html {
             get {
@@ -29,9 +30,12 @@ namespace HOFCCross.ViewModel
             base.Init(initData);
 
             var details = await _service.GetArticleDetails((string)initData);
-            Title = details.Title;
+            ArticleTitle = details.Title;
             Date = details.Date;
             Content = details.Article;
+            RaisePropertyChanged(nameof(ArticleTitle));
+            RaisePropertyChanged(nameof(Date));
+            RaisePropertyChanged(nameof(Html));
         }
     }
 }
