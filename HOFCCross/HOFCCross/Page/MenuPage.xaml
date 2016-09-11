@@ -19,7 +19,7 @@
                    Spacing="20"
                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource NotConverter}}">
         <Image Source="icon.png" />
-        <Label Text="HOFC" TextColor="White" />
+        <Label Text="Se connecter" TextColor="White"  fe:TappedGestureAttached.Command="{Binding StartLoginCommand}"/>
       </StackLayout>
       <StackLayout Orientation="Horizontal" 
                    HeightRequest="30" 
@@ -28,7 +28,7 @@
                    Spacing="20"
                    IsVisible="{Binding IsAuthenticated}">
         <Image Source="icon.png" />
-        <Label Text="{Binding User.FullName}" TextColor="White" />
+        <Label Text="{Binding User.Username}" TextColor="White"/>
       </StackLayout>
     </StackLayout>
 

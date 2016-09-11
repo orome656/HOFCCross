@@ -1,4 +1,6 @@
 ﻿using FreshMvvm;
+using HOFCCross.Constantes;
+using HOFCCross.Container;
 using HOFCCross.Enum;
 using HOFCCross.Model;
 using HOFCCross.Service;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Auth;
 
 namespace HOFCCross.ViewModel
 {
@@ -115,6 +118,41 @@ namespace HOFCCross.ViewModel
                     }
                 });
                 return _menuItemCommand;
+            }
+        }
+
+        public ICommand StartLoginCommand
+        {
+            get
+            {
+                return new Xamarin.Forms.Command(async () =>
+                {
+                    AppConstantes.OAUTH_SETTINGS.SuccessCommand = LoginSuccessCommand;
+
+                    var mainPage = App.Current.MainPage as MasterDetail;
+                    mainPage.IsPresented = false;
+
+                    var detail = mainPage.Detail as Xamarin.Forms.NavigationPage;
+                    await detail.CurrentPage.GetModel().CoreMethods.PushPageModel<LoginViewModel>(null, true);
+                });
+            }
+        }
+
+        public ICommand LoginSuccessCommand
+        {
+            get
+            {
+                return new Xamarin.Forms.Command(async () =>
+                {
+                    var mainPage = App.Current.MainPage as MasterDetail;
+
+                    var detail = mainPage.Detail as Xamarin.Forms.NavigationPage;
+                    await detail.CurrentPage.GetModel().CoreMethods.PopPageModel(true);
+
+                    await FreshMvvm.FreshIOC.Container.Resolve<ILoginService>().RequestUserInfo();
+
+                    RaisePropertyChanged(nameof(User));
+                });
             }
         }
     }

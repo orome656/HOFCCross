@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HOFCCross.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,17 @@ namespace HOFCCross.Constantes
 
         public static readonly string PRIMARY_COLOR_HEX = "#08589D";
 
+        public static readonly OAuthSettings OAUTH_SETTINGS = new OAuthSettings()
+        {
+            ClientId = "xamarin-auth",
+            ClientSecret = "test", // TODO Extract this from code
+            Scope = "openid profile email",
+            AuthorizeUrl = new Uri(SERVER_BASE_URL + "/connect/authorize"),
+            RedirectUrl = new Uri("urn:ietf:wg:oauth:2.0:oob"),
+            AccessTokenUrl = new Uri(SERVER_BASE_URL + "/connect/token"),
+            SuccessCommand = null
+        };
+
+        public static readonly string USER_INFOS_URL = SERVER_BASE_URL + "connect/userinfo";
     }
 }
