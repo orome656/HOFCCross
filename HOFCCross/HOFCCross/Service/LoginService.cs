@@ -1,4 +1,5 @@
 ﻿using HOFCCross.Constantes;
+using HOFCCross.Extension;
 using HOFCCross.Model;
 using Newtonsoft.Json;
 using System;
@@ -61,6 +62,48 @@ namespace HOFCCross.Service
             {
                 Debug.WriteLine(ex.Message);
                 throw ex;
+            }
+        }
+
+        public async Task RefreshToken()
+        {
+            try
+            {
+                var auth = new OAuth2Authenticator(
+                        AppConstantes.OAUTH_SETTINGS.ClientId,
+                        AppConstantes.OAUTH_SETTINGS.ClientSecret,
+                        AppConstantes.OAUTH_SETTINGS.Scope,
+                        AppConstantes.OAUTH_SETTINGS.AuthorizeUrl,
+                        AppConstantes.OAUTH_SETTINGS.RedirectUrl,
+                        AppConstantes.OAUTH_SETTINGS.AccessTokenUrl
+                    );
+                auth.Completed += Auth_Completed;
+                var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+                if(account != null)
+                    await auth.RequestRefreshTokenAsync(account.Properties.FirstOrDefault(c => c.Key.Equals("refresh_token")).Value);
+
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
+
+        private async void Auth_Completed(object sender, AuthenticatorCompletedEventArgs e)
+        {
+            if (e.IsAuthenticated)
+            {
+                var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+                if (account != null)
+                {
+                    await AccountStore.Create().DeleteAsync(account, "HOFC");
+                    account.Properties.Remove("access_token");
+                    account.Properties.Add("access_token", e.Account.Properties.First(c => c.Key.Equals("access_token")).Value);
+                    account.Properties.Remove("refresh_token");
+                    account.Properties.Add("refresh_token", e.Account.Properties.First(c => c.Key.Equals("refresh_token")).Value);
+                    await AccountStore.Create().SaveAsync(account, "HOFC");
+                }
             }
         }
     }

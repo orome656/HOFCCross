@@ -52,6 +52,7 @@
     <Compile Include="Converters\NotConverter.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
+    <Compile Include="Extension\OAuth2AuthenticatorExtensions.cs" />
     <Compile Include="Helpers\Maps.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ArticleDetails.cs" />

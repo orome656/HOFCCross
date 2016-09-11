@@ -12,5 +12,6 @@ namespace HOFCCross.Service
         bool IsAuthenticated();
         User GetUser();
         Task RequestUserInfo();
+        Task RefreshToken();
     }
 }
