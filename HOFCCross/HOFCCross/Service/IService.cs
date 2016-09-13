@@ -1,5 +1,5 @@
-﻿using HOFCCross.Model;
-using PushNotification.Plugin.Abstractions;
+﻿using HOFCCross.Enum;
+using HOFCCross.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

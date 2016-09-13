@@ -9,6 +9,10 @@ using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Plugin.Toasts;
 using Xamarin.Forms;
+using Android.Gms.Common;
+using Android.Util;
+using Android.Content;
+using HOFCCross.Droid.Notification;
 
 namespace HOFCCross.Droid
 {
@@ -24,9 +28,28 @@ namespace HOFCCross.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
             
+            if(IsPlayServicesAvailable())
+            {
+                var intent = new Intent(this, typeof(RegistrationIntentService));
+                StartService(intent);
+            }
+
             DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
             ToastNotificatorImplementation.Init(this);
 
+        }
+
+        public bool IsPlayServicesAvailable()
+        {
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
+            if (resultCode != ConnectionResult.Success)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
