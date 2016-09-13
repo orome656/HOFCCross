@@ -8,8 +8,8 @@ using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
 using HOFCCross.Constantes;
-using PushNotification.Plugin.Abstractions;
 using System.Diagnostics;
+using HOFCCross.Enum;
 
 namespace HOFCCross.Service
 {

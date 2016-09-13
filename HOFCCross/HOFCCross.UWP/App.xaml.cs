@@ -1,16 +1,18 @@
-﻿using HOFCCross.Notifications;
+﻿using HOFCCross.Enum;
+using HOFCCross.Service;
 using Plugin.Toasts;
-using PushNotification.Plugin;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Networking.PushNotifications;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -63,7 +65,7 @@ namespace HOFCCross.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 Xamarin.Forms.DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
                 ToastNotificatorImplementation.Init();
-                CrossPushNotification.Initialize<CrossPushNotificationListener>();
+
                 List<Assembly> assembliesToInclude = new List<Assembly>();
 
                 assembliesToInclude.Add(typeof(FFImageLoading.Forms.WinUWP.CachedImageRenderer).GetTypeInfo().Assembly);
@@ -130,7 +132,7 @@ namespace HOFCCross.UWP
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 Xamarin.Forms.DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
                 ToastNotificatorImplementation.Init();
-                CrossPushNotification.Initialize<CrossPushNotificationListener>();
+
                 Xamarin.Forms.Forms.Init(args);
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
@@ -149,7 +151,7 @@ namespace HOFCCross.UWP
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
-            
+
             // Ensure the current window is active
             Window.Current.Activate();
         }

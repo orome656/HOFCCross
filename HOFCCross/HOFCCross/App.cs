@@ -4,7 +4,6 @@ using HOFCCross.Model;
 using HOFCCross.Page;
 using HOFCCross.Service;
 using HOFCCross.ViewModel;
-using PushNotification.Plugin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +35,6 @@ namespace HOFCCross
         protected override void OnStart()
         {
             // Handle when your app starts
-            CrossPushNotification.Current.Register();
         }
 
         protected override void OnSleep()

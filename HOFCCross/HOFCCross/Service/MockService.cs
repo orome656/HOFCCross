@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using HOFCCross.Model;
 using HOFCCross.Constantes;
-using PushNotification.Plugin.Abstractions;
 using System.Diagnostics;
+using HOFCCross.Enum;
 
 namespace HOFCCross.Service
 {
