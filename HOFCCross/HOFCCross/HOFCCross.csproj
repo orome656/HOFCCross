@@ -54,6 +54,7 @@
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Extension\OAuth2AuthenticatorExtensions.cs" />
+    <Compile Include="Factory\AccountStoreFactory.cs" />
     <Compile Include="Helpers\Maps.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ArticleDetails.cs" />

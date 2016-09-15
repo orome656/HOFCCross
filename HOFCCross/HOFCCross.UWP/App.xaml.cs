@@ -1,4 +1,5 @@
 ﻿using HOFCCross.Enum;
+using HOFCCross.Factory;
 using HOFCCross.Service;
 using Plugin.Toasts;
 using System;
@@ -52,7 +53,7 @@ namespace HOFCCross.UWP
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-
+            AccountStoreFactory.Create = () => new UWPAccountStore();
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

@@ -1,5 +1,6 @@
 ﻿using HOFCCross.Constantes;
 using HOFCCross.Extension;
+using HOFCCross.Factory;
 using HOFCCross.Model;
 using Newtonsoft.Json;
 using System;
@@ -17,14 +18,14 @@ namespace HOFCCross.Service
     {
         public bool IsAuthenticated()
         {
-            var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+            var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
             return account != null;
         }
 
         public User GetUser()
         {
 
-            var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+            var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
             if(account != null)
             {
                 return new User() {
@@ -44,18 +45,18 @@ namespace HOFCCross.Service
         {
             try
             {
-                var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+                var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
                 OAuth2Request request = new OAuth2Request(HttpMethod.Get.Method, new Uri(AppConstantes.USER_INFOS_URL), null, account);
                 var response = await request.GetResponseAsync();
                 User user = JsonConvert.DeserializeObject<User>(response.GetResponseText());
                 if(user != null)
                 {
-                    await AccountStore.Create().DeleteAsync(account, "HOFC");
+                    await AccountStoreFactory.Create().DeleteAsync(account, "HOFC");
                     account.Properties.Add(nameof(User.Email), user.Email);
                     account.Properties.Add(nameof(User.Username), user.Username);
                     account.Properties.Add(nameof(User.Sub), user.Sub);
                     account.Username = user.Username;
-                    await AccountStore.Create().SaveAsync(account, "HOFC");
+                    await AccountStoreFactory.Create().SaveAsync(account, "HOFC");
                 }
             }
             catch (Exception ex)
@@ -78,7 +79,7 @@ namespace HOFCCross.Service
                         AppConstantes.OAUTH_SETTINGS.AccessTokenUrl
                     );
                 auth.Completed += Auth_Completed;
-                var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+                var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
                 if(account != null)
                     await auth.RequestRefreshTokenAsync(account.Properties.FirstOrDefault(c => c.Key.Equals("refresh_token")).Value);
 
@@ -94,15 +95,15 @@ namespace HOFCCross.Service
         {
             if (e.IsAuthenticated)
             {
-                var account = AccountStore.Create().FindAccountsForService("HOFC").FirstOrDefault();
+                var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
                 if (account != null)
                 {
-                    await AccountStore.Create().DeleteAsync(account, "HOFC");
+                    await AccountStoreFactory.Create().DeleteAsync(account, "HOFC");
                     account.Properties.Remove("access_token");
                     account.Properties.Add("access_token", e.Account.Properties.First(c => c.Key.Equals("access_token")).Value);
                     account.Properties.Remove("refresh_token");
                     account.Properties.Add("refresh_token", e.Account.Properties.First(c => c.Key.Equals("refresh_token")).Value);
-                    await AccountStore.Create().SaveAsync(account, "HOFC");
+                    await AccountStoreFactory.Create().SaveAsync(account, "HOFC");
                 }
             }
         }
