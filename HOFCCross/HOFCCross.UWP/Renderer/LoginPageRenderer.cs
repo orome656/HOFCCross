@@ -12,6 +12,7 @@ using Windows.Security.Authentication.Web;
 using Windows.Web.Http;
 using Newtonsoft.Json;
 using Xamarin.Auth;
+using HOFCCross.Factory;
 
 [assembly: ExportRenderer(typeof(LoginPage), typeof(LoginPageRenderer))]
 namespace HOFCCross.UWP.Renderer
@@ -27,6 +28,9 @@ namespace HOFCCross.UWP.Renderer
 
             var code = await AuthenticateUsingWebAuthenticationBroker();
             var account = await ConvertCodeToAccount(code);
+
+            AccountStoreFactory.Create().Save(account, "HOFC");
+            AppConstantes.OAUTH_SETTINGS.SuccessCommand.Execute(null);
             //await AuthenticationHelper.FetchGoogleEmailAndPicture(account);
         }
         
