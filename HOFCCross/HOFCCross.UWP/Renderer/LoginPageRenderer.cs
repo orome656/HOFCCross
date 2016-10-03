@@ -36,6 +36,13 @@ namespace HOFCCross.UWP.Renderer
         
         private async Task<string> AuthenticateUsingWebAuthenticationBroker()
         {
+
+            var url = string.Format("{0}?client_id={1}&redirect_uri={2}&response_type=code&scope={3}",
+                                    AppConstantes.OAUTH_SETTINGS.AuthorizeUrl,
+                                    Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.ClientId),
+                                    AppConstantes.OAUTH_SETTINGS.RedirectUrl,
+                                    Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.Scope));
+
             var googleUrl = AppConstantes.OAUTH_SETTINGS.AuthorizeUrl + "?client_id=" +
                             Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.ClientId);
             googleUrl += "&redirect_uri=" + AppConstantes.OAUTH_SETTINGS.RedirectUrl;
@@ -47,7 +54,7 @@ namespace HOFCCross.UWP.Renderer
             var webAuthenticationResult =
               await
                 WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, startUri,
-                  AppConstantes.OAUTH_SETTINGS.RedirectUrl);
+                  new Uri(AppConstantes.OAUTH_SETTINGS.RedirectUrl));
             return webAuthenticationResult.ResponseStatus != WebAuthenticationStatus.Success ? null : webAuthenticationResult.ResponseData.Substring(webAuthenticationResult.ResponseData.IndexOf('=') + 1);
         }
 
@@ -59,10 +66,10 @@ namespace HOFCCross.UWP.Renderer
         {"code", code},
         {"client_id", AppConstantes.OAUTH_SETTINGS.ClientId},
         {"client_secret", AppConstantes.OAUTH_SETTINGS.ClientSecret},
-        {"redirect_uri", AppConstantes.OAUTH_SETTINGS.RedirectUrl.AbsoluteUri},
+        {"redirect_uri", AppConstantes.OAUTH_SETTINGS.RedirectUrl},
         {"grant_type", "authorization_code"},
       });
-            var accessTokenResponse = await httpClient.PostAsync(AppConstantes.OAUTH_SETTINGS.AccessTokenUrl, content);
+            var accessTokenResponse = await httpClient.PostAsync(new Uri(AppConstantes.OAUTH_SETTINGS.AccessTokenUrl), content);
             var responseDict =
               JsonConvert.DeserializeObject<Dictionary<string, string>>(accessTokenResponse.Content.ToString());
 

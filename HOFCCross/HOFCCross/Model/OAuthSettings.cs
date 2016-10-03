@@ -13,9 +13,9 @@ namespace HOFCCross.Model
         public string ClientId { get; set; }
         public string ClientSecret { get; set; }
         public string Scope { get; set; }
-        public Uri AuthorizeUrl { get; set; }
-        public Uri RedirectUrl { get; set; }
-        public Uri AccessTokenUrl { get; set; }
+        public string AuthorizeUrl { get; set; }
+        public string RedirectUrl { get; set; }
+        public string AccessTokenUrl { get; set; }
         public ICommand SuccessCommand { get; set; }
     }
 }

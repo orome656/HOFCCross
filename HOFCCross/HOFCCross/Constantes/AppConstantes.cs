@@ -25,9 +25,9 @@ namespace HOFCCross.Constantes
             ClientId = "xamarin-auth",
             ClientSecret = "test", // TODO Extract this from code
             Scope = "openid profile email offline_access",
-            AuthorizeUrl = new Uri(SERVER_BASE_URL + "/connect/authorize"),
-            RedirectUrl = new Uri("urn:ietf:wg:oauth:2.0:oob"),
-            AccessTokenUrl = new Uri(SERVER_BASE_URL + "/connect/token"),
+            AuthorizeUrl = SERVER_BASE_URL + "connect/authorize",
+            RedirectUrl = "urn:ietf:wg:oauth:2.0:oob",
+            AccessTokenUrl = SERVER_BASE_URL + "connect/token",
             SuccessCommand = null
         };
 

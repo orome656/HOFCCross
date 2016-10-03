@@ -74,9 +74,9 @@ namespace HOFCCross.Service
                         AppConstantes.OAUTH_SETTINGS.ClientId,
                         AppConstantes.OAUTH_SETTINGS.ClientSecret,
                         AppConstantes.OAUTH_SETTINGS.Scope,
-                        AppConstantes.OAUTH_SETTINGS.AuthorizeUrl,
-                        AppConstantes.OAUTH_SETTINGS.RedirectUrl,
-                        AppConstantes.OAUTH_SETTINGS.AccessTokenUrl
+                        new Uri(AppConstantes.OAUTH_SETTINGS.AuthorizeUrl),
+                        new Uri(AppConstantes.OAUTH_SETTINGS.RedirectUrl),
+                        new Uri(AppConstantes.OAUTH_SETTINGS.AccessTokenUrl)
                     );
                 auth.Completed += Auth_Completed;
                 var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();

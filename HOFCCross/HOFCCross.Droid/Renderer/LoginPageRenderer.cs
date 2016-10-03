@@ -23,9 +23,9 @@ namespace HOFCCross.Droid.Renderer
                 AppConstantes.OAUTH_SETTINGS.ClientId,
                 AppConstantes.OAUTH_SETTINGS.ClientSecret,
                 AppConstantes.OAUTH_SETTINGS.Scope,
-                AppConstantes.OAUTH_SETTINGS.AuthorizeUrl,
-                AppConstantes.OAUTH_SETTINGS.RedirectUrl,
-                AppConstantes.OAUTH_SETTINGS.AccessTokenUrl
+                new System.Uri(AppConstantes.OAUTH_SETTINGS.AuthorizeUrl),
+                new System.Uri(AppConstantes.OAUTH_SETTINGS.RedirectUrl),
+                new System.Uri(AppConstantes.OAUTH_SETTINGS.AccessTokenUrl)
                 );
 
 
