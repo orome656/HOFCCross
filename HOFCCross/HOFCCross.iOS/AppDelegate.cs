@@ -26,11 +26,9 @@ namespace HOFCCross.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
-            ToastNotificatorImplementation.Init();
-
-            CrossPushNotification.Initialize<CrossPushNotificationListener>();
-
+            DependencyService.Register<ToastNotification>(); // Register your dependency
+            ToastNotification.Init();
+            
             global::Xamarin.Forms.Forms.Init();
 
             LoadApplication(new App());
