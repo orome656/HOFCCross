@@ -81,12 +81,12 @@
       <HintPath>..\..\packages\Xamarin.Forms.2.3.2.127\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FreshEssentials, Version=1.0.6079.29046, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FreshEssentials.2.1.1\lib\MonoAndroid10\FreshEssentials.dll</HintPath>
+    <Reference Include="FreshEssentials, Version=1.0.6122.21141, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreshEssentials.2.1.2\lib\MonoAndroid10\FreshEssentials.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FreshEssentials.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FreshEssentials.2.1.1\lib\MonoAndroid10\FreshEssentials.Droid.dll</HintPath>
+      <HintPath>..\..\packages\FreshEssentials.2.1.2\lib\MonoAndroid10\FreshEssentials.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FreshIOC, Version=1.0.6071.17008, Culture=neutral, processorArchitecture=MSIL">
@@ -142,11 +142,11 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Toasts.Forms.Plugin.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Toasts.Forms.Plugin.3.0.0\lib\MonoAndroid10\Toasts.Forms.Plugin.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\Toasts.Forms.Plugin.3.1.0\lib\MonoAndroid10\Toasts.Forms.Plugin.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Toasts.Forms.Plugin.Droid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Toasts.Forms.Plugin.3.0.0\lib\MonoAndroid10\Toasts.Forms.Plugin.Droid.dll</HintPath>
+      <HintPath>..\..\packages\Toasts.Forms.Plugin.3.1.0\lib\MonoAndroid10\Toasts.Forms.Plugin.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

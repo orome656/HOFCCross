@@ -26,1791 +26,6 @@ namespace HOFCCross.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::FreshEssentials.Droid.Resource.Animation.abc_fade_in = global::HOFCCross.Droid.Resource.Animation.abc_fade_in;
-			global::FreshEssentials.Droid.Resource.Animation.abc_fade_out = global::HOFCCross.Droid.Resource.Animation.abc_fade_out;
-			global::FreshEssentials.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::HOFCCross.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::FreshEssentials.Droid.Resource.Animation.abc_popup_enter = global::HOFCCross.Droid.Resource.Animation.abc_popup_enter;
-			global::FreshEssentials.Droid.Resource.Animation.abc_popup_exit = global::HOFCCross.Droid.Resource.Animation.abc_popup_exit;
-			global::FreshEssentials.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::HOFCCross.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::FreshEssentials.Droid.Resource.Animation.abc_slide_in_bottom = global::HOFCCross.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::FreshEssentials.Droid.Resource.Animation.abc_slide_in_top = global::HOFCCross.Droid.Resource.Animation.abc_slide_in_top;
-			global::FreshEssentials.Droid.Resource.Animation.abc_slide_out_bottom = global::HOFCCross.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::FreshEssentials.Droid.Resource.Animation.abc_slide_out_top = global::HOFCCross.Droid.Resource.Animation.abc_slide_out_top;
-			global::FreshEssentials.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::HOFCCross.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::FreshEssentials.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::HOFCCross.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::FreshEssentials.Droid.Resource.Animation.design_fab_in = global::HOFCCross.Droid.Resource.Animation.design_fab_in;
-			global::FreshEssentials.Droid.Resource.Animation.design_fab_out = global::HOFCCross.Droid.Resource.Animation.design_fab_out;
-			global::FreshEssentials.Droid.Resource.Animation.design_snackbar_in = global::HOFCCross.Droid.Resource.Animation.design_snackbar_in;
-			global::FreshEssentials.Droid.Resource.Animation.design_snackbar_out = global::HOFCCross.Droid.Resource.Animation.design_snackbar_out;
-			global::FreshEssentials.Droid.Resource.Attribute.MediaRouteControllerWindowBackground = global::HOFCCross.Droid.Resource.Attribute.MediaRouteControllerWindowBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarDivider = global::HOFCCross.Droid.Resource.Attribute.actionBarDivider;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarItemBackground = global::HOFCCross.Droid.Resource.Attribute.actionBarItemBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarPopupTheme = global::HOFCCross.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarSize = global::HOFCCross.Droid.Resource.Attribute.actionBarSize;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarSplitStyle = global::HOFCCross.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarStyle = global::HOFCCross.Droid.Resource.Attribute.actionBarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarTabBarStyle = global::HOFCCross.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarTabStyle = global::HOFCCross.Droid.Resource.Attribute.actionBarTabStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarTabTextStyle = global::HOFCCross.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarTheme = global::HOFCCross.Droid.Resource.Attribute.actionBarTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.actionBarWidgetTheme = global::HOFCCross.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.actionButtonStyle = global::HOFCCross.Droid.Resource.Attribute.actionButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionDropDownStyle = global::HOFCCross.Droid.Resource.Attribute.actionDropDownStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionLayout = global::HOFCCross.Droid.Resource.Attribute.actionLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.actionMenuTextAppearance = global::HOFCCross.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.actionMenuTextColor = global::HOFCCross.Droid.Resource.Attribute.actionMenuTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeBackground = global::HOFCCross.Droid.Resource.Attribute.actionModeBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::HOFCCross.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeCloseDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeCopyDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeCutDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeFindDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModePasteDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModePopupWindowStyle = global::HOFCCross.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeShareDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeSplitBackground = global::HOFCCross.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeStyle = global::HOFCCross.Droid.Resource.Attribute.actionModeStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::HOFCCross.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.actionOverflowButtonStyle = global::HOFCCross.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionOverflowMenuStyle = global::HOFCCross.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.actionProviderClass = global::HOFCCross.Droid.Resource.Attribute.actionProviderClass;
-			global::FreshEssentials.Droid.Resource.Attribute.actionViewClass = global::HOFCCross.Droid.Resource.Attribute.actionViewClass;
-			global::FreshEssentials.Droid.Resource.Attribute.activityChooserViewStyle = global::HOFCCross.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::HOFCCross.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.alertDialogCenterButtons = global::HOFCCross.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::FreshEssentials.Droid.Resource.Attribute.alertDialogStyle = global::HOFCCross.Droid.Resource.Attribute.alertDialogStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.alertDialogTheme = global::HOFCCross.Droid.Resource.Attribute.alertDialogTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.allowStacking = global::HOFCCross.Droid.Resource.Attribute.allowStacking;
-			global::FreshEssentials.Droid.Resource.Attribute.arrowHeadLength = global::HOFCCross.Droid.Resource.Attribute.arrowHeadLength;
-			global::FreshEssentials.Droid.Resource.Attribute.arrowShaftLength = global::HOFCCross.Droid.Resource.Attribute.arrowShaftLength;
-			global::FreshEssentials.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::HOFCCross.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.background = global::HOFCCross.Droid.Resource.Attribute.background;
-			global::FreshEssentials.Droid.Resource.Attribute.backgroundSplit = global::HOFCCross.Droid.Resource.Attribute.backgroundSplit;
-			global::FreshEssentials.Droid.Resource.Attribute.backgroundStacked = global::HOFCCross.Droid.Resource.Attribute.backgroundStacked;
-			global::FreshEssentials.Droid.Resource.Attribute.backgroundTint = global::HOFCCross.Droid.Resource.Attribute.backgroundTint;
-			global::FreshEssentials.Droid.Resource.Attribute.backgroundTintMode = global::HOFCCross.Droid.Resource.Attribute.backgroundTintMode;
-			global::FreshEssentials.Droid.Resource.Attribute.barLength = global::HOFCCross.Droid.Resource.Attribute.barLength;
-			global::FreshEssentials.Droid.Resource.Attribute.behavior_hideable = global::HOFCCross.Droid.Resource.Attribute.behavior_hideable;
-			global::FreshEssentials.Droid.Resource.Attribute.behavior_overlapTop = global::HOFCCross.Droid.Resource.Attribute.behavior_overlapTop;
-			global::FreshEssentials.Droid.Resource.Attribute.behavior_peekHeight = global::HOFCCross.Droid.Resource.Attribute.behavior_peekHeight;
-			global::FreshEssentials.Droid.Resource.Attribute.borderWidth = global::HOFCCross.Droid.Resource.Attribute.borderWidth;
-			global::FreshEssentials.Droid.Resource.Attribute.borderlessButtonStyle = global::HOFCCross.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.bottomSheetDialogTheme = global::HOFCCross.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.bottomSheetStyle = global::HOFCCross.Droid.Resource.Attribute.bottomSheetStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonBarButtonStyle = global::HOFCCross.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::HOFCCross.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::HOFCCross.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::HOFCCross.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonBarStyle = global::HOFCCross.Droid.Resource.Attribute.buttonBarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonPanelSideLayout = global::HOFCCross.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonStyle = global::HOFCCross.Droid.Resource.Attribute.buttonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonStyleSmall = global::HOFCCross.Droid.Resource.Attribute.buttonStyleSmall;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonTint = global::HOFCCross.Droid.Resource.Attribute.buttonTint;
-			global::FreshEssentials.Droid.Resource.Attribute.buttonTintMode = global::HOFCCross.Droid.Resource.Attribute.buttonTintMode;
-			global::FreshEssentials.Droid.Resource.Attribute.cardBackgroundColor = global::HOFCCross.Droid.Resource.Attribute.cardBackgroundColor;
-			global::FreshEssentials.Droid.Resource.Attribute.cardCornerRadius = global::HOFCCross.Droid.Resource.Attribute.cardCornerRadius;
-			global::FreshEssentials.Droid.Resource.Attribute.cardElevation = global::HOFCCross.Droid.Resource.Attribute.cardElevation;
-			global::FreshEssentials.Droid.Resource.Attribute.cardMaxElevation = global::HOFCCross.Droid.Resource.Attribute.cardMaxElevation;
-			global::FreshEssentials.Droid.Resource.Attribute.cardPreventCornerOverlap = global::HOFCCross.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::FreshEssentials.Droid.Resource.Attribute.cardUseCompatPadding = global::HOFCCross.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.checkboxStyle = global::HOFCCross.Droid.Resource.Attribute.checkboxStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.checkedTextViewStyle = global::HOFCCross.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.closeIcon = global::HOFCCross.Droid.Resource.Attribute.closeIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.closeItemLayout = global::HOFCCross.Droid.Resource.Attribute.closeItemLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.collapseContentDescription = global::HOFCCross.Droid.Resource.Attribute.collapseContentDescription;
-			global::FreshEssentials.Droid.Resource.Attribute.collapseIcon = global::HOFCCross.Droid.Resource.Attribute.collapseIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.collapsedTitleGravity = global::HOFCCross.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::FreshEssentials.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::HOFCCross.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.color = global::HOFCCross.Droid.Resource.Attribute.color;
-			global::FreshEssentials.Droid.Resource.Attribute.colorAccent = global::HOFCCross.Droid.Resource.Attribute.colorAccent;
-			global::FreshEssentials.Droid.Resource.Attribute.colorButtonNormal = global::HOFCCross.Droid.Resource.Attribute.colorButtonNormal;
-			global::FreshEssentials.Droid.Resource.Attribute.colorControlActivated = global::HOFCCross.Droid.Resource.Attribute.colorControlActivated;
-			global::FreshEssentials.Droid.Resource.Attribute.colorControlHighlight = global::HOFCCross.Droid.Resource.Attribute.colorControlHighlight;
-			global::FreshEssentials.Droid.Resource.Attribute.colorControlNormal = global::HOFCCross.Droid.Resource.Attribute.colorControlNormal;
-			global::FreshEssentials.Droid.Resource.Attribute.colorPrimary = global::HOFCCross.Droid.Resource.Attribute.colorPrimary;
-			global::FreshEssentials.Droid.Resource.Attribute.colorPrimaryDark = global::HOFCCross.Droid.Resource.Attribute.colorPrimaryDark;
-			global::FreshEssentials.Droid.Resource.Attribute.colorSwitchThumbNormal = global::HOFCCross.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::FreshEssentials.Droid.Resource.Attribute.commitIcon = global::HOFCCross.Droid.Resource.Attribute.commitIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.contentInsetEnd = global::HOFCCross.Droid.Resource.Attribute.contentInsetEnd;
-			global::FreshEssentials.Droid.Resource.Attribute.contentInsetLeft = global::HOFCCross.Droid.Resource.Attribute.contentInsetLeft;
-			global::FreshEssentials.Droid.Resource.Attribute.contentInsetRight = global::HOFCCross.Droid.Resource.Attribute.contentInsetRight;
-			global::FreshEssentials.Droid.Resource.Attribute.contentInsetStart = global::HOFCCross.Droid.Resource.Attribute.contentInsetStart;
-			global::FreshEssentials.Droid.Resource.Attribute.contentPadding = global::HOFCCross.Droid.Resource.Attribute.contentPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.contentPaddingBottom = global::HOFCCross.Droid.Resource.Attribute.contentPaddingBottom;
-			global::FreshEssentials.Droid.Resource.Attribute.contentPaddingLeft = global::HOFCCross.Droid.Resource.Attribute.contentPaddingLeft;
-			global::FreshEssentials.Droid.Resource.Attribute.contentPaddingRight = global::HOFCCross.Droid.Resource.Attribute.contentPaddingRight;
-			global::FreshEssentials.Droid.Resource.Attribute.contentPaddingTop = global::HOFCCross.Droid.Resource.Attribute.contentPaddingTop;
-			global::FreshEssentials.Droid.Resource.Attribute.contentScrim = global::HOFCCross.Droid.Resource.Attribute.contentScrim;
-			global::FreshEssentials.Droid.Resource.Attribute.controlBackground = global::HOFCCross.Droid.Resource.Attribute.controlBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.counterEnabled = global::HOFCCross.Droid.Resource.Attribute.counterEnabled;
-			global::FreshEssentials.Droid.Resource.Attribute.counterMaxLength = global::HOFCCross.Droid.Resource.Attribute.counterMaxLength;
-			global::FreshEssentials.Droid.Resource.Attribute.counterOverflowTextAppearance = global::HOFCCross.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.counterTextAppearance = global::HOFCCross.Droid.Resource.Attribute.counterTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.customNavigationLayout = global::HOFCCross.Droid.Resource.Attribute.customNavigationLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.defaultQueryHint = global::HOFCCross.Droid.Resource.Attribute.defaultQueryHint;
-			global::FreshEssentials.Droid.Resource.Attribute.dialogPreferredPadding = global::HOFCCross.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.dialogTheme = global::HOFCCross.Droid.Resource.Attribute.dialogTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.displayOptions = global::HOFCCross.Droid.Resource.Attribute.displayOptions;
-			global::FreshEssentials.Droid.Resource.Attribute.divider = global::HOFCCross.Droid.Resource.Attribute.divider;
-			global::FreshEssentials.Droid.Resource.Attribute.dividerHorizontal = global::HOFCCross.Droid.Resource.Attribute.dividerHorizontal;
-			global::FreshEssentials.Droid.Resource.Attribute.dividerPadding = global::HOFCCross.Droid.Resource.Attribute.dividerPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.dividerVertical = global::HOFCCross.Droid.Resource.Attribute.dividerVertical;
-			global::FreshEssentials.Droid.Resource.Attribute.drawableSize = global::HOFCCross.Droid.Resource.Attribute.drawableSize;
-			global::FreshEssentials.Droid.Resource.Attribute.drawerArrowStyle = global::HOFCCross.Droid.Resource.Attribute.drawerArrowStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.dropDownListViewStyle = global::HOFCCross.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::HOFCCross.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::FreshEssentials.Droid.Resource.Attribute.editTextBackground = global::HOFCCross.Droid.Resource.Attribute.editTextBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.editTextColor = global::HOFCCross.Droid.Resource.Attribute.editTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.editTextStyle = global::HOFCCross.Droid.Resource.Attribute.editTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.elevation = global::HOFCCross.Droid.Resource.Attribute.elevation;
-			global::FreshEssentials.Droid.Resource.Attribute.errorEnabled = global::HOFCCross.Droid.Resource.Attribute.errorEnabled;
-			global::FreshEssentials.Droid.Resource.Attribute.errorTextAppearance = global::HOFCCross.Droid.Resource.Attribute.errorTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::HOFCCross.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.expanded = global::HOFCCross.Droid.Resource.Attribute.expanded;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleGravity = global::HOFCCross.Droid.Resource.Attribute.expandedTitleGravity;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleMargin = global::HOFCCross.Droid.Resource.Attribute.expandedTitleMargin;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleMarginBottom = global::HOFCCross.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleMarginEnd = global::HOFCCross.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleMarginStart = global::HOFCCross.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleMarginTop = global::HOFCCross.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::FreshEssentials.Droid.Resource.Attribute.expandedTitleTextAppearance = global::HOFCCross.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::HOFCCross.Droid.Resource.Attribute.externalRouteEnabledDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.fabSize = global::HOFCCross.Droid.Resource.Attribute.fabSize;
-			global::FreshEssentials.Droid.Resource.Attribute.foregroundInsidePadding = global::HOFCCross.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::FreshEssentials.Droid.Resource.Attribute.gapBetweenBars = global::HOFCCross.Droid.Resource.Attribute.gapBetweenBars;
-			global::FreshEssentials.Droid.Resource.Attribute.goIcon = global::HOFCCross.Droid.Resource.Attribute.goIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.headerLayout = global::HOFCCross.Droid.Resource.Attribute.headerLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.height = global::HOFCCross.Droid.Resource.Attribute.height;
-			global::FreshEssentials.Droid.Resource.Attribute.hideOnContentScroll = global::HOFCCross.Droid.Resource.Attribute.hideOnContentScroll;
-			global::FreshEssentials.Droid.Resource.Attribute.hintAnimationEnabled = global::HOFCCross.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::FreshEssentials.Droid.Resource.Attribute.hintEnabled = global::HOFCCross.Droid.Resource.Attribute.hintEnabled;
-			global::FreshEssentials.Droid.Resource.Attribute.hintTextAppearance = global::HOFCCross.Droid.Resource.Attribute.hintTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.homeAsUpIndicator = global::HOFCCross.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::FreshEssentials.Droid.Resource.Attribute.homeLayout = global::HOFCCross.Droid.Resource.Attribute.homeLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.icon = global::HOFCCross.Droid.Resource.Attribute.icon;
-			global::FreshEssentials.Droid.Resource.Attribute.iconifiedByDefault = global::HOFCCross.Droid.Resource.Attribute.iconifiedByDefault;
-			global::FreshEssentials.Droid.Resource.Attribute.imageButtonStyle = global::HOFCCross.Droid.Resource.Attribute.imageButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.indeterminateProgressStyle = global::HOFCCross.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.initialActivityCount = global::HOFCCross.Droid.Resource.Attribute.initialActivityCount;
-			global::FreshEssentials.Droid.Resource.Attribute.insetForeground = global::HOFCCross.Droid.Resource.Attribute.insetForeground;
-			global::FreshEssentials.Droid.Resource.Attribute.isLightTheme = global::HOFCCross.Droid.Resource.Attribute.isLightTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.itemBackground = global::HOFCCross.Droid.Resource.Attribute.itemBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.itemIconTint = global::HOFCCross.Droid.Resource.Attribute.itemIconTint;
-			global::FreshEssentials.Droid.Resource.Attribute.itemPadding = global::HOFCCross.Droid.Resource.Attribute.itemPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.itemTextAppearance = global::HOFCCross.Droid.Resource.Attribute.itemTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.itemTextColor = global::HOFCCross.Droid.Resource.Attribute.itemTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.keylines = global::HOFCCross.Droid.Resource.Attribute.keylines;
-			global::FreshEssentials.Droid.Resource.Attribute.layout = global::HOFCCross.Droid.Resource.Attribute.layout;
-			global::FreshEssentials.Droid.Resource.Attribute.layoutManager = global::HOFCCross.Droid.Resource.Attribute.layoutManager;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_anchor = global::HOFCCross.Droid.Resource.Attribute.layout_anchor;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_anchorGravity = global::HOFCCross.Droid.Resource.Attribute.layout_anchorGravity;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_behavior = global::HOFCCross.Droid.Resource.Attribute.layout_behavior;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_collapseMode = global::HOFCCross.Droid.Resource.Attribute.layout_collapseMode;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::HOFCCross.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_keyline = global::HOFCCross.Droid.Resource.Attribute.layout_keyline;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_scrollFlags = global::HOFCCross.Droid.Resource.Attribute.layout_scrollFlags;
-			global::FreshEssentials.Droid.Resource.Attribute.layout_scrollInterpolator = global::HOFCCross.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::FreshEssentials.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::HOFCCross.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::FreshEssentials.Droid.Resource.Attribute.listDividerAlertDialog = global::HOFCCross.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::FreshEssentials.Droid.Resource.Attribute.listItemLayout = global::HOFCCross.Droid.Resource.Attribute.listItemLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.listLayout = global::HOFCCross.Droid.Resource.Attribute.listLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.listPopupWindowStyle = global::HOFCCross.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.listPreferredItemHeight = global::HOFCCross.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::FreshEssentials.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::HOFCCross.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::FreshEssentials.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::HOFCCross.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::FreshEssentials.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::HOFCCross.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::FreshEssentials.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::HOFCCross.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::FreshEssentials.Droid.Resource.Attribute.logo = global::HOFCCross.Droid.Resource.Attribute.logo;
-			global::FreshEssentials.Droid.Resource.Attribute.logoDescription = global::HOFCCross.Droid.Resource.Attribute.logoDescription;
-			global::FreshEssentials.Droid.Resource.Attribute.maxActionInlineWidth = global::HOFCCross.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::FreshEssentials.Droid.Resource.Attribute.maxButtonHeight = global::HOFCCross.Droid.Resource.Attribute.maxButtonHeight;
-			global::FreshEssentials.Droid.Resource.Attribute.measureWithLargestChild = global::HOFCCross.Droid.Resource.Attribute.measureWithLargestChild;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteBluetoothIconDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteBluetoothIconDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteButtonStyle = global::HOFCCross.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteCastDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteCastDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteChooserPrimaryTextStyle = global::HOFCCross.Droid.Resource.Attribute.mediaRouteChooserPrimaryTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteChooserSecondaryTextStyle = global::HOFCCross.Droid.Resource.Attribute.mediaRouteChooserSecondaryTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteCloseDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteCollapseGroupDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteCollapseGroupDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteConnectingDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteConnectingDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteControllerPrimaryTextStyle = global::HOFCCross.Droid.Resource.Attribute.mediaRouteControllerPrimaryTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteControllerSecondaryTextStyle = global::HOFCCross.Droid.Resource.Attribute.mediaRouteControllerSecondaryTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteControllerTitleTextStyle = global::HOFCCross.Droid.Resource.Attribute.mediaRouteControllerTitleTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteExpandGroupDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteExpandGroupDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteOffDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteOffDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteOnDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteOnDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRoutePauseDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRoutePlayDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::HOFCCross.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
-			global::FreshEssentials.Droid.Resource.Attribute.menu = global::HOFCCross.Droid.Resource.Attribute.menu;
-			global::FreshEssentials.Droid.Resource.Attribute.multiChoiceItemLayout = global::HOFCCross.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.navigationContentDescription = global::HOFCCross.Droid.Resource.Attribute.navigationContentDescription;
-			global::FreshEssentials.Droid.Resource.Attribute.navigationIcon = global::HOFCCross.Droid.Resource.Attribute.navigationIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.navigationMode = global::HOFCCross.Droid.Resource.Attribute.navigationMode;
-			global::FreshEssentials.Droid.Resource.Attribute.overlapAnchor = global::HOFCCross.Droid.Resource.Attribute.overlapAnchor;
-			global::FreshEssentials.Droid.Resource.Attribute.paddingEnd = global::HOFCCross.Droid.Resource.Attribute.paddingEnd;
-			global::FreshEssentials.Droid.Resource.Attribute.paddingStart = global::HOFCCross.Droid.Resource.Attribute.paddingStart;
-			global::FreshEssentials.Droid.Resource.Attribute.panelBackground = global::HOFCCross.Droid.Resource.Attribute.panelBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.panelMenuListTheme = global::HOFCCross.Droid.Resource.Attribute.panelMenuListTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.panelMenuListWidth = global::HOFCCross.Droid.Resource.Attribute.panelMenuListWidth;
-			global::FreshEssentials.Droid.Resource.Attribute.popupMenuStyle = global::HOFCCross.Droid.Resource.Attribute.popupMenuStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.popupTheme = global::HOFCCross.Droid.Resource.Attribute.popupTheme;
-			global::FreshEssentials.Droid.Resource.Attribute.popupWindowStyle = global::HOFCCross.Droid.Resource.Attribute.popupWindowStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.preserveIconSpacing = global::HOFCCross.Droid.Resource.Attribute.preserveIconSpacing;
-			global::FreshEssentials.Droid.Resource.Attribute.pressedTranslationZ = global::HOFCCross.Droid.Resource.Attribute.pressedTranslationZ;
-			global::FreshEssentials.Droid.Resource.Attribute.progressBarPadding = global::HOFCCross.Droid.Resource.Attribute.progressBarPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.progressBarStyle = global::HOFCCross.Droid.Resource.Attribute.progressBarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.queryBackground = global::HOFCCross.Droid.Resource.Attribute.queryBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.queryHint = global::HOFCCross.Droid.Resource.Attribute.queryHint;
-			global::FreshEssentials.Droid.Resource.Attribute.radioButtonStyle = global::HOFCCross.Droid.Resource.Attribute.radioButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.ratingBarStyle = global::HOFCCross.Droid.Resource.Attribute.ratingBarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.ratingBarStyleIndicator = global::HOFCCross.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::FreshEssentials.Droid.Resource.Attribute.ratingBarStyleSmall = global::HOFCCross.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::FreshEssentials.Droid.Resource.Attribute.reverseLayout = global::HOFCCross.Droid.Resource.Attribute.reverseLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.rippleColor = global::HOFCCross.Droid.Resource.Attribute.rippleColor;
-			global::FreshEssentials.Droid.Resource.Attribute.searchHintIcon = global::HOFCCross.Droid.Resource.Attribute.searchHintIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.searchIcon = global::HOFCCross.Droid.Resource.Attribute.searchIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.searchViewStyle = global::HOFCCross.Droid.Resource.Attribute.searchViewStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.seekBarStyle = global::HOFCCross.Droid.Resource.Attribute.seekBarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.selectableItemBackground = global::HOFCCross.Droid.Resource.Attribute.selectableItemBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::HOFCCross.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::FreshEssentials.Droid.Resource.Attribute.showAsAction = global::HOFCCross.Droid.Resource.Attribute.showAsAction;
-			global::FreshEssentials.Droid.Resource.Attribute.showDividers = global::HOFCCross.Droid.Resource.Attribute.showDividers;
-			global::FreshEssentials.Droid.Resource.Attribute.showText = global::HOFCCross.Droid.Resource.Attribute.showText;
-			global::FreshEssentials.Droid.Resource.Attribute.singleChoiceItemLayout = global::HOFCCross.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.spanCount = global::HOFCCross.Droid.Resource.Attribute.spanCount;
-			global::FreshEssentials.Droid.Resource.Attribute.spinBars = global::HOFCCross.Droid.Resource.Attribute.spinBars;
-			global::FreshEssentials.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::HOFCCross.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.spinnerStyle = global::HOFCCross.Droid.Resource.Attribute.spinnerStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.splitTrack = global::HOFCCross.Droid.Resource.Attribute.splitTrack;
-			global::FreshEssentials.Droid.Resource.Attribute.srcCompat = global::HOFCCross.Droid.Resource.Attribute.srcCompat;
-			global::FreshEssentials.Droid.Resource.Attribute.stackFromEnd = global::HOFCCross.Droid.Resource.Attribute.stackFromEnd;
-			global::FreshEssentials.Droid.Resource.Attribute.state_above_anchor = global::HOFCCross.Droid.Resource.Attribute.state_above_anchor;
-			global::FreshEssentials.Droid.Resource.Attribute.statusBarBackground = global::HOFCCross.Droid.Resource.Attribute.statusBarBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.statusBarScrim = global::HOFCCross.Droid.Resource.Attribute.statusBarScrim;
-			global::FreshEssentials.Droid.Resource.Attribute.submitBackground = global::HOFCCross.Droid.Resource.Attribute.submitBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.subtitle = global::HOFCCross.Droid.Resource.Attribute.subtitle;
-			global::FreshEssentials.Droid.Resource.Attribute.subtitleTextAppearance = global::HOFCCross.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.subtitleTextColor = global::HOFCCross.Droid.Resource.Attribute.subtitleTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.subtitleTextStyle = global::HOFCCross.Droid.Resource.Attribute.subtitleTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.suggestionRowLayout = global::HOFCCross.Droid.Resource.Attribute.suggestionRowLayout;
-			global::FreshEssentials.Droid.Resource.Attribute.switchMinWidth = global::HOFCCross.Droid.Resource.Attribute.switchMinWidth;
-			global::FreshEssentials.Droid.Resource.Attribute.switchPadding = global::HOFCCross.Droid.Resource.Attribute.switchPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.switchStyle = global::HOFCCross.Droid.Resource.Attribute.switchStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.switchTextAppearance = global::HOFCCross.Droid.Resource.Attribute.switchTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.tabBackground = global::HOFCCross.Droid.Resource.Attribute.tabBackground;
-			global::FreshEssentials.Droid.Resource.Attribute.tabContentStart = global::HOFCCross.Droid.Resource.Attribute.tabContentStart;
-			global::FreshEssentials.Droid.Resource.Attribute.tabGravity = global::HOFCCross.Droid.Resource.Attribute.tabGravity;
-			global::FreshEssentials.Droid.Resource.Attribute.tabIndicatorColor = global::HOFCCross.Droid.Resource.Attribute.tabIndicatorColor;
-			global::FreshEssentials.Droid.Resource.Attribute.tabIndicatorHeight = global::HOFCCross.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::FreshEssentials.Droid.Resource.Attribute.tabMaxWidth = global::HOFCCross.Droid.Resource.Attribute.tabMaxWidth;
-			global::FreshEssentials.Droid.Resource.Attribute.tabMinWidth = global::HOFCCross.Droid.Resource.Attribute.tabMinWidth;
-			global::FreshEssentials.Droid.Resource.Attribute.tabMode = global::HOFCCross.Droid.Resource.Attribute.tabMode;
-			global::FreshEssentials.Droid.Resource.Attribute.tabPadding = global::HOFCCross.Droid.Resource.Attribute.tabPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.tabPaddingBottom = global::HOFCCross.Droid.Resource.Attribute.tabPaddingBottom;
-			global::FreshEssentials.Droid.Resource.Attribute.tabPaddingEnd = global::HOFCCross.Droid.Resource.Attribute.tabPaddingEnd;
-			global::FreshEssentials.Droid.Resource.Attribute.tabPaddingStart = global::HOFCCross.Droid.Resource.Attribute.tabPaddingStart;
-			global::FreshEssentials.Droid.Resource.Attribute.tabPaddingTop = global::HOFCCross.Droid.Resource.Attribute.tabPaddingTop;
-			global::FreshEssentials.Droid.Resource.Attribute.tabSelectedTextColor = global::HOFCCross.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.tabTextAppearance = global::HOFCCross.Droid.Resource.Attribute.tabTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.tabTextColor = global::HOFCCross.Droid.Resource.Attribute.tabTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.textAllCaps = global::HOFCCross.Droid.Resource.Attribute.textAllCaps;
-			global::FreshEssentials.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::HOFCCross.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::FreshEssentials.Droid.Resource.Attribute.textAppearanceListItem = global::HOFCCross.Droid.Resource.Attribute.textAppearanceListItem;
-			global::FreshEssentials.Droid.Resource.Attribute.textAppearanceListItemSmall = global::HOFCCross.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::FreshEssentials.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::HOFCCross.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::FreshEssentials.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::HOFCCross.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::FreshEssentials.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::HOFCCross.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::FreshEssentials.Droid.Resource.Attribute.textColorAlertDialogListItem = global::HOFCCross.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::FreshEssentials.Droid.Resource.Attribute.textColorError = global::HOFCCross.Droid.Resource.Attribute.textColorError;
-			global::FreshEssentials.Droid.Resource.Attribute.textColorSearchUrl = global::HOFCCross.Droid.Resource.Attribute.textColorSearchUrl;
-			global::FreshEssentials.Droid.Resource.Attribute.theme = global::HOFCCross.Droid.Resource.Attribute.theme;
-			global::FreshEssentials.Droid.Resource.Attribute.thickness = global::HOFCCross.Droid.Resource.Attribute.thickness;
-			global::FreshEssentials.Droid.Resource.Attribute.thumbTextPadding = global::HOFCCross.Droid.Resource.Attribute.thumbTextPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.title = global::HOFCCross.Droid.Resource.Attribute.title;
-			global::FreshEssentials.Droid.Resource.Attribute.titleEnabled = global::HOFCCross.Droid.Resource.Attribute.titleEnabled;
-			global::FreshEssentials.Droid.Resource.Attribute.titleMarginBottom = global::HOFCCross.Droid.Resource.Attribute.titleMarginBottom;
-			global::FreshEssentials.Droid.Resource.Attribute.titleMarginEnd = global::HOFCCross.Droid.Resource.Attribute.titleMarginEnd;
-			global::FreshEssentials.Droid.Resource.Attribute.titleMarginStart = global::HOFCCross.Droid.Resource.Attribute.titleMarginStart;
-			global::FreshEssentials.Droid.Resource.Attribute.titleMarginTop = global::HOFCCross.Droid.Resource.Attribute.titleMarginTop;
-			global::FreshEssentials.Droid.Resource.Attribute.titleMargins = global::HOFCCross.Droid.Resource.Attribute.titleMargins;
-			global::FreshEssentials.Droid.Resource.Attribute.titleTextAppearance = global::HOFCCross.Droid.Resource.Attribute.titleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Attribute.titleTextColor = global::HOFCCross.Droid.Resource.Attribute.titleTextColor;
-			global::FreshEssentials.Droid.Resource.Attribute.titleTextStyle = global::HOFCCross.Droid.Resource.Attribute.titleTextStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.toolbarId = global::HOFCCross.Droid.Resource.Attribute.toolbarId;
-			global::FreshEssentials.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::HOFCCross.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.toolbarStyle = global::HOFCCross.Droid.Resource.Attribute.toolbarStyle;
-			global::FreshEssentials.Droid.Resource.Attribute.track = global::HOFCCross.Droid.Resource.Attribute.track;
-			global::FreshEssentials.Droid.Resource.Attribute.useCompatPadding = global::HOFCCross.Droid.Resource.Attribute.useCompatPadding;
-			global::FreshEssentials.Droid.Resource.Attribute.voiceIcon = global::HOFCCross.Droid.Resource.Attribute.voiceIcon;
-			global::FreshEssentials.Droid.Resource.Attribute.windowActionBar = global::HOFCCross.Droid.Resource.Attribute.windowActionBar;
-			global::FreshEssentials.Droid.Resource.Attribute.windowActionBarOverlay = global::HOFCCross.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::FreshEssentials.Droid.Resource.Attribute.windowActionModeOverlay = global::HOFCCross.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::FreshEssentials.Droid.Resource.Attribute.windowFixedHeightMajor = global::HOFCCross.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::FreshEssentials.Droid.Resource.Attribute.windowFixedHeightMinor = global::HOFCCross.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::FreshEssentials.Droid.Resource.Attribute.windowFixedWidthMajor = global::HOFCCross.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::FreshEssentials.Droid.Resource.Attribute.windowFixedWidthMinor = global::HOFCCross.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::FreshEssentials.Droid.Resource.Attribute.windowMinWidthMajor = global::HOFCCross.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::FreshEssentials.Droid.Resource.Attribute.windowMinWidthMinor = global::HOFCCross.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::FreshEssentials.Droid.Resource.Attribute.windowNoTitle = global::HOFCCross.Droid.Resource.Attribute.windowNoTitle;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::HOFCCross.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb = global::HOFCCross.Droid.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive = global::HOFCCross.Droid.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::HOFCCross.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::HOFCCross.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon = global::HOFCCross.Droid.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::HOFCCross.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
-			global::FreshEssentials.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::HOFCCross.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
-			global::FreshEssentials.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::HOFCCross.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::HOFCCross.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::FreshEssentials.Droid.Resource.Color.abc_color_highlight_material = global::HOFCCross.Droid.Resource.Color.abc_color_highlight_material;
-			global::FreshEssentials.Droid.Resource.Color.abc_input_method_navigation_guard = global::HOFCCross.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::FreshEssentials.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::HOFCCross.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::HOFCCross.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::FreshEssentials.Droid.Resource.Color.abc_primary_text_material_dark = global::HOFCCross.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.abc_primary_text_material_light = global::HOFCCross.Droid.Resource.Color.abc_primary_text_material_light;
-			global::FreshEssentials.Droid.Resource.Color.abc_search_url_text = global::HOFCCross.Droid.Resource.Color.abc_search_url_text;
-			global::FreshEssentials.Droid.Resource.Color.abc_search_url_text_normal = global::HOFCCross.Droid.Resource.Color.abc_search_url_text_normal;
-			global::FreshEssentials.Droid.Resource.Color.abc_search_url_text_pressed = global::HOFCCross.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::FreshEssentials.Droid.Resource.Color.abc_search_url_text_selected = global::HOFCCross.Droid.Resource.Color.abc_search_url_text_selected;
-			global::FreshEssentials.Droid.Resource.Color.abc_secondary_text_material_dark = global::HOFCCross.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.abc_secondary_text_material_light = global::HOFCCross.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::FreshEssentials.Droid.Resource.Color.accent_material_dark = global::HOFCCross.Droid.Resource.Color.accent_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.accent_material_light = global::HOFCCross.Droid.Resource.Color.accent_material_light;
-			global::FreshEssentials.Droid.Resource.Color.background_floating_material_dark = global::HOFCCross.Droid.Resource.Color.background_floating_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.background_floating_material_light = global::HOFCCross.Droid.Resource.Color.background_floating_material_light;
-			global::FreshEssentials.Droid.Resource.Color.background_material_dark = global::HOFCCross.Droid.Resource.Color.background_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.background_material_light = global::HOFCCross.Droid.Resource.Color.background_material_light;
-			global::FreshEssentials.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::HOFCCross.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.bright_foreground_disabled_material_light = global::HOFCCross.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::FreshEssentials.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::HOFCCross.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.bright_foreground_inverse_material_light = global::HOFCCross.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::FreshEssentials.Droid.Resource.Color.bright_foreground_material_dark = global::HOFCCross.Droid.Resource.Color.bright_foreground_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.bright_foreground_material_light = global::HOFCCross.Droid.Resource.Color.bright_foreground_material_light;
-			global::FreshEssentials.Droid.Resource.Color.button_material_dark = global::HOFCCross.Droid.Resource.Color.button_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.button_material_light = global::HOFCCross.Droid.Resource.Color.button_material_light;
-			global::FreshEssentials.Droid.Resource.Color.cardview_dark_background = global::HOFCCross.Droid.Resource.Color.cardview_dark_background;
-			global::FreshEssentials.Droid.Resource.Color.cardview_light_background = global::HOFCCross.Droid.Resource.Color.cardview_light_background;
-			global::FreshEssentials.Droid.Resource.Color.cardview_shadow_end_color = global::HOFCCross.Droid.Resource.Color.cardview_shadow_end_color;
-			global::FreshEssentials.Droid.Resource.Color.cardview_shadow_start_color = global::HOFCCross.Droid.Resource.Color.cardview_shadow_start_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_shadow_end_color = global::HOFCCross.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_shadow_mid_color = global::HOFCCross.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_shadow_start_color = global::HOFCCross.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::HOFCCross.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::HOFCCross.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::HOFCCross.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::FreshEssentials.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::HOFCCross.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::FreshEssentials.Droid.Resource.Color.design_snackbar_background_color = global::HOFCCross.Droid.Resource.Color.design_snackbar_background_color;
-			global::FreshEssentials.Droid.Resource.Color.design_textinput_error_color_dark = global::HOFCCross.Droid.Resource.Color.design_textinput_error_color_dark;
-			global::FreshEssentials.Droid.Resource.Color.design_textinput_error_color_light = global::HOFCCross.Droid.Resource.Color.design_textinput_error_color_light;
-			global::FreshEssentials.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::HOFCCross.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.dim_foreground_disabled_material_light = global::HOFCCross.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::FreshEssentials.Droid.Resource.Color.dim_foreground_material_dark = global::HOFCCross.Droid.Resource.Color.dim_foreground_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.dim_foreground_material_light = global::HOFCCross.Droid.Resource.Color.dim_foreground_material_light;
-			global::FreshEssentials.Droid.Resource.Color.foreground_material_dark = global::HOFCCross.Droid.Resource.Color.foreground_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.foreground_material_light = global::HOFCCross.Droid.Resource.Color.foreground_material_light;
-			global::FreshEssentials.Droid.Resource.Color.highlighted_text_material_dark = global::HOFCCross.Droid.Resource.Color.highlighted_text_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.highlighted_text_material_light = global::HOFCCross.Droid.Resource.Color.highlighted_text_material_light;
-			global::FreshEssentials.Droid.Resource.Color.hint_foreground_material_dark = global::HOFCCross.Droid.Resource.Color.hint_foreground_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.hint_foreground_material_light = global::HOFCCross.Droid.Resource.Color.hint_foreground_material_light;
-			global::FreshEssentials.Droid.Resource.Color.material_blue_grey_800 = global::HOFCCross.Droid.Resource.Color.material_blue_grey_800;
-			global::FreshEssentials.Droid.Resource.Color.material_blue_grey_900 = global::HOFCCross.Droid.Resource.Color.material_blue_grey_900;
-			global::FreshEssentials.Droid.Resource.Color.material_blue_grey_950 = global::HOFCCross.Droid.Resource.Color.material_blue_grey_950;
-			global::FreshEssentials.Droid.Resource.Color.material_deep_teal_200 = global::HOFCCross.Droid.Resource.Color.material_deep_teal_200;
-			global::FreshEssentials.Droid.Resource.Color.material_deep_teal_500 = global::HOFCCross.Droid.Resource.Color.material_deep_teal_500;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_100 = global::HOFCCross.Droid.Resource.Color.material_grey_100;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_300 = global::HOFCCross.Droid.Resource.Color.material_grey_300;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_50 = global::HOFCCross.Droid.Resource.Color.material_grey_50;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_600 = global::HOFCCross.Droid.Resource.Color.material_grey_600;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_800 = global::HOFCCross.Droid.Resource.Color.material_grey_800;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_850 = global::HOFCCross.Droid.Resource.Color.material_grey_850;
-			global::FreshEssentials.Droid.Resource.Color.material_grey_900 = global::HOFCCross.Droid.Resource.Color.material_grey_900;
-			global::FreshEssentials.Droid.Resource.Color.primary_dark_material_dark = global::HOFCCross.Droid.Resource.Color.primary_dark_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.primary_dark_material_light = global::HOFCCross.Droid.Resource.Color.primary_dark_material_light;
-			global::FreshEssentials.Droid.Resource.Color.primary_material_dark = global::HOFCCross.Droid.Resource.Color.primary_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.primary_material_light = global::HOFCCross.Droid.Resource.Color.primary_material_light;
-			global::FreshEssentials.Droid.Resource.Color.primary_text_default_material_dark = global::HOFCCross.Droid.Resource.Color.primary_text_default_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.primary_text_default_material_light = global::HOFCCross.Droid.Resource.Color.primary_text_default_material_light;
-			global::FreshEssentials.Droid.Resource.Color.primary_text_disabled_material_dark = global::HOFCCross.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.primary_text_disabled_material_light = global::HOFCCross.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::FreshEssentials.Droid.Resource.Color.ripple_material_dark = global::HOFCCross.Droid.Resource.Color.ripple_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.ripple_material_light = global::HOFCCross.Droid.Resource.Color.ripple_material_light;
-			global::FreshEssentials.Droid.Resource.Color.secondary_text_default_material_dark = global::HOFCCross.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.secondary_text_default_material_light = global::HOFCCross.Droid.Resource.Color.secondary_text_default_material_light;
-			global::FreshEssentials.Droid.Resource.Color.secondary_text_disabled_material_dark = global::HOFCCross.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.secondary_text_disabled_material_light = global::HOFCCross.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::FreshEssentials.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::HOFCCross.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.switch_thumb_disabled_material_light = global::HOFCCross.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::FreshEssentials.Droid.Resource.Color.switch_thumb_material_dark = global::HOFCCross.Droid.Resource.Color.switch_thumb_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.switch_thumb_material_light = global::HOFCCross.Droid.Resource.Color.switch_thumb_material_light;
-			global::FreshEssentials.Droid.Resource.Color.switch_thumb_normal_material_dark = global::HOFCCross.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::FreshEssentials.Droid.Resource.Color.switch_thumb_normal_material_light = global::HOFCCross.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_progress_bar_size = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_button_min_height_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_button_min_width_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::HOFCCross.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::HOFCCross.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::HOFCCross.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::HOFCCross.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::HOFCCross.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::HOFCCross.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::HOFCCross.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_control_corner_material = global::HOFCCross.Droid.Resource.Dimension.abc_control_corner_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_control_inset_material = global::HOFCCross.Droid.Resource.Dimension.abc_control_inset_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_control_padding_material = global::HOFCCross.Droid.Resource.Dimension.abc_control_padding_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_list_padding_vertical_material = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_list_padding_vertical_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_min_width_major = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_padding_material = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::HOFCCross.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::HOFCCross.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::HOFCCross.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::HOFCCross.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::HOFCCross.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::HOFCCross.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::HOFCCross.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::HOFCCross.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::HOFCCross.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_floating_window_z = global::HOFCCross.Droid.Resource.Dimension.abc_floating_window_z;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::HOFCCross.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_panel_menu_list_width = global::HOFCCross.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_search_view_preferred_width = global::HOFCCross.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_search_view_text_min_width = global::HOFCCross.Droid.Resource.Dimension.abc_search_view_text_min_width;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::HOFCCross.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::HOFCCross.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::HOFCCross.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_switch_padding = global::HOFCCross.Droid.Resource.Dimension.abc_switch_padding;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_body_1_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_body_2_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_button_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_caption_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_display_1_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_display_2_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_display_3_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_display_4_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_headline_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_large_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_medium_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_menu_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_small_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_subhead_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_title_material = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::FreshEssentials.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::HOFCCross.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::FreshEssentials.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::HOFCCross.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::FreshEssentials.Droid.Resource.Dimension.cardview_default_elevation = global::HOFCCross.Droid.Resource.Dimension.cardview_default_elevation;
-			global::FreshEssentials.Droid.Resource.Dimension.cardview_default_radius = global::HOFCCross.Droid.Resource.Dimension.cardview_default_radius;
-			global::FreshEssentials.Droid.Resource.Dimension.design_appbar_elevation = global::HOFCCross.Droid.Resource.Dimension.design_appbar_elevation;
-			global::FreshEssentials.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::HOFCCross.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::FreshEssentials.Droid.Resource.Dimension.design_bottom_sheet_modal_peek_height = global::HOFCCross.Droid.Resource.Dimension.design_bottom_sheet_modal_peek_height;
-			global::FreshEssentials.Droid.Resource.Dimension.design_fab_border_width = global::HOFCCross.Droid.Resource.Dimension.design_fab_border_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_fab_elevation = global::HOFCCross.Droid.Resource.Dimension.design_fab_elevation;
-			global::FreshEssentials.Droid.Resource.Dimension.design_fab_image_size = global::HOFCCross.Droid.Resource.Dimension.design_fab_image_size;
-			global::FreshEssentials.Droid.Resource.Dimension.design_fab_size_mini = global::HOFCCross.Droid.Resource.Dimension.design_fab_size_mini;
-			global::FreshEssentials.Droid.Resource.Dimension.design_fab_size_normal = global::HOFCCross.Droid.Resource.Dimension.design_fab_size_normal;
-			global::FreshEssentials.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::HOFCCross.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::FreshEssentials.Droid.Resource.Dimension.design_navigation_elevation = global::HOFCCross.Droid.Resource.Dimension.design_navigation_elevation;
-			global::FreshEssentials.Droid.Resource.Dimension.design_navigation_icon_padding = global::HOFCCross.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::FreshEssentials.Droid.Resource.Dimension.design_navigation_icon_size = global::HOFCCross.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::FreshEssentials.Droid.Resource.Dimension.design_navigation_max_width = global::HOFCCross.Droid.Resource.Dimension.design_navigation_max_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_navigation_padding_bottom = global::HOFCCross.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::FreshEssentials.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::HOFCCross.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_elevation = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_max_width = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_min_width = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::FreshEssentials.Droid.Resource.Dimension.design_snackbar_text_size = global::HOFCCross.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::FreshEssentials.Droid.Resource.Dimension.design_tab_max_width = global::HOFCCross.Droid.Resource.Dimension.design_tab_max_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::HOFCCross.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::FreshEssentials.Droid.Resource.Dimension.design_tab_text_size = global::HOFCCross.Droid.Resource.Dimension.design_tab_text_size;
-			global::FreshEssentials.Droid.Resource.Dimension.design_tab_text_size_2line = global::HOFCCross.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::FreshEssentials.Droid.Resource.Dimension.disabled_alpha_material_dark = global::HOFCCross.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::FreshEssentials.Droid.Resource.Dimension.disabled_alpha_material_light = global::HOFCCross.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::FreshEssentials.Droid.Resource.Dimension.highlight_alpha_material_colored = global::HOFCCross.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::FreshEssentials.Droid.Resource.Dimension.highlight_alpha_material_dark = global::HOFCCross.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::FreshEssentials.Droid.Resource.Dimension.highlight_alpha_material_light = global::HOFCCross.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::FreshEssentials.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::HOFCCross.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::FreshEssentials.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::HOFCCross.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::FreshEssentials.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::HOFCCross.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::FreshEssentials.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::HOFCCross.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
-			global::FreshEssentials.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::HOFCCross.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
-			global::FreshEssentials.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::HOFCCross.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
-			global::FreshEssentials.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::HOFCCross.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
-			global::FreshEssentials.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::HOFCCross.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
-			global::FreshEssentials.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::HOFCCross.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
-			global::FreshEssentials.Droid.Resource.Dimension.notification_large_icon_height = global::HOFCCross.Droid.Resource.Dimension.notification_large_icon_height;
-			global::FreshEssentials.Droid.Resource.Dimension.notification_large_icon_width = global::HOFCCross.Droid.Resource.Dimension.notification_large_icon_width;
-			global::FreshEssentials.Droid.Resource.Dimension.notification_subtext_size = global::HOFCCross.Droid.Resource.Dimension.notification_subtext_size;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::HOFCCross.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_borderless_material = global::HOFCCross.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_check_material = global::HOFCCross.Droid.Resource.Drawable.abc_btn_check_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::HOFCCross.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::HOFCCross.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_colored_material = global::HOFCCross.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::HOFCCross.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_radio_material = global::HOFCCross.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::HOFCCross.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::HOFCCross.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::HOFCCross.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::HOFCCross.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::HOFCCross.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_cab_background_top_material = global::HOFCCross.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_control_background_material = global::HOFCCross.Droid.Resource.Drawable.abc_control_background_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_dialog_material_background_dark = global::HOFCCross.Droid.Resource.Drawable.abc_dialog_material_background_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_dialog_material_background_light = global::HOFCCross.Droid.Resource.Drawable.abc_dialog_material_background_light;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_edit_text_material = global::HOFCCross.Droid.Resource.Drawable.abc_edit_text_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_clear_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_clear_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_search_api_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_search_api_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::HOFCCross.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::HOFCCross.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::HOFCCross.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::HOFCCross.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_item_background_holo_dark = global::HOFCCross.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_item_background_holo_light = global::HOFCCross.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_focused_holo = global::HOFCCross.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_longpressed_holo = global::HOFCCross.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::HOFCCross.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::HOFCCross.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::HOFCCross.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::HOFCCross.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::HOFCCross.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::HOFCCross.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::HOFCCross.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_list_selector_holo_light = global::HOFCCross.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::HOFCCross.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::HOFCCross.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ratingbar_full_material = global::HOFCCross.Droid.Resource.Drawable.abc_ratingbar_full_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::HOFCCross.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_ratingbar_small_material = global::HOFCCross.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::HOFCCross.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::HOFCCross.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::HOFCCross.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_seekbar_track_material = global::HOFCCross.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::HOFCCross.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_switch_thumb_material = global::HOFCCross.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_tab_indicator_material = global::HOFCCross.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_text_cursor_material = global::HOFCCross.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::HOFCCross.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::FreshEssentials.Droid.Resource.Drawable.abc_textfield_search_material = global::HOFCCross.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::FreshEssentials.Droid.Resource.Drawable.design_fab_background = global::HOFCCross.Droid.Resource.Drawable.design_fab_background;
-			global::FreshEssentials.Droid.Resource.Drawable.design_snackbar_background = global::HOFCCross.Droid.Resource.Drawable.design_snackbar_background;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_audiotrack = global::HOFCCross.Droid.Resource.Drawable.ic_audiotrack;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_audiotrack_light = global::HOFCCross.Droid.Resource.Drawable.ic_audiotrack_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_bluetooth_grey = global::HOFCCross.Droid.Resource.Drawable.ic_bluetooth_grey;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_bluetooth_white = global::HOFCCross.Droid.Resource.Drawable.ic_bluetooth_white;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_dark = global::HOFCCross.Droid.Resource.Drawable.ic_cast_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_disabled_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_disabled_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_grey = global::HOFCCross.Droid.Resource.Drawable.ic_cast_grey;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_off_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_off_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_on_0_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_on_0_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_on_1_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_on_1_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_on_2_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_on_2_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_on_light = global::HOFCCross.Droid.Resource.Drawable.ic_cast_on_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_cast_white = global::HOFCCross.Droid.Resource.Drawable.ic_cast_white;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_close_dark = global::HOFCCross.Droid.Resource.Drawable.ic_close_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_close_light = global::HOFCCross.Droid.Resource.Drawable.ic_close_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse = global::HOFCCross.Droid.Resource.Drawable.ic_collapse;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00000 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00000;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00001 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00001;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00002 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00002;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00003 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00003;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00004 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00004;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00005 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00005;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00006 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00006;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00007 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00007;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00008 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00008;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00009 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00009;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00010 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00010;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00011 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00011;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00012 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00012;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00013 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00013;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00014 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00014;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_collapse_00015 = global::HOFCCross.Droid.Resource.Drawable.ic_collapse_00015;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand = global::HOFCCross.Droid.Resource.Drawable.ic_expand;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00000 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00000;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00001 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00001;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00002 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00002;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00003 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00003;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00004 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00004;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00005 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00005;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00006 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00006;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00007 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00007;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00008 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00008;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00009 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00009;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00010 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00010;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00011 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00011;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00012 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00012;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00013 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00013;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00014 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00014;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_expand_00015 = global::HOFCCross.Droid.Resource.Drawable.ic_expand_00015;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_pause = global::HOFCCross.Droid.Resource.Drawable.ic_media_pause;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_play = global::HOFCCross.Droid.Resource.Drawable.ic_media_play;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_route_disabled_mono_dark = global::HOFCCross.Droid.Resource.Drawable.ic_media_route_disabled_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_route_off_mono_dark = global::HOFCCross.Droid.Resource.Drawable.ic_media_route_off_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_route_on_0_mono_dark = global::HOFCCross.Droid.Resource.Drawable.ic_media_route_on_0_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_route_on_1_mono_dark = global::HOFCCross.Droid.Resource.Drawable.ic_media_route_on_1_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_route_on_2_mono_dark = global::HOFCCross.Droid.Resource.Drawable.ic_media_route_on_2_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_media_route_on_mono_dark = global::HOFCCross.Droid.Resource.Drawable.ic_media_route_on_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_pause_dark = global::HOFCCross.Droid.Resource.Drawable.ic_pause_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_pause_light = global::HOFCCross.Droid.Resource.Drawable.ic_pause_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_play_dark = global::HOFCCross.Droid.Resource.Drawable.ic_play_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_play_light = global::HOFCCross.Droid.Resource.Drawable.ic_play_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_speaker_dark = global::HOFCCross.Droid.Resource.Drawable.ic_speaker_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_speaker_group_dark = global::HOFCCross.Droid.Resource.Drawable.ic_speaker_group_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_speaker_group_light = global::HOFCCross.Droid.Resource.Drawable.ic_speaker_group_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_speaker_light = global::HOFCCross.Droid.Resource.Drawable.ic_speaker_light;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_tv_dark = global::HOFCCross.Droid.Resource.Drawable.ic_tv_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.ic_tv_light = global::HOFCCross.Droid.Resource.Drawable.ic_tv_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::HOFCCross.Droid.Resource.Drawable.mr_dialog_material_background_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_dialog_material_background_light = global::HOFCCross.Droid.Resource.Drawable.mr_dialog_material_background_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_audiotrack_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_audiotrack_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_cast_dark = global::HOFCCross.Droid.Resource.Drawable.mr_ic_cast_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_cast_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_cast_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_close_dark = global::HOFCCross.Droid.Resource.Drawable.mr_ic_close_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_close_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_close_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_dark = global::HOFCCross.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_media_route_mono_dark = global::HOFCCross.Droid.Resource.Drawable.mr_ic_media_route_mono_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_media_route_mono_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_media_route_mono_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_pause_dark = global::HOFCCross.Droid.Resource.Drawable.mr_ic_pause_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_pause_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_pause_light;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_play_dark = global::HOFCCross.Droid.Resource.Drawable.mr_ic_play_dark;
-			global::FreshEssentials.Droid.Resource.Drawable.mr_ic_play_light = global::HOFCCross.Droid.Resource.Drawable.mr_ic_play_light;
-			global::FreshEssentials.Droid.Resource.Drawable.notification_template_icon_bg = global::HOFCCross.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::FreshEssentials.Droid.Resource.Id.action0 = global::HOFCCross.Droid.Resource.Id.action0;
-			global::FreshEssentials.Droid.Resource.Id.action_bar = global::HOFCCross.Droid.Resource.Id.action_bar;
-			global::FreshEssentials.Droid.Resource.Id.action_bar_activity_content = global::HOFCCross.Droid.Resource.Id.action_bar_activity_content;
-			global::FreshEssentials.Droid.Resource.Id.action_bar_container = global::HOFCCross.Droid.Resource.Id.action_bar_container;
-			global::FreshEssentials.Droid.Resource.Id.action_bar_root = global::HOFCCross.Droid.Resource.Id.action_bar_root;
-			global::FreshEssentials.Droid.Resource.Id.action_bar_spinner = global::HOFCCross.Droid.Resource.Id.action_bar_spinner;
-			global::FreshEssentials.Droid.Resource.Id.action_bar_subtitle = global::HOFCCross.Droid.Resource.Id.action_bar_subtitle;
-			global::FreshEssentials.Droid.Resource.Id.action_bar_title = global::HOFCCross.Droid.Resource.Id.action_bar_title;
-			global::FreshEssentials.Droid.Resource.Id.action_context_bar = global::HOFCCross.Droid.Resource.Id.action_context_bar;
-			global::FreshEssentials.Droid.Resource.Id.action_divider = global::HOFCCross.Droid.Resource.Id.action_divider;
-			global::FreshEssentials.Droid.Resource.Id.action_menu_divider = global::HOFCCross.Droid.Resource.Id.action_menu_divider;
-			global::FreshEssentials.Droid.Resource.Id.action_menu_presenter = global::HOFCCross.Droid.Resource.Id.action_menu_presenter;
-			global::FreshEssentials.Droid.Resource.Id.action_mode_bar = global::HOFCCross.Droid.Resource.Id.action_mode_bar;
-			global::FreshEssentials.Droid.Resource.Id.action_mode_bar_stub = global::HOFCCross.Droid.Resource.Id.action_mode_bar_stub;
-			global::FreshEssentials.Droid.Resource.Id.action_mode_close_button = global::HOFCCross.Droid.Resource.Id.action_mode_close_button;
-			global::FreshEssentials.Droid.Resource.Id.activity_chooser_view_content = global::HOFCCross.Droid.Resource.Id.activity_chooser_view_content;
-			global::FreshEssentials.Droid.Resource.Id.alertTitle = global::HOFCCross.Droid.Resource.Id.alertTitle;
-			global::FreshEssentials.Droid.Resource.Id.always = global::HOFCCross.Droid.Resource.Id.always;
-			global::FreshEssentials.Droid.Resource.Id.beginning = global::HOFCCross.Droid.Resource.Id.beginning;
-			global::FreshEssentials.Droid.Resource.Id.bottom = global::HOFCCross.Droid.Resource.Id.bottom;
-			global::FreshEssentials.Droid.Resource.Id.buttonPanel = global::HOFCCross.Droid.Resource.Id.buttonPanel;
-			global::FreshEssentials.Droid.Resource.Id.cancel_action = global::HOFCCross.Droid.Resource.Id.cancel_action;
-			global::FreshEssentials.Droid.Resource.Id.center = global::HOFCCross.Droid.Resource.Id.center;
-			global::FreshEssentials.Droid.Resource.Id.center_horizontal = global::HOFCCross.Droid.Resource.Id.center_horizontal;
-			global::FreshEssentials.Droid.Resource.Id.center_vertical = global::HOFCCross.Droid.Resource.Id.center_vertical;
-			global::FreshEssentials.Droid.Resource.Id.checkbox = global::HOFCCross.Droid.Resource.Id.checkbox;
-			global::FreshEssentials.Droid.Resource.Id.chronometer = global::HOFCCross.Droid.Resource.Id.chronometer;
-			global::FreshEssentials.Droid.Resource.Id.clip_horizontal = global::HOFCCross.Droid.Resource.Id.clip_horizontal;
-			global::FreshEssentials.Droid.Resource.Id.clip_vertical = global::HOFCCross.Droid.Resource.Id.clip_vertical;
-			global::FreshEssentials.Droid.Resource.Id.collapseActionView = global::HOFCCross.Droid.Resource.Id.collapseActionView;
-			global::FreshEssentials.Droid.Resource.Id.contentPanel = global::HOFCCross.Droid.Resource.Id.contentPanel;
-			global::FreshEssentials.Droid.Resource.Id.custom = global::HOFCCross.Droid.Resource.Id.custom;
-			global::FreshEssentials.Droid.Resource.Id.customPanel = global::HOFCCross.Droid.Resource.Id.customPanel;
-			global::FreshEssentials.Droid.Resource.Id.decor_content_parent = global::HOFCCross.Droid.Resource.Id.decor_content_parent;
-			global::FreshEssentials.Droid.Resource.Id.default_activity_button = global::HOFCCross.Droid.Resource.Id.default_activity_button;
-			global::FreshEssentials.Droid.Resource.Id.design_bottom_sheet = global::HOFCCross.Droid.Resource.Id.design_bottom_sheet;
-			global::FreshEssentials.Droid.Resource.Id.design_menu_item_action_area = global::HOFCCross.Droid.Resource.Id.design_menu_item_action_area;
-			global::FreshEssentials.Droid.Resource.Id.design_menu_item_action_area_stub = global::HOFCCross.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::FreshEssentials.Droid.Resource.Id.design_menu_item_text = global::HOFCCross.Droid.Resource.Id.design_menu_item_text;
-			global::FreshEssentials.Droid.Resource.Id.design_navigation_view = global::HOFCCross.Droid.Resource.Id.design_navigation_view;
-			global::FreshEssentials.Droid.Resource.Id.disableHome = global::HOFCCross.Droid.Resource.Id.disableHome;
-			global::FreshEssentials.Droid.Resource.Id.edit_query = global::HOFCCross.Droid.Resource.Id.edit_query;
-			global::FreshEssentials.Droid.Resource.Id.end = global::HOFCCross.Droid.Resource.Id.end;
-			global::FreshEssentials.Droid.Resource.Id.end_padder = global::HOFCCross.Droid.Resource.Id.end_padder;
-			global::FreshEssentials.Droid.Resource.Id.enterAlways = global::HOFCCross.Droid.Resource.Id.enterAlways;
-			global::FreshEssentials.Droid.Resource.Id.enterAlwaysCollapsed = global::HOFCCross.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::FreshEssentials.Droid.Resource.Id.exitUntilCollapsed = global::HOFCCross.Droid.Resource.Id.exitUntilCollapsed;
-			global::FreshEssentials.Droid.Resource.Id.expand_activities_button = global::HOFCCross.Droid.Resource.Id.expand_activities_button;
-			global::FreshEssentials.Droid.Resource.Id.expanded_menu = global::HOFCCross.Droid.Resource.Id.expanded_menu;
-			global::FreshEssentials.Droid.Resource.Id.fill = global::HOFCCross.Droid.Resource.Id.fill;
-			global::FreshEssentials.Droid.Resource.Id.fill_horizontal = global::HOFCCross.Droid.Resource.Id.fill_horizontal;
-			global::FreshEssentials.Droid.Resource.Id.fill_vertical = global::HOFCCross.Droid.Resource.Id.fill_vertical;
-			global::FreshEssentials.Droid.Resource.Id.@fixed = global::HOFCCross.Droid.Resource.Id.@fixed;
-			global::FreshEssentials.Droid.Resource.Id.home = global::HOFCCross.Droid.Resource.Id.home;
-			global::FreshEssentials.Droid.Resource.Id.homeAsUp = global::HOFCCross.Droid.Resource.Id.homeAsUp;
-			global::FreshEssentials.Droid.Resource.Id.icon = global::HOFCCross.Droid.Resource.Id.icon;
-			global::FreshEssentials.Droid.Resource.Id.ifRoom = global::HOFCCross.Droid.Resource.Id.ifRoom;
-			global::FreshEssentials.Droid.Resource.Id.image = global::HOFCCross.Droid.Resource.Id.image;
-			global::FreshEssentials.Droid.Resource.Id.info = global::HOFCCross.Droid.Resource.Id.info;
-			global::FreshEssentials.Droid.Resource.Id.item_touch_helper_previous_elevation = global::HOFCCross.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::FreshEssentials.Droid.Resource.Id.left = global::HOFCCross.Droid.Resource.Id.left;
-			global::FreshEssentials.Droid.Resource.Id.line1 = global::HOFCCross.Droid.Resource.Id.line1;
-			global::FreshEssentials.Droid.Resource.Id.line3 = global::HOFCCross.Droid.Resource.Id.line3;
-			global::FreshEssentials.Droid.Resource.Id.listMode = global::HOFCCross.Droid.Resource.Id.listMode;
-			global::FreshEssentials.Droid.Resource.Id.list_item = global::HOFCCross.Droid.Resource.Id.list_item;
-			global::FreshEssentials.Droid.Resource.Id.media_actions = global::HOFCCross.Droid.Resource.Id.media_actions;
-			global::FreshEssentials.Droid.Resource.Id.middle = global::HOFCCross.Droid.Resource.Id.middle;
-			global::FreshEssentials.Droid.Resource.Id.mini = global::HOFCCross.Droid.Resource.Id.mini;
-			global::FreshEssentials.Droid.Resource.Id.mr_art = global::HOFCCross.Droid.Resource.Id.mr_art;
-			global::FreshEssentials.Droid.Resource.Id.mr_chooser_list = global::HOFCCross.Droid.Resource.Id.mr_chooser_list;
-			global::FreshEssentials.Droid.Resource.Id.mr_chooser_route_desc = global::HOFCCross.Droid.Resource.Id.mr_chooser_route_desc;
-			global::FreshEssentials.Droid.Resource.Id.mr_chooser_route_icon = global::HOFCCross.Droid.Resource.Id.mr_chooser_route_icon;
-			global::FreshEssentials.Droid.Resource.Id.mr_chooser_route_name = global::HOFCCross.Droid.Resource.Id.mr_chooser_route_name;
-			global::FreshEssentials.Droid.Resource.Id.mr_close = global::HOFCCross.Droid.Resource.Id.mr_close;
-			global::FreshEssentials.Droid.Resource.Id.mr_control_divider = global::HOFCCross.Droid.Resource.Id.mr_control_divider;
-			global::FreshEssentials.Droid.Resource.Id.mr_control_play_pause = global::HOFCCross.Droid.Resource.Id.mr_control_play_pause;
-			global::FreshEssentials.Droid.Resource.Id.mr_control_subtitle = global::HOFCCross.Droid.Resource.Id.mr_control_subtitle;
-			global::FreshEssentials.Droid.Resource.Id.mr_control_title = global::HOFCCross.Droid.Resource.Id.mr_control_title;
-			global::FreshEssentials.Droid.Resource.Id.mr_control_title_container = global::HOFCCross.Droid.Resource.Id.mr_control_title_container;
-			global::FreshEssentials.Droid.Resource.Id.mr_custom_control = global::HOFCCross.Droid.Resource.Id.mr_custom_control;
-			global::FreshEssentials.Droid.Resource.Id.mr_default_control = global::HOFCCross.Droid.Resource.Id.mr_default_control;
-			global::FreshEssentials.Droid.Resource.Id.mr_dialog_area = global::HOFCCross.Droid.Resource.Id.mr_dialog_area;
-			global::FreshEssentials.Droid.Resource.Id.mr_expandable_area = global::HOFCCross.Droid.Resource.Id.mr_expandable_area;
-			global::FreshEssentials.Droid.Resource.Id.mr_group_expand_collapse = global::HOFCCross.Droid.Resource.Id.mr_group_expand_collapse;
-			global::FreshEssentials.Droid.Resource.Id.mr_media_main_control = global::HOFCCross.Droid.Resource.Id.mr_media_main_control;
-			global::FreshEssentials.Droid.Resource.Id.mr_name = global::HOFCCross.Droid.Resource.Id.mr_name;
-			global::FreshEssentials.Droid.Resource.Id.mr_playback_control = global::HOFCCross.Droid.Resource.Id.mr_playback_control;
-			global::FreshEssentials.Droid.Resource.Id.mr_title_bar = global::HOFCCross.Droid.Resource.Id.mr_title_bar;
-			global::FreshEssentials.Droid.Resource.Id.mr_volume_control = global::HOFCCross.Droid.Resource.Id.mr_volume_control;
-			global::FreshEssentials.Droid.Resource.Id.mr_volume_group_list = global::HOFCCross.Droid.Resource.Id.mr_volume_group_list;
-			global::FreshEssentials.Droid.Resource.Id.mr_volume_item_icon = global::HOFCCross.Droid.Resource.Id.mr_volume_item_icon;
-			global::FreshEssentials.Droid.Resource.Id.mr_volume_slider = global::HOFCCross.Droid.Resource.Id.mr_volume_slider;
-			global::FreshEssentials.Droid.Resource.Id.multiply = global::HOFCCross.Droid.Resource.Id.multiply;
-			global::FreshEssentials.Droid.Resource.Id.navigation_header_container = global::HOFCCross.Droid.Resource.Id.navigation_header_container;
-			global::FreshEssentials.Droid.Resource.Id.never = global::HOFCCross.Droid.Resource.Id.never;
-			global::FreshEssentials.Droid.Resource.Id.none = global::HOFCCross.Droid.Resource.Id.none;
-			global::FreshEssentials.Droid.Resource.Id.normal = global::HOFCCross.Droid.Resource.Id.normal;
-			global::FreshEssentials.Droid.Resource.Id.parallax = global::HOFCCross.Droid.Resource.Id.parallax;
-			global::FreshEssentials.Droid.Resource.Id.parentPanel = global::HOFCCross.Droid.Resource.Id.parentPanel;
-			global::FreshEssentials.Droid.Resource.Id.pin = global::HOFCCross.Droid.Resource.Id.pin;
-			global::FreshEssentials.Droid.Resource.Id.progress_circular = global::HOFCCross.Droid.Resource.Id.progress_circular;
-			global::FreshEssentials.Droid.Resource.Id.progress_horizontal = global::HOFCCross.Droid.Resource.Id.progress_horizontal;
-			global::FreshEssentials.Droid.Resource.Id.radio = global::HOFCCross.Droid.Resource.Id.radio;
-			global::FreshEssentials.Droid.Resource.Id.right = global::HOFCCross.Droid.Resource.Id.right;
-			global::FreshEssentials.Droid.Resource.Id.screen = global::HOFCCross.Droid.Resource.Id.screen;
-			global::FreshEssentials.Droid.Resource.Id.scroll = global::HOFCCross.Droid.Resource.Id.scroll;
-			global::FreshEssentials.Droid.Resource.Id.scrollIndicatorDown = global::HOFCCross.Droid.Resource.Id.scrollIndicatorDown;
-			global::FreshEssentials.Droid.Resource.Id.scrollIndicatorUp = global::HOFCCross.Droid.Resource.Id.scrollIndicatorUp;
-			global::FreshEssentials.Droid.Resource.Id.scrollView = global::HOFCCross.Droid.Resource.Id.scrollView;
-			global::FreshEssentials.Droid.Resource.Id.scrollable = global::HOFCCross.Droid.Resource.Id.scrollable;
-			global::FreshEssentials.Droid.Resource.Id.search_badge = global::HOFCCross.Droid.Resource.Id.search_badge;
-			global::FreshEssentials.Droid.Resource.Id.search_bar = global::HOFCCross.Droid.Resource.Id.search_bar;
-			global::FreshEssentials.Droid.Resource.Id.search_button = global::HOFCCross.Droid.Resource.Id.search_button;
-			global::FreshEssentials.Droid.Resource.Id.search_close_btn = global::HOFCCross.Droid.Resource.Id.search_close_btn;
-			global::FreshEssentials.Droid.Resource.Id.search_edit_frame = global::HOFCCross.Droid.Resource.Id.search_edit_frame;
-			global::FreshEssentials.Droid.Resource.Id.search_go_btn = global::HOFCCross.Droid.Resource.Id.search_go_btn;
-			global::FreshEssentials.Droid.Resource.Id.search_mag_icon = global::HOFCCross.Droid.Resource.Id.search_mag_icon;
-			global::FreshEssentials.Droid.Resource.Id.search_plate = global::HOFCCross.Droid.Resource.Id.search_plate;
-			global::FreshEssentials.Droid.Resource.Id.search_src_text = global::HOFCCross.Droid.Resource.Id.search_src_text;
-			global::FreshEssentials.Droid.Resource.Id.search_voice_btn = global::HOFCCross.Droid.Resource.Id.search_voice_btn;
-			global::FreshEssentials.Droid.Resource.Id.select_dialog_listview = global::HOFCCross.Droid.Resource.Id.select_dialog_listview;
-			global::FreshEssentials.Droid.Resource.Id.shortcut = global::HOFCCross.Droid.Resource.Id.shortcut;
-			global::FreshEssentials.Droid.Resource.Id.showCustom = global::HOFCCross.Droid.Resource.Id.showCustom;
-			global::FreshEssentials.Droid.Resource.Id.showHome = global::HOFCCross.Droid.Resource.Id.showHome;
-			global::FreshEssentials.Droid.Resource.Id.showTitle = global::HOFCCross.Droid.Resource.Id.showTitle;
-			global::FreshEssentials.Droid.Resource.Id.snackbar_action = global::HOFCCross.Droid.Resource.Id.snackbar_action;
-			global::FreshEssentials.Droid.Resource.Id.snackbar_text = global::HOFCCross.Droid.Resource.Id.snackbar_text;
-			global::FreshEssentials.Droid.Resource.Id.snap = global::HOFCCross.Droid.Resource.Id.snap;
-			global::FreshEssentials.Droid.Resource.Id.spacer = global::HOFCCross.Droid.Resource.Id.spacer;
-			global::FreshEssentials.Droid.Resource.Id.split_action_bar = global::HOFCCross.Droid.Resource.Id.split_action_bar;
-			global::FreshEssentials.Droid.Resource.Id.src_atop = global::HOFCCross.Droid.Resource.Id.src_atop;
-			global::FreshEssentials.Droid.Resource.Id.src_in = global::HOFCCross.Droid.Resource.Id.src_in;
-			global::FreshEssentials.Droid.Resource.Id.src_over = global::HOFCCross.Droid.Resource.Id.src_over;
-			global::FreshEssentials.Droid.Resource.Id.start = global::HOFCCross.Droid.Resource.Id.start;
-			global::FreshEssentials.Droid.Resource.Id.status_bar_latest_event_content = global::HOFCCross.Droid.Resource.Id.status_bar_latest_event_content;
-			global::FreshEssentials.Droid.Resource.Id.submit_area = global::HOFCCross.Droid.Resource.Id.submit_area;
-			global::FreshEssentials.Droid.Resource.Id.tabMode = global::HOFCCross.Droid.Resource.Id.tabMode;
-			global::FreshEssentials.Droid.Resource.Id.text = global::HOFCCross.Droid.Resource.Id.text;
-			global::FreshEssentials.Droid.Resource.Id.text2 = global::HOFCCross.Droid.Resource.Id.text2;
-			global::FreshEssentials.Droid.Resource.Id.textSpacerNoButtons = global::HOFCCross.Droid.Resource.Id.textSpacerNoButtons;
-			global::FreshEssentials.Droid.Resource.Id.time = global::HOFCCross.Droid.Resource.Id.time;
-			global::FreshEssentials.Droid.Resource.Id.title = global::HOFCCross.Droid.Resource.Id.title;
-			global::FreshEssentials.Droid.Resource.Id.title_template = global::HOFCCross.Droid.Resource.Id.title_template;
-			global::FreshEssentials.Droid.Resource.Id.top = global::HOFCCross.Droid.Resource.Id.top;
-			global::FreshEssentials.Droid.Resource.Id.topPanel = global::HOFCCross.Droid.Resource.Id.topPanel;
-			global::FreshEssentials.Droid.Resource.Id.touch_outside = global::HOFCCross.Droid.Resource.Id.touch_outside;
-			global::FreshEssentials.Droid.Resource.Id.up = global::HOFCCross.Droid.Resource.Id.up;
-			global::FreshEssentials.Droid.Resource.Id.useLogo = global::HOFCCross.Droid.Resource.Id.useLogo;
-			global::FreshEssentials.Droid.Resource.Id.view_offset_helper = global::HOFCCross.Droid.Resource.Id.view_offset_helper;
-			global::FreshEssentials.Droid.Resource.Id.volume_item_container = global::HOFCCross.Droid.Resource.Id.volume_item_container;
-			global::FreshEssentials.Droid.Resource.Id.withText = global::HOFCCross.Droid.Resource.Id.withText;
-			global::FreshEssentials.Droid.Resource.Id.wrap_content = global::HOFCCross.Droid.Resource.Id.wrap_content;
-			global::FreshEssentials.Droid.Resource.Integer.abc_config_activityDefaultDur = global::HOFCCross.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::FreshEssentials.Droid.Resource.Integer.abc_config_activityShortDur = global::HOFCCross.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::FreshEssentials.Droid.Resource.Integer.abc_max_action_buttons = global::HOFCCross.Droid.Resource.Integer.abc_max_action_buttons;
-			global::FreshEssentials.Droid.Resource.Integer.bottom_sheet_slide_duration = global::HOFCCross.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::FreshEssentials.Droid.Resource.Integer.cancel_button_image_alpha = global::HOFCCross.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::FreshEssentials.Droid.Resource.Integer.design_snackbar_text_max_lines = global::HOFCCross.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::FreshEssentials.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::HOFCCross.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
-			global::FreshEssentials.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::HOFCCross.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
-			global::FreshEssentials.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::HOFCCross.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
-			global::FreshEssentials.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::HOFCCross.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::FreshEssentials.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::HOFCCross.Droid.Resource.Interpolator.mr_fast_out_slow_in;
-			global::FreshEssentials.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::HOFCCross.Droid.Resource.Interpolator.mr_linear_out_slow_in;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_bar_title_item = global::HOFCCross.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_bar_up_container = global::HOFCCross.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout = global::HOFCCross.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_menu_item_layout = global::HOFCCross.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_menu_layout = global::HOFCCross.Droid.Resource.Layout.abc_action_menu_layout;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_mode_bar = global::HOFCCross.Droid.Resource.Layout.abc_action_mode_bar;
-			global::FreshEssentials.Droid.Resource.Layout.abc_action_mode_close_item_material = global::HOFCCross.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::FreshEssentials.Droid.Resource.Layout.abc_activity_chooser_view = global::HOFCCross.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::FreshEssentials.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::HOFCCross.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::FreshEssentials.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::HOFCCross.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::FreshEssentials.Droid.Resource.Layout.abc_alert_dialog_material = global::HOFCCross.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::FreshEssentials.Droid.Resource.Layout.abc_dialog_title_material = global::HOFCCross.Droid.Resource.Layout.abc_dialog_title_material;
-			global::FreshEssentials.Droid.Resource.Layout.abc_expanded_menu_layout = global::HOFCCross.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::FreshEssentials.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::HOFCCross.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::FreshEssentials.Droid.Resource.Layout.abc_list_menu_item_icon = global::HOFCCross.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::FreshEssentials.Droid.Resource.Layout.abc_list_menu_item_layout = global::HOFCCross.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::FreshEssentials.Droid.Resource.Layout.abc_list_menu_item_radio = global::HOFCCross.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::FreshEssentials.Droid.Resource.Layout.abc_popup_menu_item_layout = global::HOFCCross.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::FreshEssentials.Droid.Resource.Layout.abc_screen_content_include = global::HOFCCross.Droid.Resource.Layout.abc_screen_content_include;
-			global::FreshEssentials.Droid.Resource.Layout.abc_screen_simple = global::HOFCCross.Droid.Resource.Layout.abc_screen_simple;
-			global::FreshEssentials.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::HOFCCross.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::FreshEssentials.Droid.Resource.Layout.abc_screen_toolbar = global::HOFCCross.Droid.Resource.Layout.abc_screen_toolbar;
-			global::FreshEssentials.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::HOFCCross.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::FreshEssentials.Droid.Resource.Layout.abc_search_view = global::HOFCCross.Droid.Resource.Layout.abc_search_view;
-			global::FreshEssentials.Droid.Resource.Layout.abc_select_dialog_material = global::HOFCCross.Droid.Resource.Layout.abc_select_dialog_material;
-			global::FreshEssentials.Droid.Resource.Layout.design_bottom_sheet_dialog = global::HOFCCross.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::FreshEssentials.Droid.Resource.Layout.design_layout_snackbar = global::HOFCCross.Droid.Resource.Layout.design_layout_snackbar;
-			global::FreshEssentials.Droid.Resource.Layout.design_layout_snackbar_include = global::HOFCCross.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::FreshEssentials.Droid.Resource.Layout.design_layout_tab_icon = global::HOFCCross.Droid.Resource.Layout.design_layout_tab_icon;
-			global::FreshEssentials.Droid.Resource.Layout.design_layout_tab_text = global::HOFCCross.Droid.Resource.Layout.design_layout_tab_text;
-			global::FreshEssentials.Droid.Resource.Layout.design_menu_item_action_area = global::HOFCCross.Droid.Resource.Layout.design_menu_item_action_area;
-			global::FreshEssentials.Droid.Resource.Layout.design_navigation_item = global::HOFCCross.Droid.Resource.Layout.design_navigation_item;
-			global::FreshEssentials.Droid.Resource.Layout.design_navigation_item_header = global::HOFCCross.Droid.Resource.Layout.design_navigation_item_header;
-			global::FreshEssentials.Droid.Resource.Layout.design_navigation_item_separator = global::HOFCCross.Droid.Resource.Layout.design_navigation_item_separator;
-			global::FreshEssentials.Droid.Resource.Layout.design_navigation_item_subheader = global::HOFCCross.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::FreshEssentials.Droid.Resource.Layout.design_navigation_menu = global::HOFCCross.Droid.Resource.Layout.design_navigation_menu;
-			global::FreshEssentials.Droid.Resource.Layout.design_navigation_menu_item = global::HOFCCross.Droid.Resource.Layout.design_navigation_menu_item;
-			global::FreshEssentials.Droid.Resource.Layout.mr_chooser_dialog = global::HOFCCross.Droid.Resource.Layout.mr_chooser_dialog;
-			global::FreshEssentials.Droid.Resource.Layout.mr_chooser_list_item = global::HOFCCross.Droid.Resource.Layout.mr_chooser_list_item;
-			global::FreshEssentials.Droid.Resource.Layout.mr_controller_material_dialog_b = global::HOFCCross.Droid.Resource.Layout.mr_controller_material_dialog_b;
-			global::FreshEssentials.Droid.Resource.Layout.mr_controller_volume_item = global::HOFCCross.Droid.Resource.Layout.mr_controller_volume_item;
-			global::FreshEssentials.Droid.Resource.Layout.mr_playback_control = global::HOFCCross.Droid.Resource.Layout.mr_playback_control;
-			global::FreshEssentials.Droid.Resource.Layout.mr_volume_control = global::HOFCCross.Droid.Resource.Layout.mr_volume_control;
-			global::FreshEssentials.Droid.Resource.Layout.notification_media_action = global::HOFCCross.Droid.Resource.Layout.notification_media_action;
-			global::FreshEssentials.Droid.Resource.Layout.notification_media_cancel_action = global::HOFCCross.Droid.Resource.Layout.notification_media_cancel_action;
-			global::FreshEssentials.Droid.Resource.Layout.notification_template_big_media = global::HOFCCross.Droid.Resource.Layout.notification_template_big_media;
-			global::FreshEssentials.Droid.Resource.Layout.notification_template_big_media_narrow = global::HOFCCross.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::FreshEssentials.Droid.Resource.Layout.notification_template_lines = global::HOFCCross.Droid.Resource.Layout.notification_template_lines;
-			global::FreshEssentials.Droid.Resource.Layout.notification_template_media = global::HOFCCross.Droid.Resource.Layout.notification_template_media;
-			global::FreshEssentials.Droid.Resource.Layout.notification_template_part_chronometer = global::HOFCCross.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::FreshEssentials.Droid.Resource.Layout.notification_template_part_time = global::HOFCCross.Droid.Resource.Layout.notification_template_part_time;
-			global::FreshEssentials.Droid.Resource.Layout.select_dialog_item_material = global::HOFCCross.Droid.Resource.Layout.select_dialog_item_material;
-			global::FreshEssentials.Droid.Resource.Layout.select_dialog_multichoice_material = global::HOFCCross.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::FreshEssentials.Droid.Resource.Layout.select_dialog_singlechoice_material = global::HOFCCross.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::FreshEssentials.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::HOFCCross.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::FreshEssentials.Droid.Resource.String.abc_action_bar_home_description = global::HOFCCross.Droid.Resource.String.abc_action_bar_home_description;
-			global::FreshEssentials.Droid.Resource.String.abc_action_bar_home_description_format = global::HOFCCross.Droid.Resource.String.abc_action_bar_home_description_format;
-			global::FreshEssentials.Droid.Resource.String.abc_action_bar_home_subtitle_description_format = global::HOFCCross.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
-			global::FreshEssentials.Droid.Resource.String.abc_action_bar_up_description = global::HOFCCross.Droid.Resource.String.abc_action_bar_up_description;
-			global::FreshEssentials.Droid.Resource.String.abc_action_menu_overflow_description = global::HOFCCross.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::FreshEssentials.Droid.Resource.String.abc_action_mode_done = global::HOFCCross.Droid.Resource.String.abc_action_mode_done;
-			global::FreshEssentials.Droid.Resource.String.abc_activity_chooser_view_see_all = global::HOFCCross.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::FreshEssentials.Droid.Resource.String.abc_activitychooserview_choose_application = global::HOFCCross.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::FreshEssentials.Droid.Resource.String.abc_capital_off = global::HOFCCross.Droid.Resource.String.abc_capital_off;
-			global::FreshEssentials.Droid.Resource.String.abc_capital_on = global::HOFCCross.Droid.Resource.String.abc_capital_on;
-			global::FreshEssentials.Droid.Resource.String.abc_search_hint = global::HOFCCross.Droid.Resource.String.abc_search_hint;
-			global::FreshEssentials.Droid.Resource.String.abc_searchview_description_clear = global::HOFCCross.Droid.Resource.String.abc_searchview_description_clear;
-			global::FreshEssentials.Droid.Resource.String.abc_searchview_description_query = global::HOFCCross.Droid.Resource.String.abc_searchview_description_query;
-			global::FreshEssentials.Droid.Resource.String.abc_searchview_description_search = global::HOFCCross.Droid.Resource.String.abc_searchview_description_search;
-			global::FreshEssentials.Droid.Resource.String.abc_searchview_description_submit = global::HOFCCross.Droid.Resource.String.abc_searchview_description_submit;
-			global::FreshEssentials.Droid.Resource.String.abc_searchview_description_voice = global::HOFCCross.Droid.Resource.String.abc_searchview_description_voice;
-			global::FreshEssentials.Droid.Resource.String.abc_shareactionprovider_share_with = global::HOFCCross.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::FreshEssentials.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::HOFCCross.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::FreshEssentials.Droid.Resource.String.abc_toolbar_collapse_description = global::HOFCCross.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::FreshEssentials.Droid.Resource.String.appbar_scrolling_view_behavior = global::HOFCCross.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::FreshEssentials.Droid.Resource.String.bottom_sheet_behavior = global::HOFCCross.Droid.Resource.String.bottom_sheet_behavior;
-			global::FreshEssentials.Droid.Resource.String.character_counter_pattern = global::HOFCCross.Droid.Resource.String.character_counter_pattern;
-			global::FreshEssentials.Droid.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
-			global::FreshEssentials.Droid.Resource.String.mr_button_content_description = global::HOFCCross.Droid.Resource.String.mr_button_content_description;
-			global::FreshEssentials.Droid.Resource.String.mr_chooser_searching = global::HOFCCross.Droid.Resource.String.mr_chooser_searching;
-			global::FreshEssentials.Droid.Resource.String.mr_chooser_title = global::HOFCCross.Droid.Resource.String.mr_chooser_title;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_casting_screen = global::HOFCCross.Droid.Resource.String.mr_controller_casting_screen;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_close_description = global::HOFCCross.Droid.Resource.String.mr_controller_close_description;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_collapse_group = global::HOFCCross.Droid.Resource.String.mr_controller_collapse_group;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_disconnect = global::HOFCCross.Droid.Resource.String.mr_controller_disconnect;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_expand_group = global::HOFCCross.Droid.Resource.String.mr_controller_expand_group;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_no_info_available = global::HOFCCross.Droid.Resource.String.mr_controller_no_info_available;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_no_media_selected = global::HOFCCross.Droid.Resource.String.mr_controller_no_media_selected;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_pause = global::HOFCCross.Droid.Resource.String.mr_controller_pause;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_play = global::HOFCCross.Droid.Resource.String.mr_controller_play;
-			global::FreshEssentials.Droid.Resource.String.mr_controller_stop = global::HOFCCross.Droid.Resource.String.mr_controller_stop;
-			global::FreshEssentials.Droid.Resource.String.mr_system_route_name = global::HOFCCross.Droid.Resource.String.mr_system_route_name;
-			global::FreshEssentials.Droid.Resource.String.mr_user_route_category_name = global::HOFCCross.Droid.Resource.String.mr_user_route_category_name;
-			global::FreshEssentials.Droid.Resource.String.status_bar_notification_info_overflow = global::HOFCCross.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::FreshEssentials.Droid.Resource.Style.AlertDialog_AppCompat = global::HOFCCross.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Animation_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::HOFCCross.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::FreshEssentials.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::HOFCCross.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::HOFCCross.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::FreshEssentials.Droid.Resource.Style.Base_CardView = global::HOFCCross.Droid.Resource.Style.Base_CardView;
-			global::FreshEssentials.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::HOFCCross.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::FreshEssentials.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::HOFCCross.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::FreshEssentials.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::HOFCCross.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::HOFCCross.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::HOFCCross.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::HOFCCross.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::HOFCCross.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
-			global::FreshEssentials.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::HOFCCross.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
-			global::FreshEssentials.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::HOFCCross.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::HOFCCross.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::HOFCCross.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::HOFCCross.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::FreshEssentials.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::HOFCCross.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::HOFCCross.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::FreshEssentials.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::HOFCCross.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::FreshEssentials.Droid.Resource.Style.CardView = global::HOFCCross.Droid.Resource.Style.CardView;
-			global::FreshEssentials.Droid.Resource.Style.CardView_Dark = global::HOFCCross.Droid.Resource.Style.CardView_Dark;
-			global::FreshEssentials.Droid.Resource.Style.CardView_Light = global::HOFCCross.Droid.Resource.Style.CardView_Light;
-			global::FreshEssentials.Droid.Resource.Style.Platform_AppCompat = global::HOFCCross.Droid.Resource.Style.Platform_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Platform_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::HOFCCross.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::HOFCCross.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Platform_V11_AppCompat = global::HOFCCross.Droid.Resource.Style.Platform_V11_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Platform_V11_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Platform_V11_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Platform_V14_AppCompat = global::HOFCCross.Droid.Resource.Style.Platform_V14_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Platform_V14_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Platform_V14_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::HOFCCross.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::HOFCCross.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::FreshEssentials.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::HOFCCross.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::FreshEssentials.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::HOFCCross.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::FreshEssentials.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::HOFCCross.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::HOFCCross.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_Counter = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_Error = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_Hint = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Design_Tab = global::HOFCCross.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_StatusBar_EventContent = global::HOFCCross.Droid.Resource.Style.TextAppearance_StatusBar_EventContent;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::HOFCCross.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::HOFCCross.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::HOFCCross.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::HOFCCross.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::HOFCCross.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::FreshEssentials.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::HOFCCross.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Dialog = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::HOFCCross.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_Design = global::HOFCCross.Droid.Resource.Style.Theme_Design;
-			global::FreshEssentials.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::HOFCCross.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::FreshEssentials.Droid.Resource.Style.Theme_Design_Light = global::HOFCCross.Droid.Resource.Style.Theme_Design_Light;
-			global::FreshEssentials.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::HOFCCross.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::FreshEssentials.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::HOFCCross.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_Design_NoActionBar = global::HOFCCross.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Theme_MediaRouter = global::HOFCCross.Droid.Resource.Style.Theme_MediaRouter;
-			global::FreshEssentials.Droid.Resource.Style.Theme_MediaRouter_Light = global::HOFCCross.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::FreshEssentials.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::HOFCCross.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
-			global::FreshEssentials.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::HOFCCross.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::FreshEssentials.Droid.Resource.Style.ThemeOverlay_AppCompat = global::HOFCCross.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::FreshEssentials.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::HOFCCross.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::HOFCCross.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::FreshEssentials.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::HOFCCross.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::HOFCCross.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Button = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_EditText = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ListView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_SearchView = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Spinner = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::HOFCCross.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_AppBarLayout = global::HOFCCross.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::HOFCCross.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::HOFCCross.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_CoordinatorLayout = global::HOFCCross.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::HOFCCross.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_NavigationView = global::HOFCCross.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::HOFCCross.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_Snackbar = global::HOFCCross.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_TabLayout = global::HOFCCross.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::FreshEssentials.Droid.Resource.Style.Widget_Design_TextInputLayout = global::HOFCCross.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Dark = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Light = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Light;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Dark = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Light = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Light;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Dark = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Light = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Light;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Dark = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Light = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Light;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Dark = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Dark;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Light = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Light;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
-			global::FreshEssentials.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::HOFCCross.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar = global::HOFCCross.Droid.Resource.Styleable.ActionBar;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_background = global::HOFCCross.Droid.Resource.Styleable.ActionBar_background;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::HOFCCross.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::HOFCCross.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::HOFCCross.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::HOFCCross.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::HOFCCross.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::HOFCCross.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::HOFCCross.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_displayOptions = global::HOFCCross.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_divider = global::HOFCCross.Droid.Resource.Styleable.ActionBar_divider;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_elevation = global::HOFCCross.Droid.Resource.Styleable.ActionBar_elevation;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_height = global::HOFCCross.Droid.Resource.Styleable.ActionBar_height;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::HOFCCross.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::HOFCCross.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_homeLayout = global::HOFCCross.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_icon = global::HOFCCross.Droid.Resource.Styleable.ActionBar_icon;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::HOFCCross.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_itemPadding = global::HOFCCross.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_logo = global::HOFCCross.Droid.Resource.Styleable.ActionBar_logo;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_navigationMode = global::HOFCCross.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_popupTheme = global::HOFCCross.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::HOFCCross.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::HOFCCross.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_subtitle = global::HOFCCross.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::HOFCCross.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_title = global::HOFCCross.Droid.Resource.Styleable.ActionBar_title;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::HOFCCross.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBarLayout = global::HOFCCross.Droid.Resource.Styleable.ActionBarLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::HOFCCross.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMenuItemView = global::HOFCCross.Droid.Resource.Styleable.ActionMenuItemView;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::HOFCCross.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMenuView = global::HOFCCross.Droid.Resource.Styleable.ActionMenuView;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode = global::HOFCCross.Droid.Resource.Styleable.ActionMode;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode_background = global::HOFCCross.Droid.Resource.Styleable.ActionMode_background;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::HOFCCross.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::HOFCCross.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode_height = global::HOFCCross.Droid.Resource.Styleable.ActionMode_height;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::HOFCCross.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::HOFCCross.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.ActivityChooserView = global::HOFCCross.Droid.Resource.Styleable.ActivityChooserView;
-			global::FreshEssentials.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::HOFCCross.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::HOFCCross.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog = global::HOFCCross.Droid.Resource.Styleable.AlertDialog;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog_android_layout = global::HOFCCross.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::HOFCCross.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::HOFCCross.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog_listLayout = global::HOFCCross.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::HOFCCross.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::HOFCCross.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout_android_background = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout_elevation = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout_expanded = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout_LayoutParams = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout_LayoutParams;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollFlags = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollFlags;
-			global::FreshEssentials.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollInterpolator = global::HOFCCross.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollInterpolator;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatImageView = global::HOFCCross.Droid.Resource.Styleable.AppCompatImageView;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatImageView_android_src = global::HOFCCross.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::HOFCCross.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTextView = global::HOFCCross.Droid.Resource.Styleable.AppCompatTextView;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::HOFCCross.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::HOFCCross.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::FreshEssentials.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::HOFCCross.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::FreshEssentials.Droid.Resource.Styleable.BottomSheetBehavior_Params = global::HOFCCross.Droid.Resource.Styleable.BottomSheetBehavior_Params;
-			global::FreshEssentials.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_hideable = global::HOFCCross.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_hideable;
-			global::FreshEssentials.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_peekHeight = global::HOFCCross.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_peekHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.ButtonBarLayout = global::HOFCCross.Droid.Resource.Styleable.ButtonBarLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::HOFCCross.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView = global::HOFCCross.Droid.Resource.Styleable.CardView;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_android_minHeight = global::HOFCCross.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_android_minWidth = global::HOFCCross.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::HOFCCross.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_cardCornerRadius = global::HOFCCross.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_cardElevation = global::HOFCCross.Droid.Resource.Styleable.CardView_cardElevation;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_cardMaxElevation = global::HOFCCross.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::HOFCCross.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::HOFCCross.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_contentPadding = global::HOFCCross.Droid.Resource.Styleable.CardView_contentPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::HOFCCross.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::HOFCCross.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_contentPaddingRight = global::HOFCCross.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::FreshEssentials.Droid.Resource.Styleable.CardView_contentPaddingTop = global::HOFCCross.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams = global::HOFCCross.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseMode = global::HOFCCross.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseMode;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = global::HOFCCross.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::FreshEssentials.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::HOFCCross.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::FreshEssentials.Droid.Resource.Styleable.CompoundButton = global::HOFCCross.Droid.Resource.Styleable.CompoundButton;
-			global::FreshEssentials.Droid.Resource.Styleable.CompoundButton_android_button = global::HOFCCross.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::FreshEssentials.Droid.Resource.Styleable.CompoundButton_buttonTint = global::HOFCCross.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::FreshEssentials.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::HOFCCross.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_android_layout_gravity = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_android_layout_gravity;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchor = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchor;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchorGravity = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchorGravity;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_behavior = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_behavior;
-			global::FreshEssentials.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_keyline = global::HOFCCross.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_keyline;
-			global::FreshEssentials.Droid.Resource.Styleable.DesignTheme = global::HOFCCross.Droid.Resource.Styleable.DesignTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::HOFCCross.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::HOFCCross.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.DesignTheme_textColorError = global::HOFCCross.Droid.Resource.Styleable.DesignTheme_textColorError;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_color = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::FreshEssentials.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::HOFCCross.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_elevation = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::FreshEssentials.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::HOFCCross.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.ForegroundLinearLayout = global::HOFCCross.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::HOFCCross.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::FreshEssentials.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::HOFCCross.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::FreshEssentials.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::HOFCCross.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::FreshEssentials.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::HOFCCross.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::FreshEssentials.Droid.Resource.Styleable.ListPopupWindow = global::HOFCCross.Droid.Resource.Styleable.ListPopupWindow;
-			global::FreshEssentials.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::HOFCCross.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::FreshEssentials.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::HOFCCross.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::FreshEssentials.Droid.Resource.Styleable.MediaRouteButton = global::HOFCCross.Droid.Resource.Styleable.MediaRouteButton;
-			global::FreshEssentials.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::HOFCCross.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::HOFCCross.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::HOFCCross.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup = global::HOFCCross.Droid.Resource.Styleable.MenuGroup;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::HOFCCross.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup_android_enabled = global::HOFCCross.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup_android_id = global::HOFCCross.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::HOFCCross.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::HOFCCross.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuGroup_android_visible = global::HOFCCross.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem = global::HOFCCross.Droid.Resource.Styleable.MenuItem;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_actionLayout = global::HOFCCross.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::HOFCCross.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_actionViewClass = global::HOFCCross.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_checkable = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_checked = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_enabled = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_icon = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_id = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_id;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_onClick = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_title = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_title;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_android_visible = global::HOFCCross.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuItem_showAsAction = global::HOFCCross.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView = global::HOFCCross.Droid.Resource.Styleable.MenuView;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_headerBackground = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_itemBackground = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::HOFCCross.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::HOFCCross.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView = global::HOFCCross.Droid.Resource.Styleable.NavigationView;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_android_background = global::HOFCCross.Droid.Resource.Styleable.NavigationView_android_background;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::HOFCCross.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::HOFCCross.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_elevation = global::HOFCCross.Droid.Resource.Styleable.NavigationView_elevation;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_headerLayout = global::HOFCCross.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_itemBackground = global::HOFCCross.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_itemIconTint = global::HOFCCross.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::HOFCCross.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_itemTextColor = global::HOFCCross.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.NavigationView_menu = global::HOFCCross.Droid.Resource.Styleable.NavigationView_menu;
-			global::FreshEssentials.Droid.Resource.Styleable.PopupWindow = global::HOFCCross.Droid.Resource.Styleable.PopupWindow;
-			global::FreshEssentials.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::HOFCCross.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::HOFCCross.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::FreshEssentials.Droid.Resource.Styleable.PopupWindowBackgroundState = global::HOFCCross.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::FreshEssentials.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::HOFCCross.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::FreshEssentials.Droid.Resource.Styleable.RecyclerView = global::HOFCCross.Droid.Resource.Styleable.RecyclerView;
-			global::FreshEssentials.Droid.Resource.Styleable.RecyclerView_android_orientation = global::HOFCCross.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::FreshEssentials.Droid.Resource.Styleable.RecyclerView_layoutManager = global::HOFCCross.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::FreshEssentials.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::HOFCCross.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.RecyclerView_spanCount = global::HOFCCross.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::FreshEssentials.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::HOFCCross.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::HOFCCross.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::HOFCCross.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::FreshEssentials.Droid.Resource.Styleable.ScrollingViewBehavior_Params = global::HOFCCross.Droid.Resource.Styleable.ScrollingViewBehavior_Params;
-			global::FreshEssentials.Droid.Resource.Styleable.ScrollingViewBehavior_Params_behavior_overlapTop = global::HOFCCross.Droid.Resource.Styleable.ScrollingViewBehavior_Params_behavior_overlapTop;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView = global::HOFCCross.Droid.Resource.Styleable.SearchView;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_android_focusable = global::HOFCCross.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_android_imeOptions = global::HOFCCross.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_android_inputType = global::HOFCCross.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_android_maxWidth = global::HOFCCross.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_closeIcon = global::HOFCCross.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_commitIcon = global::HOFCCross.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::HOFCCross.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_goIcon = global::HOFCCross.Droid.Resource.Styleable.SearchView_goIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::HOFCCross.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_layout = global::HOFCCross.Droid.Resource.Styleable.SearchView_layout;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_queryBackground = global::HOFCCross.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_queryHint = global::HOFCCross.Droid.Resource.Styleable.SearchView_queryHint;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_searchHintIcon = global::HOFCCross.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_searchIcon = global::HOFCCross.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_submitBackground = global::HOFCCross.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::HOFCCross.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.SearchView_voiceIcon = global::HOFCCross.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.SnackbarLayout = global::HOFCCross.Droid.Resource.Styleable.SnackbarLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::HOFCCross.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.SnackbarLayout_elevation = global::HOFCCross.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::FreshEssentials.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::HOFCCross.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.Spinner = global::HOFCCross.Droid.Resource.Styleable.Spinner;
-			global::FreshEssentials.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::HOFCCross.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.Spinner_android_entries = global::HOFCCross.Droid.Resource.Styleable.Spinner_android_entries;
-			global::FreshEssentials.Droid.Resource.Styleable.Spinner_android_popupBackground = global::HOFCCross.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.Spinner_android_prompt = global::HOFCCross.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::FreshEssentials.Droid.Resource.Styleable.Spinner_popupTheme = global::HOFCCross.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_showText = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.SwitchCompat_track = global::HOFCCross.Droid.Resource.Styleable.SwitchCompat_track;
-			global::FreshEssentials.Droid.Resource.Styleable.TabItem = global::HOFCCross.Droid.Resource.Styleable.TabItem;
-			global::FreshEssentials.Droid.Resource.Styleable.TabItem_android_icon = global::HOFCCross.Droid.Resource.Styleable.TabItem_android_icon;
-			global::FreshEssentials.Droid.Resource.Styleable.TabItem_android_layout = global::HOFCCross.Droid.Resource.Styleable.TabItem_android_layout;
-			global::FreshEssentials.Droid.Resource.Styleable.TabItem_android_text = global::HOFCCross.Droid.Resource.Styleable.TabItem_android_text;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout = global::HOFCCross.Droid.Resource.Styleable.TabLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabBackground = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabContentStart = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabGravity = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabMode = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabPadding = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.TabLayout_tabTextColor = global::HOFCCross.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance = global::HOFCCross.Droid.Resource.Styleable.TextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_textColor = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_textSize = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_android_typeface = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::FreshEssentials.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::HOFCCross.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_android_hint = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::FreshEssentials.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::HOFCCross.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar = global::HOFCCross.Droid.Resource.Styleable.Toolbar;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_android_gravity = global::HOFCCross.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_android_minHeight = global::HOFCCross.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::HOFCCross.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_collapseIcon = global::HOFCCross.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::HOFCCross.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::HOFCCross.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::HOFCCross.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::HOFCCross.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_logo = global::HOFCCross.Droid.Resource.Styleable.Toolbar_logo;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_logoDescription = global::HOFCCross.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::HOFCCross.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::HOFCCross.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_navigationIcon = global::HOFCCross.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_popupTheme = global::HOFCCross.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_subtitle = global::HOFCCross.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::HOFCCross.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::HOFCCross.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_title = global::HOFCCross.Droid.Resource.Styleable.Toolbar_title;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleMargins = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::FreshEssentials.Droid.Resource.Styleable.Toolbar_titleTextColor = global::HOFCCross.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::FreshEssentials.Droid.Resource.Styleable.View = global::HOFCCross.Droid.Resource.Styleable.View;
-			global::FreshEssentials.Droid.Resource.Styleable.View_android_focusable = global::HOFCCross.Droid.Resource.Styleable.View_android_focusable;
-			global::FreshEssentials.Droid.Resource.Styleable.View_android_theme = global::HOFCCross.Droid.Resource.Styleable.View_android_theme;
-			global::FreshEssentials.Droid.Resource.Styleable.View_paddingEnd = global::HOFCCross.Droid.Resource.Styleable.View_paddingEnd;
-			global::FreshEssentials.Droid.Resource.Styleable.View_paddingStart = global::HOFCCross.Droid.Resource.Styleable.View_paddingStart;
-			global::FreshEssentials.Droid.Resource.Styleable.View_theme = global::HOFCCross.Droid.Resource.Styleable.View_theme;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewBackgroundHelper = global::HOFCCross.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::HOFCCross.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::HOFCCross.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::HOFCCross.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewStubCompat = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewStubCompat_android_id = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::FreshEssentials.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::ModernHttpClient.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
 			global::Splat.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::HOFCCross.Droid.Resource.Animation.abc_fade_in;
@@ -5524,283 +3739,271 @@ namespace HOFCCross.Droid
 			public const int design_snackbar_background = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int error = 2130837626;
+			public const int ic_audiotrack = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_audiotrack = 2130837627;
+			public const int ic_audiotrack_light = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_audiotrack_light = 2130837628;
+			public const int ic_bluetooth_grey = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_bluetooth_grey = 2130837629;
+			public const int ic_bluetooth_white = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_bluetooth_white = 2130837630;
+			public const int ic_cast_dark = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_cast_dark = 2130837631;
+			public const int ic_cast_disabled_light = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_cast_disabled_light = 2130837632;
+			public const int ic_cast_grey = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_cast_grey = 2130837633;
+			public const int ic_cast_light = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_cast_light = 2130837634;
+			public const int ic_cast_off_light = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_cast_off_light = 2130837635;
+			public const int ic_cast_on_0_light = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_cast_on_0_light = 2130837636;
+			public const int ic_cast_on_1_light = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_cast_on_1_light = 2130837637;
+			public const int ic_cast_on_2_light = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_cast_on_2_light = 2130837638;
+			public const int ic_cast_on_light = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_cast_on_light = 2130837639;
+			public const int ic_cast_white = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_cast_white = 2130837640;
+			public const int ic_close_dark = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_close_dark = 2130837641;
+			public const int ic_close_light = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_close_light = 2130837642;
+			public const int ic_collapse = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_collapse = 2130837643;
+			public const int ic_collapse_00000 = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_collapse_00000 = 2130837644;
+			public const int ic_collapse_00001 = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_collapse_00001 = 2130837645;
+			public const int ic_collapse_00002 = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_collapse_00002 = 2130837646;
+			public const int ic_collapse_00003 = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_collapse_00003 = 2130837647;
+			public const int ic_collapse_00004 = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_collapse_00004 = 2130837648;
+			public const int ic_collapse_00005 = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_collapse_00005 = 2130837649;
+			public const int ic_collapse_00006 = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_collapse_00006 = 2130837650;
+			public const int ic_collapse_00007 = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_collapse_00007 = 2130837651;
+			public const int ic_collapse_00008 = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_collapse_00008 = 2130837652;
+			public const int ic_collapse_00009 = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_collapse_00009 = 2130837653;
+			public const int ic_collapse_00010 = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_collapse_00010 = 2130837654;
+			public const int ic_collapse_00011 = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_collapse_00011 = 2130837655;
+			public const int ic_collapse_00012 = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_collapse_00012 = 2130837656;
+			public const int ic_collapse_00013 = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_collapse_00013 = 2130837657;
+			public const int ic_collapse_00014 = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_collapse_00014 = 2130837658;
+			public const int ic_collapse_00015 = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_collapse_00015 = 2130837659;
+			public const int ic_expand = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_expand = 2130837660;
+			public const int ic_expand_00000 = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_expand_00000 = 2130837661;
+			public const int ic_expand_00001 = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_expand_00001 = 2130837662;
+			public const int ic_expand_00002 = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_expand_00002 = 2130837663;
+			public const int ic_expand_00003 = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_expand_00003 = 2130837664;
+			public const int ic_expand_00004 = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_expand_00004 = 2130837665;
+			public const int ic_expand_00005 = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_expand_00005 = 2130837666;
+			public const int ic_expand_00006 = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_expand_00006 = 2130837667;
+			public const int ic_expand_00007 = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_expand_00007 = 2130837668;
+			public const int ic_expand_00008 = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_expand_00008 = 2130837669;
+			public const int ic_expand_00009 = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_expand_00009 = 2130837670;
+			public const int ic_expand_00010 = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_expand_00010 = 2130837671;
+			public const int ic_expand_00011 = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_expand_00011 = 2130837672;
+			public const int ic_expand_00012 = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_expand_00012 = 2130837673;
+			public const int ic_expand_00013 = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_expand_00013 = 2130837674;
+			public const int ic_expand_00014 = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_expand_00014 = 2130837675;
+			public const int ic_expand_00015 = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_expand_00015 = 2130837676;
+			public const int ic_info_outline_black_24dp = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_info_outline_black_24dp = 2130837677;
+			public const int ic_media_pause = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_media_pause = 2130837678;
+			public const int ic_media_play = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_media_play = 2130837679;
+			public const int ic_media_route_disabled_mono_dark = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_media_route_disabled_mono_dark = 2130837680;
+			public const int ic_media_route_off_mono_dark = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_media_route_off_mono_dark = 2130837681;
+			public const int ic_media_route_on_0_mono_dark = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_media_route_on_0_mono_dark = 2130837682;
+			public const int ic_media_route_on_1_mono_dark = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_media_route_on_1_mono_dark = 2130837683;
+			public const int ic_media_route_on_2_mono_dark = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_media_route_on_2_mono_dark = 2130837684;
+			public const int ic_media_route_on_mono_dark = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_media_route_on_mono_dark = 2130837685;
+			public const int ic_menu_black_24dp = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_menu_black_24dp = 2130837686;
+			public const int ic_navigation_black_24dp = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_navigation_black_24dp = 2130837687;
+			public const int ic_pause_dark = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_pause_dark = 2130837688;
+			public const int ic_pause_light = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_pause_light = 2130837689;
+			public const int ic_play_dark = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_play_dark = 2130837690;
+			public const int ic_play_light = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_play_light = 2130837691;
+			public const int ic_speaker_dark = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_speaker_dark = 2130837692;
+			public const int ic_speaker_group_dark = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_speaker_group_dark = 2130837693;
+			public const int ic_speaker_group_light = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_speaker_group_light = 2130837694;
+			public const int ic_speaker_light = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_speaker_light = 2130837695;
+			public const int ic_tv_dark = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_tv_dark = 2130837696;
+			public const int ic_tv_light = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_tv_light = 2130837697;
+			public const int icon = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int icon = 2130837698;
+			public const int mr_dialog_material_background_dark = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int info = 2130837699;
+			public const int mr_dialog_material_background_light = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int mr_dialog_material_background_dark = 2130837700;
+			public const int mr_ic_audiotrack_light = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int mr_dialog_material_background_light = 2130837701;
+			public const int mr_ic_cast_dark = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int mr_ic_audiotrack_light = 2130837702;
+			public const int mr_ic_cast_light = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int mr_ic_cast_dark = 2130837703;
+			public const int mr_ic_close_dark = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int mr_ic_cast_light = 2130837704;
+			public const int mr_ic_close_light = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int mr_ic_close_dark = 2130837705;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int mr_ic_close_light = 2130837706;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837707;
+			public const int mr_ic_media_route_mono_dark = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int mr_ic_media_route_connecting_mono_light = 2130837708;
+			public const int mr_ic_media_route_mono_light = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int mr_ic_media_route_mono_dark = 2130837709;
+			public const int mr_ic_pause_dark = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int mr_ic_media_route_mono_light = 2130837710;
+			public const int mr_ic_pause_light = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int mr_ic_pause_dark = 2130837711;
+			public const int mr_ic_play_dark = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int mr_ic_pause_light = 2130837712;
-			
-			// aapt resource value: 0x7f0200d1
-			public const int mr_ic_play_dark = 2130837713;
+			public const int mr_ic_play_light = 2130837712;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int mr_ic_play_light = 2130837714;
+			public const int notification_template_icon_bg = 2130837714;
 			
-			// aapt resource value: 0x7f0200d6
-			public const int notification_template_icon_bg = 2130837718;
-			
-			// aapt resource value: 0x7f0200d3
-			public const int SplashScreen = 2130837715;
-			
-			// aapt resource value: 0x7f0200d4
-			public const int success = 2130837716;
-			
-			// aapt resource value: 0x7f0200d5
-			public const int warning = 2130837717;
+			// aapt resource value: 0x7f0200d1
+			public const int SplashScreen = 2130837713;
 			
 			static Drawable()
 			{
@@ -5815,8 +4018,8 @@ namespace HOFCCross.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0094
-			public const int action0 = 2131361940;
+			// aapt resource value: 0x7f0a0093
+			public const int action0 = 2131361939;
 			
 			// aapt resource value: 0x7f0a0062
 			public const int action_bar = 2131361890;
@@ -5842,8 +4045,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0063
 			public const int action_context_bar = 2131361891;
 			
-			// aapt resource value: 0x7f0a0098
-			public const int action_divider = 2131361944;
+			// aapt resource value: 0x7f0a0097
+			public const int action_divider = 2131361943;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -5887,8 +4090,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a004c
 			public const int buttonPanel = 2131361868;
 			
-			// aapt resource value: 0x7f0a0095
-			public const int cancel_action = 2131361941;
+			// aapt resource value: 0x7f0a0094
+			public const int cancel_action = 2131361940;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int center = 2131361843;
@@ -5902,8 +4105,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a005a
 			public const int checkbox = 2131361882;
 			
-			// aapt resource value: 0x7f0a009b
-			public const int chronometer = 2131361947;
+			// aapt resource value: 0x7f0a009a
+			public const int chronometer = 2131361946;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int clip_horizontal = 2131361851;
@@ -5932,23 +4135,20 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0048
 			public const int default_activity_button = 2131361864;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int desc = 2131361905;
-			
-			// aapt resource value: 0x7f0a0073
-			public const int design_bottom_sheet = 2131361907;
-			
-			// aapt resource value: 0x7f0a007a
-			public const int design_menu_item_action_area = 2131361914;
+			// aapt resource value: 0x7f0a0072
+			public const int design_bottom_sheet = 2131361906;
 			
 			// aapt resource value: 0x7f0a0079
-			public const int design_menu_item_action_area_stub = 2131361913;
+			public const int design_menu_item_action_area = 2131361913;
 			
 			// aapt resource value: 0x7f0a0078
-			public const int design_menu_item_text = 2131361912;
+			public const int design_menu_item_action_area_stub = 2131361912;
 			
 			// aapt resource value: 0x7f0a0077
-			public const int design_navigation_view = 2131361911;
+			public const int design_menu_item_text = 2131361911;
+			
+			// aapt resource value: 0x7f0a0076
+			public const int design_navigation_view = 2131361910;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int disableHome = 2131361815;
@@ -5959,8 +4159,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0024
 			public const int end = 2131361828;
 			
-			// aapt resource value: 0x7f0a00a0
-			public const int end_padder = 2131361952;
+			// aapt resource value: 0x7f0a009f
+			public const int end_padder = 2131361951;
 			
 			// aapt resource value: 0x7f0a002b
 			public const int enterAlways = 2131361835;
@@ -6007,8 +4207,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0047
 			public const int image = 2131361863;
 			
-			// aapt resource value: 0x7f0a009f
-			public const int info = 2131361951;
+			// aapt resource value: 0x7f0a009e
+			public const int info = 2131361950;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
@@ -6019,11 +4219,11 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0013
 			public const int light = 2131361811;
 			
-			// aapt resource value: 0x7f0a0099
-			public const int line1 = 2131361945;
+			// aapt resource value: 0x7f0a0098
+			public const int line1 = 2131361944;
 			
-			// aapt resource value: 0x7f0a009d
-			public const int line3 = 2131361949;
+			// aapt resource value: 0x7f0a009c
+			public const int line3 = 2131361948;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int listMode = 2131361812;
@@ -6031,8 +4231,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0049
 			public const int list_item = 2131361865;
 			
-			// aapt resource value: 0x7f0a0097
-			public const int media_actions = 2131361943;
+			// aapt resource value: 0x7f0a0096
+			public const int media_actions = 2131361942;
 			
 			// aapt resource value: 0x7f0a0025
 			public const int middle = 2131361829;
@@ -6040,83 +4240,83 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a003f
 			public const int mini = 2131361855;
 			
-			// aapt resource value: 0x7f0a0086
-			public const int mr_art = 2131361926;
+			// aapt resource value: 0x7f0a0085
+			public const int mr_art = 2131361925;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int mr_chooser_list = 2131361915;
-			
-			// aapt resource value: 0x7f0a007e
-			public const int mr_chooser_route_desc = 2131361918;
-			
-			// aapt resource value: 0x7f0a007c
-			public const int mr_chooser_route_icon = 2131361916;
+			// aapt resource value: 0x7f0a007a
+			public const int mr_chooser_list = 2131361914;
 			
 			// aapt resource value: 0x7f0a007d
-			public const int mr_chooser_route_name = 2131361917;
+			public const int mr_chooser_route_desc = 2131361917;
 			
-			// aapt resource value: 0x7f0a0083
-			public const int mr_close = 2131361923;
+			// aapt resource value: 0x7f0a007b
+			public const int mr_chooser_route_icon = 2131361915;
 			
-			// aapt resource value: 0x7f0a0089
-			public const int mr_control_divider = 2131361929;
-			
-			// aapt resource value: 0x7f0a008f
-			public const int mr_control_play_pause = 2131361935;
-			
-			// aapt resource value: 0x7f0a0092
-			public const int mr_control_subtitle = 2131361938;
-			
-			// aapt resource value: 0x7f0a0091
-			public const int mr_control_title = 2131361937;
-			
-			// aapt resource value: 0x7f0a0090
-			public const int mr_control_title_container = 2131361936;
-			
-			// aapt resource value: 0x7f0a0084
-			public const int mr_custom_control = 2131361924;
-			
-			// aapt resource value: 0x7f0a0085
-			public const int mr_default_control = 2131361925;
-			
-			// aapt resource value: 0x7f0a0080
-			public const int mr_dialog_area = 2131361920;
-			
-			// aapt resource value: 0x7f0a007f
-			public const int mr_expandable_area = 2131361919;
-			
-			// aapt resource value: 0x7f0a0093
-			public const int mr_group_expand_collapse = 2131361939;
-			
-			// aapt resource value: 0x7f0a0087
-			public const int mr_media_main_control = 2131361927;
+			// aapt resource value: 0x7f0a007c
+			public const int mr_chooser_route_name = 2131361916;
 			
 			// aapt resource value: 0x7f0a0082
-			public const int mr_name = 2131361922;
+			public const int mr_close = 2131361922;
 			
 			// aapt resource value: 0x7f0a0088
-			public const int mr_playback_control = 2131361928;
-			
-			// aapt resource value: 0x7f0a0081
-			public const int mr_title_bar = 2131361921;
-			
-			// aapt resource value: 0x7f0a008a
-			public const int mr_volume_control = 2131361930;
-			
-			// aapt resource value: 0x7f0a008b
-			public const int mr_volume_group_list = 2131361931;
-			
-			// aapt resource value: 0x7f0a008d
-			public const int mr_volume_item_icon = 2131361933;
+			public const int mr_control_divider = 2131361928;
 			
 			// aapt resource value: 0x7f0a008e
-			public const int mr_volume_slider = 2131361934;
+			public const int mr_control_play_pause = 2131361934;
+			
+			// aapt resource value: 0x7f0a0091
+			public const int mr_control_subtitle = 2131361937;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int mr_control_title = 2131361936;
+			
+			// aapt resource value: 0x7f0a008f
+			public const int mr_control_title_container = 2131361935;
+			
+			// aapt resource value: 0x7f0a0083
+			public const int mr_custom_control = 2131361923;
+			
+			// aapt resource value: 0x7f0a0084
+			public const int mr_default_control = 2131361924;
+			
+			// aapt resource value: 0x7f0a007f
+			public const int mr_dialog_area = 2131361919;
+			
+			// aapt resource value: 0x7f0a007e
+			public const int mr_expandable_area = 2131361918;
+			
+			// aapt resource value: 0x7f0a0092
+			public const int mr_group_expand_collapse = 2131361938;
+			
+			// aapt resource value: 0x7f0a0086
+			public const int mr_media_main_control = 2131361926;
+			
+			// aapt resource value: 0x7f0a0081
+			public const int mr_name = 2131361921;
+			
+			// aapt resource value: 0x7f0a0087
+			public const int mr_playback_control = 2131361927;
+			
+			// aapt resource value: 0x7f0a0080
+			public const int mr_title_bar = 2131361920;
+			
+			// aapt resource value: 0x7f0a0089
+			public const int mr_volume_control = 2131361929;
+			
+			// aapt resource value: 0x7f0a008a
+			public const int mr_volume_group_list = 2131361930;
+			
+			// aapt resource value: 0x7f0a008c
+			public const int mr_volume_item_icon = 2131361932;
+			
+			// aapt resource value: 0x7f0a008d
+			public const int mr_volume_slider = 2131361933;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int multiply = 2131361822;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int navigation_header_container = 2131361910;
+			// aapt resource value: 0x7f0a0075
+			public const int navigation_header_container = 2131361909;
 			
 			// aapt resource value: 0x7f0a0029
 			public const int never = 2131361833;
@@ -6211,14 +4411,14 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a001b
 			public const int showTitle = 2131361819;
 			
-			// aapt resource value: 0x7f0a00a1
-			public const int sliding_tabs = 2131361953;
-			
-			// aapt resource value: 0x7f0a0075
-			public const int snackbar_action = 2131361909;
+			// aapt resource value: 0x7f0a00a0
+			public const int sliding_tabs = 2131361952;
 			
 			// aapt resource value: 0x7f0a0074
-			public const int snackbar_text = 2131361908;
+			public const int snackbar_action = 2131361908;
+			
+			// aapt resource value: 0x7f0a0073
+			public const int snackbar_text = 2131361907;
 			
 			// aapt resource value: 0x7f0a002f
 			public const int snap = 2131361839;
@@ -6244,8 +4444,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0039
 			public const int start = 2131361849;
 			
-			// aapt resource value: 0x7f0a0096
-			public const int status_bar_latest_event_content = 2131361942;
+			// aapt resource value: 0x7f0a0095
+			public const int status_bar_latest_event_content = 2131361941;
 			
 			// aapt resource value: 0x7f0a006d
 			public const int submit_area = 2131361901;
@@ -6253,17 +4453,17 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0016
 			public const int tabMode = 2131361814;
 			
-			// aapt resource value: 0x7f0a009e
-			public const int text = 2131361950;
+			// aapt resource value: 0x7f0a009d
+			public const int text = 2131361949;
 			
-			// aapt resource value: 0x7f0a009c
-			public const int text2 = 2131361948;
+			// aapt resource value: 0x7f0a009b
+			public const int text2 = 2131361947;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int textSpacerNoButtons = 2131361877;
 			
-			// aapt resource value: 0x7f0a009a
-			public const int time = 2131361946;
+			// aapt resource value: 0x7f0a0099
+			public const int time = 2131361945;
 			
 			// aapt resource value: 0x7f0a004b
 			public const int title = 2131361867;
@@ -6271,8 +4471,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a0050
 			public const int title_template = 2131361872;
 			
-			// aapt resource value: 0x7f0a00a2
-			public const int toolbar = 2131361954;
+			// aapt resource value: 0x7f0a00a1
+			public const int toolbar = 2131361953;
 			
 			// aapt resource value: 0x7f0a003a
 			public const int top = 2131361850;
@@ -6280,8 +4480,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a004f
 			public const int topPanel = 2131361871;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int touch_outside = 2131361906;
+			// aapt resource value: 0x7f0a0071
+			public const int touch_outside = 2131361905;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int up = 2131361801;
@@ -6292,8 +4492,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f0a000a
 			public const int view_offset_helper = 2131361802;
 			
-			// aapt resource value: 0x7f0a008c
-			public const int volume_item_container = 2131361932;
+			// aapt resource value: 0x7f0a008b
+			public const int volume_item_container = 2131361931;
 			
 			// aapt resource value: 0x7f0a0010
 			public const int wide = 2131361808;
@@ -6458,103 +4658,100 @@ namespace HOFCCross.Droid
 			public const int abc_select_dialog_material = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int crouton = 2130903065;
+			public const int design_bottom_sheet_dialog = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int design_bottom_sheet_dialog = 2130903066;
+			public const int design_layout_snackbar = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int design_layout_snackbar = 2130903067;
+			public const int design_layout_snackbar_include = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int design_layout_snackbar_include = 2130903068;
+			public const int design_layout_tab_icon = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int design_layout_tab_icon = 2130903069;
+			public const int design_layout_tab_text = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int design_layout_tab_text = 2130903070;
+			public const int design_menu_item_action_area = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int design_menu_item_action_area = 2130903071;
+			public const int design_navigation_item = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int design_navigation_item = 2130903072;
+			public const int design_navigation_item_header = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int design_navigation_item_header = 2130903073;
+			public const int design_navigation_item_separator = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int design_navigation_item_separator = 2130903074;
+			public const int design_navigation_item_subheader = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int design_navigation_item_subheader = 2130903075;
+			public const int design_navigation_menu = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int design_navigation_menu = 2130903076;
+			public const int design_navigation_menu_item = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int design_navigation_menu_item = 2130903077;
+			public const int mr_chooser_dialog = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int mr_chooser_dialog = 2130903078;
+			public const int mr_chooser_list_item = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int mr_chooser_list_item = 2130903079;
+			public const int mr_controller_material_dialog_b = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int mr_controller_material_dialog_b = 2130903080;
+			public const int mr_controller_volume_item = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int mr_controller_volume_item = 2130903081;
+			public const int mr_playback_control = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int mr_playback_control = 2130903082;
+			public const int mr_volume_control = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int mr_volume_control = 2130903083;
+			public const int notification_media_action = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int notification_media_action = 2130903084;
+			public const int notification_media_cancel_action = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int notification_media_cancel_action = 2130903085;
+			public const int notification_template_big_media = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int notification_template_big_media = 2130903086;
+			public const int notification_template_big_media_narrow = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int notification_template_big_media_narrow = 2130903087;
+			public const int notification_template_lines = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int notification_template_lines = 2130903088;
+			public const int notification_template_media = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int notification_template_media = 2130903089;
+			public const int notification_template_part_chronometer = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int notification_template_part_chronometer = 2130903090;
+			public const int notification_template_part_time = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_template_part_time = 2130903091;
+			public const int select_dialog_item_material = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int select_dialog_item_material = 2130903092;
+			public const int select_dialog_multichoice_material = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int select_dialog_multichoice_material = 2130903093;
+			public const int select_dialog_singlechoice_material = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int select_dialog_singlechoice_material = 2130903094;
+			public const int support_simple_spinner_dropdown_item = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int support_simple_spinner_dropdown_item = 2130903095;
+			public const int tabs = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int tabs = 2130903096;
-			
-			// aapt resource value: 0x7f030039
-			public const int toolbar = 2130903097;
+			public const int toolbar = 2130903096;
 			
 			static Layout()
 			{

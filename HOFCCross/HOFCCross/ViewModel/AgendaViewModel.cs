@@ -63,24 +63,27 @@ namespace HOFCCross.ViewModel
 
         protected override async Task ReloadItems(bool forceRefresh = false)
         {
-            IsLoading = true;
-
-            try
+            if(SelectedFilter != null)
             {
-                List<Match> matchs = await _service.GetMatchs(forceRefresh);
+                IsLoading = true;
 
-                Items = matchs.Where(m => SelectedFilter.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
-                               .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                               .OrderBy(m => m.Date)
-                               .ToList();
-            }
-            catch (Exception ex)
-            {
-                DisplayError("Erreur lors de la récupération des Matchs");
-                Debug.WriteLine(ex);
-            }
+                try
+                {
+                    List<Match> matchs = await _service.GetMatchs(forceRefresh);
 
-            IsLoading = false;
+                    Items = matchs.Where(m => SelectedFilter.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                                   .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                                   .OrderBy(m => m.Date)
+                                   .ToList();
+                }
+                catch (Exception ex)
+                {
+                    DisplayError("Erreur lors de la récupération des Matchs");
+                    Debug.WriteLine(ex);
+                }
+
+                IsLoading = false;
+            }
         }
 
         public class Week

@@ -1,6 +1,7 @@
 ﻿using HOFCCross.Enum;
 using HOFCCross.Service;
 using Plugin.Toasts;
+using Plugin.Toasts.UWP;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +9,6 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Toasts.Forms.Plugin.WinRT;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
