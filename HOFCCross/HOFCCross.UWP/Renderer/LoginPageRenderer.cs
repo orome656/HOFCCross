@@ -13,6 +13,7 @@ using Windows.Web.Http;
 using Newtonsoft.Json;
 using Xamarin.Auth;
 using HOFCCross.Factory;
+using HOFCCross.ViewModel;
 
 [assembly: ExportRenderer(typeof(LoginPage), typeof(LoginPageRenderer))]
 namespace HOFCCross.UWP.Renderer
@@ -31,6 +32,9 @@ namespace HOFCCross.UWP.Renderer
 
             AccountStoreFactory.Create().Save(account, "HOFC");
             AppConstantes.OAUTH_SETTINGS.SuccessCommand.Execute(null);
+
+            var viewModel = Element.BindingContext as LoginViewModel;
+            viewModel.CoreMethods.PopPageModel(true);
             //await AuthenticationHelper.FetchGoogleEmailAndPicture(account);
         }
         

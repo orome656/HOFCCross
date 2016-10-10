@@ -43,27 +43,30 @@ namespace HOFCCross.Service
 
         public async Task RequestUserInfo()
         {
-            try
+            await Task.Run(async () =>
             {
-                var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
-                OAuth2Request request = new OAuth2Request(HttpMethod.Get.Method, new Uri(AppConstantes.USER_INFOS_URL), null, account);
-                var response = await request.GetResponseAsync();
-                User user = JsonConvert.DeserializeObject<User>(response.GetResponseText());
-                if(user != null)
+                try
                 {
-                    await AccountStoreFactory.Create().DeleteAsync(account, "HOFC");
-                    account.Properties.Add(nameof(User.Email), user.Email);
-                    account.Properties.Add(nameof(User.Username), user.Username);
-                    account.Properties.Add(nameof(User.Sub), user.Sub);
-                    account.Username = user.Username;
-                    await AccountStoreFactory.Create().SaveAsync(account, "HOFC");
+                    var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
+                    OAuth2Request request = new OAuth2Request(HttpMethod.Get.Method, new Uri(AppConstantes.USER_INFOS_URL), null, account);
+                    var response = await request.GetResponseAsync();
+                    User user = JsonConvert.DeserializeObject<User>(response.GetResponseText());
+                    if (user != null)
+                    {
+                        await AccountStoreFactory.Create().DeleteAsync(account, "HOFC");
+                        account.Properties.Add(nameof(User.Email), user.Email);
+                        account.Properties.Add(nameof(User.Username), user.Username);
+                        account.Properties.Add(nameof(User.Sub), user.Sub);
+                        account.Username = user.Username;
+                        await AccountStoreFactory.Create().SaveAsync(account, "HOFC");
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-                throw ex;
-            }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.Message);
+                    throw ex;
+                }
+            });
         }
 
         public async Task RefreshToken()

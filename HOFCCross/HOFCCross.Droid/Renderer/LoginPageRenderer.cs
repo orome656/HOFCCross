@@ -3,6 +3,7 @@ using Android.Net;
 using HOFCCross.Constantes;
 using HOFCCross.Droid.Renderer;
 using HOFCCross.Page;
+using HOFCCross.ViewModel;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -28,17 +29,14 @@ namespace HOFCCross.Droid.Renderer
                 new System.Uri(AppConstantes.OAUTH_SETTINGS.AccessTokenUrl)
                 );
 
-
             auth.Completed += (sender, eventArgs) => {
                 if (eventArgs.IsAuthenticated)
                 {
                     AccountStore.Create(this.Context).Save(eventArgs.Account, "HOFC");
                     AppConstantes.OAUTH_SETTINGS.SuccessCommand.Execute(null);
                 }
-                else
-                {
-                    // The user cancelled
-                }
+                var viewModel = Element.BindingContext as LoginViewModel;
+                viewModel.CoreMethods.PopPageModel(true);
             };
 
             activity.StartActivity(auth.GetUI(activity));

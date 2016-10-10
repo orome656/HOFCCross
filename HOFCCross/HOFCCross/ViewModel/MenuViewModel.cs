@@ -133,6 +133,7 @@ namespace HOFCCross.ViewModel
                     mainPage.IsPresented = false;
 
                     var detail = mainPage.Detail as Xamarin.Forms.NavigationPage;
+                    var model = detail.CurrentPage.GetModel();
                     await detail.CurrentPage.GetModel().CoreMethods.PushPageModel<LoginViewModel>(null, true);
                 });
             }
@@ -144,11 +145,6 @@ namespace HOFCCross.ViewModel
             {
                 return new Xamarin.Forms.Command(async () =>
                 {
-                    var mainPage = App.Current.MainPage as MasterDetail;
-
-                    var detail = mainPage.Detail as Xamarin.Forms.NavigationPage;
-                    await detail.CurrentPage.GetModel().CoreMethods.PopPageModel(true);
-
                     await FreshMvvm.FreshIOC.Container.Resolve<ILoginService>().RequestUserInfo();
 
                     RaisePropertyChanged(nameof(User));
