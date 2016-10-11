@@ -56,6 +56,7 @@
     <Compile Include="Extension\OAuth2AuthenticatorExtensions.cs" />
     <Compile Include="Factory\AccountStoreFactory.cs" />
     <Compile Include="Helpers\Maps.cs" />
+    <Compile Include="Login\OAuth2Authenticator.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ArticleDetails.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />

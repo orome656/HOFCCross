@@ -20,7 +20,7 @@ namespace HOFCCross.Droid.Renderer
             // this is a ViewGroup - so should be able to load an AXML file and FindView<>
             var activity = this.Context as Activity;
 
-            var auth = new OAuth2Authenticator(
+            var auth = new HOFCCross.Login.OAuth2Authenticator(
                 AppConstantes.OAUTH_SETTINGS.ClientId,
                 AppConstantes.OAUTH_SETTINGS.ClientSecret,
                 AppConstantes.OAUTH_SETTINGS.Scope,
