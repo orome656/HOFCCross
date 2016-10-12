@@ -28,13 +28,16 @@ namespace HOFCCross.UWP.Renderer
             _isShown = true;
 
             var code = await AuthenticateUsingWebAuthenticationBroker();
-            var account = await ConvertCodeToAccount(code);
+            if(code != null)
+            {
+                var account = await ConvertCodeToAccount(code);
 
-            AccountStoreFactory.Create().Save(account, "HOFC");
-            AppConstantes.OAUTH_SETTINGS.SuccessCommand.Execute(null);
+                await AccountStoreFactory.Create().SaveAsync(account, "HOFC");
+                AppConstantes.OAUTH_SETTINGS.SuccessCommand.Execute(null);
+            }
 
             var viewModel = Element.BindingContext as LoginViewModel;
-            viewModel.CoreMethods.PopPageModel(true);
+            await viewModel.CoreMethods.PopPageModel(true);
             //await AuthenticationHelper.FetchGoogleEmailAndPicture(account);
         }
         
@@ -47,18 +50,15 @@ namespace HOFCCross.UWP.Renderer
                                     AppConstantes.OAUTH_SETTINGS.RedirectUrl,
                                     Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.Scope));
 
-            var googleUrl = AppConstantes.OAUTH_SETTINGS.AuthorizeUrl + "?client_id=" +
+            var authentUrl = AppConstantes.OAUTH_SETTINGS.AuthorizeUrl + "?client_id=" +
                             Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.ClientId);
-            googleUrl += "&redirect_uri=" + AppConstantes.OAUTH_SETTINGS.RedirectUrl;
-            googleUrl += "&response_type=code";
-            googleUrl += "&scope=" + Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.Scope);
+            authentUrl += "&redirect_uri=" + AppConstantes.OAUTH_SETTINGS.RedirectUrl;
+            authentUrl += "&response_type=code";
+            authentUrl += "&scope=" + Uri.EscapeDataString(AppConstantes.OAUTH_SETTINGS.Scope);
 
-            var startUri = new Uri(googleUrl);
+            var startUri = new Uri(authentUrl);
 
-            var webAuthenticationResult =
-              await
-                WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, startUri,
-                  new Uri(AppConstantes.OAUTH_SETTINGS.RedirectUrl));
+            var webAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, startUri, new Uri(AppConstantes.OAUTH_SETTINGS.RedirectUrl));
             return webAuthenticationResult.ResponseStatus != WebAuthenticationStatus.Success ? null : webAuthenticationResult.ResponseData.Substring(webAuthenticationResult.ResponseData.IndexOf('=') + 1);
         }
 
@@ -77,7 +77,7 @@ namespace HOFCCross.UWP.Renderer
             var responseDict =
               JsonConvert.DeserializeObject<Dictionary<string, string>>(accessTokenResponse.Content.ToString());
 
-            return new Account(null, responseDict);
+            return new Account("", responseDict);
         }
     }
 }
