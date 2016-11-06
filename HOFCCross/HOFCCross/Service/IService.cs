@@ -18,5 +18,7 @@ namespace HOFCCross.Service
         Task<ArticleDetails> GetArticleDetails(string Url);
         Task<List<string>> GetDiaporama(string initData);
         Task<MatchInfos> GetMatchInfos(string id);
+        Task<List<Vote>> GetUserMatchVote(string id);
+        Task<List<Joueur>> GetPlayersForMatch(string id);
     }
 }

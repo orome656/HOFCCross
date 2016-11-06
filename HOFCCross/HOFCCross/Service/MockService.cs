@@ -221,5 +221,15 @@ namespace HOFCCross.Service
                 Arbitres = new List<string>() { "Arbitre centre Test arbitre" }
             });
         }
+
+        public Task<List<Vote>> GetUserMatchVote(string id)
+        {
+            return Task.FromResult<List<Vote>>(null);
+        }
+
+        public Task<List<Joueur>> GetPlayersForMatch(string id)
+        {
+            return Task.FromResult<List<Joueur>>(null);
+        }
     }
 }

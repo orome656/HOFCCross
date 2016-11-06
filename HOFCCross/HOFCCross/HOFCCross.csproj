@@ -49,9 +49,14 @@
     </Compile>
     <Compile Include="Converters\FalseIfNullOrEmptyConverter.cs" />
     <Compile Include="Converters\IsHOFCConverter.cs" />
+    <Compile Include="Converters\JoueurToVoteConverter.cs" />
     <Compile Include="Converters\NotConverter.cs" />
+    <Compile Include="Converters\TypeVoteToStringConverter.cs" />
     <Compile Include="Enum\DeviceType.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
+    <Compile Include="Enum\StatutVote.cs" />
+    <Compile Include="Enum\TypeVote.cs" />
+    <Compile Include="Exceptions\NotLoggedException.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Extension\OAuth2AuthenticatorExtensions.cs" />
     <Compile Include="Factory\AccountStoreFactory.cs" />
@@ -61,12 +66,18 @@
     <Compile Include="Model\ArticleDetails.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />
+    <Compile Include="Model\Joueur.cs" />
     <Compile Include="Model\Match.cs" />
     <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\OAuthSettings.cs" />
+    <Compile Include="Model\Page\DropDownParameters.cs" />
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Vote.cs" />
+    <Compile Include="Page\Common\DropDownPage.xaml.cs">
+      <DependentUpon>DropDownPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\Common\ListPage.cs" />
     <Compile Include="Page\DiaporamaPage.xaml.cs">
       <DependentUpon>DiaporamaPage.xaml</DependentUpon>
@@ -83,12 +94,18 @@
     <Compile Include="Page\ClassementPage.xaml.cs">
       <DependentUpon>ClassementPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\ListeVotesOuvertsPage.xaml.cs">
+      <DependentUpon>ListeVotesOuvertsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\LoginPage.cs" />
     <Compile Include="Page\MatchInfosPage.xaml.cs">
       <DependentUpon>MatchInfosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\VoteDetailsPage.xaml.cs">
+      <DependentUpon>VoteDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\CacheService.cs" />
@@ -103,6 +120,7 @@
     <Compile Include="ViewModel\Common\ListMatchBaseViewModel.cs" />
     <Compile Include="ViewModel\DiaporamaViewModel.cs" />
     <Compile Include="ViewModel\Common\FilteredListBaseViewModel.cs" />
+    <Compile Include="ViewModel\Common\DropDownViewModel.cs" />
     <Compile Include="ViewModel\JourneeViewModel.cs" />
     <Compile Include="ViewModel\AgendaViewModel.cs" />
     <Compile Include="ViewModel\CalendrierViewModel.cs" />
@@ -114,9 +132,11 @@
     </Compile>
     <Compile Include="ViewModel\ClassementViewModel.cs" />
     <Compile Include="ViewModel\Common\ListBaseViewModel.cs" />
+    <Compile Include="ViewModel\ListeVotesOuvertsViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MatchInfosViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
+    <Compile Include="ViewModel\VoteDetailsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -193,6 +213,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Notifications\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\ListeVotesOuvertsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\VoteDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\Common\DropDownPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

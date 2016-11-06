@@ -83,6 +83,12 @@ namespace HOFCCross.ViewModel
                 Icon = "calendar_icon.png",
                 PageName = PageNameEnum.JOURNEE_EQUIPE_3
             });
+            Items.Add(new MenuItem()
+            {
+                Titre = "Votes Ouverts",
+                Icon = "calendar_icon.png",
+                PageName = PageNameEnum.LISTE_VOTES_OPENED
+            });
         }
         //Commande pour le changement de page à partir du menu
         private Xamarin.Forms.Command _menuItemCommand;
@@ -114,6 +120,9 @@ namespace HOFCCross.ViewModel
                             break;
                         case PageNameEnum.JOURNEE_EQUIPE_3:
                             await CoreMethods.PushPageModel<JourneeViewModel>("equipe3");
+                            break;
+                        case PageNameEnum.LISTE_VOTES_OPENED:
+                            await CoreMethods.PushPageModel<ListeVotesOuvertsViewModel>();
                             break;
                     }
                 });

@@ -4,6 +4,7 @@ using HOFCCross.Constantes;
 using HOFCCross.Droid.Renderer;
 using HOFCCross.Page;
 using HOFCCross.ViewModel;
+using System;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -32,6 +33,8 @@ namespace HOFCCross.Droid.Renderer
             auth.Completed += (sender, eventArgs) => {
                 if (eventArgs.IsAuthenticated)
                 {
+                    var account = eventArgs.Account;
+                    account.Properties.Add("expiration_date", DateTime.Now.AddSeconds(int.Parse(account.Properties["expires_in"])).ToString("O"));
                     AccountStore.Create(this.Context).Save(eventArgs.Account, "HOFC");
                     AppConstantes.OAUTH_SETTINGS.SuccessCommand.Execute(null);
                 }

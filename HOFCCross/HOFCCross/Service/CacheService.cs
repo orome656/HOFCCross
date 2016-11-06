@@ -112,5 +112,19 @@ namespace HOFCCross.Service
                           async () => await Service.GetMatchInfos(id),
                           DateTimeOffset.Now.AddDays(1));
         }
+
+        public async Task<List<Vote>> GetUserMatchVote(string id)
+        {
+            return await BlobCache.LocalMachine.GetOrFetchObject("Vote" + id,
+                          async () => await Service.GetUserMatchVote(id),
+                          DateTimeOffset.Now.AddDays(1));
+        }
+
+        public async Task<List<Joueur>> GetPlayersForMatch(string id)
+        {
+            return await BlobCache.LocalMachine.GetOrFetchObject("JoueursMatch" + id,
+                          async () => await Service.GetPlayersForMatch(id),
+                          DateTimeOffset.Now.AddDays(1));
+        }
     }
 }

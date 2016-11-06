@@ -106,6 +106,8 @@ namespace HOFCCross.Service
                     account.Properties.Add("access_token", e.Account.Properties.First(c => c.Key.Equals("access_token")).Value);
                     account.Properties.Remove("refresh_token");
                     account.Properties.Add("refresh_token", e.Account.Properties.First(c => c.Key.Equals("refresh_token")).Value);
+                    account.Properties.Remove("expiration_date");
+                    account.Properties.Add("expiration_date", DateTime.Now.AddSeconds(int.Parse(e.Account.Properties.First(c => c.Key.Equals("expires_in")).Value)).ToString("O"));
                     await AccountStoreFactory.Create().SaveAsync(account, "HOFC");
                 }
             }

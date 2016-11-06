@@ -11,12 +11,22 @@ using HOFCCross.Constantes;
 using System.Diagnostics;
 using HOFCCross.Enum;
 using ModernHttpClient;
+using HOFCCross.Factory;
+using Xamarin.Auth;
+using System.Globalization;
+using HOFCCross.Exceptions;
 
 namespace HOFCCross.Service
 {
     public class ClientService : IService
     {
 
+        private ILoginService _loginService;
+
+        public ClientService(ILoginService loginService)
+        {
+            _loginService = loginService;
+        }
 
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
@@ -131,6 +141,60 @@ namespace HOFCCross.Service
                 var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_INFOS_URL + "/" + id);
                 MatchInfos matchInfos = JsonConvert.DeserializeObject<MatchInfos>(response);
                 return matchInfos;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
+        }
+
+        private async Task<HttpClient> GetRequest()
+        {
+            var account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
+            if (account != null && DateTime.Now.CompareTo(DateTime.ParseExact(account.Properties["expiration_date"], "O", CultureInfo.InvariantCulture)) > 0)
+            {
+                var token = account.Properties["refresh_token"];
+                await _loginService.RefreshToken();
+                account = AccountStoreFactory.Create().FindAccountsForService("HOFC").FirstOrDefault();
+            }
+            if (account == null)
+                throw new NotLoggedException();
+            else
+            {
+                HttpClient client = new HttpClient(new NativeMessageHandler());
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + account.Properties.First(c => "access_token".Equals(c.Key)).Value);
+                return client;
+            }
+        }
+
+        public async Task<List<Vote>> GetUserMatchVote(string id)
+        {
+            return await Task.Run(async () =>
+            {
+                try
+                {
+                    HttpClient client = await GetRequest();
+                    var responsetext = await client.GetStringAsync(AppConstantes.SERVER_VOTE_URL + "/" + id);
+
+                    return JsonConvert.DeserializeObject<List<Vote>>(responsetext);
+                }
+                catch (Exception e)
+                {
+                    // FIXME
+                    return null;
+                }
+            });
+        }
+
+        public async Task<List<Joueur>> GetPlayersForMatch(string id)
+        {
+            try
+            {
+                HttpClient client = new HttpClient(new NativeMessageHandler());
+                var url = string.Format(AppConstantes.SERVER_JOUEUR_MATCH_URL, id);
+                var response = await client.GetStringAsync(url).ConfigureAwait(continueOnCapturedContext: false);
+                return JsonConvert.DeserializeObject<List<Joueur>>(response);
             }
             catch (Exception ex)
             {

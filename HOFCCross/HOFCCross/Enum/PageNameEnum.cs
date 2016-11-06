@@ -14,6 +14,7 @@ namespace HOFCCross.Enum
         JOURNEE_EQUIPE_1,
         JOURNEE_EQUIPE_2,
         JOURNEE_EQUIPE_3,
-        AGENDA
+        AGENDA,
+        LISTE_VOTES_OPENED
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using HOFCCross.Enum;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace HOFCCross.Model
 {
     public class Match
     {
+        public int Id { get; set; }
         public string Equipe1 { get; set; }
         public string Equipe2 { get; set; }
         public int? Score1 { get; set; }
@@ -31,5 +33,6 @@ namespace HOFCCross.Model
         [JsonProperty(PropertyName = "idJournee")]
         public int? JourneeId { get; set; }
         public string Infos { get; set; }
+        public StatutVote VoteStatut { get; set; }
     }
 }
