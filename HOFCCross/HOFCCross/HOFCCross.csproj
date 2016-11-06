@@ -212,9 +212,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Notifications\" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Page\ListeVotesOuvertsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
