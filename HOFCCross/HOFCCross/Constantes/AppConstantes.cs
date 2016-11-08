@@ -17,6 +17,8 @@ namespace HOFCCross.Constantes
         public static readonly string SERVER_NOTIFICATION_URL = SERVER_BASE_URL + "api/Notification";
         public static readonly string SERVER_PARSE_URL = SERVER_BASE_URL + "api/parsePage";
         public static readonly string SERVER_MATCH_INFOS_URL = SERVER_BASE_URL + "api/MatchInfos";
+        public static readonly string SERVER_VOTE_URL = SERVER_BASE_URL + "api/votes"; // TODO FIXME
+        public static readonly string SERVER_JOUEUR_MATCH_URL = SERVER_BASE_URL + "api/joueurs/match/{0}";
 
         public static readonly string PRIMARY_COLOR_HEX = "#08589D";
 
