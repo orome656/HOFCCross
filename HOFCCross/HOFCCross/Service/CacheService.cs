@@ -43,7 +43,7 @@ namespace HOFCCross.Service
                 }
             }
 
-            return _actuRepo.Get();
+            return _actuRepo.AsQueryable().OrderByDescending(a => a.Date).ToList();
         }
 
         public async Task<List<Match>> GetMatchs(bool forceRefresh = false)
