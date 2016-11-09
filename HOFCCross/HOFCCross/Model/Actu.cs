@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SQLite.Net.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace HOFCCross.Model
 {
     public class Actu
     {
+        [PrimaryKey]
         [JsonProperty(PropertyName = "postid")]
         public int PostId { get; set; }
         [JsonProperty(PropertyName = "date")]

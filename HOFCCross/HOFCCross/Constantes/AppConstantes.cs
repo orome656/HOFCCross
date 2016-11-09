@@ -34,5 +34,10 @@ namespace HOFCCross.Constantes
         };
 
         public static readonly string USER_INFOS_URL = SERVER_BASE_URL + "connect/userinfo";
+
+        public class DATABASE
+        {
+            public static string SYNC_DATE_ACTU_NAME = "actus";
+        }
     }
 }

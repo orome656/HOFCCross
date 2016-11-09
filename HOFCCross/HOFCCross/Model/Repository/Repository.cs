@@ -21,6 +21,15 @@ namespace HOFCCross.Model.Repository
 
         public List<T> Get() => _connection.Table<T>().ToList();
 
+        public TableQuery<T> AsQueryable() => _connection.Table<T>();
+
         public int Insert(T entity) => _connection.Insert(entity);
+
+        public void InsertOrUpdate(T entity)
+        {
+            var result = _connection.Update(entity);
+            if (result == 0)
+                _connection.Insert(entity);
+        }
     }
 }
