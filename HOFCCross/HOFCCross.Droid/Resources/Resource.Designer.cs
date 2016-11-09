@@ -30,6 +30,8 @@ namespace HOFCCross.Droid
 			global::PCLCrypto.Resource.String.ApplicationName = global::HOFCCross.Droid.Resource.String.ApplicationName;
 			global::PCLCrypto.Resource.String.Hello = global::HOFCCross.Droid.Resource.String.Hello;
 			global::Splat.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::HOFCCross.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::HOFCCross.Droid.Resource.String.Hello;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::HOFCCross.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_out = global::HOFCCross.Droid.Resource.Animation.abc_fade_out;
 			global::Plugin.Toasts.Resource.Animation.abc_grow_fade_in_from_bottom = global::HOFCCross.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;

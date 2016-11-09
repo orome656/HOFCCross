@@ -52,6 +52,7 @@
     <Compile Include="Converters\JoueurToVoteConverter.cs" />
     <Compile Include="Converters\NotConverter.cs" />
     <Compile Include="Converters\TypeVoteToStringConverter.cs" />
+    <Compile Include="Database\ISQLite.cs" />
     <Compile Include="Enum\DeviceType.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Enum\StatutVote.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\OAuthSettings.cs" />
     <Compile Include="Model\Page\DropDownParameters.cs" />
+    <Compile Include="Model\Repository\Repository.cs" />
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\Vote.cs" />
