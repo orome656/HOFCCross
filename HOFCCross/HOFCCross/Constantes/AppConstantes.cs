@@ -38,6 +38,8 @@ namespace HOFCCross.Constantes
         public class DATABASE
         {
             public static string SYNC_DATE_ACTU_NAME = "actus";
+            public static string SYNC_DATE_MATCH_NAME = "matchs";
         }
+        public static readonly int CACHE_LIFE_IN_DAYS = 1;
     }
 }
