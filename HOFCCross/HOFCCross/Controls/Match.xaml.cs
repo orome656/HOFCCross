@@ -108,8 +108,8 @@ namespace HOFCCross.Controls
                 Equipe2Label.Text = Equipe2;
                 Equipe1Image.IsVisible = (bool)Converter.Convert(Equipe1, null, null, null);
                 Equipe2Image.IsVisible = (bool)Converter.Convert(Equipe2, null, null, null);
-
-                DateLabel.Text = Date.Value.ToString("dd MMMM yyyy HH:mm");
+                if(Date.HasValue)
+                    DateLabel.Text = Date.Value.ToString("dd MMMM yyyy HH:mm");
 
                 MessageLabel.Text = Message;
                 TitleLabel.Text = Title;
