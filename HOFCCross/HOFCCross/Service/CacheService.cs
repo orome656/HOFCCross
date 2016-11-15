@@ -7,38 +7,36 @@ using HOFCCross.Model;
 using Akavache;
 using System.Reactive.Linq;
 using HOFCCross.Enum;
+using HOFCCross.Model.Repository;
+using HOFCCross.Constantes;
 
 namespace HOFCCross.Service
 {
     public class CacheService : IService
     {
         private ClientService Service;
+        Repository<Actu> _actuRepo;
 
-        public CacheService(ClientService service)
+        public CacheService(ClientService service, Repository<Actu> actuRepo)
         {
             Service = service;
+            _actuRepo = actuRepo;
         }
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
-            if (forceRefresh)
+            // FIXME bouchon a remplacer par un stockage en bdd
+            var lastSyncDate = DateTime.Now.AddDays(-10);
+            if (forceRefresh == true || lastSyncDate < DateTime.Now.AddDays(-AppConstantes.CACHE_LIFE_IN_DAYS))
             {
                 var actus = await Service.GetActu();
                 if (actus != null && actus.Count > 0)
                 {
-                    await BlobCache.LocalMachine.InsertObject("Actus", actus, DateTimeOffset.Now.AddDays(1));
-                    return actus;
-                }
-                else
-                {
-                    return await BlobCache.LocalMachine.GetObject<List<Actu>>("Actus");
+                    foreach (var actu in actus)
+                        _actuRepo.Insert(actu);
                 }
             }
-            else
-            {
-                return await BlobCache.LocalMachine.GetOrFetchObject("Actus",
-                                        async () => await Service.GetActu(),
-                                        DateTimeOffset.Now.AddDays(1));
-            }
+
+            return _actuRepo.AsQueryable().OrderByDescending(a => a.Date).ToList();
         }
 
         public async Task<List<Match>> GetMatchs(bool forceRefresh = false)

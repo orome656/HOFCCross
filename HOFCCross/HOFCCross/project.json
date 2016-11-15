@@ -8,6 +8,7 @@
     "modernhttpclient": "2.4.2",
     "NETStandard.Library": "1.6.0",
     "Newtonsoft.Json": "9.0.1",
+    "SQLite.Net-PCL": "3.1.1",
     "Toasts.Forms.Plugin": "3.1.1",
     "Xamarin.FFImageLoading.Forms": "2.2.5",
     "Xamarin.Forms": "2.3.2.127"

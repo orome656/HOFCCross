@@ -11,7 +11,8 @@
     <RootNamespace>HOFCCross</RootNamespace>
     <AssemblyName>HOFCCross</AssemblyName>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
@@ -50,6 +51,7 @@
     <Compile Include="Converters\FalseIfNullOrEmptyConverter.cs" />
     <Compile Include="Converters\IsHOFCConverter.cs" />
     <Compile Include="Converters\NotConverter.cs" />
+    <Compile Include="Database\ISQLite.cs" />
     <Compile Include="Enum\DeviceType.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Model\Match.cs" />
     <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
+    <Compile Include="Model\Repository\Repository.cs" />
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Page\Common\ListPage.cs" />

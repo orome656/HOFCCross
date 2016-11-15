@@ -19,5 +19,6 @@ namespace HOFCCross.Constantes
 
         public static readonly string PRIMARY_COLOR_HEX = "#08589D";
 
+        public static readonly int CACHE_LIFE_IN_DAYS = 1;
     }
 }
