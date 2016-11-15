@@ -69,17 +69,21 @@ namespace HOFCCross.ViewModel
         protected override async Task ReloadItems(bool forceRefresh = false)
         {
             IsLoading = true;
-            try
+
+            if(SelectedFilter != null)
             {
-                List<Match> matchs = await _service.GetMatchs(forceRefresh);
-                Items = matchs.Where(m => m.Competition != null && SelectedFilter.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
-                               .OrderBy(m => m.Date)
-                               .ToList();
-            }
-            catch(Exception ex)
-            {
-                DisplayError("Erreur lors de la récupération des Matchs");
-                Debug.WriteLine(ex);
+                try
+                {
+                    List<Match> matchs = await _service.GetMatchs(forceRefresh);
+                    Items = matchs.Where(m => m.Competition != null && SelectedFilter.Equals(m.Competition.Categorie) && (m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME)))
+                                   .OrderBy(m => m.Date)
+                                   .ToList();
+                }
+                catch(Exception ex)
+                {
+                    DisplayError("Erreur lors de la récupération des Matchs");
+                    Debug.WriteLine(ex);
+                }
             }
             IsLoading = false;
         }

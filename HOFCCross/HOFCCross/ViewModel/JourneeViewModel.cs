@@ -59,17 +59,21 @@ namespace HOFCCross.ViewModel
         {
             IsLoading = true;
 
-            try
+            if (SelectedFilter != null)
             {
-                List<Match> matchs = await _service.GetMatchs(forceRefresh);
+                try
+                {
+                    List<Match> matchs = await _service.GetMatchs(forceRefresh);
 
-                Items = matchs.Where(m => _category.Equals(m.Competition.Categorie) && m.JourneeId == SelectedFilter).ToList();
+                    Items = matchs.Where(m => _category.Equals(m.Competition.Categorie) && m.JourneeId == SelectedFilter).ToList();
+                }
+                catch (Exception ex)
+                {
+                    DisplayError("Erreur lors de la récupération des Matchs");
+                    Debug.WriteLine(ex);
+                }
             }
-            catch (Exception ex)
-            {
-                DisplayError("Erreur lors de la récupération des Matchs");
-                Debug.WriteLine(ex);
-            }
+
             IsLoading = false;
         }
     }

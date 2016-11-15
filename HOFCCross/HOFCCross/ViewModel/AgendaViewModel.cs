@@ -65,19 +65,22 @@ namespace HOFCCross.ViewModel
         {
             IsLoading = true;
 
-            try
+            if (SelectedFilter != null)
             {
-                List<Match> matchs = await _service.GetMatchs(forceRefresh);
+                try
+                {
+                    List<Match> matchs = await _service.GetMatchs(forceRefresh);
 
-                Items = matchs.Where(m => SelectedFilter.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
-                               .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
-                               .OrderBy(m => m.Date)
-                               .ToList();
-            }
-            catch (Exception ex)
-            {
-                DisplayError("Erreur lors de la récupération des Matchs");
-                Debug.WriteLine(ex);
+                    Items = matchs.Where(m => SelectedFilter.Date.Date.CompareTo(m.Date.StartOfWeek(DayOfWeek.Monday).Date) == 0)
+                                   .Where(m => m.Equipe1.Contains(AppConstantes.HOFC_NAME) || m.Equipe2.Contains(AppConstantes.HOFC_NAME))
+                                   .OrderBy(m => m.Date)
+                                   .ToList();
+                }
+                catch (Exception ex)
+                {
+                    DisplayError("Erreur lors de la récupération des Matchs");
+                    Debug.WriteLine(ex);
+                }
             }
 
             IsLoading = false;
