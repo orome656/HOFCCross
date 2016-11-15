@@ -26,6 +26,7 @@ namespace HOFCCross.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::ModernHttpClient.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
 			global::Splat.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::HOFCCross.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_out = global::HOFCCross.Droid.Resource.Animation.abc_fade_out;

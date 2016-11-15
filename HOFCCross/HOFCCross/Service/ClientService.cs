@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using HOFCCross.Constantes;
 using System.Diagnostics;
 using HOFCCross.Enum;
+using ModernHttpClient;
 
 namespace HOFCCross.Service
 {
@@ -21,7 +22,7 @@ namespace HOFCCross.Service
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
                 var response = await client.GetStringAsync(AppConstantes.SERVER_ACTU_URL);
                 List<Actu> actus = JsonConvert.DeserializeObject<List<Actu>>(response);
                 return actus;
@@ -36,7 +37,7 @@ namespace HOFCCross.Service
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
                 var response = await client.GetStringAsync(AppConstantes.SERVER_CLASSEMENT_URL);
                 List<ClassementEquipe> classement = JsonConvert.DeserializeObject<List<ClassementEquipe>>(response);
                 return classement;
@@ -52,7 +53,7 @@ namespace HOFCCross.Service
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
                 var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_URL);
                 List<Match> matchs = JsonConvert.DeserializeObject<List<Match>>(response);
                 return matchs;
@@ -69,7 +70,7 @@ namespace HOFCCross.Service
             
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
                 
                 List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
 
@@ -88,7 +89,7 @@ namespace HOFCCross.Service
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
 
                 List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
 
@@ -107,7 +108,7 @@ namespace HOFCCross.Service
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
 
                 List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
 
@@ -126,7 +127,7 @@ namespace HOFCCross.Service
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client = new HttpClient(new NativeMessageHandler());
                 var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_INFOS_URL + "/" + id);
                 MatchInfos matchInfos = JsonConvert.DeserializeObject<MatchInfos>(response);
                 return matchInfos;
