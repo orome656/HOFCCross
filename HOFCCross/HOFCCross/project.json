@@ -1,0 +1,20 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "akavache": "4.1.2",
+    "FreshEssentials": "2.1.2",
+    "FreshMvvm": "2.2.0",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "modernhttpclient": "2.4.2",
+    "NETStandard.Library": "1.6.0",
+    "Newtonsoft.Json": "9.0.1",
+    "Toasts.Forms.Plugin": "3.1.0",
+    "Xamarin.FFImageLoading.Forms": "2.1.8",
+    "Xamarin.Forms": "2.3.2.127"
+  },
+  "frameworks": {
+    "netstandard1.3": {
+      "imports": "portable-net45+win8+wpa81+wp8"
+    }
+  }
+}

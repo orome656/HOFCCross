@@ -33,8 +33,8 @@ namespace HOFCCross.Droid
                 StartService(intent);
             }
 
-            DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
-            ToastNotificatorImplementation.Init(this);
+            DependencyService.Register<ToastNotification>(); // Register your dependency
+            ToastNotification.Init(this);
 
         }
 

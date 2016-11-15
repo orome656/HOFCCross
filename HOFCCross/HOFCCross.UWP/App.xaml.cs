@@ -1,4 +1,5 @@
 ﻿using Plugin.Toasts;
+using Plugin.Toasts.UWP;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -59,8 +60,8 @@ namespace HOFCCross.UWP
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-                Xamarin.Forms.DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
-                ToastNotificatorImplementation.Init();
+                Xamarin.Forms.DependencyService.Register<ToastNotification>(); // Register your dependency
+                ToastNotification.Init();
 
                 List<Assembly> assembliesToInclude = new List<Assembly>();
 
@@ -126,8 +127,8 @@ namespace HOFCCross.UWP
                 rootFrame = new Frame();
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
-                Xamarin.Forms.DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
-                ToastNotificatorImplementation.Init();
+                Xamarin.Forms.DependencyService.Register<ToastNotification>(); // Register your dependency
+                ToastNotification.Init();
 
                 Xamarin.Forms.Forms.Init(args);
 

@@ -37,7 +37,12 @@ namespace HOFCCross.ViewModel.Common
         protected async void DisplayError(string message)
         {
             var notificator = DependencyService.Get<IToastNotificator>();
-            bool tapped = await notificator.Notify(ToastNotificationType.Error, "Error", message, TimeSpan.FromSeconds(2));
+            await notificator.Notify(new NotificationOptions()
+            {
+                IsClickable = false,
+                Title = "Erreur",
+                Description = message
+            });
         }
     }
 }
