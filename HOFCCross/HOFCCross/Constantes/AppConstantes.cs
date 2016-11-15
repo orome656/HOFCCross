@@ -20,5 +20,10 @@ namespace HOFCCross.Constantes
         public static readonly string PRIMARY_COLOR_HEX = "#08589D";
 
         public static readonly int CACHE_LIFE_IN_DAYS = 1;
+
+        public class DATABASE
+        {
+            public static string SYNC_DATE_ACTU_NAME = "actus";
+        }
     }
 }

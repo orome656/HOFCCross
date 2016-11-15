@@ -64,6 +64,7 @@
     <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\Repository\Repository.cs" />
+    <Compile Include="Model\SyncDate.cs" />
     <Compile Include="Model\TypeSelectionParameter.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Page\Common\ListPage.cs" />

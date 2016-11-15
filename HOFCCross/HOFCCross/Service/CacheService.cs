@@ -16,27 +16,35 @@ namespace HOFCCross.Service
     {
         private ClientService Service;
         Repository<Actu> _actuRepo;
+        Repository<SyncDate> _syncDateRepo;
 
-        public CacheService(ClientService service, Repository<Actu> actuRepo)
+        public CacheService(ClientService service, Repository<Actu> actuRepo, Repository<SyncDate> syncDateRepo)
         {
             Service = service;
             _actuRepo = actuRepo;
+            _syncDateRepo = syncDateRepo;
         }
+
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
-            // FIXME bouchon a remplacer par un stockage en bdd
-            var lastSyncDate = DateTime.Now.AddDays(-10);
-            if (forceRefresh == true || lastSyncDate < DateTime.Now.AddDays(-AppConstantes.CACHE_LIFE_IN_DAYS))
+            var lastSyncDate = _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_ACTU_NAME).FirstOrDefault()?.LastSync;
+            if (forceRefresh == true || lastSyncDate == null || lastSyncDate < DateTime.Now.AddDays(-7))
             {
                 var actus = await Service.GetActu();
                 if (actus != null && actus.Count > 0)
                 {
                     foreach (var actu in actus)
-                        _actuRepo.Insert(actu);
+                        _actuRepo.InsertOrUpdate(actu);
+
+                    _syncDateRepo.InsertOrUpdate(new SyncDate()
+                    {
+                        SyncName = AppConstantes.DATABASE.SYNC_DATE_ACTU_NAME,
+                        LastSync = DateTime.Now
+                    });
                 }
             }
 
-            return _actuRepo.AsQueryable().OrderByDescending(a => a.Date).ToList();
+            return _actuRepo.Get();
         }
 
         public async Task<List<Match>> GetMatchs(bool forceRefresh = false)
