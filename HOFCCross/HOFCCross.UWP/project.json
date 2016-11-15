@@ -1,15 +1,15 @@
 ﻿{
   "dependencies": {
-    "akavache": "4.1.2",
-    "akavache.sqlite3": "4.1.2",
+    "akavache": "5.0.0",
+    "akavache.sqlite3": "5.0.0",
     "FreshEssentials": "2.1.2",
     "FreshMvvm": "2.2.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "9.0.1",
-    "Splat": "1.6.2",
+    "Splat": "2.0.0",
     "SQLitePCL.raw_basic": "0.8.6",
-    "Toasts.Forms.Plugin": "3.1.0",
-    "Xamarin.FFImageLoading.Forms": "2.1.8",
+    "Toasts.Forms.Plugin": "3.1.1",
+    "Xamarin.FFImageLoading.Forms": "2.2.5",
     "Xamarin.Forms": "2.3.2.127"
   },
   "frameworks": {
