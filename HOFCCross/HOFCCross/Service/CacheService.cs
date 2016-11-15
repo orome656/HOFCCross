@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using HOFCCross.Model;
 using Akavache;
 using System.Reactive.Linq;
-using PushNotification.Plugin.Abstractions;
+using HOFCCross.Enum;
 
 namespace HOFCCross.Service
 {

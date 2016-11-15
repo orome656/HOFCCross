@@ -6,8 +6,6 @@ using Foundation;
 using UIKit;
 using Plugin.Toasts;
 using Xamarin.Forms;
-using PushNotification.Plugin;
-using HOFCCross.Notifications;
 
 namespace HOFCCross.iOS
 {
@@ -28,8 +26,6 @@ namespace HOFCCross.iOS
         {
             DependencyService.Register<ToastNotificatorImplementation>(); // Register your dependency
             ToastNotificatorImplementation.Init();
-
-            CrossPushNotification.Initialize<CrossPushNotificationListener>();
 
             global::Xamarin.Forms.Forms.Init();
 
