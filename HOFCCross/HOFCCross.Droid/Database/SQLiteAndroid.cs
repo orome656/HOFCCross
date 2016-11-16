@@ -19,9 +19,9 @@ using HOFCCross.Droid.Database;
 [assembly: Dependency(typeof(SQLiteAndroid))]
 namespace HOFCCross.Droid.Database
 {
-    public class SQLiteAndroid : ISQLite
+    public class SQLiteAndroid : HOFCCross.Database.Database
     {
-        public SQLiteConnection GetConnection()
+        protected override SQLiteConnection CreateConnection()
         {
             var sqliteFilename = "HOFC.db3";
             string documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal); // Documents folder

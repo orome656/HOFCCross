@@ -9,7 +9,7 @@ namespace HOFCCross.Constantes
     public class AppConstantes
     {
         public static readonly string HOFC_NAME = "HORGUES ODOS";
-        public static readonly string SERVER_BASE_URL = "http://v2.webhofc.fr/";
+        public static readonly string SERVER_BASE_URL = "https://local.webhofc.fr/";
         public static readonly string SERVER_ACTU_URL = SERVER_BASE_URL + "api/actus";
         public static readonly string SERVER_MATCH_URL = SERVER_BASE_URL + "api/matchs";
         public static readonly string SERVER_CLASSEMENT_URL = SERVER_BASE_URL + "api/classements";
@@ -24,6 +24,7 @@ namespace HOFCCross.Constantes
         public class DATABASE
         {
             public static string SYNC_DATE_ACTU_NAME = "actus";
+            public static string SYNC_DATE_MATCH_NAME = "matchs";
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using HOFCCross.Database;
 using SQLite.Net;
+using SQLiteNetExtensions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,13 +24,13 @@ namespace HOFCCross.Model.Repository
 
         public List<T> Get() => _connection.Table<T>().ToList();
 
-        public int Insert(T entity) => _connection.Insert(entity);
+        public List<T> GetWithChildren() => _connection.GetAllWithChildren<T>();
+
+        public void Insert(T entity) => _connection.InsertWithChildren(entity);
 
         public void InsertOrUpdate(T entity)
         {
-            var result = _connection.Update(entity);
-            if (result == 0)
-                _connection.Insert(entity);
+            _connection.InsertOrReplaceWithChildren(entity);
         }
     }
 }
