@@ -1,4 +1,5 @@
 ﻿using SQLite.Net.Attributes;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,8 @@ namespace HOFCCross.Model
         public string Nom { get; set; }
         public string Categorie { get; set; }
         public bool IsChampionnat { get; set; }
+
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
+        public List<Match> Matchs { get; set; }
     }
 }

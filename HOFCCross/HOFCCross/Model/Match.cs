@@ -31,7 +31,7 @@ namespace HOFCCross.Model
         public DateTime Date { get; set; }
         [ForeignKey(typeof(Competition))]
         public int CompetitionId { get; set; }
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Competition Competition { get; set; }
         [JsonProperty(PropertyName = "message")]
         public string Commentaire { get; set; }

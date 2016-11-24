@@ -12,7 +12,7 @@ namespace HOFCCross.Model.Repository
 {
     public class Repository<T> where T : class, new() // Créer une interface pour les entitées
     {
-        SQLiteConnection _connection;
+        protected SQLiteConnection _connection;
 
         public Repository()
         {
@@ -24,13 +24,18 @@ namespace HOFCCross.Model.Repository
 
         public List<T> Get() => _connection.Table<T>().ToList();
 
-        public List<T> GetWithChildren() => _connection.GetAllWithChildren<T>();
+        public virtual List<T> GetWithChildren() => _connection.GetAllWithChildren<T>(recursive: true);
 
-        public void Insert(T entity) => _connection.InsertWithChildren(entity);
+        public virtual void Insert(T entity) => _connection.InsertWithChildren(entity, recursive: true);
 
-        public void InsertOrUpdate(T entity)
+        public virtual void InsertOrUpdate(T entity)
         {
             _connection.InsertOrReplaceWithChildren(entity);
+        }
+
+        public virtual void InsertOrUpdateList(List<T> entities)
+        {
+            _connection.InsertOrReplaceAllWithChildren(entities);
         }
     }
 }

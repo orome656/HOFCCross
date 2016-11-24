@@ -16,18 +16,21 @@ namespace HOFCCross.Service
     {
         private ClientService Service;
         Repository<Actu> _actuRepo;
-        Repository<Match> _matchRepo;
+        MatchRepository _matchRepo;
         Repository<SyncDate> _syncDateRepo;
+        Repository<Competition> _competitionRepo;
 
         public CacheService(ClientService service, 
                             Repository<Actu> actuRepo,
-                            Repository<Match> matchRepo,
-                            Repository<SyncDate> syncDateRepo)
+                            MatchRepository matchRepo,
+                            Repository<SyncDate> syncDateRepo,
+                            Repository<Competition> competitionRepo)
         {
             Service = service;
             _actuRepo = actuRepo;
             _matchRepo = matchRepo;
             _syncDateRepo = syncDateRepo;
+            _competitionRepo = competitionRepo;
         }
 
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
@@ -70,7 +73,6 @@ namespace HOFCCross.Service
                     });
                 }
             }
-
             return _matchRepo.GetWithChildren();
         }
 
