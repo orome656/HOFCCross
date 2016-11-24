@@ -64,9 +64,16 @@ namespace HOFCCross.Droid.Notification
 
         async void SendRegistrationToAppServer(string token)
         {
-            var service = FreshMvvm.FreshIOC.Container.Resolve<IService>();
-            Log.Debug(nameof(RegistrationIntentService), string.Format("Push Notification - Device Registered - Token : {0}", token));
-            await service.SendNotificationToken(token, DeviceType.Android);
+            try
+            {
+                var service = FreshMvvm.FreshIOC.Container.Resolve<IService>();
+                Log.Debug(nameof(RegistrationIntentService), string.Format("Push Notification - Device Registered - Token : {0}", token));
+                await service.SendNotificationToken(token, DeviceType.Android);
+            }
+            catch (Exception e)
+            {
+                Log.Error("HOFC", "Error while sending notification token", e);
+            }
         }
 
         void Subscribe(string token)
