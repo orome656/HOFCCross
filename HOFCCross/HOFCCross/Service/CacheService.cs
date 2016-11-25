@@ -20,13 +20,17 @@ namespace HOFCCross.Service
         Repository<SyncDate> _syncDateRepo;
         Repository<Competition> _competitionRepo;
         ClassementRepository _classementRepo;
+        Repository<ArticleDetails> _articleRepo;
+        Repository<Diaporama> _diaporamaRepo;
 
         public CacheService(ClientService service, 
                             Repository<Actu> actuRepo,
                             MatchRepository matchRepo,
                             Repository<SyncDate> syncDateRepo,
                             Repository<Competition> competitionRepo,
-                            ClassementRepository classementRepo)
+                            ClassementRepository classementRepo,
+                            Repository<ArticleDetails> articleRepo,
+                            Repository<Diaporama> diaporamaRepo)
         {
             Service = service;
             _actuRepo = actuRepo;
@@ -34,6 +38,8 @@ namespace HOFCCross.Service
             _syncDateRepo = syncDateRepo;
             _competitionRepo = competitionRepo;
             _classementRepo = classementRepo;
+            _articleRepo = articleRepo;
+            _diaporamaRepo = diaporamaRepo;
         }
 
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
@@ -107,16 +113,30 @@ namespace HOFCCross.Service
 
         public async Task<ArticleDetails> GetArticleDetails(string Url)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject("Article" + Url,
-                         async () => await Service.GetArticleDetails(Url),
-                         DateTimeOffset.Now.AddDays(1));
+            var article = _articleRepo.Get(Url);
+            if(article == null)
+            {
+                article = await Service.GetArticleDetails(Url);
+                article.Url = Url;
+                article.DateSync = DateTime.Now;
+                _articleRepo.Insert(article);
+
+            }
+            return article;
         }
 
-        public async Task<List<string>> GetDiaporama(string Url)
+        public async Task<Diaporama> GetDiaporama(string Url)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject("Diaporama" + Url,
-                         async () => await Service.GetDiaporama(Url),
-                         DateTimeOffset.Now.AddDays(1));
+            var diaporama = _diaporamaRepo.Get(Url);
+            if (diaporama == null)
+            {
+                diaporama = await Service.GetDiaporama(Url);
+                diaporama.Url = Url;
+                diaporama.DateSync = DateTime.Now;
+                _diaporamaRepo.Insert(diaporama);
+
+            }
+            return diaporama;
         }
 
         public async Task<MatchInfos> GetMatchInfos(string id)

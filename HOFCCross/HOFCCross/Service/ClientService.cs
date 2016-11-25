@@ -104,7 +104,7 @@ namespace HOFCCross.Service
             }
         }
 
-        public async Task<List<string>> GetDiaporama(string url)
+        public async Task<Diaporama> GetDiaporama(string url)
         {
             try
             {
@@ -114,7 +114,12 @@ namespace HOFCCross.Service
 
                 list.Add(new KeyValuePair<string, string>("url", url));
                 var response = await client.PostAsync(AppConstantes.SERVER_PARSE_URL, new FormUrlEncodedContent(list)).ConfigureAwait(continueOnCapturedContext: false);
-                return JsonConvert.DeserializeObject<List<string>>(await response.Content.ReadAsStringAsync());
+                var images = JsonConvert.DeserializeObject<List<string>>(await response.Content.ReadAsStringAsync());
+                return new Diaporama()
+                {
+                    Url = url,
+                    Images = images
+                };
             }
             catch (Exception ex)
             {

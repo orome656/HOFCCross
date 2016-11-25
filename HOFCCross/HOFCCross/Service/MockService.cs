@@ -200,14 +200,20 @@ namespace HOFCCross.Service
             });
         }
 
-        public Task<List<string>> GetDiaporama(string initData)
+        public Task<Diaporama> GetDiaporama(string initData)
         {
-            return Task.FromResult(new List<string>()
+            var images = new List<string>()
             {
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-.jpg",
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-2.jpg",
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-3.jpg",
                 "http://www.hofc.fr/wp-content/gallery/sen-semeac-ii-0-6-hofc-29-05-2016/HOFC-SEN-SEMEAC-II-0-6-HOFC-29-05-2016-4.jpg"
+            };
+
+            return Task.FromResult(new Diaporama()
+            {
+                    Images = images,
+                    Url = "http://hofc.fr"
             });
         }
 

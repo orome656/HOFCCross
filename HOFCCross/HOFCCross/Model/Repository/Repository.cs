@@ -24,6 +24,8 @@ namespace HOFCCross.Model.Repository
 
         public List<T> Get() => _connection.Table<T>().ToList();
 
+        public T Get(object key) => _connection.FindWithChildren<T>(key);
+
         public virtual List<T> GetWithChildren() => _connection.GetAllWithChildren<T>(recursive: true);
 
         public virtual void Insert(T entity) => _connection.InsertWithChildren(entity, recursive: true);

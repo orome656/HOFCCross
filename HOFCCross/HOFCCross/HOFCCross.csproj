@@ -61,6 +61,7 @@
     <Compile Include="Model\ArticleDetails.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />
+    <Compile Include="Model\Diaporama.cs" />
     <Compile Include="Model\Match.cs" />
     <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
