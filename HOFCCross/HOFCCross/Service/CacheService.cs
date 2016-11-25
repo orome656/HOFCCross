@@ -22,6 +22,7 @@ namespace HOFCCross.Service
         ClassementRepository _classementRepo;
         Repository<ArticleDetails> _articleRepo;
         Repository<Diaporama> _diaporamaRepo;
+        Repository<MatchInfos> _matchsInfosRepo;
 
         public CacheService(ClientService service, 
                             Repository<Actu> actuRepo,
@@ -30,7 +31,8 @@ namespace HOFCCross.Service
                             Repository<Competition> competitionRepo,
                             ClassementRepository classementRepo,
                             Repository<ArticleDetails> articleRepo,
-                            Repository<Diaporama> diaporamaRepo)
+                            Repository<Diaporama> diaporamaRepo,
+                            Repository<MatchInfos> matchsInfosRepo)
         {
             Service = service;
             _actuRepo = actuRepo;
@@ -40,6 +42,7 @@ namespace HOFCCross.Service
             _classementRepo = classementRepo;
             _articleRepo = articleRepo;
             _diaporamaRepo = diaporamaRepo;
+            _matchsInfosRepo = matchsInfosRepo;
         }
 
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
@@ -141,9 +144,15 @@ namespace HOFCCross.Service
 
         public async Task<MatchInfos> GetMatchInfos(string id)
         {
-            return await BlobCache.LocalMachine.GetOrFetchObject("MatchInfos" + id,
-                          async () => await Service.GetMatchInfos(id),
-                          DateTimeOffset.Now.AddDays(1));
+            var matchInfos = _matchsInfosRepo.Get(id);
+            if(matchInfos == null)
+            {
+                matchInfos = await Service.GetMatchInfos(id);
+                matchInfos.Id = id;
+                matchInfos.SyncDate = DateTime.Now;
+                _matchsInfosRepo.Insert(matchInfos);
+            }
+            return matchInfos;
         }
     }
 }

@@ -21,6 +21,7 @@ namespace HOFCCross.Database
             connection.CreateTable<Match>();
             connection.CreateTable<ArticleDetails>();
             connection.CreateTable<Diaporama>();
+            connection.CreateTable<MatchInfos>();
 
             return connection;
         }
