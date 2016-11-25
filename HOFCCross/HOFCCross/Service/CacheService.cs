@@ -19,18 +19,21 @@ namespace HOFCCross.Service
         MatchRepository _matchRepo;
         Repository<SyncDate> _syncDateRepo;
         Repository<Competition> _competitionRepo;
+        ClassementRepository _classementRepo;
 
         public CacheService(ClientService service, 
                             Repository<Actu> actuRepo,
                             MatchRepository matchRepo,
                             Repository<SyncDate> syncDateRepo,
-                            Repository<Competition> competitionRepo)
+                            Repository<Competition> competitionRepo,
+                            ClassementRepository classementRepo)
         {
             Service = service;
             _actuRepo = actuRepo;
             _matchRepo = matchRepo;
             _syncDateRepo = syncDateRepo;
             _competitionRepo = competitionRepo;
+            _classementRepo = classementRepo;
         }
 
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
@@ -78,25 +81,23 @@ namespace HOFCCross.Service
 
         public async Task<List<ClassementEquipe>> GetClassements(bool forceRefresh = false)
         {
-            if (forceRefresh)
+            var lastSyncDate = _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_CLASSEMENT_NAME).FirstOrDefault()?.LastSync;
+            if (forceRefresh == true || lastSyncDate == null || lastSyncDate < DateTime.Now.AddDays(-AppConstantes.CACHE_LIFE_IN_DAYS))
             {
                 var classements = await Service.GetClassements();
                 if (classements != null && classements.Count > 0)
                 {
-                    await BlobCache.LocalMachine.InsertObject("Classements", classements, DateTimeOffset.Now.AddDays(1));
-                    return classements;
-                }
-                else
-                {
-                    return await BlobCache.LocalMachine.GetObject<List<ClassementEquipe>>("Classements");
+                    foreach (var classement in classements)
+                        _classementRepo.InsertOrUpdate(classement);
+
+                    _syncDateRepo.InsertOrUpdate(new SyncDate()
+                    {
+                        SyncName = AppConstantes.DATABASE.SYNC_DATE_CLASSEMENT_NAME,
+                        LastSync = DateTime.Now
+                    });
                 }
             }
-            else
-            {
-                return await BlobCache.LocalMachine.GetOrFetchObject("Classements",
-                                        async () => await Service.GetClassements(),
-                                        DateTimeOffset.Now.AddDays(1));
-            }
+            return _classementRepo.GetWithChildren().OrderByDescending(c => c.Point).ThenByDescending(c => c.Diff).ToList();
         }
 
         public async Task SendNotificationToken(string token, DeviceType type)

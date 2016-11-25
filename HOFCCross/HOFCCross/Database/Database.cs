@@ -17,6 +17,7 @@ namespace HOFCCross.Database
 
             connection.CreateTable<Actu>();
             connection.CreateTable<Competition>();
+            connection.CreateTable<ClassementEquipe>();
             connection.CreateTable<Match>();
 
             return connection;

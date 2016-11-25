@@ -64,6 +64,7 @@
     <Compile Include="Model\Match.cs" />
     <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
+    <Compile Include="Model\Repository\ClassementRepository.cs" />
     <Compile Include="Model\Repository\MatchRepository.cs" />
     <Compile Include="Model\Repository\Repository.cs" />
     <Compile Include="Model\SyncDate.cs" />

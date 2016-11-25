@@ -25,6 +25,7 @@ namespace HOFCCross.Constantes
         {
             public static string SYNC_DATE_ACTU_NAME = "actus";
             public static string SYNC_DATE_MATCH_NAME = "matchs";
+            public static string SYNC_DATE_CLASSEMENT_NAME = "classements";
         }
     }
 }
