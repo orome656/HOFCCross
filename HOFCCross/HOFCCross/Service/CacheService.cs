@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HOFCCross.Model;
-using Akavache;
-using System.Reactive.Linq;
 using HOFCCross.Enum;
 using HOFCCross.Model.Repository;
 using HOFCCross.Constantes;

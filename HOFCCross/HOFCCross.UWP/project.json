@@ -1,7 +1,5 @@
 ﻿{
   "dependencies": {
-    "akavache": "5.0.0",
-    "akavache.sqlite3": "5.0.0",
     "FreshEssentials": "2.1.2",
     "FreshMvvm": "2.2.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
