@@ -56,6 +56,7 @@
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Helpers\Maps.cs" />
+    <Compile Include="Helpers\Season.cs" />
     <Compile Include="Model\Actu.cs" />
     <Compile Include="Model\ArticleDetails.cs" />
     <Compile Include="Model\ClassementEquipe.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HOFCCross.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace HOFCCross.Model.Repository
     {
         public override List<Match> GetWithChildren()
         {
-            var matchs = _connection.Table<Match>().ToList();
+            var seasonIndex = Season.GetSeasonIndex();
+            var matchs = _connection.Query<Match>("SELECT * FROM Match as m join Competition as c on m.CompetitionId == c.Id WHERE c.Saison = ?", seasonIndex).ToList();
             Dictionary<int, Competition> competitions = new Dictionary<int, Competition>();
             foreach (var match in matchs)
             {
