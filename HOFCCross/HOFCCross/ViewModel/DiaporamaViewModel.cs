@@ -20,7 +20,7 @@ namespace HOFCCross.ViewModel
         public async override void Init(object initData)
         {
             base.Init(initData);
-            Images = await _service.GetDiaporama((string)initData);
+            Images = (await _service.GetDiaporama((string)initData)).Images;
             RaisePropertyChanged(nameof(Images));
         }
     }
