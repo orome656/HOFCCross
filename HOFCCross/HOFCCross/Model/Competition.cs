@@ -16,6 +16,8 @@ namespace HOFCCross.Model
         public string Categorie { get; set; }
         public bool IsChampionnat { get; set; }
 
+        public string Saison { get; set; }
+
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Match> Matchs { get; set; }
     }
