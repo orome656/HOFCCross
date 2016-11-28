@@ -29,7 +29,7 @@ namespace HOFCCross.Model.Repository
         public virtual List<T> GetWithChildren() => _connection.GetAllWithChildren<T>(recursive: true);
 
         public virtual void Insert(T entity) => _connection.InsertWithChildren(entity, recursive: true);
-
+        
         public virtual void InsertOrUpdate(T entity)
         {
             _connection.InsertOrReplaceWithChildren(entity);
@@ -38,6 +38,11 @@ namespace HOFCCross.Model.Repository
         public virtual void InsertOrUpdateList(List<T> entities)
         {
             _connection.InsertOrReplaceAllWithChildren(entities);
+        }
+
+        public virtual void DeleteAll()
+        {
+            _connection.DeleteAll<T>();
         }
     }
 }

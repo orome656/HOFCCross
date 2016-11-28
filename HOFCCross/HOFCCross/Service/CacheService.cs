@@ -73,8 +73,8 @@ namespace HOFCCross.Service
                 var matchs = await Service.GetMatchs();
                 if (matchs != null && matchs.Count > 0)
                 {
-                    foreach (var match in matchs)
-                        _matchRepo.InsertOrUpdate(match);
+                    _matchRepo.DeleteAll();
+                    _matchRepo.InsertOrUpdateList(matchs);
 
                     _syncDateRepo.InsertOrUpdate(new SyncDate()
                     {
@@ -94,8 +94,8 @@ namespace HOFCCross.Service
                 var classements = await Service.GetClassements();
                 if (classements != null && classements.Count > 0)
                 {
-                    foreach (var classement in classements)
-                        _classementRepo.InsertOrUpdate(classement);
+                    _classementRepo.DeleteAll();
+                    _classementRepo.InsertOrUpdateList(classements);
 
                     _syncDateRepo.InsertOrUpdate(new SyncDate()
                     {
