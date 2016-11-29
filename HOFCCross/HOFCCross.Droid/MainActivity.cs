@@ -12,6 +12,7 @@ using Xamarin.Forms;
 using Android.Content;
 using HOFCCross.Droid.Notification;
 using Android.Gms.Common;
+using Android.Preferences;
 
 namespace HOFCCross.Droid
 {
@@ -27,10 +28,14 @@ namespace HOFCCross.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
 
-            if (IsPlayServicesAvailable())
+            var preferenceManager = PreferenceManager.GetDefaultSharedPreferences(Application.ApplicationContext);
+            if(!preferenceManager.Contains("notification_key"))
             {
-                var intent = new Intent(this, typeof(RegistrationIntentService));
-                StartService(intent);
+                if (IsPlayServicesAvailable())
+                {
+                    var intent = new Intent(this, typeof(RegistrationIntentService));
+                    StartService(intent);
+                }
             }
 
             DependencyService.Register<ToastNotification>(); // Register your dependency

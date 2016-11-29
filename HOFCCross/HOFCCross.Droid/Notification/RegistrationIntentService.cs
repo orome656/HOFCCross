@@ -17,6 +17,8 @@ using Android.Gms.Gcm;
 using Android.Gms.Gcm.Iid;
 using HOFCCross.Service;
 using HOFCCross.Enum;
+using System.Threading.Tasks;
+using Android.Preferences;
 
 namespace HOFCCross.Droid.Notification
 {
@@ -38,7 +40,19 @@ namespace HOFCCross.Droid.Notification
                     var token = instanceID.GetToken(GetSenderId(), GoogleCloudMessaging.InstanceIdScope, null);
 
                     Log.Info("RegistrationIntentService", "GCM Registration Token: " + token);
-                    SendRegistrationToAppServer(token);
+                    var result = SendRegistrationToAppServer(token).Result;
+                    if (result == 0)
+                    {
+                        var preferenceManager = PreferenceManager.GetDefaultSharedPreferences(Application.ApplicationContext);
+                        var editor = preferenceManager.Edit();
+                        editor.Remove("notification_key");
+                        editor.PutString("notification_key", token);
+                        editor.Apply();
+                    }
+                    else
+                    {
+
+                    }
                     //Subscribe(token);
                 }
             }
@@ -62,17 +76,19 @@ namespace HOFCCross.Droid.Notification
             }
         }
 
-        async void SendRegistrationToAppServer(string token)
+        async Task<int> SendRegistrationToAppServer(string token)
         {
             try
             {
                 var service = FreshMvvm.FreshIOC.Container.Resolve<IService>();
                 Log.Debug(nameof(RegistrationIntentService), string.Format("Push Notification - Device Registered - Token : {0}", token));
                 await service.SendNotificationToken(token, DeviceType.Android);
+                return 0;
             }
             catch (Exception e)
             {
                 Log.Error("HOFC", "Error while sending notification token", e);
+                return -1;
             }
         }
 
