@@ -26,12 +26,7 @@
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer d'équipe"
                        IsVisible="{Binding Filters, Converter={StaticResource FalseIfNullOrEmptyConverter}}"/>
-    <ListView ItemsSource="{Binding Items}"
-              IsPullToRefreshEnabled="True"
-              IsRefreshing="{Binding IsLoading}"
-              RefreshCommand="{Binding RefreshCommand}">
-      <ListView.Header>
-        <Grid Padding="5,20,5,20">
+     <Grid Padding="5,0,5,0">
           <Grid.ColumnDefinitions>
             <!-- Place -->
             <ColumnDefinition Width="2*" />
@@ -41,33 +36,22 @@
             <ColumnDefinition Width="2*" />
             <!-- Joues -->
             <ColumnDefinition Width="2*" />
-            <!-- Victoires -->
-            <ColumnDefinition Width="2*" />
-            <!-- Nuls -->
-            <ColumnDefinition Width="2*" />
-            <!-- Défaites -->
-            <ColumnDefinition Width="2*" />
-            <!-- But Pour -->
-            <ColumnDefinition Width="2*" />
-            <!-- But Contre -->
-            <ColumnDefinition Width="2*" />
             <!-- Diff -->
             <ColumnDefinition Width="2*" />
           </Grid.ColumnDefinitions>
 
-          <Label Text="#" Grid.Column="0" />
-          <Label Text="Nom" Grid.Column="1" />
+          <Label Text="" Grid.Column="0" />
+          <Label Text="Equipe" Grid.Column="1" />
           <Label Text="P" Grid.Column="2" />
           <Label Text="J" Grid.Column="3" />
-          <Label Text="V" Grid.Column="4" />
-          <Label Text="N" Grid.Column="5" />
-          <Label Text="D" Grid.Column="6" />
-          <Label Text="BP" Grid.Column="7" />
-          <Label Text="BC" Grid.Column="8" />
-          <Label Text="+/-" Grid.Column="9" />
-
-        </Grid>
-      </ListView.Header>
+          <Label Text="Diff" Grid.Column="4" />
+    </Grid>
+    <BoxView Color="Gray" HeightRequest="1" Margin="5,0,5,0"/>
+    <ListView ItemsSource="{Binding Items}"
+              IsPullToRefreshEnabled="True"
+              IsRefreshing="{Binding IsLoading}"
+              RefreshCommand="{Binding RefreshCommand}"
+              SeparatorColor="Gray">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
@@ -79,17 +63,7 @@
                 <ColumnDefinition Width="7*" />
                 <!-- Points -->
                 <ColumnDefinition Width="2*" />
-                <!-- Joues -->
-                <ColumnDefinition Width="2*" />
-                <!-- Victoires -->
-                <ColumnDefinition Width="2*" />
-                <!-- Nuls -->
-                <ColumnDefinition Width="2*" />
-                <!-- Défaites -->
-                <ColumnDefinition Width="2*" />
-                <!-- But Pour -->
-                <ColumnDefinition Width="2*" />
-                <!-- But Contre -->
+                <!-- Joués -->
                 <ColumnDefinition Width="2*" />
                 <!-- Diff -->
                 <ColumnDefinition Width="2*" />
@@ -99,13 +73,7 @@
               <Label VerticalTextAlignment="Center" Text="{Binding Nom}" Grid.Column="1" />
               <Label VerticalTextAlignment="Center" Text="{Binding Point}" Grid.Column="2" />
               <Label VerticalTextAlignment="Center" Text="{Binding Joue}" Grid.Column="3" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Victoire}" Grid.Column="4" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Nul}" Grid.Column="5" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Defaite}" Grid.Column="6" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Bp}" Grid.Column="7" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Bc}" Grid.Column="8" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Diff}" Grid.Column="9" />
-
+              <Label VerticalTextAlignment="Center" Text="{Binding Diff}" Grid.Column="4" />
             </Grid>
           </ViewCell>
         </DataTemplate>
