@@ -1,5 +1,6 @@
-﻿using SQLite.Net.Attributes;
-using SQLiteNetExtensions.Attributes;
+﻿using Newtonsoft.Json;
+using SQLite;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,16 @@ namespace HOFCCross.Model
     {
         [PrimaryKey]
         public string Url { get; set; }
-        [TextBlob("ImagesBlobbed")]
+
+        [Ignore]
         public List<string> Images { get; set; }
-        public string ImagesBlobbed { get; set; }
+
+        public string ImagesBlobbed
+        {
+            get { return JsonConvert.SerializeObject(Images); }
+            set { Images = JsonConvert.DeserializeObject<List<string>>(value); }
+        }
+
         public DateTime DateSync { get; set; }
     }
 }

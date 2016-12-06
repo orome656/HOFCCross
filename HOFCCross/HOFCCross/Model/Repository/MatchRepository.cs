@@ -9,10 +9,10 @@ namespace HOFCCross.Model.Repository
 {
     public class MatchRepository: Repository<Match>
     {
-        public override List<Match> GetWithChildren()
+        public async override Task<List<Match>> GetWithChildren()
         {
             var seasonIndex = Season.GetSeasonIndex();
-            var matchs = _connection.Query<Match>("SELECT * FROM Match as m join Competition as c on m.CompetitionId == c.Id WHERE c.Saison = ?", seasonIndex).ToList();
+            var matchs = await _connection.QueryAsync<Match>("SELECT * FROM Match as m join Competition as c on m.CompetitionId == c.Id WHERE c.Saison = ?", seasonIndex);
             Dictionary<int, Competition> competitions = new Dictionary<int, Competition>();
             foreach (var match in matchs)
             {
@@ -24,7 +24,7 @@ namespace HOFCCross.Model.Repository
                     }
                     else
                     {
-                        var compet = _connection.Table<Competition>().Where(c => c.Id == match.CompetitionId).FirstOrDefault();
+                        var compet = await _connection.Table<Competition>().Where(c => c.Id == match.CompetitionId).FirstOrDefaultAsync();
                         competitions.Add(compet.Id, compet);
                         match.Competition = compet;
                     }
@@ -33,22 +33,22 @@ namespace HOFCCross.Model.Repository
             return matchs;
         }
 
-        public override void InsertOrUpdateList(List<Match> entity)
+        public override async Task InsertOrUpdateList(List<Match> entity)
         {
+            List<Task> tasks = new List<Task>();
             Dictionary<int, Competition> competitions = new Dictionary<int, Competition>();
             foreach(var match in entity)
             {
-                if(match.Competition != null &&  !competitions.ContainsKey(match.Competition.Id))
-                {
-                    var competResult = _connection.Update(match.Competition);
-                    if (competResult == 0)
-                        _connection.Insert(match.Competition);
-                    match.CompetitionId = match.Competition.Id;
-                }
-                var result = _connection.Update(match);
-                if (result == 0)
-                    _connection.Insert(match);
+                tasks.Add(Task.Run(async () => {
+                    if (match.Competition != null && !competitions.ContainsKey(match.Competition.Id))
+                    {
+                        var competResult = await _connection.InsertOrReplaceAsync(match.Competition);
+                        match.CompetitionId = match.Competition.Id;
+                    }
+                    await _connection.InsertOrReplaceAsync(match);
+                }));
             }
+            await Task.WhenAll(tasks.ToArray());
         }
     }
 }

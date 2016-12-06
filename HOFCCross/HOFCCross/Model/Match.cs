@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-using SQLite.Net.Attributes;
-using SQLiteNetExtensions.Attributes;
+using SQLite;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +29,10 @@ namespace HOFCCross.Model
             }
         }
         public DateTime Date { get; set; }
-        [ForeignKey(typeof(Competition))]
+
         public int CompetitionId { get; set; }
-        [ManyToOne(CascadeOperations = CascadeOperation.All)]
+
+        [Ignore]
         public Competition Competition { get; set; }
         [JsonProperty(PropertyName = "message")]
         public string Commentaire { get; set; }

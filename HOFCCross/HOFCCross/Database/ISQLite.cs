@@ -1,4 +1,4 @@
-﻿using SQLite.Net;
+﻿using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace HOFCCross.Database
 {
     public interface ISQLite
     {
-        SQLiteConnection GetConnection();
+        Task<SQLiteAsyncConnection> GetConnection();
     }
 }

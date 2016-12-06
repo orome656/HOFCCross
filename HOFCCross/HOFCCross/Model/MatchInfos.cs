@@ -1,5 +1,6 @@
-﻿using SQLite.Net.Attributes;
-using SQLiteNetExtensions.Attributes;
+﻿using Newtonsoft.Json;
+using SQLite;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,13 @@ namespace HOFCCross.Model
         public string Adresse { get; set; }
         public string Ville { get; set; }
         
-        public string ArbitresBlobbed { get; set; }
-        [TextBlob("ArbitresBlobbed")]
+        [Ignore]
         public List<string> Arbitres { get; set; }
+        public string ArbitresBlobbed
+        {
+            get { return JsonConvert.SerializeObject(Arbitres); }
+            set { Arbitres = JsonConvert.DeserializeObject<List<string>>(value); }
+        }
 
         public DateTime SyncDate { get; set; }
     }

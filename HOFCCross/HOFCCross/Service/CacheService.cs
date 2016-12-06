@@ -45,16 +45,17 @@ namespace HOFCCross.Service
 
         public async Task<List<Actu>> GetActu(bool forceRefresh = false)
         {
-            var lastSyncDate = _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_ACTU_NAME).FirstOrDefault()?.LastSync;
+            var lastSyncDate = (await _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_ACTU_NAME).FirstOrDefaultAsync())?.LastSync;
             if (forceRefresh == true || lastSyncDate == null || lastSyncDate < DateTime.Now.AddDays(-7))
             {
                 var actus = await Service.GetActu();
                 if (actus != null && actus.Count > 0)
                 {
+                    List<Task> tasks = new List<Task>();
                     foreach (var actu in actus)
-                        _actuRepo.InsertOrUpdate(actu);
-
-                    _syncDateRepo.InsertOrUpdate(new SyncDate()
+                        tasks.Add(_actuRepo.InsertOrUpdate(actu));
+                    await Task.WhenAll(tasks.ToArray());
+                    await _syncDateRepo.InsertOrUpdate(new SyncDate()
                     {
                         SyncName = AppConstantes.DATABASE.SYNC_DATE_ACTU_NAME,
                         LastSync = DateTime.Now
@@ -62,33 +63,33 @@ namespace HOFCCross.Service
                 }
             }
 
-            return _actuRepo.Get().OrderByDescending(a => a.Date).ToList();
+            return await _actuRepo.AsQueryable().OrderByDescending(a => a.Date).ToListAsync();
         }
 
         public async Task<List<Match>> GetMatchs(bool forceRefresh = false)
         {
-            var lastSyncDate = _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_MATCH_NAME).FirstOrDefault()?.LastSync;
+            var lastSyncDate = (await _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_MATCH_NAME).FirstOrDefaultAsync())?.LastSync;
             if (forceRefresh == true || lastSyncDate == null || lastSyncDate < DateTime.Now.AddDays(-AppConstantes.CACHE_LIFE_IN_DAYS))
             {
                 var matchs = await Service.GetMatchs();
                 if (matchs != null && matchs.Count > 0)
                 {
                     _matchRepo.DeleteAll();
-                    _matchRepo.InsertOrUpdateList(matchs);
+                    await _matchRepo.InsertOrUpdateList(matchs);
 
-                    _syncDateRepo.InsertOrUpdate(new SyncDate()
+                    await _syncDateRepo.InsertOrUpdate(new SyncDate()
                     {
                         SyncName = AppConstantes.DATABASE.SYNC_DATE_MATCH_NAME,
                         LastSync = DateTime.Now
                     });
                 }
             }
-            return _matchRepo.GetWithChildren();
+            return await _matchRepo.GetWithChildren();
         }
 
         public async Task<List<ClassementEquipe>> GetClassements(bool forceRefresh = false)
         {
-            var lastSyncDate = _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_CLASSEMENT_NAME).FirstOrDefault()?.LastSync;
+            var lastSyncDate = (await _syncDateRepo.AsQueryable().Where(s => s.SyncName == AppConstantes.DATABASE.SYNC_DATE_CLASSEMENT_NAME).FirstOrDefaultAsync())?.LastSync;
             if (forceRefresh == true || lastSyncDate == null || lastSyncDate < DateTime.Now.AddDays(-AppConstantes.CACHE_LIFE_IN_DAYS))
             {
                 var classements = await Service.GetClassements();
@@ -97,14 +98,14 @@ namespace HOFCCross.Service
                     _classementRepo.DeleteAll();
                     _classementRepo.InsertOrUpdateList(classements);
 
-                    _syncDateRepo.InsertOrUpdate(new SyncDate()
+                    await _syncDateRepo.InsertOrUpdate(new SyncDate()
                     {
                         SyncName = AppConstantes.DATABASE.SYNC_DATE_CLASSEMENT_NAME,
                         LastSync = DateTime.Now
                     });
                 }
             }
-            return _classementRepo.GetWithChildren().OrderByDescending(c => c.Point).ThenByDescending(c => c.Diff).ToList();
+            return (await _classementRepo.GetWithChildren()).OrderByDescending(c => c.Point).ThenByDescending(c => c.Diff).ToList();
         }
 
         public async Task SendNotificationToken(string token, DeviceType type)
@@ -114,13 +115,13 @@ namespace HOFCCross.Service
 
         public async Task<ArticleDetails> GetArticleDetails(string Url)
         {
-            var article = _articleRepo.Get(Url);
+            var article = await _articleRepo.Get(Url);
             if(article == null)
             {
                 article = await Service.GetArticleDetails(Url);
                 article.Url = Url;
                 article.DateSync = DateTime.Now;
-                _articleRepo.Insert(article);
+                await _articleRepo.InsertOrUpdate(article);
 
             }
             return article;
@@ -128,13 +129,13 @@ namespace HOFCCross.Service
 
         public async Task<Diaporama> GetDiaporama(string Url)
         {
-            var diaporama = _diaporamaRepo.Get(Url);
+            var diaporama = await _diaporamaRepo.Get(Url);
             if (diaporama == null)
             {
                 diaporama = await Service.GetDiaporama(Url);
                 diaporama.Url = Url;
                 diaporama.DateSync = DateTime.Now;
-                _diaporamaRepo.Insert(diaporama);
+                await _diaporamaRepo.InsertOrUpdate(diaporama);
 
             }
             return diaporama;
@@ -142,13 +143,13 @@ namespace HOFCCross.Service
 
         public async Task<MatchInfos> GetMatchInfos(string id)
         {
-            var matchInfos = _matchsInfosRepo.Get(id);
+            var matchInfos = await _matchsInfosRepo.Get(id);
             if(matchInfos == null)
             {
                 matchInfos = await Service.GetMatchInfos(id);
                 matchInfos.Id = id;
                 matchInfos.SyncDate = DateTime.Now;
-                _matchsInfosRepo.Insert(matchInfos);
+                await _matchsInfosRepo.InsertOrUpdate(matchInfos);
             }
             return matchInfos;
         }

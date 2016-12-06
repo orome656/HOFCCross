@@ -1,6 +1,5 @@
 ﻿using HOFCCross.Database;
-using SQLite.Net;
-using SQLiteNetExtensions.Extensions;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,37 +11,42 @@ namespace HOFCCross.Model.Repository
 {
     public class Repository<T> where T : class, new() // Créer une interface pour les entitées
     {
-        protected SQLiteConnection _connection;
+        protected SQLiteAsyncConnection _connection;
 
         public Repository()
         {
-            _connection = DependencyService.Get<ISQLite>().GetConnection();
-            _connection.CreateTable<T>();
+            _connection = Task.Run(() => DependencyService.Get<ISQLite>().GetConnection()).Result;
+            _connection.CreateTableAsync<T>();
         }
 
-        public TableQuery<T> AsQueryable() => _connection.Table<T>();
+        public AsyncTableQuery<T> AsQueryable() => _connection.Table<T>();
 
-        public List<T> Get() => _connection.Table<T>().ToList();
+        public async Task<List<T>> Get() => await _connection.Table<T>().ToListAsync();
 
-        public T Get(object key) => _connection.FindWithChildren<T>(key);
+        public async Task<T> Get(object key) => await _connection.FindAsync<T>(key);
 
-        public virtual List<T> GetWithChildren() => _connection.GetAllWithChildren<T>(recursive: true);
-
-        public virtual void Insert(T entity) => _connection.InsertWithChildren(entity, recursive: true);
+        public virtual Task<List<T>> GetWithChildren()
+        {
+            throw new NotImplementedException();
+        }
         
-        public virtual void InsertOrUpdate(T entity)
+        public virtual async Task InsertOrUpdate(T entity) => await _connection.InsertOrReplaceAsync(entity);
+        
+        public virtual async Task InsertOrUpdateList(List<T> entities)
         {
-            _connection.InsertOrReplaceWithChildren(entity);
-        }
+            List<Task> tasks = new List<Task>();
 
-        public virtual void InsertOrUpdateList(List<T> entities)
-        {
-            _connection.InsertOrReplaceAllWithChildren(entities);
+            foreach (var entite in entities)
+            {
+                tasks.Add(_connection.InsertOrReplaceAsync(entite));
+            }
+
+            await Task.WhenAll(tasks.ToArray());
         }
 
         public virtual void DeleteAll()
         {
-            _connection.DeleteAll<T>();
+            _connection.GetConnection().DeleteAll<T>();
         }
     }
 }
