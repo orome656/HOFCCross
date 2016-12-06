@@ -96,7 +96,7 @@ namespace HOFCCross.Service
                 if (classements != null && classements.Count > 0)
                 {
                     _classementRepo.DeleteAll();
-                    _classementRepo.InsertOrUpdateList(classements);
+                    await _classementRepo.InsertOrUpdateList(classements);
 
                     await _syncDateRepo.InsertOrUpdate(new SyncDate()
                     {
