@@ -53,6 +53,7 @@
               IsRefreshing="{Binding IsLoading}"
               RefreshCommand="{Binding RefreshCommand}"
               Margin="5,0,5,0"
+              RowHeight="35"
               SeparatorColor="#FFD3D3D3">
       <ListView.ItemTemplate>
         <DataTemplate>
