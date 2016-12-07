@@ -26,7 +26,7 @@
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer d'équipe"
                        IsVisible="{Binding Filters, Converter={StaticResource FalseIfNullOrEmptyConverter}}"/>
-     <Grid Padding="5,0,5,0">
+     <Grid>
           <Grid.ColumnDefinitions>
             <!-- Place -->
             <ColumnDefinition Width="2*" />
@@ -40,22 +40,23 @@
             <ColumnDefinition Width="2*" />
           </Grid.ColumnDefinitions>
 
-          <Label Text="" Grid.Column="0" />
-          <Label Text="Equipe" Grid.Column="1" />
-          <Label Text="P" Grid.Column="2" />
-          <Label Text="J" Grid.Column="3" />
-          <Label Text="Diff" Grid.Column="4" />
+          <Label VerticalTextAlignment="Center" Text="" Grid.Column="0" />
+          <Label VerticalTextAlignment="Center" Text="Equipe" Grid.Column="1" />
+          <Label VerticalTextAlignment="Center" Text="P" Grid.Column="2" />
+          <Label VerticalTextAlignment="Center" Text="J" Grid.Column="3" />
+          <Label VerticalTextAlignment="Center" Text="Diff" Grid.Column="4" />
     </Grid>
-    <BoxView Color="Gray" HeightRequest="1" Margin="5,0,5,0"/>
+    <BoxView Color="#FFD3D3D3" HeightRequest="1" Margin="5,0,5,0"/>
     <ListView ItemsSource="{Binding Items}"
               IsPullToRefreshEnabled="True"
               IsRefreshing="{Binding IsLoading}"
               RefreshCommand="{Binding RefreshCommand}"
-              SeparatorColor="Gray">
+              Margin="5,0,5,0"
+              SeparatorColor="#FFD3D3D3">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <Grid Padding="5,0,5,0">
+            <Grid>
               <Grid.ColumnDefinitions>
                 <!-- Place -->
                 <ColumnDefinition Width="2*" />
