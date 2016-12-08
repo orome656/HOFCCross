@@ -12,6 +12,7 @@
       <converters:NotConverter x:Key="NotConverter" />
       <converters:FalseIfNullOrEmptyConverter x:Key="FalseIfNullOrEmptyConverter" />
       <converters:ColorIfHOFCConverter x:Key="ColorIfHOFCConverter" />
+      <converters:ColumnWidthConverter x:Key="ColumnWidthConverter" />
     </ResourceDictionary>
   </ContentPage.Resources>
   <StackLayout>
@@ -27,28 +28,47 @@
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer d'équipe"
                        IsVisible="{Binding Filters, Converter={StaticResource FalseIfNullOrEmptyConverter}}"/>
-     <Grid>
+     <Grid ColumnSpacing="0">
           <Grid.ColumnDefinitions>
             <!-- Place -->
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="30" />
             <!-- Nom -->
-            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="*" />
             <!-- Points -->
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="30" />
             <!-- Joues -->
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="30" />
+            <!-- Victoires -->
+            <ColumnDefinition Width="{Binding IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+            <!-- Nuls -->
+            <ColumnDefinition Width="{Binding IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+            <!-- Défaites -->
+            <ColumnDefinition Width="{Binding IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+            <!-- BP -->
+            <ColumnDefinition Width="{Binding IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+            <!-- BC -->
+            <ColumnDefinition Width="{Binding IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
             <!-- Diff -->
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="30" />
           </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+              <RowDefinition Height="30" />
+          </Grid.RowDefinitions>
 
-          <Label VerticalTextAlignment="Center" Text="" Grid.Column="0" />
+          <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="" Grid.Column="0" />
           <Label VerticalTextAlignment="Center" Text="Equipe" Grid.Column="1" />
-          <Label VerticalTextAlignment="Center" Text="P" Grid.Column="2" />
-          <Label VerticalTextAlignment="Center" Text="J" Grid.Column="3" />
-          <Label VerticalTextAlignment="Center" Text="Diff" Grid.Column="4" />
+          <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="P" Grid.Column="2" />
+          <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="J" Grid.Column="3" />
+          <Label x:Name="HVColumn" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="V" Grid.Column="4" />
+          <Label x:Name="HNColumn" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="N" Grid.Column="5" />
+          <Label x:Name="HDColumn" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="D" Grid.Column="6" />
+          <Label x:Name="HBPColumn" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="BP" Grid.Column="7" />
+          <Label x:Name="HBCColumn" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="BC" Grid.Column="8" />
+          <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Diff" Grid.Column="9" />
     </Grid>
     <BoxView Color="#FFD3D3D3" HeightRequest="1" Margin="5,0,5,0"/>
-    <ListView ItemsSource="{Binding Items}"
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Items}"
               IsPullToRefreshEnabled="True"
               IsRefreshing="{Binding IsLoading}"
               RefreshCommand="{Binding RefreshCommand}"
@@ -58,25 +78,83 @@
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
-            <Grid>
+            <Grid ColumnSpacing="0">
               <Grid.ColumnDefinitions>
                 <!-- Place -->
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="30" />
                 <!-- Nom -->
-                <ColumnDefinition Width="7*" />
+                <ColumnDefinition Width="*" />
                 <!-- Points -->
-                <ColumnDefinition Width="2*" />
-                <!-- Joués -->
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="30" />
+                <!-- Joues -->
+                <ColumnDefinition Width="30" />
+                <!-- Victoires -->
+                <ColumnDefinition Width="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+                <!-- Nuls -->
+                <ColumnDefinition Width="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+                <!-- Défaites -->
+                <ColumnDefinition Width="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+                <!-- BP -->
+                <ColumnDefinition Width="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
+                <!-- BC -->
+                <ColumnDefinition Width="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape, Converter={StaticResource ColumnWidthConverter}}" />
                 <!-- Diff -->
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="30" />
               </Grid.ColumnDefinitions>
 
-              <Label VerticalTextAlignment="Center" Text="{Binding Rank}" Grid.Column="0" TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Nom}" Grid.Column="1" TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Point}" Grid.Column="2" TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Joue}" Grid.Column="3" TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
-              <Label VerticalTextAlignment="Center" Text="{Binding Diff}" Grid.Column="4" TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Rank}" 
+                     Grid.Column="0" 
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label VerticalTextAlignment="Center"
+                     Text="{Binding Nom}" 
+                     Grid.Column="1" 
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Point}"
+                     Grid.Column="2" 
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Joue}"
+                     Grid.Column="3"
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label IsVisible="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape}"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Victoire}"
+                     Grid.Column="4" TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label IsVisible="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape}}"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Nul}"
+                     Grid.Column="5"
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label IsVisible="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape}}"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Defaite}"
+                     Grid.Column="6"
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label IsVisible="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape}}"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Bp}"
+                     Grid.Column="7"
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label IsVisible="{Binding Source={x:Reference listView}, Path=BindingContext.IsLandscape}}"
+                     VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Bc}"
+                     Grid.Column="8"
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
+              <Label VerticalTextAlignment="Center"
+                     HorizontalTextAlignment="Center"
+                     Text="{Binding Diff}"
+                     Grid.Column="9"
+                     TextColor="{Binding Nom, Converter={StaticResource ColorIfHOFCConverter}}" />
             </Grid>
           </ViewCell>
         </DataTemplate>

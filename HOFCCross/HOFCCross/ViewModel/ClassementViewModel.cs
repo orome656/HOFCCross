@@ -2,6 +2,7 @@
 using HOFCCross.Model;
 using HOFCCross.Service;
 using HOFCCross.ViewModel.Common;
+using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,8 +14,11 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
+    [ImplementPropertyChanged]
     class ClassementViewModel: FilteredListBaseViewModel<string, ClassementEquipe>
     {
+        public bool IsLandscape { get; set; }
+
         public ClassementViewModel(IService service) : base(service)
         {
         }

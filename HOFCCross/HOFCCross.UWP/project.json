@@ -5,6 +5,7 @@
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "modernhttpclient": "2.4.2",
     "Newtonsoft.Json": "9.0.1",
+    "PropertyChanged.Fody": "1.52.1",
     "Splat": "2.0.0",
     "sqlite-net-pcl": "1.2.1",
     "SQLitePCL.raw_basic": "0.8.6",
