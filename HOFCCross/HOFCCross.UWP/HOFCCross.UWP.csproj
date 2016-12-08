@@ -119,6 +119,7 @@
     <Content Include="calendar_icon.png" />
     <Content Include="classement_icon.png" />
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="FodyWeavers.xml" />
     <Content Include="icon.png" />
     <Content Include="ic_info_outline_black_24dp.png" />
     <Content Include="ic_navigation_black_24dp.png" />
