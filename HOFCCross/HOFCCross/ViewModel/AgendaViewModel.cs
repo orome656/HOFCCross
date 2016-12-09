@@ -24,6 +24,8 @@ namespace HOFCCross.ViewModel
 
         public override async void Init(object initData)
         {
+            bool loadEnd = false;
+            var animation = Task.Delay(500).ContinueWith((t) => { if (!loadEnd) IsLoading = true; });
             base.Init(initData);
             IsLoading = true;
             
@@ -36,6 +38,7 @@ namespace HOFCCross.ViewModel
             SelectedFilter = weekDate;
 
             IsLoading = false;
+            loadEnd = true;
         }
 
         private async Task LoadListeSemaine()
@@ -63,6 +66,8 @@ namespace HOFCCross.ViewModel
 
         protected override async Task ReloadItems(bool forceRefresh = false)
         {
+            bool loadEnd = false;
+            var animation = Task.Delay(500).ContinueWith((t) => { if (!loadEnd) IsLoading = true; });
             IsLoading = true;
 
             if (SelectedFilter != null)
@@ -84,6 +89,7 @@ namespace HOFCCross.ViewModel
             }
 
             IsLoading = false;
+            loadEnd = true;
         }
 
         public class Week

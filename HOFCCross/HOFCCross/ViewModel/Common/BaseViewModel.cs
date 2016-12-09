@@ -1,6 +1,7 @@
 ﻿using FreshMvvm;
 using HOFCCross.Service;
 using Plugin.Toasts;
+using PropertyChanged;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +11,10 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel.Common
 {
+    [ImplementPropertyChanged]
     public class BaseViewModel: FreshBasePageModel
     {
-        private bool _isLoading;
-        public bool IsLoading
-        {
-            get
-            {
-                return _isLoading;
-            }
-            set
-            {
-                _isLoading = value;
-                RaisePropertyChanged(nameof(IsLoading));
-            }
-        }
+        public bool IsLoading { get; set; }
         protected IService _service;
         public string ErrorMessage { get; set; }
         public string Title { get; set; }

@@ -37,7 +37,8 @@ namespace HOFCCross.ViewModel
 
         protected override async Task ReloadItems(bool forceRefresh = false)
         {
-            IsLoading = true;
+            bool loadEnd = false;
+            var animation = Task.Delay(500).ContinueWith((t) => { if (!loadEnd) IsLoading = true; });
             try
             {
                 Items = await _service.GetActu(forceRefresh);
@@ -48,6 +49,7 @@ namespace HOFCCross.ViewModel
                 Debug.WriteLine(ex);
             }
             IsLoading = false;
+            loadEnd = true;
         }
 
         public Command ItemTapCommand
