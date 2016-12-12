@@ -22,7 +22,7 @@
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
     <PackageCertificateThumbprint>FB458D0201CD7E52B15E2307DF71C0FB924360CA</PackageCertificateThumbprint>
-    <AppxPackageDir>C:\Users\Anthony\Desktop\</AppxPackageDir>
+    <AppxPackageDir>C:\Users\Anthony\Desktop\UWP\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
