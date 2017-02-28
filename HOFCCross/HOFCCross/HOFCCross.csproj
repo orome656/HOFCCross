@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Auth\OAuth2Authenticator.cs" />
+    <Compile Include="Auth\OAuth2Request.cs" />
     <Compile Include="Behaviors\BehaviorBase.cs" />
     <Compile Include="Behaviors\ToolbarItemsBehavior.cs" />
     <Compile Include="Constantes\AppConstantes.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="Enum\DeviceType.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
+    <Compile Include="Extension\OAuth2AuthenticatorExtensions.cs" />
     <Compile Include="Helpers\Maps.cs" />
     <Compile Include="Helpers\Season.cs" />
     <Compile Include="Model\Actu.cs" />

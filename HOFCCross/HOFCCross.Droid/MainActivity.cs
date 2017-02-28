@@ -26,6 +26,7 @@ namespace HOFCCross.Droid
             
             base.OnCreate(bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            global::Xamarin.Auth.Auth.Init(this, bundle);
             LoadApplication(new App());
 
             var preferenceManager = PreferenceManager.GetDefaultSharedPreferences(Application.ApplicationContext);

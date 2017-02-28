@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,8 @@ namespace HOFCCross.Model
 {
     public class User
     {
-        public string Name { get; set; }
-        public string FirstName { get; set; }
-        public string FullName
-        {
-            get
-            {
-                return FirstName + " " + Name;
-            }
-        }
+        public string Sub { get; set; }
+        public string Email { get; set; }
+        public string Username { get; set; }
     }
 }

@@ -27,6 +27,8 @@ namespace HOFCCross.Droid
 		public static void UpdateIdValues()
 		{
 			global::ModernHttpClient.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
+			global::PCLCrypto.Resource.String.ApplicationName = global::HOFCCross.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::HOFCCross.Droid.Resource.String.Hello;
 			global::Splat.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_in = global::HOFCCross.Droid.Resource.Animation.abc_fade_in;
 			global::Plugin.Toasts.Resource.Animation.abc_fade_out = global::HOFCCross.Droid.Resource.Animation.abc_fade_out;
@@ -1588,6 +1590,7 @@ namespace HOFCCross.Droid
 			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_id = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_inflatedId = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::Plugin.Toasts.Resource.Styleable.ViewStubCompat_android_layout = global::HOFCCross.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Xamarin.Auth.Resource.String.library_name = global::HOFCCross.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::HOFCCross.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -4766,11 +4769,11 @@ namespace HOFCCross.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060046
-			public const int ApplicationName = 2131099718;
+			// aapt resource value: 0x7f060047
+			public const int ApplicationName = 2131099719;
 			
-			// aapt resource value: 0x7f060045
-			public const int Hello = 2131099717;
+			// aapt resource value: 0x7f060046
+			public const int Hello = 2131099718;
 			
 			// aapt resource value: 0x7f06002e
 			public const int abc_action_bar_home_description = 2131099694;
@@ -4931,8 +4934,8 @@ namespace HOFCCross.Droid
 			// aapt resource value: 0x7f06001e
 			public const int common_signin_button_text_long = 2131099678;
 			
-			// aapt resource value: 0x7f060047
-			public const int library_name = 2131099719;
+			// aapt resource value: 0x7f060045
+			public const int library_name = 2131099717;
 			
 			// aapt resource value: 0x7f06001f
 			public const int mr_button_content_description = 2131099679;

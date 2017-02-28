@@ -19,7 +19,7 @@
                    Spacing="20"
                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource NotConverter}}">
         <Image Source="icon.png" />
-        <Label Text="HOFC" TextColor="White" />
+        <Label Text="Se connecter" TextColor="White" fe:TappedGestureAttached.Command="{Binding ConnectCommand}" />
       </StackLayout>
       <StackLayout Orientation="Horizontal" 
                    HeightRequest="30" 
@@ -28,7 +28,7 @@
                    Spacing="20"
                    IsVisible="{Binding IsAuthenticated}">
         <Image Source="icon.png" />
-        <Label Text="{Binding User.FullName}" TextColor="White" />
+        <Label Text="{Binding User.Username}" TextColor="White" />
       </StackLayout>
     </StackLayout>
 
@@ -47,5 +47,12 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
+    <StackLayout HeightRequest="50" 
+                 BackgroundColor="Red" 
+                 VerticalOptions="Center" 
+                 fe:TappedGestureAttached.Command="{Binding DisconnectCommand}"
+                 IsVisible="{Binding IsAuthenticated}">
+      <Label VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"  Text="Se déconnecter"/>
+    </StackLayout>
   </StackLayout>
 </ContentPage>

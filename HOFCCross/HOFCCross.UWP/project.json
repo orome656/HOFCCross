@@ -9,9 +9,11 @@
     "Splat": "2.0.0",
     "sqlite-net-pcl": "1.3.1",
     "SQLitePCL.raw_basic": "0.8.6",
-    "Toasts.Forms.Plugin": "3.1.2",
-    "Xamarin.FFImageLoading.Forms": "2.2.8",
-    "Xamarin.Forms": "2.3.3.180"
+    "Toasts.Forms.Plugin": "3.1.4",
+    "Xamarin.Auth": "1.3.2.1",
+    "Xamarin.Auth.Extensions": "1.3.2.1",
+    "Xamarin.FFImageLoading.Forms": "2.2.9",
+    "Xamarin.Forms": "2.3.3.193"
   },
   "frameworks": {
     "uap10.0": {}
