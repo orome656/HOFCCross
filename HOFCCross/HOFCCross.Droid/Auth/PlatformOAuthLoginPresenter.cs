@@ -16,7 +16,7 @@ namespace Xamarin.Auth
     {
         public void Login(Authenticator authenticator)
         {
-            Auth.Context.StartActivity(authenticator.GetUI(Auth.Context));
+            Auth.Activity.StartActivity(authenticator.GetUI(Auth.Activity) as Intent);
         }
     }
 }

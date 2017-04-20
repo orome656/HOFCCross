@@ -15,11 +15,11 @@ namespace Xamarin.Auth
 {
     public static class Auth
     {
-        internal static Context Context { get; set; }
+        internal static Activity Activity { get; set; }
 
-        public static void Init(Context context, Bundle bundle)
+        public static void Init(Activity context, Bundle bundle)
         {
-            Auth.Context = context;
+            Auth.Activity = context;
 
             OAuthLoginPresenter.PlatformLogin = (authenticator) => {
                 var oauthLogin = new PlatformOAuthLoginPresenter();
