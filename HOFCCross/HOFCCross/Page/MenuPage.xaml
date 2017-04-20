@@ -16,6 +16,14 @@
                    HeightRequest="30" 
                    VerticalOptions="CenterAndExpand" 
                    Margin="20,0,0,0"
+                   Spacing="20">
+        <Image Source="icon.png" />
+        <Label Text="HOFC" TextColor="White" />
+      </StackLayout>
+      <!--StackLayout Orientation="Horizontal" 
+                   HeightRequest="30" 
+                   VerticalOptions="CenterAndExpand" 
+                   Margin="20,0,0,0"
                    Spacing="20"
                    IsVisible="{Binding IsAuthenticated, Converter={StaticResource NotConverter}}">
         <Image Source="icon.png" />
@@ -29,7 +37,7 @@
                    IsVisible="{Binding IsAuthenticated}">
         <Image Source="icon.png" />
         <Label Text="{Binding User.Username}" TextColor="White" />
-      </StackLayout>
+      </StackLayout-->
     </StackLayout>
 
     <ListView ItemsSource="{Binding Items}"
@@ -47,12 +55,12 @@
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>
-    <StackLayout HeightRequest="50" 
+    <!--StackLayout HeightRequest="50" 
                  BackgroundColor="Red" 
                  VerticalOptions="Center" 
                  fe:TappedGestureAttached.Command="{Binding DisconnectCommand}"
                  IsVisible="{Binding IsAuthenticated}">
       <Label VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"  Text="Se déconnecter"/>
-    </StackLayout>
+    </StackLayout-->
   </StackLayout>
 </ContentPage>
