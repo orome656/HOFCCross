@@ -26,7 +26,7 @@
     </ContentView>
     <ActivityIndicator IsRunning="{Binding IsNavLoading}"
                        IsVisible="{Binding IsNavLoading}" />
-    <fe:BindablePicker ItemsSource="{Binding Filters}"
+    <Picker ItemsSource="{Binding Filters}"
                        SelectedItem="{Binding SelectedFilter}"
                        Title="Changer d'équipe"
                        IsVisible="{Binding Filters, Converter={StaticResource FalseIfNullOrEmptyConverter}}"/>
