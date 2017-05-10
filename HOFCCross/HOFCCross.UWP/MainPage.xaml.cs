@@ -2,6 +2,7 @@
 using HOFCCross.Service;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -36,11 +37,18 @@ namespace HOFCCross.UWP
 
         private async Task InitNotification()
         {
-            // Get a channel URI from WNS.
-            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            try
+            {
+                // Get a channel URI from WNS.
+                var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
 
-            var service = FreshMvvm.FreshIOC.Container.Resolve<IService>();
-            await service.SendNotificationToken(channel.Uri, DeviceType.Windows);
+                var service = FreshMvvm.FreshIOC.Container.Resolve<IService>();
+                await service.SendNotificationToken(channel.Uri, DeviceType.Windows);
+            }
+            catch (Exception e)
+            {
+                Debug.Write(e);
+            }
         }
     }
 }
