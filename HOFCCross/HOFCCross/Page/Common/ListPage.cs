@@ -12,7 +12,7 @@ namespace HOFCCross.Page.Common
         public ListPage()
         {
 
-            if (Device.OS == TargetPlatform.Windows)
+            if (Device.RuntimePlatform == Device.Windows)
             {
                 var tbi = new ToolbarItem { Text = "Sync", Priority = 0, Icon = "ic_sync_black_24dp_2x.png", Order = ToolbarItemOrder.Primary };
                 tbi.SetBinding(MenuItem.CommandProperty, new Binding("RefreshCommand"));

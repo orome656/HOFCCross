@@ -18,10 +18,10 @@
   <StackLayout>
     <ContentView>
       <OnPlatform x:TypeArguments="View">
-        <OnPlatform.WinPhone>
+        <On Platform="WinPhone,Windows">
           <ActivityIndicator IsRunning="{Binding IsLoading}"
                              IsVisible="{Binding IsLoading}" />
-        </OnPlatform.WinPhone>
+        </On>
       </OnPlatform>
     </ContentView>
     <Picker ItemsSource="{Binding Filters}"

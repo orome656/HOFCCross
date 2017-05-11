@@ -12,18 +12,18 @@ namespace HOFCCross.Helpers
     {
         public static void OpenMap(string address)
         {
-            switch (Device.OS)
+            switch (Device.RuntimePlatform)
             {
-                case TargetPlatform.iOS:
+                case Device.iOS:
                     Device.OpenUri(
                       new Uri(string.Format("http://maps.apple.com/?q={0}", WebUtility.UrlEncode(address))));
                     break;
-                case TargetPlatform.Android:
+                case Device.Android:
                     Device.OpenUri(
                       new Uri(string.Format("geo:0,0?q={0}", WebUtility.UrlEncode(address))));
                     break;
-                case TargetPlatform.Windows:
-                case TargetPlatform.WinPhone:
+                case Device.Windows:
+                case Device.WinPhone:
                     Device.OpenUri(
                       new Uri(string.Format("bingmaps:?where={0}", Uri.EscapeDataString(address))));
                     break;
