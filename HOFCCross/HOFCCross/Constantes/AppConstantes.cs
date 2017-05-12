@@ -12,7 +12,7 @@ namespace HOFCCross.Constantes
     #if DEBUG
         public static readonly string SERVER_BASE_URL = "https://local.webhofc.fr/";
     #else
-        public static readonly string SERVER_BASE_URL = "https://v2.webhofc.fr/";
+        public static readonly string SERVER_BASE_URL = "https://www.webhofc.fr/";
     #endif
         public static readonly string SERVER_ACTU_URL = SERVER_BASE_URL + "api/actus";
         public static readonly string SERVER_MATCH_URL = SERVER_BASE_URL + "api/matchs";
