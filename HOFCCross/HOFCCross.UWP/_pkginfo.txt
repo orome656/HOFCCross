@@ -1,1 +1,1 @@
-C:\Users\Anthony\Desktop\UWP\HOFCCross.UWP_1.2.8.0\HOFCCross.UWP_1.2.8.0_x86_x64_arm.appxbundle
+E:\Dev\HOFC\HOFCCross\HOFCCross\HOFCCross.UWP\bin\ARM\Release\Upload\HOFCCross.UWP_1.3.14.0\HOFCCross.UWP_1.3.14.0_x86_x64_arm.appxbundle

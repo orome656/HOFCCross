@@ -21,7 +21,7 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
-    <PackageCertificateThumbprint>FB458D0201CD7E52B15E2307DF71C0FB924360CA</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>D8C6C0FB16955549D73FECDEED1586AAA52C94A2</PackageCertificateThumbprint>
     <AppxPackageDir>C:\Users\Anthony\Desktop\UWP\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
