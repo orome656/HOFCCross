@@ -13,6 +13,7 @@ using Android.Content;
 using HOFCCross.Droid.Notification;
 using Android.Gms.Common;
 using Android.Preferences;
+using HOFCCross.Droid.Auth;
 
 namespace HOFCCross.Droid
 {
@@ -26,7 +27,7 @@ namespace HOFCCross.Droid
             
             base.OnCreate(bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            global::Xamarin.Auth.Auth.Init(this, bundle);
+            global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
             LoadApplication(new App());
 
             var preferenceManager = PreferenceManager.GetDefaultSharedPreferences(Application.ApplicationContext);
@@ -41,7 +42,6 @@ namespace HOFCCross.Droid
 
             DependencyService.Register<ToastNotification>(); // Register your dependency
             ToastNotification.Init(this);
-
         }
 
         public bool IsPlayServicesAvailable()

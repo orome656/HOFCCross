@@ -14,7 +14,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel
 {
-    [ImplementPropertyChanged]
+    [AddINotifyPropertyChangedInterface]
     class ClassementViewModel: FilteredListBaseViewModel<string, ClassementEquipe>
     {
         public bool IsLandscape { get; set; }

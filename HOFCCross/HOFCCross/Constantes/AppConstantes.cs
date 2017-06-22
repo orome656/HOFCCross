@@ -40,7 +40,7 @@ namespace HOFCCross.Constantes
             public static string ClientSecret = "AMAHOFCOPENIDDICTSECRET"; // TODO Extract this from code
             public static string Scope = "openid profile email offline_access";
             public static string AuthorizeUrl = SERVER_BASE_URL + "connect/authorize";
-            public static string RedirectUrl = "urn:ietf:wg:oauth:2.0:oob";
+            public static string RedirectUrl = "com.hofc.oauth.providers.android:/oauth2redirect";
             public static string AccessTokenUrl = SERVER_BASE_URL + "connect/token";
         };
     }

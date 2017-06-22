@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Auth\AuthentificationState.cs" />
     <Compile Include="Auth\OAuth2Authenticator.cs" />
     <Compile Include="Auth\OAuth2AuthenticatorExtensions.cs" />
     <Compile Include="Auth\OAuth2Request.cs" />

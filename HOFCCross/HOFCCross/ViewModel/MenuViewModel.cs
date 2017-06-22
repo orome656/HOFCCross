@@ -1,4 +1,5 @@
 ﻿using FreshMvvm;
+using HOFCCross.Auth;
 using HOFCCross.Constantes;
 using HOFCCross.Enum;
 using HOFCCross.Model;
@@ -144,14 +145,19 @@ namespace HOFCCross.ViewModel
                         AppConstantes.OAUTHSETTING.Scope,
                         new Uri(AppConstantes.OAUTHSETTING.AuthorizeUrl),
                         new Uri(AppConstantes.OAUTHSETTING.RedirectUrl),
-                        new Uri(AppConstantes.OAUTHSETTING.AccessTokenUrl)
+                        new Uri(AppConstantes.OAUTHSETTING.AccessTokenUrl),
+                        isUsingNativeUI: true
                     );
+                    
 
                     authenticator.Completed += Authenticator_Completed;
                     authenticator.Error += Authenticator_Error;
+                    AuthentificationState.Authenticator = authenticator;
 
-                    var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
+                    Xamarin.Auth.Presenters.OAuthLoginPresenter presenter = null;
+                    presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
                     presenter.Login(authenticator);
+                    
                 });
                 return _connectCommand;
             }
@@ -173,11 +179,12 @@ namespace HOFCCross.ViewModel
 
         private void Authenticator_Error(object sender, AuthenticatorErrorEventArgs e)
         {
-
+            AuthentificationState.Authenticator = null;
         }
 
         private void Authenticator_Completed(object sender, AuthenticatorCompletedEventArgs e)
         {
+            AuthentificationState.Authenticator = null;
             if(e.IsAuthenticated)
             {
                 LoginService.AuthenticateAsync(e.Account);

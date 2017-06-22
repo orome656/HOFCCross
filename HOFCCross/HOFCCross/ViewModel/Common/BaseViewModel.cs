@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace HOFCCross.ViewModel.Common
 {
-    [ImplementPropertyChanged]
+    [AddINotifyPropertyChangedInterface]
     public class BaseViewModel: FreshBasePageModel
     {
         public bool IsLoading { get; set; }

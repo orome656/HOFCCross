@@ -55,13 +55,20 @@ namespace HOFCCross.Container
 
         public async Task PushPage(Xamarin.Forms.Page page, FreshBasePageModel model, bool modal = false, bool animate = true)
         {
-            var newDetail = new FreshNavigationContainer(page, "DetailPageArea");
-            this.Detail = newDetail;
+            if(modal)
+            {
+                await Navigation.PushModalAsync(page);
+            }
+            else
+            {
+                var newDetail = new FreshNavigationContainer(page, "DetailPageArea");
+                this.Detail = newDetail;
 
-            IsPresented = false;
+                IsPresented = false;
 
-            DetailsPage.NotifyChildrenPageWasPopped();
-            DetailsPage = newDetail;
+                DetailsPage.NotifyChildrenPageWasPopped();
+                DetailsPage = newDetail;
+            }
         }
 
         public Task<FreshBasePageModel> SwitchSelectedRootPageModel<T>() where T : FreshBasePageModel

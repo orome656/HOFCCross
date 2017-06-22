@@ -11,16 +11,8 @@
   </ContentPage.Resources>
   <StackLayout Spacing="0">
     <BoxView BackgroundColor="#084578" HeightRequest="24"/>
-    <StackLayout HeightRequest="100" BackgroundColor="#08589D">
-      <StackLayout Orientation="Horizontal" 
-                   HeightRequest="30" 
-                   VerticalOptions="CenterAndExpand" 
-                   Margin="20,0,0,0"
-                   Spacing="20">
-        <Image Source="icon.png" />
-        <Label Text="HOFC" TextColor="White" />
-      </StackLayout>
-      <!--StackLayout Orientation="Horizontal" 
+        <StackLayout HeightRequest="100" BackgroundColor="#08589D">
+            <StackLayout Orientation="Horizontal" 
                    HeightRequest="30" 
                    VerticalOptions="CenterAndExpand" 
                    Margin="20,0,0,0"
@@ -37,7 +29,7 @@
                    IsVisible="{Binding IsAuthenticated}">
         <Image Source="icon.png" />
         <Label Text="{Binding User.Username}" TextColor="White" />
-      </StackLayout-->
+      </StackLayout>
     </StackLayout>
 
     <ListView ItemsSource="{Binding Items}"

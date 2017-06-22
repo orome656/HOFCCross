@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Auth;
 
 namespace HOFCCross.Auth
 {
     public class OAuth2Authenticator: Xamarin.Auth.OAuth2Authenticator
     {
         public OAuth2Authenticator(string clientId, string clientSecret, string scope, Uri authorizeUrl, Uri redirectUrl, Uri accessTokenUrl) : base(clientId, clientSecret, scope, authorizeUrl, redirectUrl, accessTokenUrl)
+        {
+
+        }
+
+        public OAuth2Authenticator(string clientId, string clientSecret, string scope, Uri authorizeUrl, Uri redirectUrl, Uri accessTokenUrl, GetUsernameAsyncFunc getUsernameAsync = null, bool isUsingNativeUI = false): base(clientId, clientSecret, scope, authorizeUrl, redirectUrl, accessTokenUrl, getUsernameAsync = null, isUsingNativeUI)
         {
 
         }
