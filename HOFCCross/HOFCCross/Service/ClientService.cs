@@ -143,5 +143,10 @@ namespace HOFCCross.Service
                 throw ex;
             }
         }
+
+        public Task<Match> GetMatchDetails(string matchId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

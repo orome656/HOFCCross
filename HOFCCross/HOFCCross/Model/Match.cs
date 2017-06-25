@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using HOFCCross.Enum;
+using Newtonsoft.Json;
 using SQLite;
 
 using System;
@@ -39,5 +40,13 @@ namespace HOFCCross.Model
         [JsonProperty(PropertyName = "idJournee")]
         public int? JourneeId { get; set; }
         public string Infos { get; set; }
+
+        public int VoteStatut { get; set; }
+        
+        [Ignore]
+        [JsonIgnore]
+        public StatutVote VoteStatutEnum { get { return (StatutVote)VoteStatut; } }
+        
+        public MatchInfos MatchInfos { get; set; }
     }
 }

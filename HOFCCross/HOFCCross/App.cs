@@ -17,7 +17,7 @@ namespace HOFCCross
     {
         public App()
         {
-            FreshMvvm.FreshIOC.Container.Register<IService, CacheService>();
+            FreshMvvm.FreshIOC.Container.Register<IService, MockService>();
             FreshMvvm.FreshIOC.Container.Register<ILoginService, LoginService>();
 
             // The root page of your application

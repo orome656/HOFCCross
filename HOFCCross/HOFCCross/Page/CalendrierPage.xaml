@@ -44,7 +44,7 @@
                           Date="{Binding Date}"
                           Title="{Binding Competition.Nom}"
                           InfosCommand="{Binding Source={x:Reference listView}, Path=BindingContext.InfosCommand}"
-                          InfosId="{Binding Infos}"
+                          InfosId="{Binding Id}"
                           NavCommand="{Binding Source={x:Reference listView}, Path=BindingContext.NavCommand}"/>
         </DataTemplate>
       </ListView.ItemTemplate>

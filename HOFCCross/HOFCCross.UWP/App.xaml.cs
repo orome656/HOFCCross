@@ -131,6 +131,7 @@ namespace HOFCCross.UWP
                 ToastNotification.Init();
 
                 Xamarin.Forms.Forms.Init(args);
+                Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

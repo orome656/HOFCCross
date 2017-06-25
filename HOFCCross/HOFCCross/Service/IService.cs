@@ -18,5 +18,6 @@ namespace HOFCCross.Service
         Task<ArticleDetails> GetArticleDetails(string Url);
         Task<Diaporama> GetDiaporama(string initData);
         Task<MatchInfos> GetMatchInfos(string id);
+        Task<Match> GetMatchDetails(string matchId);
     }
 }

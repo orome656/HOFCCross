@@ -56,10 +56,12 @@
     <Compile Include="Converters\FalseIfNullOrEmptyConverter.cs" />
     <Compile Include="Converters\IsHOFCConverter.cs" />
     <Compile Include="Converters\NotConverter.cs" />
+    <Compile Include="Converters\StatutVoteConverter.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Database\ISQLite.cs" />
     <Compile Include="Enum\DeviceType.cs" />
     <Compile Include="Enum\PageNameEnum.cs" />
+    <Compile Include="Enum\StatutVote.cs" />
     <Compile Include="Extension\DateTimeExtensions.cs" />
     <Compile Include="Extension\OAuth2AuthenticatorExtensions.cs" />
     <Compile Include="Helpers\Maps.cs" />
@@ -94,6 +96,9 @@
     <Compile Include="Page\ClassementPage.xaml.cs">
       <DependentUpon>ClassementPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page\MatchDetailsPage.xaml.cs">
+      <DependentUpon>MatchDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page\MatchInfosPage.xaml.cs">
       <DependentUpon>MatchInfosPage.xaml</DependentUpon>
     </Compile>
@@ -124,6 +129,7 @@
     </Compile>
     <Compile Include="ViewModel\ClassementViewModel.cs" />
     <Compile Include="ViewModel\Common\ListBaseViewModel.cs" />
+    <Compile Include="ViewModel\MatchDetailsViewModel.cs" />
     <Compile Include="ViewModel\MatchInfosViewModel.cs" />
     <Compile Include="ViewModel\MenuViewModel.cs" />
   </ItemGroup>
@@ -202,6 +208,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page\MatchDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

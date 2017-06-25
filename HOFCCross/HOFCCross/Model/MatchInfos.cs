@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms.Maps;
 
 namespace HOFCCross.Model
 {
@@ -13,6 +14,7 @@ namespace HOFCCross.Model
     {
         [PrimaryKey]
         public string Id { get; set; }
+        public int MatchId { get; set; }
         public string Nom { get; set; }
         public string Adresse { get; set; }
         public string Ville { get; set; }
@@ -26,5 +28,12 @@ namespace HOFCCross.Model
         }
 
         public DateTime SyncDate { get; set; }
+
+        [Ignore]
+        public Position Position { get; set; }
+        public string PositionString {
+            get { return JsonConvert.SerializeObject(Position); }
+            set { Position = JsonConvert.DeserializeObject<Position>(value); }
+        }
     }
 }

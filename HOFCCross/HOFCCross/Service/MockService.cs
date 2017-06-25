@@ -227,5 +227,32 @@ namespace HOFCCross.Service
                 Arbitres = new List<string>() { "Arbitre centre Test arbitre" }
             });
         }
+
+        public Task<Match> GetMatchDetails(string matchId)
+        {
+            return Task.FromResult(new Match()
+            {
+                Id = 1,
+                Date = DateTime.Now,
+                Equipe1 = AppConstantes.HOFC_NAME,
+                Equipe2 = "Test2",
+                Competition = new Competition()
+                {
+                    Nom = "Autre",
+                    Categorie = "equipe1",
+                    IsChampionnat = false
+                },
+                Infos = "1111",
+                VoteStatut = (int)StatutVote.NON_OUVERT,
+                MatchInfos = new MatchInfos()
+                {
+                    Id = "1111",
+                    Nom = "STADE DU TILHOS 1",
+                    Adresse = "ROUTE DU STADE",
+                    Ville = "65400 ARGELES GAZOST",
+                    Arbitres = new List<string>() { "Arbitre centre Test arbitre" }
+                }
+            });
+        }
     }
 }
