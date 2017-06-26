@@ -26,14 +26,23 @@ namespace HOFCCross.Page
             if (BindingContext != null)
             {
                 var vm = BindingContext as MatchDetailsViewModel;
-                if (vm.Match != null && vm.Match.MatchInfos != null && vm.Match.MatchInfos.Position != null)
+                vm.Positions.CollectionChanged += Positions_CollectionChanged;
+            }
+        }
+
+        private void Positions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            var vm = BindingContext as MatchDetailsViewModel;
+            if(vm.Positions.Any())
+            {
+
+                MyMap.Pins.Clear();
+                MyMap.Pins.Add(new Pin()
                 {
-                    MyMap.Pins.Add(new Pin()
-                    {
-                        Label = $"{vm.Match.MatchInfos.Adresse} {vm.Match.MatchInfos.Ville}",
-                        Position = vm.Match.MatchInfos.Position
-                    });
-                }
+                    Label = $"{vm.Match.MatchInfos.Adresse} {vm.Match.MatchInfos.Ville}",
+                    Position = vm.Positions.First()
+                });
+                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(vm.Positions.First(), Distance.FromKilometers(1)));
             }
         }
     }

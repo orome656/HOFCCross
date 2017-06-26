@@ -44,6 +44,7 @@
     <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
+    <AndroidSupportedAbis>x86;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
