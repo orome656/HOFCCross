@@ -11,103 +11,131 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Il faudrait ajouter une carte si on a l'adresse -->
-            <maps:Map WidthRequest="320" HeightRequest="200"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <maps:Map HeightRequest="150"
+                      Grid.Row="0"
                       x:Name="MyMap"
                       IsShowingUser="false"
                       MapType="Street"/>
+            <ScrollView Grid.Row="1"
+                        VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Grid HeightRequest="180" BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+                        <Grid.ColumnDefinitions>
+                            <!-- Logo + Nom -->
+                            <ColumnDefinition Width="*"/>
+                            <!-- Score -->
+                            <ColumnDefinition  Width="*"/>
+                            <!-- Logo + Nom -->
+                            <ColumnDefinition  Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
 
-            <Grid HeightRequest="180" BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
-                <Grid.ColumnDefinitions>
-                    <!-- Logo + Nom -->
-                    <ColumnDefinition Width="*"/>
-                    <!-- Score -->
-                    <ColumnDefinition  Width="*"/>
-                    <!-- Logo + Nom -->
-                    <ColumnDefinition  Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
+                        <Label x:Name="TitleLabel"
+                               Grid.ColumnSpan="3"
+                               HorizontalTextAlignment="Center"
+                               Text="{Binding Match.Competition.Nom}"/>
 
-                <Label x:Name="TitleLabel"
-                       Grid.ColumnSpan="3"
-                       HorizontalTextAlignment="Center"
-                       Text="{Binding Match.Competition.Nom}"/>
+                        <Label x:Name="DateLabel" 
+                               Grid.Row="1" 
+                               Grid.ColumnSpan="3" 
+                               HorizontalTextAlignment="Center"
+                               Text="{Binding Match.Date}"/>
 
-                <Label x:Name="DateLabel" 
-                       Grid.Row="1" 
-                       Grid.ColumnSpan="3" 
-                       HorizontalTextAlignment="Center"
-                       Text="{Binding Match.Date}"/>
-
-                <Image x:Name="Equipe1Image" 
-                       Source="icon.png" 
-                       Grid.Column="0"
-                       Grid.Row="2"
-                       Grid.RowSpan="2"
-                       HorizontalOptions="Center"/>
+                        <Image x:Name="Equipe1Image" 
+                               Source="icon.png" 
+                               Grid.Column="0"
+                               Grid.Row="2"
+                               Grid.RowSpan="2"
+                               HorizontalOptions="Center"/>
 
 
-                <StackLayout Grid.Column="0"
-                             Grid.Row="4"
-                             Grid.RowSpan="2"
-                             HorizontalOptions="FillAndExpand"
-                             VerticalOptions="FillAndExpand">
-                    <Label x:Name="Equipe1Label"
-                           HorizontalTextAlignment="Center"
-                           LineBreakMode="WordWrap"
-                           Text="{Binding Match.Equipe1}"/>
+                        <StackLayout Grid.Column="0"
+                                     Grid.Row="4"
+                                     Grid.RowSpan="2"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand">
+                            <Label x:Name="Equipe1Label"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"
+                                   Text="{Binding Match.Equipe1}"/>
+                        </StackLayout>
+
+                        <Label x:Name="MessageLabel" 
+                               FontSize="20"
+                               Grid.Row="3" 
+                               Grid.Column="1" 
+                               Grid.RowSpan="2"
+                               HorizontalOptions="Center"
+                               Text="{Binding Match.Score1}"/>
+
+                        <Image x:Name="Equipe2Image" 
+                               Source="icon.png" 
+                               Grid.Column="2" 
+                               Grid.Row="2"
+                               Grid.RowSpan="2"
+                               HorizontalOptions="Center"/>
+
+                        <StackLayout Grid.Column="2"
+                                     Grid.Row="4"
+                                     Grid.RowSpan="2"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand">
+                            <Label x:Name="Equipe2Label"
+                                   HorizontalTextAlignment="Center"
+                                   LineBreakMode="WordWrap"
+                                   Text="{Binding Match.Equipe2}" />
+                        </StackLayout>
+                    </Grid>
+
+                    <StackLayout BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+                        <Label Text="Votes" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
+                        <Label Text="Le vote n'est pas encore ouvert"
+                               IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.NON_OUVERT}}}}}"
+                               VerticalTextAlignment="Center"
+                               VerticalOptions="Center"/>
+                        <StackLayout Orientation="Vertical" 
+                                     IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.OUVERT}}}}}">
+                            <!-- Différencier le cas ou l'utilisateur est logué (il peut voter), et le cas ou il ne l'est pas (il faut afficher un message)-->
+                            <Label Text="Voter !" />
+
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" 
+                                     IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.CLOS}}}}}">
+                            <Label Text="Afficher les résultats !" />
+
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+                        <Label Text="Buteur(s)" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Truc"/>
+                            <Label Text="3" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Truc"/>
+                            <Label Text="3" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Truc"/>
+                            <Label Text="3" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </StackLayout>
                 </StackLayout>
-
-                <Label x:Name="MessageLabel" 
-                       FontSize="20"
-                       Grid.Row="3" 
-                       Grid.Column="1" 
-                       Grid.RowSpan="2"
-                       HorizontalOptions="Center"
-                       Text="{Binding Match.Score1}"/>
-
-                <Image x:Name="Equipe2Image" 
-                       Source="icon.png" 
-                       Grid.Column="2" 
-                       Grid.Row="2"
-                       Grid.RowSpan="2"
-                       HorizontalOptions="Center"/>
-
-                <StackLayout Grid.Column="2"
-                             Grid.Row="4"
-                             Grid.RowSpan="2"
-                             HorizontalOptions="FillAndExpand"
-                             VerticalOptions="FillAndExpand">
-                    <Label x:Name="Equipe2Label"
-                           HorizontalTextAlignment="Center"
-                           LineBreakMode="WordWrap"
-                           Text="{Binding Match.Equipe2}" />
-                </StackLayout>
-            </Grid>
-
-            <StackLayout HeightRequest="100" BackgroundColor="#08589D">
-                <Label Text="Le vote n'est pas encore ouvert"
-                       IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.NON_OUVERT}}}}}"/>
-                <StackLayout Orientation="Vertical" 
-                             IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.OUVERT}}}}}">
-                    <!-- Différencier le cas ou l'utilisateur est logué (il peut voter), et le cas ou il ne l'est pas (il faut afficher un message)-->
-                    <Label Text="Voter !" />
-
-                </StackLayout>
-                <StackLayout Orientation="Vertical" 
-                             IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.CLOS}}}}}">
-                    <Label Text="Afficher les résultats !" />
-
-                </StackLayout>
-            </StackLayout>
-        </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
