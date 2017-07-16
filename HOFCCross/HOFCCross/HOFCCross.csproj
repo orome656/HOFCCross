@@ -48,9 +48,13 @@
     <Compile Include="Controls\CardView.xaml.cs">
       <DependentUpon>CardView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Compo.xaml.cs">
+      <DependentUpon>Compo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Match.xaml.cs">
       <DependentUpon>Match.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\RepeaterView.cs" />
     <Compile Include="Converters\ColorIfHOFCConverter.cs" />
     <Compile Include="Converters\ColumnWidthConverter.cs" />
     <Compile Include="Converters\FalseIfNullOrEmptyConverter.cs" />
@@ -71,6 +75,7 @@
     <Compile Include="Model\ClassementEquipe.cs" />
     <Compile Include="Model\Competition.cs" />
     <Compile Include="Model\Diaporama.cs" />
+    <Compile Include="Model\Joueur.cs" />
     <Compile Include="Model\Match.cs" />
     <Compile Include="Model\MatchInfos.cs" />
     <Compile Include="Model\MenuItem.cs" />
@@ -211,6 +216,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Page\MatchDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Compo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

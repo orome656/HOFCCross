@@ -4,7 +4,9 @@
              xmlns:enum="clr-namespace:HOFCCross.Enum"
              xmlns:converters="clr-namespace:HOFCCross.Converters"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-             x:Class="HOFCCross.Page.MatchDetailsPage">
+             x:Class="HOFCCross.Page.MatchDetailsPage"
+             xmlns:repeater="clr-namespace:Xamarin.CustomControls;"
+             Title="{Binding Title}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:StatutVoteConverter x:Key="StatutVoteConverter" />
@@ -14,7 +16,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
             <maps:Map HeightRequest="150"
@@ -100,7 +102,23 @@
                         </StackLayout>
                     </Grid>
 
+                    <!-- Adresse-->
                     <StackLayout BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+                        <Label Text="{Binding Match.MatchInfos.Nom}"/>
+                        <Label Text="{Binding Match.MatchInfos.Adresse}"/>
+                        <Label Text="{Binding Match.MatchInfos.Ville}"/>
+                    </StackLayout>
+                    <!-- Arbitres-->
+                    <repeater:RepeaterView ItemsSource="{Binding Match.MatchInfos.Arbitres}" BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+                        <repeater:RepeaterView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="{Binding .}"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </repeater:RepeaterView.ItemTemplate>
+                    </repeater:RepeaterView>
+                    <!--StackLayout BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
                         <Label Text="Votes" HorizontalTextAlignment="Center" FontAttributes="Bold"></Label>
                         <Label Text="Le vote n'est pas encore ouvert"
                                IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.NON_OUVERT}}}}}"
@@ -108,7 +126,6 @@
                                VerticalOptions="Center"/>
                         <StackLayout Orientation="Vertical" 
                                      IsVisible="{Binding Match.VoteStatutEnum, Converter={StaticResource StatutVoteConverter}, ConverterParameter={x:Static enum:StatutVote.OUVERT}}}}}">
-                            <!-- Différencier le cas ou l'utilisateur est logué (il peut voter), et le cas ou il ne l'est pas (il faut afficher un message)-->
                             <Label Text="Voter !" />
 
                         </StackLayout>
@@ -117,9 +134,9 @@
                             <Label Text="Afficher les résultats !" />
 
                         </StackLayout>
-                    </StackLayout>
+                    </StackLayout-->
 
-                    <StackLayout BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
+                    <!--StackLayout BackgroundColor="White" Margin="10,10,10,0" Padding="10,10,10,10">
                         <Label Text="Buteur(s)" HorizontalTextAlignment="Center" FontAttributes="Bold" />
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Truc"/>
@@ -133,7 +150,7 @@
                             <Label Text="Truc"/>
                             <Label Text="3" FontAttributes="Bold"/>
                         </StackLayout>
-                    </StackLayout>
+                    </StackLayout-->
                 </StackLayout>
             </ScrollView>
         </Grid>

@@ -250,7 +250,7 @@ namespace HOFCCross.Service
                     Nom = "STADE DU TILHOS 1",
                     Adresse = "ROUTE DU STADE",
                     Ville = "65400 ARGELES GAZOST",
-                    Arbitres = new List<string>() { "Arbitre centre Test arbitre" }
+                    Arbitres = new List<string>() { "Arbitre centre Test arbitre", "Arbitre touche Mr Truc" }
                 }
             });
         }

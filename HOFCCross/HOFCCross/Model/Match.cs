@@ -48,5 +48,7 @@ namespace HOFCCross.Model
         public StatutVote VoteStatutEnum { get { return (StatutVote)VoteStatut; } }
         
         public MatchInfos MatchInfos { get; set; }
+
+        public List<Joueur> Joueurs { get; set; }
     }
 }
