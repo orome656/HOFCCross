@@ -6,6 +6,7 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="HOFCCross.Page.MatchDetailsPage"
              xmlns:repeater="clr-namespace:Xamarin.CustomControls;"
+             BackgroundColor="#cccccc"
              Title="{Binding Title}">
     <ContentPage.Resources>
         <ResourceDictionary>
