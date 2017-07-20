@@ -26,7 +26,7 @@ namespace HOFCCross.ViewModel
             Title = "Détails Match";
             IsLoading = true;
             base.Init(initData);
-            string matchId = initData as string;
+            int matchId = (int)initData;
             Match = await _service.GetMatchDetails(matchId);
             Positions.Clear();
             Geocoder geo = new Geocoder();

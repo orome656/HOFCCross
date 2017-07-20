@@ -46,9 +46,12 @@ namespace HOFCCross.Model
         [Ignore]
         [JsonIgnore]
         public StatutVote VoteStatutEnum { get { return (StatutVote)VoteStatut; } }
-        
-        public MatchInfos MatchInfos { get; set; }
 
+        public string MatchInfosId { get; set; }
+        [Ignore]
+        public MatchInfos MatchInfos { get; set; }
+        
+        [Ignore]
         public List<Joueur> Joueurs { get; set; }
     }
 }

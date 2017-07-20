@@ -33,6 +33,18 @@ namespace HOFCCross.Model.Repository
             return matchs;
         }
 
+        public async Task<Match> GetWithChildren(int id)
+        {
+            var match = await _connection.FindAsync<Match>(id);
+            if (match.CompetitionId != 0)
+                match.Competition = await _connection.FindAsync<Competition>(match.CompetitionId);
+
+            if (match.MatchInfosId != null)
+                match.MatchInfos = await _connection.FindAsync<MatchInfos>(match.MatchInfosId);
+
+            return match;
+        }
+
         public override async Task InsertOrUpdateList(List<Match> entity)
         {
             List<Task> tasks = new List<Task>();
@@ -45,6 +57,13 @@ namespace HOFCCross.Model.Repository
                         var competResult = await _connection.InsertOrReplaceAsync(match.Competition);
                         match.CompetitionId = match.Competition.Id;
                     }
+
+                    if(match.MatchInfos != null)
+                    {
+                        await _connection.InsertOrReplaceAsync(match.MatchInfos);
+                        match.MatchInfosId = match.MatchInfos.Id;
+                    }
+
                     await _connection.InsertOrReplaceAsync(match);
                 }));
             }

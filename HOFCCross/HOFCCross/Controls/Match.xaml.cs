@@ -79,11 +79,11 @@ namespace HOFCCross.Controls
         }
 
         public static readonly BindableProperty InfosIdProperty =
-            BindableProperty.Create(nameof(InfosId), typeof(string), typeof(Match), null, BindingMode.OneWay);
+            BindableProperty.Create(nameof(InfosId), typeof(int?), typeof(Match), null, BindingMode.OneWay);
 
-        public string InfosId
+        public int? InfosId
         {
-            get { return (string)GetValue(InfosIdProperty); }
+            get { return (int?)GetValue(InfosIdProperty); }
             set { SetValue(InfosIdProperty, value); }
         }
 

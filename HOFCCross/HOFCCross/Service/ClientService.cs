@@ -144,7 +144,7 @@ namespace HOFCCross.Service
             }
         }
 
-        public async Task<Match> GetMatchDetails(string matchId)
+        public async Task<Match> GetMatchDetails(int matchId)
         {
             try
             {

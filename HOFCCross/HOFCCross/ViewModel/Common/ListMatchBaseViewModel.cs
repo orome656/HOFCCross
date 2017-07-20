@@ -34,7 +34,7 @@ namespace HOFCCross.ViewModel.Common
         {
             get
             {
-                return new Command<string>(async (id) =>
+                return new Command<int>(async (id) =>
                 {
                     await CoreMethods.PushPageModel<MatchDetailsViewModel>(id, true);
                 });

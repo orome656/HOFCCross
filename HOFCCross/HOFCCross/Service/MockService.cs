@@ -228,7 +228,7 @@ namespace HOFCCross.Service
             });
         }
 
-        public Task<Match> GetMatchDetails(string matchId)
+        public Task<Match> GetMatchDetails(int matchId)
         {
             return Task.FromResult(new Match()
             {

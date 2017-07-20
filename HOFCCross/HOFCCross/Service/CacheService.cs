@@ -154,9 +154,17 @@ namespace HOFCCross.Service
             return matchInfos;
         }
 
-        public async Task<Match> GetMatchDetails(string matchId)
+        public async Task<Match> GetMatchDetails(int matchId)
         {
-            return await Service.GetMatchDetails(matchId);
+            var match = await _matchRepo.GetWithChildren(matchId);
+
+            if (match == null || match.MatchInfosId == null)
+            {
+                match = await Service.GetMatchDetails(matchId);
+                await _matchRepo.InsertOrUpdateList(new List<Match>() { match });
+            }
+
+            return match;
         }
     }
 }
