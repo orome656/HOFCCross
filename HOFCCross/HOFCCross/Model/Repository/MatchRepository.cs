@@ -12,7 +12,7 @@ namespace HOFCCross.Model.Repository
         public async override Task<List<Match>> GetWithChildren()
         {
             var seasonIndex = Season.GetSeasonIndex();
-            var matchs = await _connection.QueryAsync<Match>("SELECT * FROM Match as m join Competition as c on m.CompetitionId == c.Id WHERE c.Saison = ?", seasonIndex);
+            var matchs = await _connection.QueryAsync<Match>("SELECT m.Id, m.Equipe1, m.Equipe2, m.Score1, m.Score2, m.Date, m.CompetitionId, m.Commentaire, m.JourneeId, m.Infos, m.VoteStatut, c.Nom, c.Categorie, c.IsChampionnat, c.Saison FROM Match as m join Competition as c on m.CompetitionId == c.Id WHERE c.Saison = ?", seasonIndex);
             Dictionary<int, Competition> competitions = new Dictionary<int, Competition>();
             foreach (var match in matchs)
             {
