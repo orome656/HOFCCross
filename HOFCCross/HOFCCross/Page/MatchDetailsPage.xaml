@@ -82,7 +82,7 @@
                                Grid.Column="1" 
                                Grid.RowSpan="2"
                                HorizontalOptions="Center"
-                               Text="{Binding Match.Score1}"/>
+                               Text="{Binding Match.ScoreMessage}"/>
 
                         <Image x:Name="Equipe2Image" 
                                Source="icon.png" 

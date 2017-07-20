@@ -154,9 +154,9 @@ namespace HOFCCross.Service
             return matchInfos;
         }
 
-        public Task<Match> GetMatchDetails(string matchId)
+        public async Task<Match> GetMatchDetails(string matchId)
         {
-            throw new NotImplementedException();
+            return await Service.GetMatchDetails(matchId);
         }
     }
 }

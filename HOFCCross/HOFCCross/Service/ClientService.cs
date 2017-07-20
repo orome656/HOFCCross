@@ -144,9 +144,20 @@ namespace HOFCCross.Service
             }
         }
 
-        public Task<Match> GetMatchDetails(string matchId)
+        public async Task<Match> GetMatchDetails(string matchId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                HttpClient client = new HttpClient(new NativeMessageHandler());
+                var response = await client.GetStringAsync(AppConstantes.SERVER_MATCH_URL + "/" + matchId);
+                Match matchInfos = JsonConvert.DeserializeObject<Match>(response);
+                return matchInfos;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                throw ex;
+            }
         }
     }
 }
